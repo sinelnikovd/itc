@@ -1,0 +1,305 @@
+extends ../base/page
+
+block title
+	title Продвижение сайтов
+
+block content
+	+b.top._internet#sidebar-top
+		.container
+			+b.header__
+				+e.top
+					+b.A.logo.__logo(href="/")
+						+e.IMG.image(src="media/img/logo.png", alt="ITC-Meadia")
+						+e.SPAN.desc Создаем медиапространства
+					+b.call.__call
+						+e.icon
+							.icon.icon_phone
+						+e.UL.tab
+							+e.tab-item._active
+								+e.A.tab-link Москва
+							+e.tab-item
+								+e.A.tab-link Калуга
+							+e.tab-item
+								+e.A.tab-link Брянск
+						+e.UL.phone
+							+e.phone-item._active +7 (4832) 68-18-80
+							+e.phone-item +7 (4832) 68-18-81
+							+e.phone-item +7 (4832) 68-18-82
+					+e.recall
+						+btn(a)._transparent._border_1._border_white(href="#") Заказать звонок
+
+				include ../blocks/nav/nav
+
+			
+			+b.title.__title Комплексная интернет-реклама
+			+e.desc Комплексная интернет-реклама позволяет правильно скомбинировать работы и получить результат больше совокупного — так называемый синергетический эффект.
+			+e.content
+				+e.IMG.img(src="media/img/internet-top.png")
+				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
+				+b.UL.list.__list
+					+e.item
+						+e.icon.icon._list_cw
+						| Усиление каждого рекламного канала за счет правильно скомбинированных работ;
+
+
+
+					+e.item
+						+e.icon.icon._list_cw
+						| Высокая конверсия за счет оптимизации структуры и улучшения контента на посадочных страницах;
+					+e.item
+						+e.icon.icon._list_cw
+						| Моментальный эффект, в отличие от других компаний, которые используют лишь один инструмент;
+					+e.item
+						+e.icon.icon._list_cw
+						| Максимальный охват аудитории за счет использования комплекса рекламных инструментов.
+				+e.group-btn
+					+btn(a)._orange._fz_14.__btn(href="#") Заказать
+					+btn(a)._transparent._fz_14._border_1._border_white.__btn(href="#") Кейсы
+
+	include ../blocks/sidebar
+
+
+	+b.typesite
+		.container
+			.content
+				+b.title.__title Объединяем самые эффективные типы рекламы для 
+					+b.select-inline.typesite__select
+						+e.overlay
+						+e.txt интернет магазина
+						+e.UL.list
+							+e.item._active интернет магазина
+							+e.item корпоротивного сайта
+							+e.item landingpage
+
+				+e.body
+					+b.gravity.__gravity
+						+e.title Используя сильные стороны каждого способа, мы создаем эффективные и сбалансированные рекламные кампании.
+						+e.txt Вам не надо разбираться во всех типах рекламы и вникать в их тонкости — мы берем все управление на себя.
+					+b.UL.typesite-list.__list
+						+e.item
+							+e.icon.icon._ic5
+							+e.plus.icon._plus
+							+e.title Контекстная реклама 
+								+e.SPAN.mark 20%
+							+e.txt Объявления размещаются в рекламных сетях и показываются только тем посетителям, которые вводят запрос, соответствующий тематике объявления. Правильная настройка рекламной кампании обеспечит вам приток заинтересованных посетителей за оптимальную цену.
+						+e.item
+							+e.icon.icon._ic6
+							+e.plus.icon._plus
+							+e.title Медийная реклама 
+								+e.SPAN.mark 20%
+							+e.txt Этот канал позволяет привлечь заинтересованных посетителей путём публикации рекламных объявлений по принципу аукциона в реальном времени, выбирая из более чем 50 000 площадок различной тематики. Анализируя трафик, мы отсеиваем некачественные площадки, делая выбор в пользу наиболее эффективных.
+						+e.item
+							+e.icon.icon._ic7
+							+e.title SEO 
+								+e.SPAN.mark 60%
+							+e.txt С помощью SEO ваш сайт продвигается на первые позиции по тематическим запросам. Посетители приходят на него прямо из поиска. Этот канал – оптимальный выбор для прироста качественного трафика, но его использование требует высокой квалификации. Достижение результатов занимает несколько месяцев.
+
+
+	+b.client._pb_60._pt_40
+		.container
+			.content
+				+b.title Клиенты о нас
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+e.slider.owl-carousel
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+				+b.slider-nav
+					+e.prev
+						.icon.icon_arrow_left
+					+e.dots
+					+e.next
+						.icon.icon_arrow_right
+
+
+	+b.proces
+		.container
+			.content
+				+b.title Процесс
+
+				+e.body
+					+e.titles
+						+e.title 1. Аудирование сайта
+							+e.point
+							+e.line
+						+e.title 2. Внутренняя оптимизация
+							+e.point
+							+e.line
+						+e.title 3. Техническая оптимизация
+							+e.point
+							+e.line
+					+e.block
+						+e.angle._right
+						+e.angle._left
+						+e.lists
+							+b.UL.proces-list.__list
+								+e.item Анализ сайта с точки зрения поисковых систем;
+								+e.item Подбор запросов для продвижения и выбор страниц, наиболее соответствующих им;
+								+e.item Формирование стратегии продвижения.
+							+b.UL.proces-list.__list
+								+e.item Настройка индексирования сайта
+								+e.item Контент-маркетинг
+								+e.item Оптимизация HTML-кода под  поисковые запросы
+							+b.UL.proces-list.__list
+								+e.item Проверка/устранение технических ошибок сайта, негативно влияющих на SEO
+						+e.titles
+							+e.title 6. Отчетность
+								+e.point
+								+e.line
+							+e.title 5. Веб-аналитика
+								+e.point
+								+e.line
+							+e.title 4. Внешняя оптимизация
+								+e.point
+								+e.line
+					+e.lists
+						+b.UL.proces-list.__list
+							+e.item Личный кабинет пользователя с открытым отчетом обо всех действиях.
+						+b.UL.proces-list.__list
+							+e.item Аналитика источников трафика по каналам привлечения и видам рекламы;
+							+e.item Рекомендации по юзабилити и улучшению конверсии сайта.
+						+b.UL.proces-list.__list
+							+e.item Формирование ссылочной массы и упоминаемости бренда в сети: размещение вечных ссылок/пресс-репизов на тематических площадках и в социальных сетях
+
+
+
+	+b.order
+		.container
+			.content
+				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+e.INPUT.input(type="text", placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваш телефон
+							+e.INPUT.input(type="text", placeholder="Ваш сайт")
+						+b.control
+							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Отправить
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ

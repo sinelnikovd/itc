@@ -1,0 +1,120 @@
+.patern
+	background-image: url(media/img/patern.png)
+	background-color: #2f3c6b
+	position: relative
+	color: #fff
+	padding: 50px 0 62px
+	//+clearfix
+	.content
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			+radial-gradient(circle at 40% 50%, #fff 20%, transparent 100%)
+			opacity: .15
+	&_type
+		&_2
+			padding-top: 70px
+			@media only screen and (max-width : 1200px)
+				padding-top: 20px
+				padding-bottom: 20px
+			.patern
+				&__title
+					width: 40%
+					@media only screen and (max-width : 1200px)
+						width: 78%
+					@media only screen and (max-width : 750px)
+						width: 100%
+				&__desc
+					width: 60%
+					padding-left: 5%
+					@media only screen and (max-width : 1200px)
+						width: 78%
+						padding-left: 0
+					@media only screen and (max-width : 750px)
+						width: 100%
+		&_3
+			padding-top: 35px
+			.patern
+				&__title
+					width: 41%
+					@media only screen and (max-width : 1200px)
+						width: 78%
+					@media only screen and (max-width : 750px)
+						width: 100%
+				&__desc
+					width: 59%
+					padding-left: 5%
+					@media only screen and (max-width : 1200px)
+						width: 78%
+						padding-left: 0
+					@media only screen and (max-width : 750px)
+						width: 100%
+
+		&_4
+			padding-top: 58px
+			.patern
+				&__title
+					width: 41%
+					@extend %plight
+					font-size: 26px
+					padding-top: 26px
+				&__desc
+					width: 59%
+					padding-left: 5%
+
+	&__body
+		width: 100%
+		display: table
+		@media only screen and (max-width : 1200px)
+			display: block
+
+	&__title
+		color: #fff
+		//float: left
+		width: 28%
+		text-align: left
+		//padding-top: 75px
+		line-height: 1.25
+		display: table-cell
+		vertical-align: middle
+		@media only screen and (max-width : 1200px)
+			display: block
+			width: 78%
+		@media only screen and (max-width : 750px)
+			width: 100%
+
+	&__desc
+		//float: right
+		width: 72%
+		padding-left: 6.5%
+		margin-top: 14px
+		margin-bottom: 14px
+		box-sizing: border-box
+		position: relative
+		background-image: url(media/img/brace.png)
+		background-repeat: no-repeat
+		background-position: 0 50%
+		background-size: contain
+		display: table-cell
+		vertical-align: middle
+		@media only screen and (max-width : 1200px)
+			display: block
+			width: 78%
+			background: none
+			padding-left: 0
+		@media only screen and (max-width : 750px)
+			width: 100%
+		p
+			line-height: 1.5
+			margin: 14px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+
+

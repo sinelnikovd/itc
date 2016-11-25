@@ -1,0 +1,68 @@
+.work
+	+clearfix
+	&__item
+		float: left
+		width: 20%
+		padding-top: 20%
+
+.work-item
+	position: relative
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	overflow: hidden
+	&:hover
+		.work-item__hover
+			top: 0
+	&__hover
+		position: absolute
+		top: 100%
+		bottom: 0
+		left: 0
+		right: 0
+		text-align: center
+		background-color: #05447e
+		+transition(all .5s ease-in-out)
+		color: #fff
+		padding-top: 7%
+	&__title
+		@extend %pbold
+		font-size: 1.9em
+		text-transform: uppercase
+	&__desc
+		font-size: .85em
+		opacity: .7
+
+	&__list
+		&-key
+			@extend %psbold
+			font-size: 26px
+			margin-top: 10px
+			position: relative
+			display: inline-block
+
+	&__mark
+		position: absolute
+		top: 50%
+		+transform(translateY(-50%))
+		left: 100%
+		margin-left: 15px
+		background-color: rgba(#000, .3)
+		border-radius: 4px
+		font-size: 12px
+		vertical-align: middle
+		line-height: 1
+		padding: 5px 10px
+
+	&__link-group
+		margin-top: 10px
+		text-align: center
+	&__link
+		display: inline-block
+		+size(40px)
+		border: 1px solid rgba(#fff,.3)
+		border-radius: 4px
+		margin: 0 5px
+		padding-top: 8px
+		box-sizing: border-box
+

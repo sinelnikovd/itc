@@ -1,0 +1,107 @@
+.rate
+	padding: 20px 0 50px
+	text-align: center
+	&__title
+		font-size: 34px
+		@extend %pregular
+		text-align: center
+
+	&__desc
+		margin: 3px auto 0
+		line-height: 1.65
+		width: 70%
+
+	&__tab
+		display: inline-block
+		margin-top: 40px
+		padding: 0 10px
+		border-bottom: 2px solid #ebeaef
+		box-sizing: border-box
+		&-item
+			display: inline-block
+			padding: 0 15px
+			margin-bottom: -2px
+			&_active
+				.rate__tab-link
+					opacity: 1
+					border-bottom-color: #ff6026
+		&-link
+			display: inline-block
+			padding: 6px 5px
+			color: #333
+			border-bottom: 2px solid transparent
+			@extend %pbold
+			font-size: 12px
+			opacity: .6
+			text-transform: uppercase
+			text-decoration: none
+
+.rate-content
+	&__item
+		display: none
+		position: relative
+		text-align: left
+		width: 35%
+		margin-left: 57.5%
+		padding: 45px 0 0
+		&_active
+			display: block
+
+	&__img
+		position: absolute
+		top: 50%
+		+transform(translateY(-50%))
+		right: 100%
+		margin-right: 15%
+		max-width: none
+
+	&__title
+		@extend %pregular
+		font-size: 18px
+		text-transform: uppercase
+
+	&__price
+		font-size: 26px
+		@extend %pbold
+
+	&__sale
+		margin-top: 6px
+
+	&__list
+		margin-top: 30px
+		&-item
+			margin: 10px 0
+			position: relative
+			padding-left: 25px
+		&-icon
+			position: absolute
+			top: 0
+			left: 0
+
+	&__btn
+		margin-top: 30px
+		max-width: 160px
+		padding: 10px 0
+.rate-sale
+	border: 2px solid #23ce42
+	padding: 10px 20% 12px 12px
+	position: relative
+	box-sizing: border-box
+	&__percent
+		position: absolute
+		background-color: #23ce42
+		top: 0
+		bottom: 0
+		right: 0
+		width: 20%
+		padding-top: 5%
+		text-align: center
+		color: #fff
+		@extend %bold
+
+	&__price
+		@extend %pbold
+		font-size: 18px
+		line-height: 1
+	&__if
+		line-height: 1

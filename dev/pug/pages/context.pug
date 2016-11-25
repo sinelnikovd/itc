@@ -1,0 +1,262 @@
+extends ../base/page
+
+block title
+	title Продвижение сайтов
+
+block content
+	+b.top._context#sidebar-top
+		.container
+			+b.header__
+				+e.top
+					+b.A.logo.__logo(href="/")
+						+e.IMG.image(src="media/img/logo.png", alt="ITC-Meadia")
+						+e.SPAN.desc Создаем медиапространства
+					+b.call.__call
+						+e.icon
+							.icon.icon_phone
+						+e.UL.tab
+							+e.tab-item._active
+								+e.A.tab-link Москва
+							+e.tab-item
+								+e.A.tab-link Калуга
+							+e.tab-item
+								+e.A.tab-link Брянск
+						+e.UL.phone
+							+e.phone-item._active +7 (4832) 68-18-80
+							+e.phone-item +7 (4832) 68-18-81
+							+e.phone-item +7 (4832) 68-18-82
+					+e.recall
+						+btn(a)._transparent._border_1._border_white(href="#") Заказать звонок
+
+				include ../blocks/nav/nav
+
+			
+			+b.title.__title Контекстная реклама
+			+e.desc Ведения рекламных кампаний в системах контекстной рекламы Яндекс.Директ и Google Adwords <br>Эффективное размещение контекстной рекламы - это серьезная профессиональная задача со множеством нюансов. Нужно не только грамотно подобрать ключевые слова (и периодически их расширять), написать продающие тексты объявлений, выбрать подходящую стратегию по управлению ставками, работать над оптимизацией ставок, но и понимать как каждый запрос конвертируется в продажу, какой ROI каждого запроса. И таких тонкостей - миллион.
+			+e.content
+				+e.IMG.img(src="media/img/context-top.png")
+				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
+				+b.UL.list.__list
+					+e.item
+						+e.icon.icon._list_cw
+						| Мы умеем работать с небольшими бюджетами (от 3 000 руб. в месяц) и знаем, как выжать максимум;
+					+e.item
+						+e.icon.icon._list_cw
+						| Благодаря автоматизации работы у нас есть возможность удерживать низкие цены без потери качества;
+					+e.item
+						+e.icon.icon._list_cw
+						| Мы работаем по фиксированной стоимости за ведение рекламы и не берем % от вашего бюджета;
+					+e.item
+						+e.icon.icon._list_cw
+						| Отдельная стоимость по каждому региону продвижения.
+				+e.group-btn
+					+btn(a)._orange._fz_14.__btn(href="#") Заказать
+					+btn(a)._transparent._fz_14._border_1._border_white.__btn(href="#") Кейсы
+
+	include ../blocks/sidebar
+
+	+b.rate
+		.container
+			.content
+				+e.title Выберите подходящий тариф
+				+b.desc.__desc Наши последние достижения в области интернет-маркетинга позволили составить ряд успешных стратегий как для малого, так и для среднего бизнеса.
+				+e.UL.tab
+					+e.tab-item._active
+						+e.A.tab-link(href="#") Легкий старт
+					+e.tab-item
+						+e.A.tab-link(href="#") Бизнес
+					+e.tab-item
+						+e.A.tab-link(href="#") Профи
+
+				+b.rate-content
+					+e.item._active
+						+e.IMG.img(src="media/img/rate/1.png", alt="")
+						+e.title Легкий старт
+						+e.price 2490 
+							+b.SPAN.rubl Р
+							|  в месяц
+						+b.rate-sale.__sale
+							+e.price 1990 
+								+b.SPAN.rubl Р
+								|  в месяц
+							+e.if при заказе SEO-продвижения
+							+e.percent -20%
+
+						+e.UL.list
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Яндекс или Google
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Отслеживание целей
+							+e.list-item
+								+e.list-icon.icon._del
+								| Настройка Яндекс.Метрика
+							+e.list-item
+								+e.list-icon.icon._del
+								| Коллтрекинг
+
+						+btn(a)._orange._fz_14.__btn(href="#") Выбрать тариф
+					+e.item
+						+e.IMG.img(src="media/img/rate/2.png", alt="")
+						+e.title Легкий старт
+						+e.price 2490
+							+b.SPAN.rubl Р
+							|  в месяц
+						+b.rate-sale
+							+e.price 1990
+								+b.SPAN.rubl Р
+								|  в месяц
+							+e.if при заказе SEO-продвижения
+							+e.percent -20%
+						+e.UL.list
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Яндекс или Google
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Отслеживание целей
+							+e.list-item
+								+e.list-icon.icon._del
+								| Настройка Яндекс.Метрика
+							+e.list-item
+								+e.list-icon.icon._del
+								| Коллтрекинг
+						+btn(a)._orange._fz_14.__btn(href="#") Выбрать тариф
+
+					+e.item
+						+e.IMG.img(src="media/img/rate/3.png", alt="")
+						+e.title Легкий старт
+						+e.price 2490
+							+b.SPAN.rubl Р
+							|  в месяц
+						+b.rate-sale
+							+e.price 1990
+								+b.SPAN.rubl Р
+								|  в месяц
+							+e.if при заказе SEO-продвижения
+							+e.percent -20%
+
+						+e.UL.list
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Яндекс или Google
+							+e.list-item
+								+e.list-icon.icon._list_cg_b
+								| Отслеживание целей
+							+e.list-item
+								+e.list-icon.icon._del
+								| Настройка Яндекс.Метрика
+							+e.list-item
+								+e.list-icon.icon._del
+								| Коллтрекинг
+
+						+btn(a)._orange._fz_14.__btn(href="#") Выбрать тариф
+
+
+	+b.rsya
+		.container
+			.content
+				+e.IMG.arm(src="media/img/rsya.png", alt="")
+				+b.title.__title РСЯ — рекламная сеть Яндекс
+				+e.desc Настройка и сопровождение 
+					+e.STRONG.free БЕСПЛАТНО!
+				+btn(a)._orange._fz_14.__btn(href="#") Подробнее
+
+	+b.ad-no-work
+		.container
+			.content
+				+e.body
+					+b.title Если реклама не помогает
+					+b.desc.__desc Вы уже сотрудничаете с тем или иным SEO-агентством, но недовольны результатом или стоимостью раскрутки сайта? Закажите у нас бесплатный аудит Вашего веб-ресурса — и мы уже сегодня дадим Вам рекомендации по его улучшению и развитию.
+					+btn(a)._orange._h_50._fz_14.__btn(href="#") Заказать бесплатный аудит сайта
+
+				+e.notebook
+
+	+b.efficiency._hr
+		.container
+			.content
+				+b.hr.__hr
+				+b.title.__title Главный критерий эффективности для нас - рост вашего бизнеса
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+b.slider-wrap
+					+e.nav._prev
+						.icon.icon_arrow_left
+					+e.nav._next
+						.icon.icon_arrow_right
+
+					+e.slider
+						+b.slider-graph
+							+b.graph-item
+								+e.name Роза Мимоза
+								+e.A.link(href="#") rosamimoza.ru
+								+e.IMG.img(src="media/images/graph/1.jpg", alt="")
+								+b.UL.graph-number
+									+e.item
+										+e.number +770%
+										+e.P.desc Рост поискового трафика с мобильных устройств.
+									+e.item
+										+e.number 2000+ 
+										+e.SPAN.mark +350%
+										+e.P.desc Количество запросов в ТОП10.
+									+e.item
+										+e.number 52,64%
+										+e.P.desc Достижение цели в случаев переходов с контекстной рекламы
+								+e.data
+									+b.UL.list-data.__list
+										+e.item
+											strong Тематика: 
+											| B2C-рынок, цветы
+										+e.item
+											strong Услуга: 
+											| Продвижение в ТОП-10
+										+e.item
+											strong Регион: 
+											| Самара
+										+e.item
+											strong Срок достижения результата: 
+											| 9 месяцев
+									+e.result
+										+e.STRONG.result-title Результаты работы
+										p Каждый заказ в данной тематике - это доход в 100-150 тысяч рублей. 10-кратный рост поискового трафика позволил увеличить поток клиентов через сайт, что привело к росту оборота более чем на 3 миллиона рублей.
+
+
+	+b.patern._type_4
+		.container
+			.content
+				+b.title.__title Наиболее полезным инструментом контекстная реклама оказывается в следующих случаях
+				+e.desc
+					p Если вы организуете какие-либо акции, специальные предложения для своих клиентов или осуществляете продажу сезонных товаров
+					p Для тех, кто хочет получить целевой трафик «прямо сейчас»
+					p В случае наличия достаточных средств на интернет-маркетинг, было бы неэффективно использовать лишь один канал привлечения клиентов, такой как SEO.
+
+
+	+b.order
+		.container
+			.content
+				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+e.INPUT.input(type="text", placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваш телефон
+							+e.INPUT.input(type="text", placeholder="Ваш сайт")
+						+b.control
+							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Отправить
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ

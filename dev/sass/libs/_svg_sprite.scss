@@ -1,0 +1,498 @@
+.icon {
+    font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("media/img/svg/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 8em 79.3em;
+
+      .no-svg & {
+        background-image: url("media/img/svg/sprite.png");
+      }
+    }
+}
+
+
+
+
+.icon_Yandex {
+  &:before {
+      background-position: 0em 0em;
+      width: 8em;
+      height: 3.1787em;
+    }
+  }
+
+  @mixin icon-Yandex(){
+    @extend .icon_Yandex;
+  }
+
+
+.icon_arrow_left {
+  &:before {
+      background-position: 0em -3.2em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-arrow_left(){
+    @extend .icon_arrow_left;
+  }
+
+
+.icon_arrow_right {
+  &:before {
+      background-position: 0em -5.6em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-arrow_right(){
+    @extend .icon_arrow_right;
+  }
+
+
+.icon_brief {
+  &:before {
+      background-position: 0em -8em;
+      width: 1.4em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-brief(){
+    @extend .icon_brief;
+  }
+
+
+.icon_del {
+  &:before {
+      background-position: 0em -10.1em;
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-del(){
+    @extend .icon_del;
+  }
+
+
+.icon_download {
+  &:before {
+      background-position: 0em -11.5em;
+      width: 1.1em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-download(){
+    @extend .icon_download;
+  }
+
+
+.icon_fb {
+  &:before {
+      background-position: 0em -12.9em;
+      width: 1.2em;
+      height: 2.2em;
+    }
+  }
+
+  @mixin icon-fb(){
+    @extend .icon_fb;
+  }
+
+
+.icon_guarantee {
+  &:before {
+      background-position: 0em -15.1em;
+      width: 1.4em;
+      height: 1.8em;
+    }
+  }
+
+  @mixin icon-guarantee(){
+    @extend .icon_guarantee;
+  }
+
+
+.icon_help {
+  &:before {
+      background-position: 0em -16.9em;
+      width: 3em;
+      height: 3em;
+    }
+  }
+
+  @mixin icon-help(){
+    @extend .icon_help;
+  }
+
+
+.icon_ic1 {
+  &:before {
+      background-position: 0em -19.9em;
+      width: 5em;
+      height: 2.5em;
+    }
+  }
+
+  @mixin icon-ic1(){
+    @extend .icon_ic1;
+  }
+
+
+.icon_ic2 {
+  &:before {
+      background-position: 0em -22.4em;
+      width: 4.7em;
+      height: 1.7em;
+    }
+  }
+
+  @mixin icon-ic2(){
+    @extend .icon_ic2;
+  }
+
+
+.icon_ic3 {
+  &:before {
+      background-position: 0em -24.1em;
+      width: 3.2em;
+      height: 3.5em;
+    }
+  }
+
+  @mixin icon-ic3(){
+    @extend .icon_ic3;
+  }
+
+
+.icon_ic4 {
+  &:before {
+      background-position: 0em -27.6em;
+      width: 4.2em;
+      height: 3.9em;
+    }
+  }
+
+  @mixin icon-ic4(){
+    @extend .icon_ic4;
+  }
+
+
+.icon_ic5 {
+  &:before {
+      background-position: 0em -31.5em;
+      width: 4.6em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin icon-ic5(){
+    @extend .icon_ic5;
+  }
+
+
+.icon_ic6 {
+  &:before {
+      background-position: 0em -34.7em;
+      width: 5em;
+      height: 5em;
+    }
+  }
+
+  @mixin icon-ic6(){
+    @extend .icon_ic6;
+  }
+
+
+.icon_ic7 {
+  &:before {
+      background-position: 0em -39.7em;
+      width: 4.4em;
+      height: 3.7em;
+    }
+  }
+
+  @mixin icon-ic7(){
+    @extend .icon_ic7;
+  }
+
+
+.icon_in {
+  &:before {
+      background-position: 0em -43.4em;
+      width: 2.2em;
+      height: 2.2em;
+    }
+  }
+
+  @mixin icon-in(){
+    @extend .icon_in;
+  }
+
+
+.icon_link {
+  &:before {
+      background-position: 0em -45.6em;
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  @mixin icon-link(){
+    @extend .icon_link;
+  }
+
+
+.icon_list_c3 {
+  &:before {
+      background-position: 0em -47.1em;
+      width: 1.2em;
+      height: 1.2em;
+    }
+  }
+
+  @mixin icon-list_c3(){
+    @extend .icon_list_c3;
+  }
+
+
+.icon_list_cg {
+  &:before {
+      background-position: 0em -48.3em;
+      width: 1.2em;
+      height: 1.2em;
+    }
+  }
+
+  @mixin icon-list_cg(){
+    @extend .icon_list_cg;
+  }
+
+
+.icon_list_cg_b {
+  &:before {
+      background-position: 0em -49.5em;
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-list_cg_b(){
+    @extend .icon_list_cg_b;
+  }
+
+
+.icon_list_cw {
+  &:before {
+      background-position: 0em -50.9em;
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-list_cw(){
+    @extend .icon_list_cw;
+  }
+
+
+.icon_phone {
+  &:before {
+      background-position: 0em -52.3em;
+      width: 1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-phone(){
+    @extend .icon_phone;
+  }
+
+
+.icon_phone_black {
+  &:before {
+      background-position: 0em -54.4em;
+      width: 1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-phone_black(){
+    @extend .icon_phone_black;
+  }
+
+
+.icon_phone_blue {
+  &:before {
+      background-position: 0em -56.5em;
+      width: 1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-phone_blue(){
+    @extend .icon_phone_blue;
+  }
+
+
+.icon_plus {
+  &:before {
+      background-position: 0em -58.6em;
+      width: 0.8em;
+      height: 0.8em;
+    }
+  }
+
+  @mixin icon-plus(){
+    @extend .icon_plus;
+  }
+
+
+.icon_saic_1 {
+  &:before {
+      background-position: 0em -59.4em;
+      width: 2.4em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-saic_1(){
+    @extend .icon_saic_1;
+  }
+
+
+.icon_saic_2 {
+  &:before {
+      background-position: 0em -61.5em;
+      width: 2.3em;
+      height: 2em;
+    }
+  }
+
+  @mixin icon-saic_2(){
+    @extend .icon_saic_2;
+  }
+
+
+.icon_saic_3 {
+  &:before {
+      background-position: 0em -63.5em;
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  @mixin icon-saic_3(){
+    @extend .icon_saic_3;
+  }
+
+
+.icon_saic_4 {
+  &:before {
+      background-position: 0em -65.5em;
+      width: 2.8em;
+      height: 1.3em;
+    }
+  }
+
+  @mixin icon-saic_4(){
+    @extend .icon_saic_4;
+  }
+
+
+.icon_saic_5 {
+  &:before {
+      background-position: 0em -66.8em;
+      width: 2.2em;
+      height: 1.9em;
+    }
+  }
+
+  @mixin icon-saic_5(){
+    @extend .icon_saic_5;
+  }
+
+
+.icon_saic_6 {
+  &:before {
+      background-position: 0em -68.7em;
+      width: 2.1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-saic_6(){
+    @extend .icon_saic_6;
+  }
+
+
+.icon_search {
+  &:before {
+      background-position: 0em -70.8em;
+      width: 1.8em;
+      height: 1.8em;
+    }
+  }
+
+  @mixin icon-search(){
+    @extend .icon_search;
+  }
+
+
+.icon_star {
+  &:before {
+      background-position: 0em -72.6em;
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  @mixin icon-star(){
+    @extend .icon_star;
+  }
+
+
+.icon_stat {
+  &:before {
+      background-position: 0em -74.1em;
+      width: 1.9em;
+      height: 1.9em;
+    }
+  }
+
+  @mixin icon-stat(){
+    @extend .icon_stat;
+  }
+
+
+.icon_tie {
+  &:before {
+      background-position: 0em -76em;
+      width: 1.1em;
+      height: 2em;
+    }
+  }
+
+  @mixin icon-tie(){
+    @extend .icon_tie;
+  }
+
+
+.icon_vk {
+  &:before {
+      background-position: 0em -78em;
+      width: 2.2em;
+      height: 1.3em;
+    }
+  }
+
+  @mixin icon-vk(){
+    @extend .icon_vk;
+  }

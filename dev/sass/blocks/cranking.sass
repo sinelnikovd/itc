@@ -1,0 +1,113 @@
+.cranking
+	padding-bottom: 47px
+	&__title
+		margin-top: 75px
+		padding-left: 6.5%
+		font-size: 26px
+		@extend %plight
+		@media only screen and (max-width : 550px)
+			padding-left: 0
+			font-family: "ProximaNovaBold", $helvetica
+			color: #000
+			font-size: 18px
+	&__accordion
+		margin-top: 25px
+
+.cranking-top
+	padding: 75px 0 0
+	position: relative
+	+clearfix
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		height: 1px
+		background-color: #e5e5e5
+		left: 0
+		right: 0
+		@media only screen and (max-width : 750px)
+			display: none
+	&__chart
+		float: left
+		width: 46%
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+			text-align: center
+			border-bottom: 1px solid #e5e5e5
+		&-img
+			position: relative
+			margin-bottom: -13.5%
+			@media only screen and (max-width : 750px)
+				margin-bottom: -60px
+			@media only screen and (max-width : 500px)
+				margin-bottom: -13.5%
+	&__body
+		float: right
+		width: 54%
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+		//margin-left: 46%
+	&__title
+		width: 78%
+		font-size: 18px
+		@extend %pbold
+		line-height: 1.2
+	&__txt
+		margin-top: 10px
+		line-height: 1.6
+
+
+
+.accordion
+	&__head
+		margin-top: 10px
+		border-top: 1px solid #e5e5e5
+		border-left: 1px solid #e5e5e5
+		border-right: 1px solid #e5e5e5
+		border-bottom: 1px solid #e5e5e5
+		padding: 9px 20px 12px 6.2%
+		box-sizing: border-box
+		@extend %bold
+		width: 81%
+		position: relative
+		@media only screen and (max-width : 750px)
+			width: 100%
+		@media only screen and (max-width : 550px)
+			padding-left: 10%
+		&_active
+			border-bottom: 0 none
+			.accordion__icon
+				+transform(rotate(135deg))
+
+	&__icon
+		position: absolute
+		top: 50%
+		margin-top: -6px
+		left: 2.2%
+		+size(8px)
+		+transform(rotate(-45deg))
+		+transition(all .5s ease-in-out)
+		border-bottom: 1px solid #9eafb4
+		border-left: 1px solid #9eafb4
+
+
+	&__body
+		border-bottom: 1px solid #e5e5e5
+		border-left: 1px solid #e5e5e5
+		border-right: 1px solid #e5e5e5
+		padding: 0 20px 12px 6.2%
+		width: 81%
+		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			width: 100%
+		@media only screen and (max-width : 550px)
+			padding-left: 10%
+
+	&__list
+		&-item
+			margin: 16px 0
+			&:first-child
+				margin-top: 0
+

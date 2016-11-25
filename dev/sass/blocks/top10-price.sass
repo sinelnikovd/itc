@@ -1,0 +1,155 @@
+.top10-price
+	padding: 30px 0 50px
+	text-align: center
+	&__title
+		width: 70%
+		margin: 0 auto
+	&__tab
+		margin-top: 20px
+		display: inline-block
+		border-bottom: 2px solid #ebeaef
+		&-item
+			display: inline-block
+			margin-bottom: -2px
+			@media only screen and (max-width : 550px)
+				width: 48%
+			&_active
+				border-bottom: 2px solid #ff6026
+				.top10-price__tab-link
+					opacity: 1
+		&-link
+			padding: 5px 20px
+			text-transform: uppercase
+			text-decoration: none
+			opacity: .6
+			color: #333
+			@extend %pbold
+			font-size: 12px
+			display: block
+
+
+	&__slide
+		&-nav
+			position: absolute
+			top: 60px
+			cursor: pointer
+			z-index: 50
+			&-wrap
+				position: relative
+				display: none
+				@media only screen and (max-width : 750px)
+					display: block
+			&_prev
+				left: 0
+			&_next
+				right: 0
+
+	&__table
+		width: 85%
+		display: table
+		margin: 38px auto 0
+		@media only screen and (max-width : 950px)
+			width: 100%
+		@media only screen and (max-width : 750px)
+			display: block
+
+	&__row
+		display: table-row
+		@media only screen and (max-width : 750px)
+			display: block
+		.top10-price__cell
+			border-top: 1px solid #e5e5e5
+		&_head
+			.top10-price__cell
+				color: #333
+				border-top: 0 none
+				@extend %bold
+				@media only screen and (max-width : 750px)
+					font-family: "ProximaNovaLight", $helvetica
+					font-size: 26px
+		&_foot
+			.top10-price__cell
+				color: #333
+				border-bottom: 1px solid #e5e5e5
+				@extend %bold
+				background-color: #f2f2f2
+				font-size: 16px
+				white-space: nowrap
+				&_h
+					white-space: normal
+
+
+	&__cell
+		display: table-cell
+		padding: 10px 30px
+		line-height: 1.4
+		vertical-align: middle
+		color: #515a5c
+		position: relative
+		@media only screen and (max-width : 750px)
+			display: block
+			font-family: "ProximaNovaBold", $helvetica
+			font-size: 18px
+		&_h
+			text-align: left
+			padding-right: 10px
+			@media only screen and (max-width : 750px)
+				display: none
+		&_t
+			@media only screen and (max-width : 750px)
+				display: none
+		&_old-price
+			padding-top: 3px
+			padding-bottom: 5px
+			line-height: 1.1
+
+
+	&__hidden
+		display: none
+		margin-bottom: 10px
+		@extend %regular
+		font-size: 14px
+		@media only screen and (max-width : 750px)
+			display: block
+		&_f
+			@extend %bold
+			color: #333
+			font-size: 18px
+
+	&__old-price
+		position: relative
+		color: #515a5c
+		font-size: 14px
+		@extend %regular
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			background: #515a5c
+			height: 1px
+			opacity: .6
+	&__sale
+		background-color: #da2c27
+		border-radius: 4px
+		font-size: 14px
+		@extend %regular
+		color: #fff
+		display: inline-block
+		padding: 0 5px
+		line-height: 1.1
+
+	&__tooltip
+		line-height: 1
+		&_h
+			position: absolute
+			top: 50%
+			margin-top: -10px
+			right: 10px
+			display: none
+			@media only screen and (max-width : 750px)
+				display: block
+
+
+

@@ -1,0 +1,49 @@
+.select-inline
+	display: inline-block
+	position: relative
+	&__list
+		display: none
+		opacity: 1
+		visibility: visible
+		background-color: #2f3c6b
+		&_dropdown
+			position: absolute
+			top: 50%
+			+transform(translateY(-50%))
+			display: block
+			z-index: 301
+	&__txt
+		cursor: pointer
+		line-height: 1
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -2px
+			right: -20px
+			+size(5px)
+			+transform(rotate(45deg))
+			border-bottom: 2px solid #4fc3f7
+			border-right: 2px solid #4fc3f7
+	&__item
+		font-size: .8em
+		@extend %regular
+		white-space: nowrap
+		color: #fff
+		padding: 15px 30px
+		cursor: pointer
+		&:hover
+			background-color: rgba(#fff,.1)
+
+	&__overlay
+		display: none
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 300
+		background-color: rgba(#000, .5)
+		&_dropdown
+			display: block

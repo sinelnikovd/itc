@@ -1,0 +1,94 @@
+.seo
+	padding: 40px 0
+	&__content
+		margin-left: 34.05%
+
+.seo-item
+	margin: 30px 0 0
+	width: 52.5%
+	position: relative
+	&_right
+		margin-left: 47.5%
+		.seo-item__img
+			left: -100%
+			margin-left: 8px
+			top: 30px
+		.seo-item__line
+			&:after
+				left: -30%
+			&:before
+				right: 130%
+	&_left
+		margin-top: 68px
+		.seo-item__img
+			right: -100%
+			margin-right: 15px
+		.seo-item__line
+			&:after
+				left: 0
+				right: -30%
+			&:before
+				left: 130%
+	&__price
+		@extend %pbold
+		font-size: 18px
+		&-num
+			font-size: 34px
+			display: inline-block
+			margin: 0 5px
+			letter-spacing: 1.8px
+			&_green
+				color: #23ce42
+	&__title
+		@extend %pbold
+		font-size: 18px
+
+	&__img
+		position: absolute
+		
+
+	&__line
+		margin-top: 10px
+		position: relative
+
+		&:after
+			content: ''
+			position: absolute
+			right: 0
+			background: #ccc
+			height: 1px
+
+		&:before
+			content: ''
+			position: absolute
+			background-color: #ccc
+			
+			top: -3px
+			+size(7px)
+			border-radius: 100%
+
+
+
+
+.seo-list
+	margin-top: 30px
+	&_green
+		.seo-list__icon
+			+icon-list_cg
+	&__item
+		margin: 15px 0
+		padding-left: 20px
+		position: relative
+	&__icon
+		position: absolute
+		left: 2px
+		top: 0
+		@extend .icon
+		+icon-list_c3
+	&__title
+		font-size: 12px
+		@extend %pbold
+		text-transform: uppercase
+	&__desc
+		margin-top: 4px
+

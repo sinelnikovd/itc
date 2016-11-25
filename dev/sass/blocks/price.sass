@@ -1,0 +1,102 @@
+.price
+	padding: 10px 0 48px
+	&__hr
+		margin-bottom: 42px
+	&__list
+		margin-top: 43px
+		+clearfix
+.price-item
+	float: left
+	width: 31%
+	border: 1px solid #e5e5e5
+	box-sizing: border-box
+	margin-top: 30px
+	text-align: center
+	padding: 48px 15px 28px
+	&:first-child
+		border-right: 0 none
+	&:nth-child(2)
+		width: 38%
+		margin-top: 0
+		padding-top: 58px
+		padding-bottom: 33px
+		border-color: #ff6026
+		.price-item__price
+			margin-top: 45px
+		.price-item__list
+			margin-top: 40px
+		.price-item__btn
+			margin-top: 38px
+	&:last-child
+		border-left: 0 none
+		.price-item__price
+			margin-top: 48px
+		.price-item__btn
+			margin-top: 8px
+	&__title
+		font-size: 26px
+		@extend %pbold
+	&__desc
+		margin-top: 5px
+		line-height: 1.6
+		color: #515a5c
+	&__price
+		margin-top: 25px
+		font-size: 34px
+		line-height: 1
+		@extend %pbold
+	&__count-client
+		margin-top: 4px
+		color: #929292
+		font-size: 12px
+	&__list
+		color: #515a5c
+		margin-top: 10px
+		&-item
+			padding: 12px 0
+			line-height: 1.6
+			position: relative
+			&:first-child
+				&:after
+					display: none
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				width: 160px
+				margin: 0 auto
+				height: 1px
+				background-color: #e5e5e5
+	&__btn
+		padding: 10px 0 9px
+		width: 68%
+		margin: 55px auto 0
+		&_orange
+			padding: 15px 0 17px
+			width: 60%
+			box-shadow: 0 5px 10px rgba(#ff6026, .24)
+
+
+	&__next
+		display: inline-block
+		margin-top: 10px
+		font-size: 11px
+		color: #929292
+
+.price-help
+	text-align: center
+	margin-top: 52px
+	&__link
+		display: inline-block
+		margin-top: 7px
+		color: #039be6
+		text-transform: uppercase
+		@extend %pbold
+		font-size: 12px
+		line-height: 1
+		text-decoration: none
+		border-bottom: 2px dotted #039be6
+		&:hover
+			border-bottom-color: transparent

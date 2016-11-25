@@ -1,0 +1,471 @@
+extends ../base/page
+
+block title
+	title Продвижение сайтов
+
+block content
+
+	+b.top#sidebar-top
+
+		include ../blocks/header
+
+		.container
+			+b.title.__title SEO-продвижение с абонентской платой
+			+e.desc SEO-продвижение с абонентской платой — самая простая и потому самая популярная схема оплаты за продукт. Мы рекомендуем именно эту схему оплаты для небольших интернет-проектов и средних, на продвижение которых бюджет ограничен.
+			+e.content.animated.fadeInRight
+				+e.IMG.img.animated.fadeInRight(src="media/img/subscriber-top.png")
+				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
+				+b.UL.list.__list
+					+e.item
+						+e.icon.icon._list_cw
+						| Самая рентабельная схема для небольших интернет-проектов
+					+e.item
+						+e.icon.icon._list_cw
+						| Простота расчётов: в отличие от других схем оплат в этой не нужно изучать дополнительную информацию.
+					+e.item
+						+e.icon.icon._list_cw
+						| Цена на продвижение в течение года не меняется
+					+e.item
+						+e.icon.icon._list_cw
+						| Вы не платите за нахождение запросов в ТОП-10, а также за добавление новых
+					+e.item
+						+e.icon.icon._list_cw
+						| Гарантированный список работ
+				+e.group-btn
+					+btn(a)._orange._fz_14.__btn(href="#") Заказать
+					+btn(a)._transparent._fz_14._border_1._border_white.__btn(href="#") Кейсы
+
+
+	include ../blocks/sidebar
+
+	+b.top10-price
+		.container
+			.content
+				+b.title.__title Абонентская плата за продвижение сайта в ТОП10
+				+e.UL.tab
+					+e.tab-item._active
+						+e.A.tab-link(href="javascript:void(0);") Месячная подписка
+					+e.tab-item
+						+e.A.tab-link(href="javascript:void(0);") Годовая подписка
+				+e.slide-nav-wrap
+					+e.slide-nav._prev.icon._arrow_left
+					+e.slide-nav._next.icon._arrow_right
+				+e.table
+					+e.row._head
+						+e.cell._h Название тарифа
+						+e.cell._t
+						+e.cell._slide «Город»
+						+e.cell._slide «Столица»
+						+e.cell._slide «Россия»
+					+e.row
+						+e.cell._h Ежемесячный комплекс работ по оптимизации и монторингу
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Количество запросов
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Количество запросов
+							| до 120
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Количество запросов
+							| до 150
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Количество запросов
+							| до 200
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Конкурентность запросов
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Конкурентность запросов
+							| средняя
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Конкурентность запросов
+							| высокая
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Конкурентность запросов
+							| высокая
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Максимальное количество регионов для продвижения
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Максимальное количество регионов для продвижения
+							| 1
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Максимальное количество регионов для продвижения
+							| 3
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Максимальное количество регионов для продвижения
+							| 9
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Участие копирайтера для написания текстов (символов)
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Участие копирайтера для написания текстов (символов)
+							| 20 000
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Участие копирайтера для написания текстов (символов)
+							| 25 000
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Участие копирайтера для написания текстов (символов)
+							| 30 000
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Рекомендации по улучшению продающих качеств сайта
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Рекомендации по улучшению продающих качеств сайта
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Рекомендации по улучшению продающих качеств сайта
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Рекомендации по улучшению продающих качеств сайта
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Техническая поддержка сайта
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Техническая поддержка сайта
+							| 1 час
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Техническая поддержка сайта
+							| 2 часа
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Техническая поддержка сайта
+							| 4 часа
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Еженедельная отчетность
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Еженедельная отчетность
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Еженедельная отчетность
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Еженедельная отчетность
+							+b.icon._list_cg
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row
+						+e.cell._h Написание текстов сверх лимита (за 1000 символов), руб.
+						+e.cell._t
+							+b.tooltip(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
+							| 220
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
+							| 200
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+						+e.cell._slide
+							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
+							| 190
+							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
+								+e.SPAN.txt ?
+					+e.row._foot
+						+e.cell._h Стоимость тарифа, руб.
+						+e.cell._t
+						+e.cell._slide
+							+e.hidden._f Стоимость тарифа, руб.
+							| 12 000 р.
+						+e.cell._slide
+							+e.hidden._f Стоимость тарифа, руб.
+							| 20 000 р.
+						+e.cell._old-price._slide
+							+e.hidden._f Стоимость тарифа, руб.
+							+e.SPAN.sale -15%
+							br
+							+e.SPAN.old-price 24 000 р.
+							br
+							| 20 000 р.
+
+
+
+
+
+
+	+b.client._hr._pb_75
+		.container
+			.content
+				+b.hr
+				+b.title Клиенты о нас
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+e.slider.owl-carousel
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+				+b.slider-nav
+					+e.prev
+						.icon.icon_arrow_left
+					+e.dots
+					+e.next
+						.icon.icon_arrow_right
+
+	+b.patern._type_2.darkBlock
+		.container
+			.content
+				+e.body
+					+b.title.__title Данный вид продвижения услуг подходит в первую очередь
+					+e.desc
+						p Молодым сайтам либо сайтам, никогда ранее не продвигавшимся
+						p Для желающих впервые попробовать SEO
+						p Для тех кто не готов платить за нахождение запросов в топе, а также за добавление новых
+
+	+b.cranking
+		.container
+			.content
+				+b.cranking-top
+
+					+e.body
+						+e.title Раскрутка сайта с нами ‐ никаких загадок и черных ящиков.
+						+e.txt Вы знаете, какие работы проводятся над вашим сайтом, и за что вы платите деньги: мы предоставляем подробный план работ и ежемесячные отчеты.
+					+e.chart
+						+e.IMG.chart-img(src="media/img/graph.png", alt="")
+				+e.title Работы, которые входят в услугу
+				+b.accordion.__accordion
+					+e.head._active
+						+e.icon
+						| Подготовка сайта к продвижению (1-ый месяц)
+					+e.body
+						+e.UL.list
+							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
+							+e.list-item Работа над контентом на посадочных страницах;
+							+e.list-item Мониторинг позиций по продвигаемым запросам;
+							+e.list-item Улучшение поведенческих факторов сайта;
+							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии сайта;
+					+e.head
+						+e.icon
+						| Продвижение сайта (2-ой и последующие месяцы)
+					+e.body
+						+e.UL.list
+							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
+							+e.list-item Работа над контентом на посадочных страницах;
+							+e.list-item Мониторинг позиций по продвигаемым запросам;
+							+e.list-item Улучшение поведенческих факторов сайта;
+							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии сайта;
+					+e.head
+						+e.icon
+						| Поддержка достигнутых позиций сайта (начиная с 6 месяца продвижения)
+					+e.body
+						+e.UL.list
+							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
+							+e.list-item Работа над контентом на посадочных страницах;
+							+e.list-item Мониторинг позиций по продвигаемым запросам;
+							+e.list-item Улучшение поведенческих факторов сайта;
+							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии 
+
+	+b.order.darkBlock
+		.container
+			.content
+				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+e.INPUT.input(type="text", placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваш телефон
+							+e.INPUT.input(type="text", placeholder="Ваш сайт")
+						+b.control
+							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Отправить
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ

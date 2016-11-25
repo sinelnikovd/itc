@@ -1,0 +1,129 @@
+extends ../base/page
+
+block title
+	title Продвижение сайтов
+
+block content
+
+	+b.top-bg._site
+		.container
+			+b.header__
+				+e.top
+					+b.A.logo.__logo(href="/")
+						+e.IMG.image(src="media/img/logo.png", alt="ITC-Meadia")
+						+e.SPAN.desc Создаем медиапространства
+					+b.call.__call
+						+e.icon
+							.icon.icon_phone
+						+e.UL.tab
+							+e.tab-item._active
+								+e.A.tab-link Москва
+							+e.tab-item
+								+e.A.tab-link Калуга
+							+e.tab-item
+								+e.A.tab-link Брянск
+						+e.UL.phone
+							+e.phone-item._active +7 (4832) 68-18-80
+							+e.phone-item +7 (4832) 68-18-81
+							+e.phone-item +7 (4832) 68-18-82
+					+e.recall
+						+btn(a)._transparent._border_1._border_white(href="#") Заказать звонок
+
+				include ../blocks/nav/nav
+			+e.content
+				+e.desc
+					+e.H1.title Разработка сайтов «под ключ»
+					+e.P.txt Являясь одним из ведущих экспертов в области интернет-маркетинга, мы накопили бесценный опыт во многих областях online.
+					+btn(a)._orange._fz_14.__btn(href="#") Заказать сайт
+				+e.btn-wrap
+					+btn(a)._transparent._border_1._border_white.__btn-nav(href="#") Кейсы
+					+btn(a)._transparent._border_1._border_white.__btn-nav(href="#") Клиенты о нас
+
+			+b.UL.advantage-site.__advantage
+				+e.item
+					+e.icon.icon._saic_1
+					| 8 лет на рынке (с 2009 года)
+				+e.item
+					+e.icon.icon._saic_2
+					| Свыше 300 сайтов разработано
+				+e.item
+					+e.icon.icon._saic_3
+					| Свыше 100 клиентов на постоянной поддержке
+				+e.item
+					+e.icon.icon._saic_4
+					| Специалисты высочайшего класса
+				+e.item
+					+e.icon.icon._saic_5
+					| Нам доверяют свои сайты крупнейшие компании
+				+e.item
+					+e.icon.icon._saic_6
+					| Полное погружение в проект
+
+
+
+	//include ../blocks/sidebar
+
+
+	+b.join.blueblock
+		.container
+			+e.title Готовы присоединиться к довольным клиентам?
+			+e.form
+				form(action="/")
+					+e.INPUT.input(type="text", placeholder="Имя")
+					+e.INPUT.input(type="tel", placeholder="Телефон")
+					+btn(button)._orange._h_50._fz_14.__btn(type="submit") Присоединиться
+
+	+b.work
+		- for (var x = 1; x <= 10; x++)
+			+b.work-item.__item(style="background-image: url(media/images/work/"+ x + ".jpg)")
+				+e.hover
+					+e.title Августин
+					+e.desc Год на продвижении
+					+e.DL.list
+						+e.DT.list-key 150%
+						+e.DD.list-desc Увеличена доля поискового трафика 
+						+e.DT.list-key 88%
+							+e.mark +31%
+						+e.DD.list-desc Запросы в ТОП10 
+						+e.DT.list-key 3 897
+							+e.mark +1200%
+						+e.DD.list-desc Число посетителей в месяц
+					+e.link-group
+						+e.A.link(href="#")
+							+b.icon._link.__icon
+						+e.A.link(href="#")
+							+b.icon._stat.__icon
+
+
+
+
+
+	+b.order
+		.container
+			.content
+				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+e.INPUT.input(type="text", placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваш телефон
+							+e.INPUT.input(type="text", placeholder="Ваш сайт")
+						+b.control
+							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Отправить
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ

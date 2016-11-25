@@ -1,0 +1,133 @@
+.top
+	background-color: #2f3c6b
+	background-image: url(media/img/dots-pattern.png)
+	position: relative
+	color: #fff
+	padding-bottom: 88px
+	overflow: hidden
+	&_optimization
+		padding-bottom: 132px
+		@media only screen and (max-width : 750px)
+			padding-bottom: 50px
+		.top__img
+			top: -15px
+			margin-right: 22%
+			@media only screen and (max-width : 950px)
+				margin-right: 2%
+	&_internet
+		padding-bottom: 102px
+		.top
+			&__content
+				margin-top: 100px
+			&__img
+				top: -85px
+				margin-right: 0
+
+	&_context
+		padding-bottom: 120px
+		.top
+			&__desc
+				width: 80%
+			&__content
+				margin-top: 30px
+			&__img
+				top: -10px
+				margin-right: -10%
+			&__list
+				width: 100%
+	.container
+		position: relative
+		z-index: 2
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 100%
+		+linear-gradient(to bottom, transparent, #303e6e 70%)
+
+	&__title
+		margin-top: 28px
+		color: #fff
+		@media only screen and (max-width : 950px)
+			margin-top: 40px
+
+	&__desc
+		margin: 7px auto
+		line-height: 1.75
+		width: 52%
+		text-align: center
+		@media only screen and (max-width : 1200px)
+			width: 70%
+		@media only screen and (max-width : 950px)
+			margin-top: 10px
+			width: 90%
+		@media only screen and (max-width : 550px)
+			display: none
+
+	&__content
+		margin-top: 80px
+		width: 40%
+		margin-left: 60%
+		position: relative
+		@media only screen and (max-width : 950px)
+			width: 50%
+			margin-left: 50%
+		@media only screen and (max-width : 750px)
+			width: 100%
+			margin-left: 0
+			margin-top: 30px
+		@media only screen and (max-width : 550px)
+			margin-top: 10px
+
+	&__img
+		position: absolute
+		right: 100%
+		top: -7px
+		max-width: none
+		margin-right: 27%
+		@media only screen and (max-width : 950px)
+			margin-right: 10%
+		@media only screen and (max-width : 750px)
+			display: none
+
+
+	&__subtitle
+		@extend %pbold
+		font-size: 18px
+		line-height: 1.3
+		width: 80%
+		+animation-duration(2s)
+		@media only screen and (max-width : 550px)
+			display: none
+	&__list
+		margin-top: 20px
+		width: 90%
+		+animation-duration(2s)
+
+	&__group-btn
+		margin-top: 25px
+		+animation-duration(2s)
+	&__btn
+		margin-left: 4%
+		display: inline-block
+		width: 100%
+		max-width: 170px
+		padding-top: 11px
+		padding-bottom: 10px
+		@media only screen and (max-width : 950px)
+			max-width: none
+			width: 48%
+		@media only screen and (max-width : 550px)
+			width: 100%
+			margin-left: 0
+		&:first-child
+			margin-left: 0
+			max-width: 150px
+			@media only screen and (max-width : 950px)
+				max-width: none
+				width: 48%
+			@media only screen and (max-width : 550px)
+				width: 100%
+				margin-bottom: 15px

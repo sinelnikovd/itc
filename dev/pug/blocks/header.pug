@@ -1,0 +1,29 @@
++b.header__
+	.container
+		+e.top
+			+e.hamburger
+				+b.A.hamburger(href="javascript:void(0);")
+					+e.line
+					+e.line
+					+e.line
+			+b.A.logo.__logo(href="/")
+				+e.image
+				+e.SPAN.desc Создаем медиапространства
+			+b.call.__call
+				+e.UL.tab
+					+e.tab-item._active
+						+e.A.tab-link Москва
+					+e.tab-item
+						+e.A.tab-link Калуга
+					+e.tab-item
+						+e.A.tab-link Брянск
+				+e.phone
+					+e.icon.icon._phone
+					+e.phone-item._active +7 (4832) 68-18-80
+					+e.phone-item +7 (4832) 68-18-81
+					+e.phone-item +7 (4832) 68-18-82
+			+e.recall
+				+btn(a)._transparent._border_1._border_white.__btn(href="#")
+					span.recall__txt Заказать звонок
+					.recall__icon.icon.icon_phone_black
+		include ./nav/nav

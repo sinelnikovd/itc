@@ -1,0 +1,492 @@
+extends ../base/page
+
+block title
+	title Продвижение сайтов
+
+block content
+	+b.promotion-top#sidebar-top
+		.container
+			+b.header__
+				+e.top
+					+b.A.logo.__logo(href="/")
+						+e.IMG.image(src="media/img/logo.png", alt="ITC-Meadia")
+						+e.SPAN.desc Создаем медиапространства
+					+b.call.__call
+						+e.icon
+							.icon.icon_phone
+						+e.UL.tab
+							+e.tab-item._active
+								+e.A.tab-link Москва
+							+e.tab-item
+								+e.A.tab-link Калуга
+							+e.tab-item
+								+e.A.tab-link Брянск
+						+e.UL.phone
+							+e.phone-item._active +7 (4832) 68-18-80
+							+e.phone-item +7 (4832) 68-18-81
+							+e.phone-item +7 (4832) 68-18-82
+					+e.recall
+						+btn(a)._transparent._border_1._border_white(href="#") Заказать звонок
+
+				include ../blocks/nav/nav
+			+e.content
+				+e.desc
+					+e.H1.title Результативное продвижение сайтов
+					+e.P.txt Это больше, чем его оптимизация под поисковые системы. Ваша стратегия SEO должна быть нацелена на качественное и оптимальное предоставление информации пользователю, который ищет в интернете ваши товары и услуги.
+					+btn(a)._orange._h_50._fz_14.__btn(href="#") Сделайте мой сайт посещаемым
+				+e.btn-wrap
+					+btn(a)._transparent._border_1._border_white.__btn-nav(href="#") Кейсы
+					+btn(a)._transparent._border_1._border_white.__btn-nav(href="#") Клиенты о нас
+
+	include ../blocks/sidebar
+
+
+	+b.search-query
+		.container
+			.content
+				+b.title Что такое поисковый запрос?
+				+b.browser-input.__input Заказать продвижение сайта
+					+e.btn
+						+e.icon
+							.icon.icon_search
+				+b.P.desc.__desc Поисковой запрос — это слово или фраза, которую пользователь вводит в<br> поисковую систему Google, Яндекс и другие для поиска необходимой информации, <br>услуги или товара. Например, «заказать продвижение сайта».
+				+e.browser
+					+e.browser-top
+						+e.browser-btn
+						+e.browser-btn
+						+e.browser-btn
+						| Search
+					+e.browser-body
+						+b.browser-input.__browser-input Заказать продвижение сайта
+							+e.btn
+								+e.icon
+									.icon.icon_search
+						+b.browser-item._ad
+							+e.SPAN.mark Реклама
+							+e.title Контекстная реклама
+							+e.P.desc Контекстной рекламе доверяет и производит по ней клик около 20% пользователей.
+						+b.browser-item
+							+e.title Поисковая выдача
+							+e.P.desc Уровень доверия к поисковой выдаче значительно выше. На данные позиции кликает 80% пользователей.
+	+b.patern
+		.container
+			.content
+				+b.title.__title Поисковое продвижение сайтов
+				+e.desc
+					p SEO — это комплекс мер, способствующий улучшению ранжирования сайта в поисковых системах. Благодаря росту позиций увеличивается количество пользователей, которые находят сайт и переходят на него из поисковых систем.
+					p Ваши потенциальные клиенты ежесекундно вводят поисковые запросы и формируют мнение о компаниях, которым можно доверять, основываясь на дизайне и удобстве пользования сайтом и его позициях в поисковых системах. SEO — самый верный способ получить «тёплых» клиентов, готовых к заказу продукта/услуги.
+					p Мы поможем Вашему сайту стать настоящим продавцом услуг и товаров. Расскажем Вашим потенциальным клиентам, что им необходимо выбрать сотрудничество именно с Вами и Вашей компанией
+
+	+b.advantage
+		.container
+			.content
+				+b.title Преимущества SEO
+				+e.list
+					+e.list-item
+						+e.list-icon
+						+e.list-title Низкая стоимость
+						+e.list-desc Низкая стоимость перехода на сайт по сравнению с другими интернет-каналами
+					+e.list-item
+						+e.list-icon
+						+e.list-title Доверие пользователей
+						+e.list-desc Доверие пользователей, т.к. отсутствует понимание что это реклама
+					+e.list-item
+						+e.list-icon
+						+e.list-title Комплексное развитие
+						+e.list-desc Вклад в комплексное развитие интернет-ресурса
+					+e.list-item
+						+e.list-icon
+						+e.list-title Конверсия
+						+e.list-desc Повышение конверсии сайта
+					+e.list-item
+						+e.list-icon
+						+e.list-title Результат
+						+e.list-desc Стабильность результата и долгосрочный эффект
+					+e.list-item
+						+e.list-icon
+						+e.list-title Лучшая репутация
+						+e.list-desc Бизнес-сайты, которые находятся на вершине результатов поиска, вызывают доверие у пользователей.
+
+	+b.price
+		.container
+			.content
+				+b.hr.__hr
+				+b.title Выберите схему сотрудничества
+				+e.UL.list
+					+b.price-item
+						+e.icon
+						+e.title Абонентская
+						+e.desc SEO-продвижение с абонентской платой — самая простая и потому самая популярная схема оплаты за продукт
+						+e.price от 5 900 Р
+						+e.count-client Выбор 25 клиентов
+						+e.UL.list
+							+e.list-item Стабильный ежемесячный бюджет
+							+e.list-item Самая рентабельная схема для небольших интернет-проектов.
+							+e.list-item Простота расчётов: в отличие от других схем оплат в этой не нужно изучать дополнительную информацию.
+
+						+btn(a)._transparent._border_2._border_orange._fz_14.__btn(href="#") Заказать
+						+e.A.next(href="#") Подробнее о тарифе
+					+b.price-item
+						+e.icon
+						+e.title По позициям
+						+e.desc Идеально подходит для сайтов с достаточно узкой специализацией, где нет большого количества страниц.
+						+e.price от 7 900 Р
+						+e.count-client Выбор 45 клиентов
+						+e.UL.list
+							+e.list-item Не тарифицируются сопутствующие запросы
+							+e.list-item Имиджевая + коммерческая<br> ориентация
+							+e.list-item Оплата за позиции в ТОПе по выбранным ключевым запросам
+							+e.list-item Вы не платите за запросы, которые выходят в ТОП-10 самостоятельно
+
+						+btn(a)._transparent._orange._fz_14.__btn._orange(href="#") Заказать
+						+e.A.next(href="#") Подробнее о тарифе
+					+b.price-item
+						+e.icon
+						+e.title Комбинированная
+						+e.desc Если вы хотите получить результат с первых дней вложения в интернет-рекламу.
+						+e.price от 14 900 Р
+						+e.count-client Выбор 25 клиентов
+						+e.UL.list
+							+e.list-item Задействует три мощных канала интернет-маркетинга
+							+e.list-item Контекстную рекламу ваших товаров и услуг в Яндекс.Директ и Google Adwords.
+							+e.list-item Таргетинговую рекламу в социальных сетях.
+							+e.list-item Классическое SEO с выгодной схемой оплаты
+
+						+btn(a)._transparent._border_2._border_orange._fz_14.__btn(href="#") Заказать
+						+e.A.next(href="#") Подробнее о тарифе
+				+b.price-help
+					+b.icon.icon_help.__icon
+					+e.A.link(href="#") Помочь с выбором тарифа
+
+	+b.ad-no-work._hr
+		.container
+			.content
+				+e.body
+					+b.hr.__hr
+					+b.title Если реклама не помогает
+					+b.desc.__desc Вы уже сотрудничаете с тем или иным SEO-агентством, но недовольны результатом или стоимостью раскрутки сайта? Закажите у нас бесплатный аудит Вашего веб-ресурса — и мы уже сегодня дадим Вам рекомендации по его улучшению и развитию.
+					+btn(a)._orange._h_50._fz_14.__btn(href="#") Заказать бесплатный аудит сайта
+
+				+e.notebook
+
+	+b.client._bg
+		.container
+			.content
+				+b.title Клиенты о нас
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+e.slider.owl-carousel
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+					+b.slider-item(data-dot="<span></span><i></i>")
+						+e.desc
+							+b.person
+								+e.IMG.thumb(src="./media/images/person/1.jpg")
+								+e.desc
+									+e.name Ковель Денис
+									+e.position Генеральный директор
+									+e.A.link(href="#") 77volt.ru
+							+e.txt
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
+						+b.client-result.__result
+							+e.title Позиции в 
+								+e.SPAN.title-icon
+									.icon.icon_Yandex
+							+e.A.link(href="#") 77volt.ru
+							+e.TABLE.table
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель в Самаре
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") кабель дешево
+									td 1
+								tr
+									td
+										+e.A.position-link(href="#") купить кабель
+									td 1
+				+b.slider-nav
+					+e.prev
+						.icon.icon_arrow_left
+					+e.dots
+					+e.next
+						.icon.icon_arrow_right
+
+	+b.efficiency
+		.container
+			.content
+				+b.title.__title Главный критерий эффективности для нас - рост вашего бизнеса
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+b.slider-wrap
+					+e.nav._prev
+						.icon.icon_arrow_left
+					+e.nav._next
+						.icon.icon_arrow_right
+
+					+e.slider
+						+b.slider-graph
+							+b.graph-item
+								+e.name Роза Мимоза
+								+e.A.link(href="#") rosamimoza.ru
+								+e.IMG.img(src="media/images/graph/1.jpg", alt="")
+								+b.UL.graph-number
+									+e.item
+										+e.number +770%
+										+e.P.desc Рост поискового трафика с мобильных устройств.
+									+e.item
+										+e.number 2000+ 
+										+e.SPAN.mark +350%
+										+e.P.desc Количество запросов в ТОП10.
+									+e.item
+										+e.number 52,64%
+										+e.P.desc Достижение цели в случаев переходов с контекстной рекламы
+								+e.data
+									+b.UL.list-data.__list
+										+e.item
+											strong Тематика: 
+											| B2C-рынок, цветы
+										+e.item
+											strong Услуга: 
+											| Продвижение в ТОП-10
+										+e.item
+											strong Регион: 
+											| Самара
+										+e.item
+											strong Срок достижения результата: 
+											| 9 месяцев
+									+e.result
+										+e.STRONG.result-title Результаты работы
+										p Каждый заказ в данной тематике - это доход в 100-150 тысяч рублей. 10-кратный рост поискового трафика позволил увеличить поток клиентов через сайт, что привело к росту оборота более чем на 3 миллиона рублей.
+
+	+b.step-work
+		.container
+			.content
+				+b.hr.__hr
+				+b.title.__title Этапы работ
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+
+				+b.lines
+
+
+
+	+b.interaction.blueblock
+		.container
+			.content
+				+e.left
+					+b.title.__title Как выглядит взаимодействие по проекту
+					+b.icon-txt
+						+e.icon
+						+e.desc Вы
+					+e.next
+						+e.next-top Согласование
+						+e.next-bottom Разработка стратегии, тексты, счета, отчеты
+					+b.icon-txt
+						+e.icon
+						+e.desc Аккаунт <br>менеджер
+					+e.next
+					+b.icon-txt
+						+e.icon
+						+e.desc SEO-специалист
+					+e.next
+				+e.right
+					+b.icon-txt
+						+e.icon
+						+e.desc Копирайтер
+					+b.icon-txt
+						+e.icon
+						+e.desc Дизайнер
+					+b.icon-txt
+						+e.icon
+						+e.desc Программист
+					+b.icon-txt
+						+e.icon
+						+e.desc Аналитик
+
+	+b.seo
+		.container
+			.content.seo__content
+				+b.title.__title Думаете SEO - это дорого? <br>Сравните с наружной рекламой!
+				+b.seo-item._right
+					+e.IMG.img(src="media/img/billbord.png")
+					+e.price от 
+						+e.STRONG.price-num 6 000
+						|  р/мес
+					+e.title Аренда, дизайн и печать двух билбордов
+					+e.line
+					+b.UL.seo-list
+						+e.item
+							+e.icon
+							+e.title Охват
+							+e.desc Всего одна улица и один город
+						+e.item
+							+e.icon
+							+e.title Аудитория
+							+e.desc Большинство не целевая аудитория. Одни и те же люди каждый день.
+						+e.item
+							+e.icon
+							+e.title Затраты
+							+e.desc Оплата за размещение, печать и дизайн билборда.
+						+e.item
+							+e.icon
+							+e.title Тип информации
+							+e.desc Статическая информация без возможности изменений.
+				+b.seo-item._left
+					+e.IMG.img(src="media/img/seo.png")
+					+e.price от 
+						+e.STRONG.price-num._green 6 000
+						|  р/мес
+					+e.title Стоимость SEO продвижения сайта 
+					+e.line
+					+b.UL.seo-list._green
+						+e.item
+							+e.icon
+							+e.title Охват
+							+e.desc Все улицы, все города!
+						+e.item
+							+e.icon
+							+e.title Аудитория
+							+e.desc 100% охват целевой аудитории. Ежедневно 80% новых посетителей.
+						+e.item
+							+e.icon
+							+e.title Затраты
+							+e.desc Никаких дополнительных затрат (наши статьи на солнце не выгорают).
+						+e.item
+							+e.icon
+							+e.title Тип информации
+							+e.desc Регулярно обновляемая информация, всегда актуальные цены.
+
+	+b.order._promoution#sidebar-bottom
+		.container
+			+b.order-manager.__manager
+				+e.IMG.img(src="media/images/manager.jpg", alt="")
+				+e.name Василий Васильев
+				+e.position Аккаунт менеджер
+			+e.body
+				+b.title.__title Закажите необходимые вам услуги
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+e.INPUT.input(type="text", placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Введите свой e-mail
+								+e.INPUT.input(type="text", placeholder="Ваш e-mail")
+							+b.control.__control
+								+e.LABEL.label Укажите ваш телефон
+								+e.INPUT.input(type="text", placeholder="Ваш телефон")
+						+b.control
+							+e.LABEL.label Укажите ваш сайт
+							+e.INPUT.input(type="text", placeholder="Ваш сайт")
+						+b.control
+							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Заказать
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ
+
+
+
+
+
+
+
+
+
+
+
+

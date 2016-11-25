@@ -1,0 +1,32 @@
+.blocktxt
+	padding: 45px 0 47px
+	@media only screen and (max-width : 550px)
+		padding: 25px 0 30px
+	&__body
+		+clearfix
+	&__left
+		float: left
+		font-size: 18px
+		@extend %pbold
+		width: 50%
+		line-height: 1.2
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+	&__right
+		float: right
+		width: 50%
+		padding-left: 7.3%
+		box-sizing: border-box
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+			padding-left: 0
+			padding-top: 12px
+		p
+			margin: 10px 0
+			line-height: 1.6
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0

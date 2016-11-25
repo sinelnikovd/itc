@@ -1,0 +1,280 @@
+.header
+	+transition(all .5s ease-in-out)
+	@media only screen and (max-width : 950px)
+		padding-bottom: 10px
+	@media only screen and (max-width : 750px)
+		background-color: #fff
+	@media only screen and (max-width : 550px)
+		padding-bottom: 5px
+	&_fixed
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		background-color: #fff
+		z-index: 501
+		color: #333
+		border-bottom: 2px solid #ced7d9
+		.logo
+			&__image
+				background-image: url(media/img/logo_black.png)
+			&__desc
+				opacity: 1
+				color: #afc2cf
+		.call
+			&__icon
+				+icon-phone_blue
+			&__tab
+				color: #333
+				&-link
+					color: #333
+					border-bottom-color: rgba(#000,.7)
+		.nav
+			border-top: 1px solid #ebeaef
+			border-bottom: 0 none
+			&__link
+				color: #333
+				opacity: .8
+			&__item
+				&_active
+					.nav__link
+						border-bottom-color: #fb5f27
+		.header__nav
+			margin-top: 10px
+			@media only screen and (max-width : 550px)
+				margin-top: 5px
+
+		.header__btn
+			color: #333
+			border-color: #9dafb4
+
+		.hamburger
+			&__line
+				background-color: #303030
+	@media only screen and (max-width : 950px)
+		&_nav750active
+			position: relative
+			z-index: 501
+			background-color: #fff
+			&.header_fixed
+				position: fixed
+				top: 0
+				right: 0
+				left: 0
+				background-color: #fff
+				color: #333
+				border-bottom: 2px solid #ced7d9
+
+			.header__nav
+				right: 0
+			.logo
+				&__image
+					background-image: url(media/img/logo_black.png)
+				&__desc
+					opacity: 1
+					color: #afc2cf
+			.call
+				&__icon
+					&:before
+						background-position: 0em -56.5em
+						width: 1em
+						height: 2.1em
+				&__tab
+					color: #333
+					&-link
+						color: #333
+						border-bottom-color: rgba(#000,.7)
+			.nav
+				border-top: 1px solid #ebeaef
+				border-bottom: 0 none
+				&__link
+					color: #333
+					opacity: .8
+				&__item
+					&_active
+						.nav__link
+							border-bottom-color: #fb5f27
+
+			.header__btn
+				color: #333
+				border-color: #9dafb4
+
+			.hamburger
+				&__line
+					background-color: #303030
+					
+					&:first-child
+						right: 60%
+						+transform(rotate(-45deg) translateX(-3px) translateY(2px))
+					&:last-child
+						right: 60%
+						+transform(rotate(45deg) translateX(-3px) translateY(-2px))
+
+			.sidebar
+				&__links
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					border-top: 1px solid #ebeaef
+					@media only screen and (max-width : 550px)
+						flex-direction: column
+
+
+
+	&__hamburger
+		float: left
+		padding-top: 20px
+		width: 50%
+		display: none
+		position: relative
+		z-index: 2
+		@media only screen and (max-width : 950px)
+			display: block
+		@media only screen and (max-width : 550px)
+			padding-top: 10px
+	&__logo
+		float: left
+		padding-top: 15px
+		width: 48%
+		@media only screen and (max-width : 950px)
+			text-align: center
+			width: 100%
+			position: absolute
+			z-index: 1
+		@media only screen and (max-width : 750px)
+			padding-top: 10px
+		@media only screen and (max-width : 550px)
+			padding-top: 5px
+	&__call
+		float: left
+		width: 29%
+		@media only screen and (max-width : 950px)
+			margin: 10px auto
+			float: none
+			width: 220px
+			color: #333
+	&__recall
+		float: left
+		width: 23%
+		padding-top: 18px
+		box-sizing: border-box
+		@media only screen and (max-width : 950px)
+			width: 50%
+			position: relative
+			z-index: 2
+		@media only screen and (max-width : 750px)
+			text-align: right
+			padding-top: 10px
+		@media only screen and (max-width : 550px)
+			padding-top: 5px
+	&__top
+		padding-top: 2px
+		+clearfix
+		@media only screen and (max-width : 950px)
+			position: relative
+
+	&__nav
+		margin-top: 36px
+		+transition(all .5s ease-in-out)
+		@media only screen and (max-width : 950px)
+			margin-top: 10px
+			position: absolute
+			top: 100%
+			right: 100%
+			width: 100%
+			background-color: #fff
+		@media only screen and (max-width : 550px)
+			margin-top: 5px
+
+
+	&__btn
+		margin-left: auto
+		max-width: 170px
+		@media only screen and (max-width : 750px)
+			max-width: none
+			display: inline-block
+			padding: 5px 10px
+			border-color: #9dafb4
+		@media only screen and (max-width : 550px)
+			padding: 2px 7px
+
+
+
+
+.logo
+	text-decoration: none
+	display: block
+	&_footer
+		.logo__image
+			background: none
+			@media only screen and (max-width : 550px)
+				width: 100%
+				max-width: 190px
+	&__image
+		width: 190px
+		height: 32px
+		display: inline-block
+		vertical-align: bottom
+		background-image: url(media/img/logo.png)
+		background-repeat: no-repeat
+		background-size: contain
+		@media only screen and (max-width : 750px)
+			background-image: url(media/img/logo_black.png)
+		@media only screen and (max-width : 550px)
+			padding-top: 25px
+			width: 150px
+
+	&__desc
+		color: #fff
+		vertical-align: bottom
+		opacity: .5
+		margin-left: 4.5%
+		padding-bottom: 5px
+		display: inline-block
+		@media only screen and (max-width : 950px)
+			display: none
+
+.call
+	text-align: right
+	position: relative
+	&__icon
+		position: absolute
+		top: 2px
+		right: 200px
+	&__tab
+		&-item
+			display: inline-block
+			margin-left: 9.5%
+			&_active
+				.call__tab-link
+					opacity: 1
+					border-bottom-color: transparent
+					cursor: default
+		&-link
+			font-size: 12px
+			color: #fff
+			line-height: 1
+			border-bottom: 1px dotted rgba(#fff, .7)
+			opacity: .7
+			cursor: pointer
+			&:hover
+				opacity: 1
+				border-bottom-color: transparent
+	&__phone
+		height: 22px
+		position: relative
+		width: 100%
+		&-item
+			@extend %bold
+			font-size: 22px
+			line-height: 1
+			opacity: 0
+			+transition(opacity .2s ease-in-out)
+			position: absolute
+			top: 0
+			right: 0
+			&_active
+				opacity: 1

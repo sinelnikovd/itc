@@ -1,0 +1,45 @@
+.join
+	padding: 35px 0
+	+clearfix
+	&__title
+		float: left
+		width: 33%
+		font-size: 34px
+		@extend %pregular
+		line-height: 1.1
+
+	&__form
+		float: right
+		width: 67%
+		text-align: right
+		padding-top: 15px
+
+	&__input
+		display: inline-block
+		height: 50px
+		box-sizing: border-box
+		background-color: #3a4a85
+		border: 1px solid #47679a
+		width: 100%
+		max-width: 200px
+		border-radius: 3px
+		padding: 0 20px
+		margin-left: 1%
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: .6
+		&:-moz-placeholder
+			color: #fff
+			opacity: .6
+		&::-moz-placeholder
+			color: #fff
+			opacity: .6
+		&:-ms-input-placeholder
+			color: #fff
+			opacity: .6
+	&__btn
+		display: inline-block
+		max-width: 200px
+		width: 100%
+		margin-left: 5%
+

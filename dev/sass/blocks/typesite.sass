@@ -1,0 +1,74 @@
+.typesite
+	padding: 40px 0 70px
+	&__title
+		width: 80%
+		margin: 0 auto
+
+	&__select
+		color: #4fc3f7
+		border-bottom: 1px dashed #4fc3f7
+
+
+	&__body
+		margin-top: 50px
+		position: relative
+	&__gravity
+		position: absolute
+		top: 0
+		left: 0
+		width: 46%
+	&__list
+		padding-top: 25px
+		margin-left: 52%
+
+.typesite-list
+	&__item
+		margin: 30px 0 0
+		position: relative
+		padding-left: 11.5%
+		&:first-child
+			margin-top: 0
+	&__icon
+		position: absolute
+		top: 15px
+		left: 0
+		+transform(translateX(-50%))
+	&__plus
+		position: absolute
+		top: 70%
+		left: 0
+		margin-left: -4px
+	&__title
+		font-size: 18px
+		@extend %pbold
+
+	&__txt
+		margin-top: 5px
+		line-height: 1.6
+
+	&__mark
+		@extend %bold
+		font-size: 12px
+		display: inline-block
+		background-color: #28c945
+		color: #fff
+		padding: 2px 7px
+		border-radius: 4px
+		vertical-align: middle
+
+
+.gravity
+	background-color: #2f3c6b
+	border: 1px solid #000
+	box-sizing: border-box
+	padding: 25px 40px 25px 30px
+	color: #fff
+	&__title
+		font-size: 16px
+		@extend %pbold
+		line-height: 1.4
+		letter-spacing: 1px
+	&__txt
+		margin-top: 20px
+		opacity: .6
+		line-height: 1.65

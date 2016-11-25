@@ -1,0 +1,20 @@
+.hamburger
+	+size(25px 18px)
+	position: relative
+	display: block
+	&__line
+		position: absolute
+		left: 0
+		right: 0
+		background-color: #fff
+		height: 2px
+		+transition(all .5s ease-in-out)
+		@media only screen and (max-width : 750px)
+			background-color: #303030
+		&:first-child
+			top: 0
+		&:nth-child(2)
+			top: 50%
+			margin-top: -1px
+		&:last-child
+			bottom: 0

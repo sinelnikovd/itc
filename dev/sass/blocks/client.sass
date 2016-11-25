@@ -1,0 +1,237 @@
+.client
+	padding: 70px 0 40px
+	&_bg
+		background-color: #f5f5f5
+	&_hr
+		padding-top: 0
+		.hr
+			margin-bottom: 40px
+	&_pb
+		&_75
+			padding-bottom: 75px
+		&_60
+			padding-bottom: 60px
+
+	&_pt
+		&_40
+			padding-top: 40px
+
+	&__desc
+		width: 55%
+		margin: 5px auto
+		@media only screen and (max-width : 550px)
+			width: 100%
+	&__slider
+		margin-top: 45px
+
+.slider-item
+	background-color: #fff
+	border: 1px solid #e5e5e5
+	box-sizing: border-box
+	+clearfix
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 10px
+		bottom: 10px
+		right: 35%
+		background-image: url(media/img/sep-client.png)
+		background-repeat: repeat-y
+		width: 8px
+		@media only screen and (max-width : 750px)
+			display: none
+	&__desc
+		float: left
+		width: 65%
+		padding: 28px 65px 30px 28px
+		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+			padding-bottom: 0
+			padding-right: 30px
+	&__result
+		float: right
+		width: 35%
+		padding: 15px 30px
+		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+			padding-bottom: 30px
+	&__txt
+		padding-top: 11px
+		p
+			margin: 12px 0
+			line-height: 1.6
+
+	&__btn
+		margin-top: 25px
+		max-width: 170px
+		padding: 10px 0
+		@media only screen and (max-width : 420px)
+			width: 100%
+			max-width: none
+
+
+.person
+	+clearfix
+	&__thumb
+		display: block
+		float: left
+		max-width: 66px
+	&__desc
+		float: left
+		padding-left: 20px
+		box-sizing: border-box
+	&__name
+		font-size: 18px
+		@extend %pbold
+		line-height: 1
+	&__position
+		font-size: 11px
+		color: #929292
+		margin-top: 8px
+	&__link
+		display: inline-block
+		color: #4fc3f7
+		margin-top: 10px
+
+
+.client-result
+	text-align: center
+	&__title
+		vertical-align: bottom
+		font-size: 18px
+		@extend %pbold
+		&-icon
+			display: inline-block
+			vertical-align: bottom
+	&__link
+		display: inline-block
+		margin-top: 13px
+		font-size: 34px
+		line-height: 1
+		color: #4fc3f7
+		@extend %pbold
+		text-decoration: none
+		border-bottom: 1px solid #4fc3f7
+	&__table
+		margin-top: 22px
+		width: 100%
+		text-align: left
+		td
+			border: 1px solid #e5e5e5
+			padding: 8px 15px
+			&:last-child
+				font-size: 18px
+				@extend %pbold
+				text-align: center
+	&__position-link
+		color: #4fc3f7
+		text-decoration: underline
+
+.slider-nav
+	margin-top: 15px
+	text-align: center
+	&__next,
+	&__dots,
+	&__prev
+		display: inline-block
+		vertical-align: middle
+	&__next
+		margin-left: 30px
+		cursor: pointer
+	&__prev
+		margin-right: 30px
+		cursor: pointer
+
+
+.owl-dot
+	text-align: left
+	display: inline-block
+	vertical-align: middle
+	margin: 0 5px
+	+size(16px)
+	position: relative
+	background-color: #f5f5f5
+	border-radius: 100%
+	overflow: hidden
+	cursor: pointer
+	i
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border-radius: 100%
+		background-color: #fff
+		border: 4px solid #cfd8db
+	&:hover
+		i
+			background-color: #f2612e
+
+	&.active
+		&:hover
+			background-color: #fff
+		&:after
+			content: ''
+			width: 8px
+			height: 100%
+			position: absolute
+			border: 4px solid #f2612e
+			border-radius: 10px 0 0 10px
+			z-index: 200
+			border-right: 0 none
+			+animation(rota 10s linear)
+			+transform-origin(100% 50%)
+			box-sizing: border-box
+		span
+			display: block
+			width: 8px
+			height: 100%
+			position: absolute
+			border: 4px solid #f2612e
+			border-radius: 0 10px 10px 0
+			z-index: 100
+			border-left: 0 none
+			+animation(fill 10s steps(1, end))
+			left: 50%
+			box-sizing: border-box
+			opacity: 
+		&:before
+			content: ''
+			width: 8px
+			height: 100%
+			position: absolute
+			border-radius: 10px 0 0 10px
+			border: 4px solid #cfd8db
+			border-right: 0 none
+			box-sizing: border-box
+			top: 0
+			bottom: 0
+			z-index: 300
+			opacity: 0
+			background: #fff
+			+animation(mask 10s steps(1, end))
+
+
+
++keyframes(rota)
+	0%
+		+transform(rotate(0deg))
+	100%
+		+transform(rotate(360deg))
++keyframes(fill)
+	0%
+		opacity: 0
+	50%,100%
+		opacity: 1
+
++keyframes(mask)
+	0%
+		opacity: 1
+	50%, 100%
+		opacity: 0
