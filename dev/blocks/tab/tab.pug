@@ -1,0 +1,5 @@
+mixin tab(...items)
+	+b.UL.tab&attributes(attributes)
+		each item, index in items
+			+e.item(class= (index == 0) ? "_active" : '')
+				+e.A.link(href="javascript:void(0);")= item

@@ -1,0 +1,37 @@
+.field
+	box-sizing: border-box
+	width: 100%
+	border-radius: 3px
+	border: 1px solid #d6d7d7
+	background-color: #fff
+	height: 40px
+	padding: 0 1.5em
+	+placeholder
+		color: #a7b6bb
+	&:focus
+		border-color: $c-orange
+	&_blue
+		background-color: #3a4a85
+		color: #eceff1
+		border-color: #47679a
+		+placeholder
+			color: #b3b9ca
+		&:focus
+			background-color: #1d2543
+			border-color: #47679a
+		&.field_error
+			border-color: #e57373
+			&+.field__error
+				background-color: #e57373
+	&_error
+		border-color: #f44336
+
+	&__error
+		position: absolute
+		bottom: 14px
+		right: 10px
+		+size(11px)
+		border-radius: 100%
+		background: #f44336 url(media/img/error.svg) no-repeat 50% 50%
+		.no-svg &
+			background-image: url(media/img/error.png)

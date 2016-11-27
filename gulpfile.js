@@ -138,7 +138,9 @@ gulp.task('coffee', function() {
 
 gulp.task('watch', function () {
 	gulp.watch('dev/sass/**/**/**/*.sass', ['sass']);
+	gulp.watch('dev/blocks/**/**/*.sass', ['sass']);
 	gulp.watch('dev/pug/**/**/*.pug', ['pug']);
+	gulp.watch('dev/blocks/**/*.pug', ['pug']);
 	gulp.watch('dev/coffee/**/**/*.coffee', ['coffee']);
 	gulp.watch('dev/js/**/**/*.js', ['vendor']);
 	gulp.watch('dev/sprite/**/**/*.*', ['sprite']);

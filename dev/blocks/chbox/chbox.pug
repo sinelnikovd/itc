@@ -1,0 +1,6 @@
+mixin chbox(id)
+	+b.chbox&attributes(attributes)
+		+e.INPUT.input(type="checkbox", id= id)
+		+e.LABEL.label(for= id)
+			+e.SPAN.txt
+				block

@@ -1,0 +1,31 @@
+.chbox
+	display: inline-block
+	&__input
+		display: none
+		&:checked
+			&+.chbox__label
+				&:before
+					border-color: $c-orange
+					background: url(media/img/check.svg) no-repeat 50% 50%
+					.no-svg &
+						background-image: url(media/img/check.png)
+	&__label
+		user-select: none
+		cursor: pointer
+		&:before
+			content: ''
+			display: inline-block
+			+size(16px)
+			border: 1px solid #ccc
+			border-radius: 2px
+			vertical-align: middle
+			box-sizing: border-box
+			margin-right: .7em
+		&:hover
+			&:before
+				border-color: $c-orange
+				box-shadow: 0 0 5px rgba($c-orange, .84)
+	&__txt
+		vertical-align: middle
+
+

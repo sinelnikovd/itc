@@ -1,0 +1,25 @@
+.tab
+	padding: 0 .3em
+	border-bottom: 2px solid #ebeaef
+	display: inline-block
+	&__item
+		display: inline-block
+		margin: 0 1.2em
+		&_active
+			.tab__link
+				border-bottom-color: $c-orange
+				opacity: 1
+	&__link
+		display: block
+		text-decoration: none
+		text-transform: uppercase
+		padding: .38em 0
+		font-size: 12px
+		color: #333
+		@extend %pbold
+		letter-spacing: .6px
+		border-bottom: 2px solid transparent
+		margin-bottom: -2px
+		opacity: .6
+		&:hover
+			opacity: 1

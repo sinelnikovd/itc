@@ -1,0 +1,45 @@
+extends ../base/base
+
+block title
+	title UI
+
+block base-content
+	.container.ui
+		+btn.A._bg-color_orange._size_normal(src="#") Подробнее
+	.container.ui
+		+btn.A._bg-color_orange._size_big._shadow(src="#") Подробнее
+
+	.container.ui
+		+btn.A._border_normal._color_orange(src="#") А мне подойдет?
+
+	.container.ui.ui_bgc
+		+btn.A._border_small._color_white(src="#") Заказать звонок
+
+
+	.container.ui
+		+chbox("ch1") Укажите ваше имя
+
+
+	.container.ui.ui_bgc
+		+b.FORM.form._blue(action="/")
+			+e.control
+				+e.LABEL.label(for="in1") E-mail
+				+field#in1._blue.__field(placeholder="Ваш e-mail")
+			+e.control
+				+e.LABEL.label(for="in2") E-mail
+				+field#in2.__field(placeholder="Ваш e-mail")
+			+e.control
+				+e.LABEL.label(for="in3") E-mail
+				+field#in3._error.__field(placeholder="Ваш e-mail")
+				span.field__error
+			+e.control
+				+e.LABEL.label(for="in4") E-mail
+				+field#in4._blue._error.__field(placeholder="Ваш e-mail")
+				span.field__error
+
+	.container.ui
+		+tab("Месячная подписка", "Годовая подписка")
+
+	.container.ui
+		p Перемещаться на дальние расстояния в Австралии удобнее всего по воздуху. Разветвленная сеть маршрутов покрывает всю страну, к тому же, конкурируя между собой, местные авиакомпании порой предлагают весьма привлекательные тарифы.
+		p Железнодорожный транспорт в Австралии развит относительно слабо, а билеты весьма дороги. Хорошо налажены только пригородные перевозки и туристические маршруты в районе Сиднея. Самый дешевый, но и самый длительный способ передвижения между городами — автобусы.
