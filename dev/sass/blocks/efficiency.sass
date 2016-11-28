@@ -24,9 +24,13 @@
 		&_prev
 			left: 50%
 			margin-left: -38%
+			&:hover
+				+icon-arrow_left_orange
 		&_next
 			right: 50%
 			margin-right: -38%
+			&:hover
+				+icon-arrow_right_orange
 
 
 .graph-item
@@ -34,6 +38,7 @@
 	&__name
 		@extend %plight
 		font-size: 26px
+		line-height: 1.35em
 	&__link
 		color: #4fc3f7
 		text-decoration: underline
@@ -83,6 +88,7 @@
 	&__number
 		@extend %pbold
 		font-size: 34px
+		line-height: 1.35em
 		display: inline-block
 		vertical-align: middle
 	&__desc

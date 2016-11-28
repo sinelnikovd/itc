@@ -69,9 +69,18 @@
 		border-bottom: 1px solid #e5e5e5
 		padding: 9px 20px 12px 6.2%
 		box-sizing: border-box
-		@extend %bold
+		//@extend %bold
 		width: 81%
 		position: relative
+		cursor: pointer
+		&:hover
+			border-color: #d5d4d9
+			.accordion
+				&__icon
+					border-color: $c-orange
+				&__txt
+					color: $c-orange
+					border-bottom-color: $c-orange
 		@media only screen and (max-width : 750px)
 			width: 100%
 		@media only screen and (max-width : 550px)
@@ -80,6 +89,12 @@
 			border-bottom: 0 none
 			.accordion__icon
 				+transform(rotate(135deg))
+			&:hover
+				border-color:  #e5e5e5
+
+	&__txt
+		color: #039be6
+		border-bottom: 1px dashed #039be6
 
 	&__icon
 		position: absolute
@@ -88,9 +103,9 @@
 		left: 2.2%
 		+size(8px)
 		+transform(rotate(-45deg))
-		+transition(all .5s ease-in-out)
-		border-bottom: 1px solid #9eafb4
-		border-left: 1px solid #9eafb4
+		+transition(transform .5s ease-in-out)
+		border-bottom: 1px solid #039be6
+		border-left: 1px solid #039be6
 
 
 	&__body

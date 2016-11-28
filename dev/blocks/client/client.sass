@@ -68,8 +68,13 @@
 
 	&__btn
 		margin-top: 25px
-		max-width: 170px
-		padding: 10px 0
+		color: #333
+		border-color: #e6ebec
+		&:hover
+			background-color: #e6ebec
+		&:active
+			background-color: #cad0d1
+			border-color: #cad0d1
 		@media only screen and (max-width : 420px)
 			width: 100%
 			max-width: none
@@ -143,10 +148,15 @@
 	&__next
 		margin-left: 30px
 		cursor: pointer
+		&:hover
+			.icon_arrow_right
+				+icon-arrow_right_orange
 	&__prev
 		margin-right: 30px
 		cursor: pointer
-
+		&:hover
+			.icon_arrow_left
+				+icon-arrow_left_orange
 
 .owl-dot
 	text-align: left
@@ -175,7 +185,8 @@
 
 	&.active
 		&:hover
-			background-color: #fff
+			i
+				background-color: #fff
 		&:after
 			content: ''
 			width: 8px

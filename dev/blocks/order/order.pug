@@ -1,0 +1,30 @@
+mixin order()
+	+b.order&attributes(attributes)
+		.container
+			.content
+				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
+				+e.form-wrap
+					+b.FORM.form.__form
+						+e.line
+							+b.control.__control
+								+e.LABEL.label Укажите ваше имя
+								+field(placeholder="Ваше имя")
+							+b.control.__control
+								+e.LABEL.label Укажите вашу фамилию
+								+field(placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваш телефон
+							+field.js-inputmask(placeholder="+7 (___) ___-__-__")
+						+b.control
+							+btn.A._bg-color_orange._size_big._shadow.order__btn(type="submit") Отправить
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ

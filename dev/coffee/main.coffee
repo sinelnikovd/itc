@@ -1,5 +1,5 @@
 $(document).ready ->
-	$('input.inputmask').inputmask("+7 (999) 999-99-99")
+	$('input.js-inputmask').inputmask("+7 (999) 999-99-99",{ "clearIncomplete": true })
 
 	clientCarousel = $('.client__slider').owlCarousel
 		loop: true

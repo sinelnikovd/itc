@@ -32,8 +32,8 @@ block content
 						+e.icon.icon._list_cw
 						| Гарантированный список работ
 				+e.group-btn
-					+btn(a)._orange._fz_14.__btn(href="#") Заказать
-					+btn(a)._transparent._fz_14._border_1._border_white.__btn(href="#") Кейсы
+					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать
+					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 
 	include ../blocks/sidebar
@@ -42,11 +42,7 @@ block content
 		.container
 			.content
 				+b.title.__title Абонентская плата за продвижение сайта в ТОП10
-				+e.UL.tab
-					+e.tab-item._active
-						+e.A.tab-link(href="javascript:void(0);") Месячная подписка
-					+e.tab-item
-						+e.A.tab-link(href="javascript:void(0);") Годовая подписка
+				+tab("Месячная подписка", "Годовая подписка").__tab
 				+e.slide-nav-wrap
 					+e.slide-nav._prev.icon._arrow_left
 					+e.slide-nav._next.icon._arrow_right
@@ -257,135 +253,7 @@ block content
 
 
 
-
-
-	+b.client._hr._pb_75
-		.container
-			.content
-				+b.hr
-				+b.title Клиенты о нас
-				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
-				+e.slider.owl-carousel
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn(a)._transparent._border_1._fz_14._border_gray.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-				+b.slider-nav
-					+e.prev
-						.icon.icon_arrow_left
-					+e.dots
-					+e.next
-						.icon.icon_arrow_right
+	+client(true)._hr._pb_75
 
 	+b.patern._type_2.darkBlock
 		.container
@@ -411,7 +279,7 @@ block content
 				+b.accordion.__accordion
 					+e.head._active
 						+e.icon
-						| Подготовка сайта к продвижению (1-ый месяц)
+						+e.SPAN.txt Подготовка сайта к продвижению (1-ый месяц)
 					+e.body
 						+e.UL.list
 							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
@@ -421,7 +289,7 @@ block content
 							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии сайта;
 					+e.head
 						+e.icon
-						| Продвижение сайта (2-ой и последующие месяцы)
+						+e.SPAN.txt Продвижение сайта (2-ой и последующие месяцы)
 					+e.body
 						+e.UL.list
 							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
@@ -431,7 +299,7 @@ block content
 							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии сайта;
 					+e.head
 						+e.icon
-						| Поддержка достигнутых позиций сайта (начиная с 6 месяца продвижения)
+						+e.SPAN.txt Поддержка достигнутых позиций сайта (начиная с 6 месяца продвижения)
 					+e.body
 						+e.UL.list
 							+e.list-item Подбор дополнительных ключевых запросов для продвижения;
@@ -440,32 +308,4 @@ block content
 							+e.list-item Улучшение поведенческих факторов сайта;
 							+e.list-item Отчетность о результатах работы за месяц и рекомендации по улучшению конверсии 
 
-	+b.order.darkBlock
-		.container
-			.content
-				+b.title.__title Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
-				+b.desc.__desc Отправьте заявку и получите коммерческое предложение
-				+e.form-wrap
-					+b.FORM.form.__form
-						+e.line
-							+b.control.__control
-								+e.LABEL.label Укажите ваше имя
-								+e.INPUT.input(type="text", placeholder="Ваше имя")
-							+b.control.__control
-								+e.LABEL.label Укажите вашу фамилию
-								+e.INPUT.input(type="text", placeholder="Ваша фамилия")
-						+b.control
-							+e.LABEL.label Укажите ваш телефон
-							+e.INPUT.input(type="text", placeholder="Ваш сайт")
-						+b.control
-							+btn(button)._orange._h_50._fz_14.order__btn(type="submit") Отправить
-					+b.UL.advantage-list.__advantage
-						+e.item
-							+e.icon.icon.icon_star
-							+e.txt Специалисты высокого класса
-						+e.item
-							+e.icon.icon.icon_tie
-							+e.txt Нам доверяют свои сайты крупнейшие компании
-						+e.item
-							+e.icon.icon.icon_guarantee
-							+e.txt Гарантия качества выполненных работ
+	+order.darkBlock

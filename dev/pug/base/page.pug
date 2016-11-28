@@ -15,12 +15,13 @@ block base-content
 			+e.subscribe
 				+e.subscribe-title Подписывайтесь на новости и акции:
 				+e.FORM.subscribe-form(action="/")
-					+e.INPUT.subscribe-input(type="text", placeholder="Ваш e-mail")
-					+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться
+					+field._blue.__subscribe-input(placeholder="Ваш e-mail")
+					+btn.BUTTON._border_small._color_white.__subscribe-btn(type="submit") Подписаться
+					//+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться
 			+b.social.__social
-				+e.icon.icon.icon_fb
-				+e.icon.icon.icon_vk
-				+e.icon.icon.icon_in
+				+e.A.icon.icon.icon_fb(href="#")
+				+e.A.icon.icon.icon_vk(href="#")
+				+e.A.icon.icon.icon_in(href="#")
 		+e.HR.hr
 		+e.nav.container
 			+e.nav-list

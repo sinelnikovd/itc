@@ -39,14 +39,19 @@
 				&_active
 					.nav__link
 						border-bottom-color: #fb5f27
-		.header__nav
-			margin-top: 10px
-			@media only screen and (max-width : 550px)
-				margin-top: 5px
-
-		.header__btn
-			color: #333
-			border-color: #9dafb4
+		.header
+			&__nav
+				margin-top: 10px
+				@media only screen and (max-width : 550px)
+					margin-top: 5px
+			&__btn
+				color: #333
+				border-color: #e6ebec
+				&:hover
+					background-color: #e6ebec
+				&:active
+					background-color: #cad0d1
+					border-color: #cad0d1
 
 		.hamburger
 			&__line
@@ -194,10 +199,16 @@
 		margin-left: auto
 		max-width: 170px
 		@media only screen and (max-width : 750px)
+			width: auto
 			max-width: none
 			display: inline-block
 			padding: 5px 10px
-			border-color: #9dafb4
+			border-color: #e6ebec
+			&:hover
+				background-color: #e6ebec
+			&:active
+				background-color: #cad0d1
+				border-color: #cad0d1
 		@media only screen and (max-width : 550px)
 			padding: 2px 7px
 
