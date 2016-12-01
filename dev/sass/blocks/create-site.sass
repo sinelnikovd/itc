@@ -1,0 +1,131 @@
+.create-site
+	padding: 20px 0 60px
+
+.site-type
+	margin-top: 25px
+	padding-bottom: 65px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	&__item
+		width: 33.333333%
+		padding: 15px 10px
+		margin-bottom: 10px
+		box-sizing: border-box
+	&__title
+		margin-top: 10px
+		display: inline-block
+		@extend %pbold
+		font-size: 12px
+		text-transform: uppercase
+		color: #333
+		text-decoration: none
+		&:hover
+			color: $c-orange
+	&__icon-wrap
+		min-height: 30px
+		position: relative
+	&__icon
+		position: absolute
+		bottom: 0
+		&_1c
+			&:hover
+				+icon-1c_h
+		&_bitrix
+			&:hover
+				+icon-bitrix_h
+		&_corporate
+			&:hover
+				+icon-corporate_h
+		&_shops
+			&:hover
+				+icon-shops_h
+		&_lp
+			&:hover
+				+icon-lp_h
+		&_redesign
+			&:hover
+				+icon-redesign_h
+	&__txt
+		line-height: 1.5em
+
+
+.site-result
+	border-top: 1px solid #ebeaef
+	text-align: center
+	&__btn
+		border: 1px solid #ebeaef
+		background-color: #fff
+		height: 44px
+		position: relative
+		top: -22px
+		padding: 0 2.5em
+		cursor: pointer
+		&:after
+			content: ''
+			display: inline-block
+			margin-left: 5px
+			+size(8px)
+			+transform(rotate(-135deg))
+			+transition(transform .5s ease-in-out)
+			border-top: 1px solid #039be6
+			border-left: 1px solid #039be6
+			position: relative
+		&-txt
+			color: #039be6
+			font-size: 14px
+			border-bottom: 1px dashed #039be6
+		&:hover
+			&:after
+				border-color: $c-orange
+			.site-result__btn
+				&-txt
+					color: $c-orange
+					border-bottom-color: $c-orange
+		&_active
+			&:after
+				+transform(rotate(45deg) translateY(3px))
+
+	&__list
+		display: none
+		text-align: left
+		+clearfix
+
+
+	&__item
+		position: relative
+		padding-left: 50px
+		margin: 10px 0 40px
+		float: left
+		width: 50%
+		box-sizing: border-box
+
+	&__title
+		@extend %pregular
+		font-size: 18px
+
+	&__txt
+		margin-top: 8px
+
+	&__icon
+		background-color: #012233
+		+size(30px)
+		border-radius: 100%
+		position: absolute
+		top: 0
+		left: 0
+		@extend %pbold
+		color: #fff
+		font-size: 16px
+		text-align: center
+		line-height: 30px
+	&__check
+		position: absolute
+		bottom: 0
+		right: -5px
+		display: block
+		line-height: 1

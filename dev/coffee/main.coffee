@@ -5,13 +5,14 @@ $(document).ready ->
 		loop: true
 		nav: false
 		items: 1
-		dotsContainer: ".slider-nav__dots"
+		dots: true
+		dotsContainer: ".client-slider-nav__dots"
 		dotsData: true
 		autoplay: true
 		autoplayTimeout: 10000
-	$('.slider-nav__prev').click ->
+	$('.client-slider-nav__arrow_prev').click ->
 		clientCarousel.trigger('prev.owl.carousel')
-	$('.slider-nav__next').click ->
+	$('.client-slider-nav__arrow_next').click ->
 		clientCarousel.trigger('next.owl.carousel')
 
 
@@ -61,9 +62,17 @@ $(document).ready ->
 		ui.newHeader.addClass("accordion__head_active")
 	)
 
+	$( ".technology__accordion" ).on( "accordionbeforeactivate",( event, ui ) ->
+		$(".radial-item").removeClass("radial-item_active")
+		$(".radial-item").eq(ui.newHeader.index()/2).addClass("radial-item_active")
+	)
+
 
 	$(".select-inline__txt").click ->
-		$(@).next(".select-inline__list").toggleClass("select-inline__list_dropdown")
+		list = $(@).next(".select-inline__list").toggleClass("select-inline__list_dropdown")
+		if list.offset().left + list.width() > $(document).width()
+			list.css
+				right: "-30px"
 		$(@).closest(".select-inline").find(".select-inline__overlay").toggleClass("select-inline__overlay_dropdown")
 
 		self = $(@)
@@ -83,9 +92,9 @@ $(document).ready ->
 	#	if(i == 0)
 	#		$(@).height()
 
-	$(".top10-price__slide-nav_prev").click ->
+	$(".top10-price__arrow_prev").click ->
 		$('.top10-price__row').slick("slickPrev")
-	$(".top10-price__slide-nav_next").click ->
+	$(".top10-price__arrow_next").click ->
 		$('.top10-price__row').slick("slickNext")
 
 	slickInit = false
@@ -114,12 +123,12 @@ $(document).ready ->
 		if scrollPosition > 0
 			if !$(".header").hasClass("header_fixed")
 				$(".header").addClass("header_fixed")
-				$(".top").css
+				$(".top, .top-bg").css
 					"padding-top": $(".header").height() + "px"
 		if scrollPosition <= 0
 			if $(".header").hasClass("header_fixed")
 				$(".header").removeClass("header_fixed")
-				$(".top").css
+				$(".top, .top-bg").css
 					"padding-top": 0 +"px"
 
 	headerFixed($(window).scrollTop())
@@ -175,4 +184,65 @@ $(document).ready ->
 
 
 
+	efficiencyCarousel = $('.efficiency__slider').owlCarousel
+		loop: true
+		nav: false
+		items: 1
+		dots: false
+	$('.efficiency__arrow_prev').click ->
+		efficiencyCarousel.trigger('prev.owl.carousel')
+	$('.efficiency__arrow_next').click ->
+		efficiencyCarousel.trigger('next.owl.carousel')
 
+
+
+	reviewsCarousel = $('.reviews__items').owlCarousel
+		loop: true
+		nav: false
+		items: 1
+		dots: false
+	$('.reviews__arrow_prev').click ->
+		reviewsCarousel.trigger('prev.owl.carousel')
+	$('.reviews__arrow_next').click ->
+		reviewsCarousel.trigger('next.owl.carousel')
+
+
+
+
+
+
+	$(".price__arrow_prev").click ->
+		$('.price__list').slick("slickPrev")
+	$(".price__arrow_next").click ->
+		$('.price__list').slick("slickNext")
+	priceSlickInit = true
+	mq600 = window.matchMedia('only screen and (max-width : 600px)')
+	mq600Handler = ->
+		if mq600.matches
+			$('.price__list').slick
+				slidesToShow: 1
+				slidesToScroll: 1
+				arrows: false
+				slide: ".price-item"
+			priceSlickInit = true
+
+		else
+			if priceSlickInit
+				$('.price__list').slick("unslick")
+				priceSlickInit = false
+	mq600Handler()
+	mq600.addListener(mq600Handler)
+
+
+
+
+
+	$(".site-result__btn").click ->
+		$(@).toggleClass("site-result__btn_active")
+		$(@).next(".site-result__list").slideToggle()
+
+
+	$('.radial-item__progress, .radial-item__progress-active').circleProgress
+			startAngle: -Math.PI / 2
+			emptyFill: "rgba(0,0,0,0)"
+			thickness: 18

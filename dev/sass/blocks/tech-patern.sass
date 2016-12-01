@@ -1,0 +1,25 @@
+.tech-patern
+	background-image: url(media/img/patern.png)
+	background-color: #2f3c6b
+	position: relative
+	color: #fff
+	padding: 40px 0 50px
+	&__title
+		text-align: left
+		color: #fff
+	&__body
+		margin-top: 20px
+		+clearfix
+	&__left
+		float: left
+		width: 45%
+		padding-right: 2%
+		box-sizing: border-box
+		p
+			@extend %pbold
+			font-size: 18px
+			line-height: 1.2em
+	&__right
+		float: right
+		width: 54%
+		line-height: 1.5em

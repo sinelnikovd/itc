@@ -1,0 +1,46 @@
+mixin efficiency(hr)
+	+b.efficiency&attributes(attributes)
+		.container
+			.content
+				if hr
+					+b.hr.__hr
+				+b.title.__title Главный критерий эффективности для нас - рост вашего бизнеса
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+				+e.wrap
+					+arrow._prev.__arrow._prev
+					+arrow._next.__arrow._next
+					+e.slider.owl-carousel
+						- for (var x = 0; x < 3; x++)
+							+b.efficiency-item
+								+e.name Роза Мимоза
+								+e.A.link(href="#") rosamimoza.ru
+								+e.IMG.img(src="media/images/graph/1.jpg", alt="")
+								+b.UL.efficiency-number
+									+e.item
+										+e.number +770%
+										+e.P.desc Рост поискового трафика с мобильных устройств.
+									+e.item
+										+e.number 2000+ 
+										+e.SPAN.mark +350%
+										+e.P.desc Количество запросов в ТОП10.
+									+e.item
+										+e.number 52,64%
+										+e.P.desc Достижение цели в случаев переходов с контекстной рекламы
+								+e.data
+									+b.UL.efficiency-list.__list
+										+e.item
+											strong Тематика: 
+											| B2C-рынок, цветы
+										+e.item
+											strong Услуга: 
+											| Продвижение в ТОП-10
+										+e.item
+											strong Регион: 
+											| Самара
+										+e.item
+											strong Срок достижения результата: 
+											| 9 месяцев
+									+e.result
+										+e.STRONG.result-title Результаты работы
+										p Каждый заказ в данной тематике - это доход в 100-150 тысяч рублей. 10-кратный рост поискового трафика позволил увеличить поток клиентов через сайт, что привело к росту оборота более чем на 3 миллиона рублей.
+

@@ -8,12 +8,22 @@
 		position: absolute
 		right: 0
 		bottom: 0
+		@media only screen and (max-width : 950px)
+			right: -50px
+		@media only screen and (max-width : 550px)
+			right: -100px
 	&__title
 		text-align: left
+		@media only screen and (max-width : 750px)
+			width: 60%
 	&__desc
 		font-size: 26px
 		line-height: 1.35em
 		@extend %plight
+		@media only screen and (max-width : 750px)
+			width: 60%
+		@media only screen and (max-width : 550px)
+			font-size: 18px
 	&__free
 		@extend %pbold
 		color: #23ce42
@@ -21,4 +31,5 @@
 	&__btn
 		margin-top: 37px
 		display: inline-block
-		padding: 11px 42px
+		@media only screen and (max-width : 420px)
+			width: 100%

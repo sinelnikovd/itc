@@ -1,0 +1,61 @@
+.radial
+	padding-top: 10px
+	
+.radial-item
+	margin: 10px 0
+	+clearfix
+	&_active
+		.radial-item
+			&__progress
+				display: none
+				&-active
+					display: block
+			&__percent
+				background-color: $c-orange
+			&__name
+				color: $c-orange
+	&__name
+		float: left
+		width: 48%
+		text-align: right
+		padding-right: 5px
+		box-sizing: border-box
+	&__percent
+		float: left
+		width: 9%
+		height: 18px
+		background-color: #0e5c98
+		position: relative
+		&-txt
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			@extend %pbold
+			color: #fff
+			font-size: 12px
+	&__progress
+		float: left
+		width: 41%
+		box-sizing: border-box
+		position: relative
+		canvas
+			position: absolute
+			top: 0
+			left: 2px
+			+transform(translateX(-50%))
+		&-active
+			float: left
+			width: 41%
+			box-sizing: border-box
+			position: relative
+			display: none
+			canvas
+				position: absolute
+				top: 0
+				left: 2px
+				+transform(translateX(-50%))
+			
+

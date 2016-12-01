@@ -1,0 +1,17 @@
+.arrow
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	@extend .icon
+	border: 0 none
+	box-shadow: none
+	background-color: transparent
+	padding: 0
+	&_prev
+		+icon-prev
+		&:hover
+			+icon-prev_orange
+	&_next
+		+icon-next
+		&:hover
+			+icon-next_orange

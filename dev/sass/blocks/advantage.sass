@@ -1,20 +1,40 @@
 .advantage
-	padding: 32px 0 0
+	padding: 32px 0 15px
 	&__list
-		width: 96%
-		margin-left: 4%
-		padding-top: 8px
-		+clearfix
-		&-item
-			float: left
-			width: 50%
-			padding-left: 80px
-			box-sizing: border-box
-			margin: 29px 0
-			min-height: 60px
-		&-title
-			font-size: 18px
-			@extend %pbold
-		&-desc
-			margin-top: 5px
-			line-height: 1.5
+		width: 85%
+		margin-top: 15px
+		margin-left: auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		align-content: flex-start
+		@media only screen and (max-width : 750px)
+			width: 95%
+		@media only screen and (max-width : 550px)
+			width: 100%
+			display: block
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		+transform(translateX(-50%))
+	&__item
+		width: 50%
+		padding-left: 40px
+		padding-right: 50px
+		box-sizing: border-box
+		margin: 22px 0
+		position: relative
+		@media only screen and (max-width : 550px)
+			width: 90%
+			padding-right: 0
+			margin-left: auto
+	&__title
+		font-size: 18px
+		@extend %pbold
+	&__desc
+		margin-top: 5px
+		line-height: 1.5

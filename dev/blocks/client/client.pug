@@ -7,123 +7,46 @@ mixin client(hr)
 				+b.title Клиенты о нас
 				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
 				+e.slider.owl-carousel
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn.A._border_small._color_white.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn.A._border_small._color_white.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-					+b.slider-item(data-dot="<span></span><i></i>")
-						+e.desc
-							+b.person
-								+e.IMG.thumb(src="./media/images/person/1.jpg")
-								+e.desc
-									+e.name Ковель Денис
-									+e.position Генеральный директор
-									+e.A.link(href="#") 77volt.ru
-							+e.txt
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-								p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
-							+btn.A._border_small._color_white.__btn(href="#") Читать полностью
-						+b.client-result.__result
-							+e.title Позиции в 
-								+e.SPAN.title-icon
-									.icon.icon_Yandex
-							+e.A.link(href="#") 77volt.ru
-							+e.TABLE.table
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель в Самаре
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") кабель дешево
-									td 1
-								tr
-									td
-										+e.A.position-link(href="#") купить кабель
-									td 1
-				+b.slider-nav
-					+e.prev
-						.icon.icon_arrow_left
+					- for(var i=0; i < 3; i++)
+						+b.client-item(data-dot="<span></span><i></i>")
+							+e.desc
+								+b.person
+									+e.IMG.thumb(src="./media/images/person/1.jpg")
+									+e.desc
+										+e.name Ковель Денис
+										+e.position Генеральный директор
+										+e.A.link(href="#") 77volt.ru
+								+e.txt
+									p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+									p Мы получаем продуманные предложения, подходящие именно нашему бизнесу. Благодаря правильной стратегии трафик на сайте вырос в 13 раз!
+								+btn.A._border_small._color_white.__btn(href="#") Читать полностью
+							+b.client-result.__result
+								+e.title Позиции в 
+									+e.SPAN.title-icon
+										.icon.icon_Yandex
+								+e.A.link(href="#") 77volt.ru
+								+e.TABLE.table
+									tr
+										td
+											+e.A.position-link(href="#") кабель дешево
+										td 1
+									tr
+										td
+											+e.A.position-link(href="#") купить кабель
+										td 1
+									tr
+										td
+											+e.A.position-link(href="#") кабель в Самаре
+										td 1
+									tr
+										td
+											+e.A.position-link(href="#") кабель дешево
+										td 1
+									tr
+										td
+											+e.A.position-link(href="#") купить кабель
+										td 1
+				+b.client-slider-nav
+					+arrow._prev.__arrow._prev
 					+e.dots
-					+e.next
-						.icon.icon_arrow_right
+					+arrow._next.__arrow._next

@@ -4,12 +4,36 @@
 		margin: 42px 11.5% 37px
 		padding: 17px 11% 16px 21px
 		font-size: 18px
-		.browser-input__icon
-			padding-top: 20px
+
+		@media only screen and (max-width : 750px)
+			margin-left: 8%
+			margin-right: 8%
+		@media only screen and (max-width : 550px)
+			margin-left: 0
+			margin-right: 20px
+			font-size: 14px
+			padding-left: 15px
+
 	&__desc
 		margin: 0 12%
+		@media only screen and (max-width : 950px)
+			br
+				display: none
+		@media only screen and (max-width : 750px)
+			margin-left: 8%
+			margin-right: 8%
+		@media only screen and (max-width : 550px)
+			margin-left: 0
+			margin-right: 0
 	&__browser
 		margin: 45px 10.8% 0 16.5%
+		@media only screen and (max-width : 750px)
+			margin-left: 8%
+			margin-right: 8%
+		@media only screen and (max-width : 550px)
+			margin-left: 0
+			margin-right: 0
+
 		&-top
 			background-color: #e3e5e8
 			height: 22px
@@ -38,6 +62,9 @@
 			border-left: 1px solid #e3e5e8
 			border-right: 1px solid #e3e5e8
 			padding: 43px 25px 5px
+			@media only screen and (max-width : 550px)
+				padding-left: 10px
+				padding-right: 10px
 	&__browser-input
 		max-width: 470px
 		padding: 10px 17px
@@ -45,11 +72,18 @@
 		margin-bottom: 30px
 		margin-left: 10px
 		.browser-input__btn
-			font-size: 21px
+			font-size: 20px
+			&:after
+				border-top: 21px solid transparent
+				border-left: 10px solid #ffdb4d
+				border-bottom: 21px solid transparent
+
 		.browser-input__icon
-			padding-top: 15px
-			.icon
-				font-size: 8px
+			font-size: 8px
+		@media only screen and (max-width : 550px)
+			margin-right: 20px
+			margin-left: 0
+			padding-left: 10px
 
 .browser-item
 	margin: 3px 0
@@ -81,7 +115,10 @@
 	position: relative
 	box-sizing: border-box
 	&__icon
-		padding-top: 10px
+		position: absolute
+		top: 50%
+		left: 50%
+		+transform(translateX(-50%) translateY(-50%))
 	&__btn
 		position: absolute
 		width: 15%
@@ -92,6 +129,7 @@
 		right: 0
 		font-size: 30px
 		text-align: center
+		margin-right: -10px
 		&:after
 			content: ''
 			position: absolute
@@ -99,8 +137,8 @@
 			top: 0
 			bottom: 0
 			+size(0)
-			border-top: 1em solid transparent
+			border-top: 28px solid transparent
 			border-left: 10px solid #ffdb4d
-			border-bottom: 1em solid transparent
+			border-bottom: 28px solid transparent
 
 

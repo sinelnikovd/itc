@@ -1,0 +1,26 @@
+.technology
+	padding: 40px 0
+	text-align: center
+	&__tab
+		margin-top: 15px
+	&__body
+		margin-top: 40px
+		+clearfix
+	&__accordion
+		text-align: left
+		float: left
+		width: 54%
+		.accordion
+			&__head
+				width: 100%
+				&_active
+					.accordion__icon
+						border-color: $c-orange
+					.accordion__head-txt
+						color: $c-orange
+						border-bottom-color: $c-orange
+			&__body
+				width: 100%
+	&__radial
+		float: left
+		width: 46%

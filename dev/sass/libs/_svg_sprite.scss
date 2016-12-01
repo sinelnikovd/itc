@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("media/img/svg/sprite.svg");
       background-repeat: no-repeat;
-      background-size: 8em 84.1em;
+      background-size: 9em 255.3em;
 
       .no-svg & {
         background-image: url("media/img/svg/sprite.png");
@@ -17,9 +17,35 @@
 
 
 
-.icon_Yandex {
+.icon_1c {
   &:before {
       background-position: 0em 0em;
+      width: 4.2em;
+      height: 1.8em;
+    }
+  }
+
+  @mixin icon-1c(){
+    @extend .icon_1c;
+  }
+
+
+.icon_1c_h {
+  &:before {
+      background-position: 0em -1.8em;
+      width: 4.2em;
+      height: 1.8em;
+    }
+  }
+
+  @mixin icon-1c_h(){
+    @extend .icon_1c_h;
+  }
+
+
+.icon_Yandex {
+  &:before {
+      background-position: 0em -3.6em;
       width: 8em;
       height: 3.1787em;
     }
@@ -30,61 +56,48 @@
   }
 
 
-.icon_arrow_left {
+.icon_action {
   &:before {
-      background-position: 0em -3.2em;
-      width: 1.3em;
-      height: 2.4em;
+      background-position: 0em -6.8em;
+      width: 9em;
+      height: 7em;
     }
   }
 
-  @mixin icon-arrow_left(){
-    @extend .icon_arrow_left;
+  @mixin icon-action(){
+    @extend .icon_action;
   }
 
 
-.icon_arrow_left_orange {
+.icon_bitrix {
   &:before {
-      background-position: 0em -5.6em;
-      width: 1.3em;
-      height: 2.4em;
+      background-position: 0em -13.8em;
+      width: 4em;
+      height: 4em;
     }
   }
 
-  @mixin icon-arrow_left_orange(){
-    @extend .icon_arrow_left_orange;
+  @mixin icon-bitrix(){
+    @extend .icon_bitrix;
   }
 
 
-.icon_arrow_right {
+.icon_bitrix_h {
   &:before {
-      background-position: 0em -8em;
-      width: 1.3em;
-      height: 2.4em;
+      background-position: 0em -17.8em;
+      width: 4em;
+      height: 4em;
     }
   }
 
-  @mixin icon-arrow_right(){
-    @extend .icon_arrow_right;
-  }
-
-
-.icon_arrow_right_orange {
-  &:before {
-      background-position: 0em -10.4em;
-      width: 1.3em;
-      height: 2.4em;
-    }
-  }
-
-  @mixin icon-arrow_right_orange(){
-    @extend .icon_arrow_right_orange;
+  @mixin icon-bitrix_h(){
+    @extend .icon_bitrix_h;
   }
 
 
 .icon_brief {
   &:before {
-      background-position: 0em -12.8em;
+      background-position: 0em -21.8em;
       width: 1.4em;
       height: 2.1em;
     }
@@ -95,9 +108,48 @@
   }
 
 
+.icon_comment {
+  &:before {
+      background-position: 0em -23.9em;
+      width: 1.8em;
+      height: 1.5em;
+    }
+  }
+
+  @mixin icon-comment(){
+    @extend .icon_comment;
+  }
+
+
+.icon_corporate {
+  &:before {
+      background-position: 0em -25.4em;
+      width: 2.3945em;
+      height: 4.2909999999999995em;
+    }
+  }
+
+  @mixin icon-corporate(){
+    @extend .icon_corporate;
+  }
+
+
+.icon_corporate_h {
+  &:before {
+      background-position: 0em -29.7em;
+      width: 2.394em;
+      height: 4.2909999999999995em;
+    }
+  }
+
+  @mixin icon-corporate_h(){
+    @extend .icon_corporate_h;
+  }
+
+
 .icon_del {
   &:before {
-      background-position: 0em -14.9em;
+      background-position: 0em -34em;
       width: 1.4em;
       height: 1.4em;
     }
@@ -108,9 +160,35 @@
   }
 
 
+.icon_dis {
+  &:before {
+      background-position: 0em -35.4em;
+      width: 9em;
+      height: 7em;
+    }
+  }
+
+  @mixin icon-dis(){
+    @extend .icon_dis;
+  }
+
+
+.icon_double-arrow {
+  &:before {
+      background-position: 0em -42.4em;
+      width: 4.2em;
+      height: 2.397em;
+    }
+  }
+
+  @mixin icon-double-arrow(){
+    @extend .icon_double-arrow;
+  }
+
+
 .icon_download {
   &:before {
-      background-position: 0em -16.3em;
+      background-position: 0em -44.8em;
       width: 1.1em;
       height: 1.4em;
     }
@@ -123,7 +201,7 @@
 
 .icon_fb {
   &:before {
-      background-position: 0em -17.7em;
+      background-position: 0em -46.2em;
       width: 1.2em;
       height: 2.2em;
     }
@@ -136,7 +214,7 @@
 
 .icon_guarantee {
   &:before {
-      background-position: 0em -19.9em;
+      background-position: 0em -48.4em;
       width: 1.4em;
       height: 1.8em;
     }
@@ -149,7 +227,7 @@
 
 .icon_help {
   &:before {
-      background-position: 0em -21.7em;
+      background-position: 0em -50.2em;
       width: 3em;
       height: 3em;
     }
@@ -162,7 +240,7 @@
 
 .icon_ic1 {
   &:before {
-      background-position: 0em -24.7em;
+      background-position: 0em -53.2em;
       width: 5em;
       height: 2.5em;
     }
@@ -175,7 +253,7 @@
 
 .icon_ic2 {
   &:before {
-      background-position: 0em -27.2em;
+      background-position: 0em -55.7em;
       width: 4.7em;
       height: 1.7em;
     }
@@ -188,7 +266,7 @@
 
 .icon_ic3 {
   &:before {
-      background-position: 0em -28.9em;
+      background-position: 0em -57.4em;
       width: 3.2em;
       height: 3.5em;
     }
@@ -201,7 +279,7 @@
 
 .icon_ic4 {
   &:before {
-      background-position: 0em -32.4em;
+      background-position: 0em -60.9em;
       width: 4.2em;
       height: 3.9em;
     }
@@ -214,7 +292,7 @@
 
 .icon_ic5 {
   &:before {
-      background-position: 0em -36.3em;
+      background-position: 0em -64.8em;
       width: 4.6em;
       height: 3.2em;
     }
@@ -227,7 +305,7 @@
 
 .icon_ic6 {
   &:before {
-      background-position: 0em -39.5em;
+      background-position: 0em -68em;
       width: 5em;
       height: 5em;
     }
@@ -240,7 +318,7 @@
 
 .icon_ic7 {
   &:before {
-      background-position: 0em -44.5em;
+      background-position: 0em -73em;
       width: 4.4em;
       height: 3.7em;
     }
@@ -253,7 +331,7 @@
 
 .icon_in {
   &:before {
-      background-position: 0em -48.2em;
+      background-position: 0em -76.7em;
       width: 2.2em;
       height: 2.2em;
     }
@@ -264,9 +342,100 @@
   }
 
 
+.icon_interic1 {
+  &:before {
+      background-position: 0em -78.9em;
+      width: 4em;
+      height: 4.1em;
+    }
+  }
+
+  @mixin icon-interic1(){
+    @extend .icon_interic1;
+  }
+
+
+.icon_interic2 {
+  &:before {
+      background-position: 0em -83em;
+      width: 3.2em;
+      height: 4.3em;
+    }
+  }
+
+  @mixin icon-interic2(){
+    @extend .icon_interic2;
+  }
+
+
+.icon_interic3 {
+  &:before {
+      background-position: 0em -87.3em;
+      width: 4.1em;
+      height: 3.85em;
+    }
+  }
+
+  @mixin icon-interic3(){
+    @extend .icon_interic3;
+  }
+
+
+.icon_interic4 {
+  &:before {
+      background-position: 0em -91.2em;
+      width: 3.5em;
+      height: 4.5em;
+    }
+  }
+
+  @mixin icon-interic4(){
+    @extend .icon_interic4;
+  }
+
+
+.icon_interic5 {
+  &:before {
+      background-position: 0em -95.7em;
+      width: 4em;
+      height: 4em;
+    }
+  }
+
+  @mixin icon-interic5(){
+    @extend .icon_interic5;
+  }
+
+
+.icon_interic6 {
+  &:before {
+      background-position: 0em -99.7em;
+      width: 4.1em;
+      height: 4em;
+    }
+  }
+
+  @mixin icon-interic6(){
+    @extend .icon_interic6;
+  }
+
+
+.icon_interic7 {
+  &:before {
+      background-position: 0em -103.7em;
+      width: 4.9em;
+      height: 3.9em;
+    }
+  }
+
+  @mixin icon-interic7(){
+    @extend .icon_interic7;
+  }
+
+
 .icon_link {
   &:before {
-      background-position: 0em -50.4em;
+      background-position: 0em -107.6em;
       width: 1.5em;
       height: 1.5em;
     }
@@ -279,7 +448,7 @@
 
 .icon_list_c3 {
   &:before {
-      background-position: 0em -51.9em;
+      background-position: 0em -109.1em;
       width: 1.2em;
       height: 1.2em;
     }
@@ -292,7 +461,7 @@
 
 .icon_list_cg {
   &:before {
-      background-position: 0em -53.1em;
+      background-position: 0em -110.3em;
       width: 1.2em;
       height: 1.2em;
     }
@@ -305,7 +474,7 @@
 
 .icon_list_cg_b {
   &:before {
-      background-position: 0em -54.3em;
+      background-position: 0em -111.5em;
       width: 1.4em;
       height: 1.4em;
     }
@@ -318,7 +487,7 @@
 
 .icon_list_cw {
   &:before {
-      background-position: 0em -55.7em;
+      background-position: 0em -112.9em;
       width: 1.4em;
       height: 1.4em;
     }
@@ -329,9 +498,74 @@
   }
 
 
+.icon_lp {
+  &:before {
+      background-position: 0em -114.3em;
+      width: 5em;
+      height: 3.3em;
+    }
+  }
+
+  @mixin icon-lp(){
+    @extend .icon_lp;
+  }
+
+
+.icon_lp_h {
+  &:before {
+      background-position: 0em -117.6em;
+      width: 5em;
+      height: 3.3em;
+    }
+  }
+
+  @mixin icon-lp_h(){
+    @extend .icon_lp_h;
+  }
+
+
+.icon_modulet {
+  &:before {
+      background-position: 0em -120.9em;
+      width: 5.4em;
+      height: 7.3em;
+    }
+  }
+
+  @mixin icon-modulet(){
+    @extend .icon_modulet;
+  }
+
+
+.icon_next {
+  &:before {
+      background-position: 0em -128.2em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-next(){
+    @extend .icon_next;
+  }
+
+
+.icon_next_orange {
+  &:before {
+      background-position: 0em -130.6em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-next_orange(){
+    @extend .icon_next_orange;
+  }
+
+
 .icon_phone {
   &:before {
-      background-position: 0em -57.1em;
+      background-position: 0em -133em;
       width: 1em;
       height: 2.1em;
     }
@@ -344,7 +578,7 @@
 
 .icon_phone_black {
   &:before {
-      background-position: 0em -59.2em;
+      background-position: 0em -135.1em;
       width: 1em;
       height: 2.1em;
     }
@@ -357,7 +591,7 @@
 
 .icon_phone_blue {
   &:before {
-      background-position: 0em -61.3em;
+      background-position: 0em -137.2em;
       width: 1em;
       height: 2.1em;
     }
@@ -368,9 +602,22 @@
   }
 
 
+.icon_photot {
+  &:before {
+      background-position: 0em -139.3em;
+      width: 5.3em;
+      height: 7.3em;
+    }
+  }
+
+  @mixin icon-photot(){
+    @extend .icon_photot;
+  }
+
+
 .icon_plus {
   &:before {
-      background-position: 0em -63.4em;
+      background-position: 0em -146.6em;
       width: 0.8em;
       height: 0.8em;
     }
@@ -381,9 +628,139 @@
   }
 
 
+.icon_prev {
+  &:before {
+      background-position: 0em -147.4em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-prev(){
+    @extend .icon_prev;
+  }
+
+
+.icon_prev_orange {
+  &:before {
+      background-position: 0em -149.8em;
+      width: 1.3em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin icon-prev_orange(){
+    @extend .icon_prev_orange;
+  }
+
+
+.icon_priceic1 {
+  &:before {
+      background-position: 0em -152.2em;
+      width: 2.6em;
+      height: 1.9em;
+    }
+  }
+
+  @mixin icon-priceic1(){
+    @extend .icon_priceic1;
+  }
+
+
+.icon_priceic2 {
+  &:before {
+      background-position: 0em -154.1em;
+      width: 2.8em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-priceic2(){
+    @extend .icon_priceic2;
+  }
+
+
+.icon_priceic3 {
+  &:before {
+      background-position: 0em -155.5em;
+      width: 2.8em;
+      height: 1.4em;
+    }
+  }
+
+  @mixin icon-priceic3(){
+    @extend .icon_priceic3;
+  }
+
+
+.icon_prog {
+  &:before {
+      background-position: 0em -156.9em;
+      width: 9em;
+      height: 7em;
+    }
+  }
+
+  @mixin icon-prog(){
+    @extend .icon_prog;
+  }
+
+
+.icon_psd2htmlt {
+  &:before {
+      background-position: 0em -163.9em;
+      width: 5.4em;
+      height: 7.3em;
+    }
+  }
+
+  @mixin icon-psd2htmlt(){
+    @extend .icon_psd2htmlt;
+  }
+
+
+.icon_psdt {
+  &:before {
+      background-position: 0em -171.2em;
+      width: 5.4em;
+      height: 7.3em;
+    }
+  }
+
+  @mixin icon-psdt(){
+    @extend .icon_psdt;
+  }
+
+
+.icon_redesign {
+  &:before {
+      background-position: 0em -178.5em;
+      width: 4.7003em;
+      height: 3.5014000000000003em;
+    }
+  }
+
+  @mixin icon-redesign(){
+    @extend .icon_redesign;
+  }
+
+
+.icon_redesign_h {
+  &:before {
+      background-position: 0em -182.1em;
+      width: 4.7em;
+      height: 3.501em;
+    }
+  }
+
+  @mixin icon-redesign_h(){
+    @extend .icon_redesign_h;
+  }
+
+
 .icon_saic_1 {
   &:before {
-      background-position: 0em -64.2em;
+      background-position: 0em -185.7em;
       width: 2.4em;
       height: 2.1em;
     }
@@ -396,7 +773,7 @@
 
 .icon_saic_2 {
   &:before {
-      background-position: 0em -66.3em;
+      background-position: 0em -187.8em;
       width: 2.3em;
       height: 2em;
     }
@@ -409,7 +786,7 @@
 
 .icon_saic_3 {
   &:before {
-      background-position: 0em -68.3em;
+      background-position: 0em -189.8em;
       width: 2em;
       height: 2em;
     }
@@ -422,7 +799,7 @@
 
 .icon_saic_4 {
   &:before {
-      background-position: 0em -70.3em;
+      background-position: 0em -191.8em;
       width: 2.8em;
       height: 1.3em;
     }
@@ -435,7 +812,7 @@
 
 .icon_saic_5 {
   &:before {
-      background-position: 0em -71.6em;
+      background-position: 0em -193.1em;
       width: 2.2em;
       height: 1.9em;
     }
@@ -448,7 +825,7 @@
 
 .icon_saic_6 {
   &:before {
-      background-position: 0em -73.5em;
+      background-position: 0em -195em;
       width: 2.1em;
       height: 2.1em;
     }
@@ -461,7 +838,7 @@
 
 .icon_search {
   &:before {
-      background-position: 0em -75.6em;
+      background-position: 0em -197.1em;
       width: 1.8em;
       height: 1.8em;
     }
@@ -472,9 +849,113 @@
   }
 
 
+.icon_seoic1 {
+  &:before {
+      background-position: 0em -198.9em;
+      width: 5.1em;
+      height: 4.6em;
+    }
+  }
+
+  @mixin icon-seoic1(){
+    @extend .icon_seoic1;
+  }
+
+
+.icon_seoic2 {
+  &:before {
+      background-position: 0em -203.5em;
+      width: 3.6912em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin icon-seoic2(){
+    @extend .icon_seoic2;
+  }
+
+
+.icon_seoic3 {
+  &:before {
+      background-position: 0em -206.7em;
+      width: 4.7em;
+      height: 4.2em;
+    }
+  }
+
+  @mixin icon-seoic3(){
+    @extend .icon_seoic3;
+  }
+
+
+.icon_seoic4 {
+  &:before {
+      background-position: 0em -210.9em;
+      width: 3.5698em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin icon-seoic4(){
+    @extend .icon_seoic4;
+  }
+
+
+.icon_seoic5 {
+  &:before {
+      background-position: 0em -214.1em;
+      width: 4.9177em;
+      height: 4.8em;
+    }
+  }
+
+  @mixin icon-seoic5(){
+    @extend .icon_seoic5;
+  }
+
+
+.icon_seoic6 {
+  &:before {
+      background-position: 0em -218.9em;
+      width: 4.629em;
+      height: 4.409000000000001em;
+    }
+  }
+
+  @mixin icon-seoic6(){
+    @extend .icon_seoic6;
+  }
+
+
+.icon_shops {
+  &:before {
+      background-position: 0em -223.4em;
+      width: 4.1958em;
+      height: 3.4em;
+    }
+  }
+
+  @mixin icon-shops(){
+    @extend .icon_shops;
+  }
+
+
+.icon_shops_h {
+  &:before {
+      background-position: 0em -226.8em;
+      width: 4.196em;
+      height: 3.4em;
+    }
+  }
+
+  @mixin icon-shops_h(){
+    @extend .icon_shops_h;
+  }
+
+
 .icon_star {
   &:before {
-      background-position: 0em -77.4em;
+      background-position: 0em -230.2em;
       width: 1.5em;
       height: 1.5em;
     }
@@ -487,7 +968,7 @@
 
 .icon_stat {
   &:before {
-      background-position: 0em -78.9em;
+      background-position: 0em -231.7em;
       width: 1.9em;
       height: 1.9em;
     }
@@ -498,9 +979,87 @@
   }
 
 
+.icon_techad_1 {
+  &:before {
+      background-position: 0em -233.6em;
+      width: 2.4em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-techad_1(){
+    @extend .icon_techad_1;
+  }
+
+
+.icon_techad_2 {
+  &:before {
+      background-position: 0em -235.7em;
+      width: 2.3em;
+      height: 2em;
+    }
+  }
+
+  @mixin icon-techad_2(){
+    @extend .icon_techad_2;
+  }
+
+
+.icon_techad_3 {
+  &:before {
+      background-position: 0em -237.7em;
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  @mixin icon-techad_3(){
+    @extend .icon_techad_3;
+  }
+
+
+.icon_techad_4 {
+  &:before {
+      background-position: 0em -239.7em;
+      width: 2.8em;
+      height: 1.3em;
+    }
+  }
+
+  @mixin icon-techad_4(){
+    @extend .icon_techad_4;
+  }
+
+
+.icon_techad_5 {
+  &:before {
+      background-position: 0em -241em;
+      width: 2.2em;
+      height: 1.9em;
+    }
+  }
+
+  @mixin icon-techad_5(){
+    @extend .icon_techad_5;
+  }
+
+
+.icon_techad_6 {
+  &:before {
+      background-position: 0em -242.9em;
+      width: 2.1em;
+      height: 2.1em;
+    }
+  }
+
+  @mixin icon-techad_6(){
+    @extend .icon_techad_6;
+  }
+
+
 .icon_tie {
   &:before {
-      background-position: 0em -80.8em;
+      background-position: 0em -245em;
       width: 1.1em;
       height: 2em;
     }
@@ -511,9 +1070,22 @@
   }
 
 
+.icon_update {
+  &:before {
+      background-position: 0em -247em;
+      width: 9em;
+      height: 7em;
+    }
+  }
+
+  @mixin icon-update(){
+    @extend .icon_update;
+  }
+
+
 .icon_vk {
   &:before {
-      background-position: 0em -82.8em;
+      background-position: 0em -254em;
       width: 2.2em;
       height: 1.3em;
     }

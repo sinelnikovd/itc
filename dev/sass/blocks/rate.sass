@@ -6,14 +6,29 @@
 		line-height: 1.35em
 		@extend %pregular
 		text-align: center
+		@media only screen and (max-width : 550px)
+			font-size: 18px
+			font-family: "ProximaNovaBold", $helvetica
 
 	&__desc
 		margin: 3px auto 0
 		line-height: 1.65
 		width: 70%
+		@media only screen and (max-width : 550px)
+			width: 100%
 
 	&__tab
 		margin-top: 40px
+		@media only screen and (max-width : 550px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.tab__item
+				width: 100%
+				margin: 0
 
 .rate-content
 	&__item
@@ -23,6 +38,12 @@
 		width: 35%
 		margin-left: 57.5%
 		padding: 45px 0 0
+
+		@media only screen and (max-width : 750px)
+			width: 42.5%
+		@media only screen and (max-width : 550px)
+			width: 100%
+			margin-left: 0
 		&_active
 			display: block
 
@@ -33,6 +54,8 @@
 		right: 100%
 		margin-right: 15%
 		max-width: none
+		@media only screen and (max-width : 550px)
+			display: none
 
 	&__title
 		@extend %pregular
@@ -60,6 +83,8 @@
 
 	&__btn
 		margin-top: 20px
+		@media only screen and (max-width : 550px)
+			width: 100%
 .rate-sale
 	border: 2px solid #23ce42
 	padding: 10px 20% 12px 12px
@@ -72,10 +97,16 @@
 		bottom: 0
 		right: 0
 		width: 20%
-		padding-top: 5%
 		text-align: center
-		color: #fff
-		@extend %bold
+		display: inline-block
+		&-txt
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			+transform(translateY(-50%))
+			color: #fff
+			@extend %bold
 
 	&__price
 		@extend %pbold

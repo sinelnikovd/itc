@@ -24,7 +24,7 @@
 	&__slider
 		margin-top: 45px
 
-.slider-item
+.client-item
 	background-color: #fff
 	border: 1px solid #e5e5e5
 	box-sizing: border-box
@@ -61,13 +61,14 @@
 			width: 100%
 			padding-bottom: 30px
 	&__txt
-		padding-top: 11px
+		padding-top: 5px
 		p
 			margin: 12px 0
 			line-height: 1.6
 
 	&__btn
-		margin-top: 25px
+		font-size: 14px
+		margin-top: 15px
 		color: #333
 		border-color: #e6ebec
 		&:hover
@@ -137,26 +138,17 @@
 		color: #4fc3f7
 		text-decoration: underline
 
-.slider-nav
+.client-slider-nav
 	margin-top: 15px
 	text-align: center
-	&__next,
-	&__dots,
-	&__prev
+	&__dots
 		display: inline-block
 		vertical-align: middle
-	&__next
-		margin-left: 30px
-		cursor: pointer
-		&:hover
-			.icon_arrow_right
-				+icon-arrow_right_orange
-	&__prev
-		margin-right: 30px
-		cursor: pointer
-		&:hover
-			.icon_arrow_left
-				+icon-arrow_left_orange
+	&__arrow
+		&_prev
+			margin-right: 4%
+		&_next
+			margin-left: 4%
 
 .owl-dot
 	text-align: left

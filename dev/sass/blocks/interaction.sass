@@ -1,17 +1,123 @@
 .interaction
 	background-color: #2f3c6b
-	padding: 40px 0
-	min-height: 345px
-	+clearfix
+	.content
+		padding: 40px 0 30px
+		position: relative
+		+clearfix
+	&__line
+		position: absolute
+		left: 79%
+		top: 40px
+		bottom: 40px
+		border-right: 2px dotted rgba(#fff, .3)
+		@media only screen and (max-width : 750px)
+			top: auto
+			bottom: 25%
+			left: 20px
+			right: 20px
+			border-right: 0 none
+			border-top: 2px dotted rgba(#fff, .3)
+
 	&__left
 		float: left
 		width: 78.9%
-		border-right: 2px dotted rgba(#fff, .3)
+		
 		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+
 	&__right
 		float: right
 		width: 21.1%
+		padding-top: 15px
+		@media only screen and (max-width : 750px)
+			width: 100%
+			float: none
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			.interaction-item
+				width: 50%
+
 	&__title
 		color: #fff
 		width: 75%
 		text-align: left
+		@media only screen and (max-width : 750px)
+			width: 100%
+			text-align: center
+
+	&__list
+		margin-top: 60px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 90%
+		margin-right: auto
+		justify-content: space-between
+		align-items: center
+		@media only screen and (max-width : 750px)
+			flex-direction: column
+			width: 100%
+			text-align: center
+
+
+	&__next
+		position: relative
+		padding-bottom: 50px
+		@media only screen and (max-width : 750px)
+			&:before
+				+transform(rotate(90deg))
+		&_text
+			text-align: center
+			flex-grow: 2
+		&-top
+			position: absolute
+			bottom: 100%
+			margin-bottom: 15px
+			font-size: 14px
+			text-align: center
+			width: 150px
+			left: 50%
+			margin-left: -75px
+			@media only screen and (max-width : 750px)
+				bottom: auto
+				right: 100%
+				left: auto
+				top: 5px
+				margin-bottom: 0
+				margin-left: 0
+				width: 100px
+		&-bottom
+			position: absolute
+			top: 100%
+			margin-top: -40px
+			font-size: 12px
+			min-width: 150px
+			left: 50%
+			margin-left: -75px
+			text-align: center
+			@media only screen and (max-width : 750px)
+				left: 100%
+				margin-left: 0
+				bottom: auto
+				top: -5px
+				margin-top: 0
+				min-width: auto
+				width: 133px
+
+
+
+
+.interaction-item
+	text-align: center
+	margin-bottom: 17px
+	&__desc
+		margin-top: 8px
+		@extend %bold

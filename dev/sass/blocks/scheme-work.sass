@@ -1,0 +1,123 @@
+.scheme-work
+	color: #fff
+	padding: 40px 0 35px
+	&__title
+		color: #fff
+		text-align: left
+	&__body
+		+clearfix
+	&__desc
+		float: left
+		width: 40%
+	&__scheme
+		float: left
+		width: 51.5%
+		margin-left: 8.5%
+
+	&__txt
+		p
+			margin: 12px 0
+			line-height: 1.5em
+
+
+.line-scheme
+	&__line
+		position: relative
+		margin: 10px 0
+		padding: 9px 36px 9px 18px
+		box-sizing: border-box
+		border-radius: 3px
+		box-shadow: -1px 0 0 rgba(#000, .2)
+		&:after
+			content: ''
+			position: absolute
+			top: 1px
+			bottom: 1px
+			right: 35px
+			width: 1px
+			background-color: rgba(#000, .2)
+		&_tz
+			background-color: #035b97
+			max-width: 190px
+		&_port
+			background-color: #16599a
+			max-width: 220px
+			margin-left: 6%
+		&_desing
+			background-color: #25579c
+			max-width: 190px
+			margin-left: 22%
+		&_psd2html
+			background-color: #39549f
+			max-width: 190px
+			margin-left: 32.5%
+		&_prog
+			background-color: #5250a2
+			max-width: 320px
+			margin-left: 22%
+		&_test
+			background-color: #614ea5
+			max-width: 190px
+			margin-left: 54%
+		&_start
+			background-color: #714da7
+			max-width: 230px
+			margin-left: 58%
+	&__tooltip-wrap
+		position: absolute
+		width: 35px
+		right: 0
+		top: 0
+		bottom: 0
+	&__tooltip
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		color: #015b97
+		background-color: #fff
+		+size(14px)
+		line-height: 14px
+		border-radius: 100%
+		text-align: center
+		@extend %bold
+		font-size: 12px
+		opacity: .4
+		cursor: pointer
+		user-select: none
+		&:after
+			content: attr(data-tooltip)
+			position: absolute
+			background-color: #fff
+			color: #515a5c
+			@extend %regular
+			bottom: 100%
+			min-width: 500px
+			left: 50%
+			margin-left: -340px
+			margin-bottom: 15px
+			padding: 22px 20px
+			box-sizing: border-box
+			text-align: left
+			font-size: 14px
+			line-height: 1.5em
+			display: none
+		&:before
+			content: ''
+			position: absolute
+			bottom: 100%
+			left: 50%
+			margin-left: -5px
+			border-left: 5px solid transparent
+			border-top: 15px solid #fff
+			border-right: 5px solid transparent
+			display: none
+		&:hover
+			opacity: 1
+			&:after,
+			&:before
+				display: block
+
+

@@ -23,14 +23,22 @@
 				display: none
 				@media only screen and (max-width : 750px)
 					display: block
-			&_prev
-				left: 0
-				&:hover
-					+icon-arrow_left_orange
-			&_next
-				right: 0
-				&:hover
-					+icon-arrow_right_orange
+
+	&__slide-nav-wrap
+		position: relative
+		display: none
+		@media only screen and (max-width : 750px)
+			display: block
+	&__arrow
+		position: absolute
+		top: 60px
+		cursor: pointer
+		z-index: 50
+		&_prev
+			left: 0
+		&_next
+			right: 0
+
 
 	&__table
 		width: 85%

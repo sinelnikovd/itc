@@ -1,12 +1,18 @@
 .efficiency
-	padding: 35px 0 23px
+	padding: 110px 0 45px
+	&_pt_35
+		padding-top: 35px
 	&__title
 		width: 70%
 		margin: 0 auto
 		line-height: 1.1
+		@media only screen and (max-width : 550px)
+			width: 100%
 	&__desc
 		margin: 10px auto 0
 		width: 55%
+		@media only screen and (max-width : 550px)
+			width: 100%
 
 	&_hr
 		padding-top: 0
@@ -14,27 +20,29 @@
 	&__hr
 		margin-bottom: 160px
 
-.slider-wrap
-	position: relative
-	margin-top: 25px
-	&__nav
+	&__wrap
+		position: relative
+		margin-top: 20px
+		border-bottom: 1px solid #ebeaef
+
+	&__arrow
 		position: absolute
-		top: 10px
-		cursor: pointer
+		top: 20px
+		z-index: 25
 		&_prev
-			left: 50%
-			margin-left: -38%
-			&:hover
-				+icon-arrow_left_orange
+			left: 12%
+			@media only screen and (max-width : 750px)
+				left: 0
 		&_next
-			right: 50%
-			margin-right: -38%
-			&:hover
-				+icon-arrow_right_orange
+			right: 12%
+			@media only screen and (max-width : 750px)
+				right: 0
 
 
-.graph-item
+
+.efficiency-item
 	text-align: center
+	padding-bottom: 20px
 	&__name
 		@extend %plight
 		font-size: 26px
@@ -47,6 +55,7 @@
 	&__img
 		margin-top: 30px
 
+
 	&__data
 		margin-top: 20px
 		+clearfix
@@ -54,18 +63,28 @@
 	&__list
 		float: left
 		width: 40%
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
 	&__result
 		float: right
 		width: 60%
 		padding-top: 15px
 		padding-left: 6%
 		box-sizing: border-box
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+			padding-left: 0
 		p
 			margin: 10px 0
 			line-height: 1.5
 
+	@media only screen and (max-width : 550px)
+		img.efficiency-item__img
+			display: none
 
-.list-data
+.efficiency-list
 	&__item
 		margin: 15px 0
 
@@ -74,7 +93,7 @@
 
 
 
-.graph-number
+.efficiency-number
 	margin-top: 28px
 	text-align: left
 	&__item
@@ -84,6 +103,10 @@
 		box-sizing: border-box
 		vertical-align: top
 		&:first-child
+			padding-left: 0
+		@media only screen and (max-width : 550px)
+			display: block
+			width: 100%
 			padding-left: 0
 	&__number
 		@extend %pbold

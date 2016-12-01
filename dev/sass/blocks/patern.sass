@@ -3,7 +3,7 @@
 	background-color: #2f3c6b
 	position: relative
 	color: #fff
-	padding: 50px 0 62px
+	padding: 66px 0 62px
 	//+clearfix
 	.content
 		&:after
@@ -13,9 +13,10 @@
 			bottom: 0
 			left: 0
 			right: 0
+			z-index: 1
 			margin: 0 auto
-			+radial-gradient(circle at 40% 50%, #fff 20%, transparent 100%)
-			opacity: .15
+			+radial-gradient(circle at 45% 50%, #5e78d5 20%, transparent 100%)
+			opacity: .4
 	&_type
 		&_2
 			padding-top: 70px
@@ -62,22 +63,30 @@
 					width: 41%
 					@extend %plight
 					font-size: 26px
+					@media only screen and (max-width : 1200px)
+						width: 78%
+					@media only screen and (max-width : 750px)
+						width: 100%
 				&__desc
 					width: 59%
 					padding-left: 5%
-
+					@media only screen and (max-width : 1200px)
+						width: 78%
+						padding-left: 0
+					@media only screen and (max-width : 750px)
+						width: 100%
 	&__body
 		width: 100%
 		display: table
+		position: relative
+		z-index: 2
 		@media only screen and (max-width : 1200px)
 			display: block
 
 	&__title
 		color: #fff
-		//float: left
 		width: 28%
 		text-align: left
-		//padding-top: 75px
 		line-height: 1.25
 		display: table-cell
 		vertical-align: middle

@@ -40,89 +40,36 @@ block content
 				+tab("Легкий старт", "Бизнес", "Профи").__tab
 
 				+b.rate-content
-					+e.item._active
-						+e.IMG.img(src="media/img/rate/1.png", alt="")
-						+e.title Легкий старт
-						+e.price 2490 
-							+b.SPAN.rubl Р
-							|  в месяц
-						+b.rate-sale.__sale
-							+e.price 1990 
+					-for (var i=1; i <= 3;i++)
+						+e.item(class= (i == 1) ? "_active" : "")
+							+e.IMG.img(src="media/img/rate/"+ i +".png", alt="")
+							+e.title Легкий старт
+							+e.price 2490 
 								+b.SPAN.rubl Р
 								|  в месяц
-							+e.if при заказе SEO-продвижения
-							+e.percent -20%
+							+b.rate-sale.__sale
+								+e.price 1990 
+									+b.SPAN.rubl Р
+									|  в месяц
+								+e.if при заказе SEO-продвижения
+								+e.percent
+									+e.SPAN.percent-txt -20%
 
-						+e.UL.list
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Яндекс или Google
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Отслеживание целей
-							+e.list-item
-								+e.list-icon.icon._del
-								| Настройка Яндекс.Метрика
-							+e.list-item
-								+e.list-icon.icon._del
-								| Коллтрекинг
+							+e.UL.list
+								+e.list-item
+									+e.list-icon.icon._list_cg_b
+									| Яндекс или Google
+								+e.list-item
+									+e.list-icon.icon._list_cg_b
+									| Отслеживание целей
+								+e.list-item
+									+e.list-icon.icon._del
+									| Настройка Яндекс.Метрика
+								+e.list-item
+									+e.list-icon.icon._del
+									| Коллтрекинг
 
-						+btn.A._bg-color_orange._size_normal.__btn(href="#") Выбрать тариф
-					+e.item
-						+e.IMG.img(src="media/img/rate/2.png", alt="")
-						+e.title Легкий старт
-						+e.price 2490
-							+b.SPAN.rubl Р
-							|  в месяц
-						+b.rate-sale
-							+e.price 1990
-								+b.SPAN.rubl Р
-								|  в месяц
-							+e.if при заказе SEO-продвижения
-							+e.percent -20%
-						+e.UL.list
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Яндекс или Google
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Отслеживание целей
-							+e.list-item
-								+e.list-icon.icon._del
-								| Настройка Яндекс.Метрика
-							+e.list-item
-								+e.list-icon.icon._del
-								| Коллтрекинг
-						+btn.A._bg-color_orange._size_normal.__btn(href="#") Выбрать тариф
-
-					+e.item
-						+e.IMG.img(src="media/img/rate/3.png", alt="")
-						+e.title Легкий старт
-						+e.price 2490
-							+b.SPAN.rubl Р
-							|  в месяц
-						+b.rate-sale
-							+e.price 1990
-								+b.SPAN.rubl Р
-								|  в месяц
-							+e.if при заказе SEO-продвижения
-							+e.percent -20%
-
-						+e.UL.list
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Яндекс или Google
-							+e.list-item
-								+e.list-icon.icon._list_cg_b
-								| Отслеживание целей
-							+e.list-item
-								+e.list-icon.icon._del
-								| Настройка Яндекс.Метрика
-							+e.list-item
-								+e.list-icon.icon._del
-								| Коллтрекинг
-
-						+btn.A._bg-color_orange._size_normal.__btn(href="#") Выбрать тариф
+							+btn.A._bg-color_orange._size_normal.__btn(href="#") Выбрать тариф
 
 
 	+b.rsya
@@ -136,50 +83,7 @@ block content
 
 	+ad-no-work
 
-	+b.efficiency._hr
-		.container
-			.content
-				+b.hr.__hr
-				+b.title.__title Главный критерий эффективности для нас - рост вашего бизнеса
-				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
-				+b.slider-wrap
-					+e.nav._prev.icon.icon_arrow_left
-					+e.nav._next.icon.icon_arrow_right
-					+e.slider
-						+b.slider-graph
-							+b.graph-item
-								+e.name Роза Мимоза
-								+e.A.link(href="#") rosamimoza.ru
-								+e.IMG.img(src="media/images/graph/1.jpg", alt="")
-								+b.UL.graph-number
-									+e.item
-										+e.number +770%
-										+e.P.desc Рост поискового трафика с мобильных устройств.
-									+e.item
-										+e.number 2000+ 
-										+e.SPAN.mark +350%
-										+e.P.desc Количество запросов в ТОП10.
-									+e.item
-										+e.number 52,64%
-										+e.P.desc Достижение цели в случаев переходов с контекстной рекламы
-								+e.data
-									+b.UL.list-data.__list
-										+e.item
-											strong Тематика: 
-											| B2C-рынок, цветы
-										+e.item
-											strong Услуга: 
-											| Продвижение в ТОП-10
-										+e.item
-											strong Регион: 
-											| Самара
-										+e.item
-											strong Срок достижения результата: 
-											| 9 месяцев
-									+e.result
-										+e.STRONG.result-title Результаты работы
-										p Каждый заказ в данной тематике - это доход в 100-150 тысяч рублей. 10-кратный рост поискового трафика позволил увеличить поток клиентов через сайт, что привело к росту оборота более чем на 3 миллиона рублей.
-
+	+efficiency(false)
 
 	+b.patern._type_4.darkBlock
 		.container

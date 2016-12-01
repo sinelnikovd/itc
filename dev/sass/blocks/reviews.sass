@@ -1,0 +1,123 @@
+.reviews
+	padding: 40px 0 30px
+	background-image: url(media/img/reviews_bg.jpg)
+	background-position: 50% 50%
+	background-size: cover
+	position: relative
+	z-index: 32
+	color: #fff
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 36px
+		color: #fff
+
+	&__slider
+		margin-top: 45px
+		position: relative
+
+	&__items
+		width: 90%
+		margin: 0 auto
+
+	&__arrow
+		position: absolute
+		top: 60%
+		&_prev
+			left: 0
+		&_next
+			right: 0
+
+	&__all
+		margin: 33px auto 0
+		width: 90%
+		&-btn
+			display: inline-block
+			color: #fff
+			text-decoration: none
+			margin-left: 23%
+			background-color: rgba(#fff, .1)
+			padding: .7em 3.2em
+			border-radius: 3px
+			&:hover
+				background-color: rgba(#000, .5)
+			&:active
+				background-color: rgba(#000, .8)
+
+.reviews-item
+	+clearfix
+	&__person
+		float: left
+		width: 23%
+		box-sizing: border-box
+		padding-right: 30px
+		text-align: right
+		padding-top: 85px
+	&__avatar
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -7px
+			right: -30px
+			+size(0)
+			border-top: 7px solid transparent
+			border-right: 15px solid rgba(#fff, .1)
+			border-bottom: 7px solid transparent
+	img.reviews-item__avatar-img
+		+size(60px)
+		object-fit: cover
+		display: inline-block
+		border-radius: 100%
+
+	&__name
+		@extend %bold
+		margin-top: 15px
+
+	&__positon
+		margin-top: 10px
+		font-size: 12px
+
+	&__desc
+		float: left
+		width: 77%
+
+	&__title
+		@extend %pbold
+		font-size: 18px
+	&__link
+		margin-top: 10px
+		color: #039be6
+		display: inline-block
+		&:hover
+			text-decoration: none
+	&__txt
+		margin-top: 35px
+		background-color: rgba(#fff, .1)
+		box-sizing: border-box
+		padding: 15px 30px 35px
+		border-radius: 5px
+		p
+			margin: 10px 0
+			line-height: 1.7em
+			@extend %italic
+
+	&__btn
+		display: inline-block
+		margin-top: 8px
+		background-color: rgba(#000, .3)
+		border-radius: 3px
+		color: rgba(#fff, .7)
+		text-decoration: none
+		padding: .4em 1.2em .5em 42px
+		font-size: 12px
+		position: relative
+		&-icon
+			position: absolute
+			left: 12px
+			top: 5px
+		&:hover
+			background-color: rgba(#000, .5)
+			color: #fff
+		&:active
+			background-color: rgba(#000, .8)

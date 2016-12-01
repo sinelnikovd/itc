@@ -1,6 +1,9 @@
 .top-bg
 	padding-bottom: 35px
 	position: relative
+	background-position: 50% 0
+	background-repeat: no-repeat
+	color: #fff
 	&:after
 		content: ''
 		position: absolute
@@ -11,24 +14,61 @@
 		background-image: url(media/img/dots-pattern.png)
 	&_site
 		background-image: url(media/img/site_bg.jpg)
+		.top-bg__btn
+			margin-top: 31px
+			max-width: 160px
+			width: 100%
+	&_promotion
+		background-image: url(media/img/promotion_top_bg.jpg)
+		padding-bottom: 50px
+		.top-bg__content
+			margin-top: 40px
+
+	&_tech
+		background-image: url(media/img/tech_bg.jpg)
+		padding-bottom: 59px
+		.top-bg__btn
+			margin-top: 30px
+
 	.container
 		position: relative
 		z-index: 2
 
 	&__content
-		margin-top: 26px
-		color: #fff
+		margin-top: 23px
 		+clearfix
 	&__desc
 		float: left
 		width: 54%
+		@media only screen and (max-width : 950px)
+			width: 70%
+		@media only screen and (max-width : 750px)
+			width: 60%
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
 	&__btn-wrap
 		float: right
-		width: 14.5%
+		width: 25%
 		margin-top: 25px
+		text-align: right
+		@media only screen and (max-width : 750px)
+			width: 40%
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
 	&__title
 		font-size: 34px
 		@extend %pbold
+		line-height: 1.35em
+		@media only screen and (max-width : 550px)
+			font-size: 18px
 
 	&__txt
 		margin-top: 9px
@@ -37,12 +77,20 @@
 	&__btn-nav
 		margin-bottom: 10px
 		font-size: 14px
+		@media only screen and (max-width : 550px)
+			width: 48%
 
 	&__btn
-		margin-top: 32px
+		width: auto
+		margin-top: 37px
 		display: inline-block
-		padding: 10px 33px
+		padding-left: 2em
+		padding-right: 2em
+		@media only screen and (max-width : 420px)
+			width: 100%
+
 
 	&__advantage
 		margin-top: 35px
 		width: 80%
+		color: #fff

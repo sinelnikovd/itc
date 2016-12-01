@@ -5,6 +5,19 @@
 	&__list
 		margin-top: 43px
 		+clearfix
+	&__nav
+		display: none
+		position: relative
+		@media only screen and (max-width : 600px)
+			display: block
+	&__arrow
+		position: absolute
+		top: 70px
+		z-index: 30
+		&_prev
+			left: 10px
+		&_next
+			right: 10px
 .price-item
 	float: left
 	width: 31%
@@ -13,29 +26,71 @@
 	margin-top: 30px
 	text-align: center
 	padding: 48px 15px 28px
+	position: relative
+	@media only screen and (max-width : 600px)
+		width: 100%
+		margin-top: 0
+		border: 1px solid #e5e5e5
+		padding-top: 45px
 	&:first-child
 		border-right: 0 none
-	&:nth-child(2)
+		@media only screen and (max-width : 600px)
+			border: 1px solid #e5e5e5
+	&_center
 		width: 38%
 		margin-top: 0
 		padding-top: 58px
 		padding-bottom: 33px
 		border-color: #ff6026
-		.price-item__price
-			margin-top: 45px
-		.price-item__list
-			margin-top: 40px
-		.price-item__btn
-			margin-top: 38px
+		@media only screen and (max-width : 600px)
+			width: auto
+			border: 1px solid #e5e5e5
+			padding-top: 45px
+		&:after
+			content: ''
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 50%
+			margin-left: -36px
+			background-color: #ff6026
+			+size(72px 36px)
+			border-radius: 0 0 50px 50px
+
+		.price-item
+			&__price
+				margin-top: 45px
+			&__list
+				margin-top: 40px
+			&__btn
+				margin-top: 38px
+				@media only screen and (max-width : 750px)
+					margin-top: 80px
+			&__icon
+				top: 5px
 	&:last-child
 		border-left: 0 none
-		.price-item__price
-			margin-top: 48px
-		.price-item__btn
-			margin-top: 8px
+		.price-item
+			&__price
+				margin-top: 48px
+			&__btn
+				margin-top: 8px
+		@media only screen and (max-width : 600px)
+			border: 1px solid #e5e5e5
+	&_center
+		
+	&__icon
+		position: absolute
+		top: 15px
+		left: 50%
+		z-index: 2
+		+transform(translateX(-50%))
 	&__title
 		font-size: 26px
 		@extend %pbold
+		line-height: 1.35em
+		@media only screen and (max-width : 1200px)
+			font-size: 18px
 	&__desc
 		margin-top: 5px
 		line-height: 1.6
@@ -45,6 +100,8 @@
 		font-size: 34px
 		line-height: 1
 		@extend %pbold
+		@media only screen and (max-width : 750px)
+			font-size: 26px
 	&__count-client
 		margin-top: 4px
 		color: #929292
@@ -70,13 +127,13 @@
 				height: 1px
 				background-color: #e5e5e5
 	&__btn
-		padding: 10px 0 9px
+		display: block
 		width: 68%
 		margin: 55px auto 0
 		&_orange
-			padding: 15px 0 17px
 			width: 60%
-			box-shadow: 0 5px 10px rgba(#ff6026, .24)
+		@media only screen and (max-width : 750px)
+			width: 100%
 
 
 	&__next
@@ -84,6 +141,8 @@
 		margin-top: 10px
 		font-size: 11px
 		color: #929292
+		&:hover
+			text-decoration: none
 
 .price-help
 	text-align: center
