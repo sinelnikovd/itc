@@ -1,25 +1,216 @@
 .tech-price
 	padding: 35px 0
 	text-align: center
+	&__tab
+		margin-left: 23%
+		@media only screen and (max-width : 750px)
+			margin-left: 0
 	&__table
-		margin-top: 20px
+		margin-top: 30px
+	&__compare
+		margin-top: 30px
+		margin-left: 23%
+		text-align: center
+		@media only screen and (max-width : 750px)
+			margin-left: 0
+	&__nav
+		position: relative
+		display: none
+		@media only screen and (max-width : 600px)
+			display: block
+
+	&__arrow
+		position: absolute
+		top: 60px
+		z-index: 30
+		&_prev
+			left: 10px
+		&_next
+			right: 10px
 
 
 .tech-table
 	text-align: center
 	display: table
+	height: 100%
+	width: 100%
+	@media only screen and (max-width : 600px)
+		display: block
 	&__row
 		display: table-row
+		height: 100%
+		@media only screen and (max-width : 600px)
+			display: block
 	&__cell
 		display: table-cell
 		vertical-align: middle
+		height: 100%
+		@media only screen and (max-width : 600px)
+			display: block
+		&_h
+			text-align: left
+			width: 23%
+			@media only screen and (max-width : 750px)
+				display: none
+			.title
+				text-align: left
+		&_head
+			padding-top: 30px
+			@media only screen and (max-width : 600px)
+				padding-top: 0
+		&_c
+			padding-top: 0
+		&_r
+			padding-bottom: 30px
+		&_l
+			padding-bottom: 30px
+		&_cent
+			width: 31%
+			@media only screen and (max-width : 600px)
+				width: 100%
+			.tech-table__cell-in
+				border-color: $c-orange
+		&_right
+			width: 23%
+			@media only screen and (max-width : 600px)
+				width: 100%
+			.tech-table__cell-in
+				border-left: 0 none
+				@media only screen and (max-width : 600px)
+					border-left: 1px solid #e5e5e5
+		&_left
+			width: 23%
+			@media only screen and (max-width : 600px)
+				width: 100%
+			.tech-table__cell-in
+				border-right: 0 none
+				@media only screen and (max-width : 600px)
+					border-right: 1px solid #e5e5e5
+		&-in
+			height: 100%
+			border-right: 1px solid #e5e5e5
+			border-left: 1px solid #e5e5e5
+			@extend %pbold
+			font-size: 18px
+			color: #333
+			padding: 12px 5px 18px
+			&_bg
+				background-color: #e5e5e5
+				color: #141414
+			&_ln
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 10%
+					right: 10%
+					height: 1px
+					background-color: #e5e5e5
+
 
 	&__head
 		border: 1px solid #e5e5e5
 		border-bottom: 0 none
+		height: 100%
+		padding: 15px 5px 5px
+
 		&_l
 			border-right: 0 none
+			@media only screen and (max-width : 600px)
+				border-right: 1px solid #e5e5e5
 		&_c
 			border-color: $c-orange
+			padding-top: 7px
+			position: relative
+			.tech-table
+				&__icon
+					position: relative
+					z-index: 2
+					color: #fff
+				&__title
+					margin-top: 30px
+			&:after
+				content: ''
+				position: absolute
+				z-index: 1
+				top: 0
+				left: 50%
+				margin-left: -36px
+				background-color: #ff6026
+				+size(72px 36px)
+				border-radius: 0 0 50px 50px
 		&_r
 			border-left: 0 none
+			@media only screen and (max-width : 600px)
+				border-left: 1px solid #e5e5e5
+	&__icon
+		font-size: 18px
+		color: $c-orange
+
+	&__title
+		margin-top: 20px
+		font-size: 18px
+		@extend %pbold
+
+	&__desc
+		margin-top: 10px
+		color: #929292
+		font-size: 12px
+		line-height: 1.5em
+
+	&__foot
+		border: 1px solid #e5e5e5
+		border-top: 0 none
+		height: 100%
+		padding-top: 20px
+		padding-bottom: 10px
+		&_l
+			border-right: 0 none
+			@media only screen and (max-width : 600px)
+				border-right: 1px solid #e5e5e5
+		&_c
+			padding-top: 35px
+			border-color: $c-orange
+			padding-bottom: 40px
+		&_r
+			border-left: 0 none
+			@media only screen and (max-width : 600px)
+				border-left: 1px solid #e5e5e5
+
+	&__link
+		display: inline-block
+		margin-top: 10px
+		color: #929292
+		font-size: 12px
+
+	&__hidden-title
+		color: #4c5a5c
+		font-size: 12px
+		@extend %regular
+		display: none
+		@media only screen and (max-width : 750px)
+			display: block
+
+	&__btn
+		display: block
+		width: 80%
+		margin: 0 auto
+		box-sizing: border-box
+		max-width: none
+
+
+.compare
+	&__link
+		&:hover
+			.compare__txt
+				border-color: transparent
+	&__txt
+		display: inline-block
+		margin-top: 20px
+		color: #039be6
+		@extend %pbold
+		font-size: 12px
+		line-height: 1
+		text-transform: uppercase
+		border-bottom: 2px dotted #039be6

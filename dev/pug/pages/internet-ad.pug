@@ -1,16 +1,16 @@
 extends ../base/page
 
 block title
-	title Продвижение сайтов
+	title Комплексная интернет-реклама
 
 block content
 	+b.top._internet#sidebar-top
-		include ../blocks/header
+		//include ../blocks/header
 		.container
 			+b.title.__title Комплексная интернет-реклама
 			+e.desc Комплексная интернет-реклама позволяет правильно скомбинировать работы и получить результат больше совокупного — так называемый синергетический эффект.
-			+e.content
-				+e.IMG.img(src="media/img/internet-top.png")
+			+e.content.animated.fadeInRight
+				+e.IMG.img.animated.fadeInRight(src="media/img/internet-top.png")
 				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
 				+b.UL.list.__list
 					+e.item
@@ -26,7 +26,7 @@ block content
 						+e.icon.icon._list_cw
 						| Максимальный охват аудитории за счет использования комплекса рекламных инструментов.
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 	include ../blocks/sidebar
@@ -152,3 +152,4 @@ block content
 								| Личный кабинет пользователя с открытым отчетом обо всех действиях.
 
 	+order.darkBlock
+

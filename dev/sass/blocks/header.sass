@@ -1,4 +1,10 @@
 .header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 501
+	color: #fff
 	+transition(all .5s ease-in-out)
 	@media only screen and (max-width : 950px)
 		padding-bottom: 10px
@@ -7,12 +13,7 @@
 	@media only screen and (max-width : 550px)
 		padding-bottom: 5px
 	&_fixed
-		position: fixed
-		top: 0
-		right: 0
-		left: 0
 		background-color: #fff
-		z-index: 501
 		color: #333
 		border-bottom: 2px solid #ced7d9
 		.logo
@@ -41,9 +42,7 @@
 						border-bottom-color: #fb5f27
 		.header
 			&__nav
-				margin-top: 10px
-				@media only screen and (max-width : 550px)
-					margin-top: 5px
+				margin-top: 0
 			&__btn
 				color: #333
 				border-color: #e6ebec
@@ -58,7 +57,6 @@
 				background-color: #303030
 	@media only screen and (max-width : 950px)
 		&_nav750active
-			position: relative
 			z-index: 501
 			background-color: #fff
 			&.header_fixed
@@ -81,7 +79,7 @@
 			.call
 				&__icon
 					&:before
-						background-position: 0em -56.5em
+						background-position: 0em -140.7em
 						width: 1em
 						height: 2.1em
 				&__tab
@@ -126,6 +124,13 @@
 					border-top: 1px solid #ebeaef
 					@media only screen and (max-width : 550px)
 						flex-direction: column
+
+			&+.paranja
+				display: block
+				&+.page
+					+filter(blur(5px))
+					&+.footer
+						+filter(blur(5px))
 
 
 
@@ -185,14 +190,12 @@
 		margin-top: 36px
 		+transition(all .5s ease-in-out)
 		@media only screen and (max-width : 950px)
-			margin-top: 10px
+			margin-top: 0
 			position: absolute
 			top: 100%
 			right: 100%
 			width: 100%
 			background-color: #fff
-		@media only screen and (max-width : 550px)
-			margin-top: 5px
 
 
 	&__btn

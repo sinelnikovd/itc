@@ -1,9 +1,14 @@
 .top-bg
+	padding-top: 130px
 	padding-bottom: 35px
 	position: relative
 	background-position: 50% 0
 	background-repeat: no-repeat
 	color: #fff
+	@media only screen and (max-width : 950px)
+		padding-top: 70px
+	@media only screen and (max-width : 550px)
+		padding-top: 50px
 	&:after
 		content: ''
 		position: absolute
@@ -18,6 +23,8 @@
 			margin-top: 31px
 			max-width: 160px
 			width: 100%
+			@media only screen and (max-width : 550px)
+				max-width: none
 	&_promotion
 		background-image: url(media/img/promotion_top_bg.jpg)
 		padding-bottom: 50px
@@ -94,3 +101,5 @@
 		margin-top: 35px
 		width: 80%
 		color: #fff
+		@media only screen and (max-width : 750px)
+			width: 100%

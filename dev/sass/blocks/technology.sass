@@ -1,15 +1,25 @@
 .technology
-	padding: 40px 0
+	padding: 40px 0 140px
 	text-align: center
+	@media only screen and (max-width : 550px)
+		padding-bottom: 30px
+
 	&__tab
 		margin-top: 15px
 	&__body
 		margin-top: 40px
 		+clearfix
+		@media only screen and (max-width : 550px)
+			margin-top: 20px
 	&__accordion
 		text-align: left
 		float: left
 		width: 54%
+		@media only screen and (max-width : 1200px)
+			width: 45%
+		@media only screen and (max-width : 750px)
+			display: none
+			float: none
 		.accordion
 			&__head
 				width: 100%
@@ -24,3 +34,11 @@
 	&__radial
 		float: left
 		width: 46%
+		@media only screen and (max-width : 1200px)
+			width: 55%
+		@media only screen and (max-width : 750px)
+			width: 100%
+			float: none
+			min-height: 280px
+			@media only screen and (max-width : 550px)
+				min-height: 100%

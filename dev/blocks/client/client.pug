@@ -1,9 +1,7 @@
-mixin client(hr)
+mixin client()
 	+b.client&attributes(attributes)
 		.container
 			.content
-				if hr
-					+b.hr
 				+b.title Клиенты о нас
 				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
 				+e.slider.owl-carousel

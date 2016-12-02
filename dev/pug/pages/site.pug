@@ -6,13 +6,12 @@ block title
 block content
 
 	+b.top-bg._site#sidebar-top
-		include ../blocks/header
 		.container
 			+e.content
 				+e.desc
 					+e.H1.title Разработка сайтов «под ключ»
 					+e.P.txt Являясь одним из ведущих экспертов в области интернет-маркетинга, мы накопили бесценный опыт во многих областях online.
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать сайт
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать сайт
 				+e.btn-wrap
 					+btn.A._border_small._color_white.__btn-nav(href="#") Кейсы
 					+btn.A._border_small._color_white.__btn-nav(href="#") Клиенты о нас
@@ -81,44 +80,45 @@ block content
 				+b.site-result
 					+e.BUTTON.btn
 						+e.SPAN.btn-txt Что вы получаете?
-					+e.UL.list
-						+e.item
-							+e.icon 1
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Эксклюзивный дизайн
-								+e.txt Дизайн как средство решения конкретных задач вашего проекта.
-						+e.item
-							+e.icon 4
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Базовая поисковая оптимизация
-								+e.txt При разработке сайта выполняются все правила базовой поисковой оптимизации, что позволяет легко продвигать ресурс.
-						+e.item
-							+e.icon 2
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Простое управление сайтом
-								+e.txt Исходим из задач клиента при подборе оптимального решения на базе платформ 1С-Битрикс и HostCMS.
-						+e.item
-							+e.icon 5
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Быстрая скорость запуска
-								+e.txt Благодаря налаженным процессам работы в компании запуск сайта осуществляется в максимально короткие сроки.
-						+e.item
-							+e.icon 3
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Фокус на повышение продаж
-								+e.txt Посетитель вашего сайта за 3 секунды поймет, что он нашел то, что искал, и приступит к выбору товаров или услуг.
+					+e.list-wrap
+						+e.UL.list
+							+e.item
+								+e.icon 1
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Эксклюзивный дизайн
+									+e.txt Дизайн как средство решения конкретных задач вашего проекта.
+							+e.item
+								+e.icon 4
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Базовая поисковая оптимизация
+									+e.txt При разработке сайта выполняются все правила базовой поисковой оптимизации, что позволяет легко продвигать ресурс.
+							+e.item
+								+e.icon 2
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Простое управление сайтом
+									+e.txt Исходим из задач клиента при подборе оптимального решения на базе платформ 1С-Битрикс и HostCMS.
+							+e.item
+								+e.icon 5
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Быстрая скорость запуска
+									+e.txt Благодаря налаженным процессам работы в компании запуск сайта осуществляется в максимально короткие сроки.
+							+e.item
+								+e.icon 3
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Фокус на повышение продаж
+									+e.txt Посетитель вашего сайта за 3 секунды поймет, что он нашел то, что искал, и приступит к выбору товаров или услуг.
 
-						+e.item
-							+e.icon 6
-								+e.SPAN.check.icon._list_cg
-							+e.item-in
-								+e.title Обучение работы с сайтом
-								+e.txt После сдачи проекта мы обучим ваших специалистов управлению сайтом с помощью наглядных инструкций.
+							+e.item
+								+e.icon 6
+									+e.SPAN.check.icon._list_cg
+								+e.item-in
+									+e.title Обучение работы с сайтом
+									+e.txt После сдачи проекта мы обучим ваших специалистов управлению сайтом с помощью наглядных инструкций.
 
 
 
@@ -150,7 +150,7 @@ block content
 		.container
 			.content
 				+b.title.__title Технология ведения проекта
-				+tab("Концепция", "Реализация").__tab
+				+tab({txt:"Концепция", id:"#id-concept"}, {txt:"Реализация", id:"#id-relize"}).__tab
 				+e.body
 					+b.accordion.__accordion
 						+e.head._active
@@ -178,6 +178,7 @@ block content
 							+e.txt
 								p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
 					+b.radial.__radial
+						+e.logo
 						+b.radial-item._active
 							+e.name Руководитель проекта
 							+e.percent

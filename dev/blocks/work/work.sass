@@ -1,10 +1,27 @@
 .work
 	position: relative
+	z-index: 32
 	+clearfix
 	&__item
 		float: left
 		width: 20%
 		padding-top: 20%
+		@media only screen and (max-width : 950px)
+			width: 25%
+			padding-top: 25%
+			&:last-child,
+			&:nth-last-child(2)
+				display: none
+		@media only screen and (max-width : 750px)
+			width: 33.33333333%
+			padding-top: 33.3333333333333%
+			&:nth-last-child(2)
+				display: block
+		@media only screen and (max-width : 550px)
+			width: 50%
+			padding-top: 50%
+			&:last-child
+				display: block
 
 .work-item
 	position: relative
@@ -25,22 +42,60 @@
 		background-color: #05447e
 		+transition(all .5s ease-in-out)
 		color: #fff
-		padding-top: 12%
+		padding-top: 10%
+		@media only screen and (max-width : 950px)
+			padding-top: 5%
+		@media only screen and (max-width : 750px)
+			padding-top: 3%
 	&__title
 		@extend %pbold
-		font-size: 1.9em
 		text-transform: uppercase
+		font-size: 1.5vw
+		line-height: 1.1em
+		@media only screen and (max-width : 950px)
+			font-size: 2vw
+		@media only screen and (max-width : 750px)
+			font-size: 3vw
+		@media only screen and (max-width : 750px)
+			font-size: 4.5vw
 	&__desc
-		font-size: .85em
+		font-size: .7vw
 		opacity: .7
+		line-height: 1.2em
+		@media only screen and (max-width : 950px)
+			font-size: 1vw
+		@media only screen and (max-width : 750px)
+			font-size: 1.5vw
+		@media only screen and (max-width : 750px)
+			font-size: 2vw
 
 	&__list
 		&-key
 			@extend %psbold
-			font-size: 26px
-			margin-top: 10px
+			font-size: 1.55vw
+			margin-top: .3em
 			position: relative
 			display: inline-block
+			line-height: 1.1em
+			&:first-child
+				margin-top: .6em
+				@media only screen and (max-width : 750px)
+					margin-top: .3em
+			@media only screen and (max-width : 950px)
+				font-size: 2.1vw
+			@media only screen and (max-width : 750px)
+				font-size: 3vw
+			@media only screen and (max-width : 750px)
+				font-size: 4.4vw
+		&-desc
+			font-size: 1vw
+			line-height: 1.1em
+			@media only screen and (max-width : 950px)
+				font-size: 1.3vw
+			@media only screen and (max-width : 750px)
+				font-size: 1.5vw
+			@media only screen and (max-width : 750px)
+				font-size: 2.2vw
 
 	&__mark
 		position: absolute
@@ -54,6 +109,12 @@
 		vertical-align: middle
 		line-height: 1
 		padding: 5px 10px
+		@media only screen and (max-width : 950px)
+			font-size: 1.1vw
+		@media only screen and (max-width : 750px)
+			font-size: 1.3vw
+		@media only screen and (max-width : 750px)
+			font-size: 1.5vw
 
 	&__link-group
 		margin-top: 10px
@@ -66,4 +127,12 @@
 		margin: 0 5px
 		padding-top: 8px
 		box-sizing: border-box
+		&:hover
+			background-color: rgba(#fff,.8)
+			&.icon_stat
+				+icon-stat_h
+			&.icon_link
+				+icon-link_h
+		&:hover
+			background-color: #fff
 

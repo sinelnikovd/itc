@@ -1,18 +1,18 @@
 extends ../base/page
 
 block title
-	title Разработка сайтов «под ключ»
+	title Поддержка сайтов
 
 block content
 
 	+b.top-bg._tech#sidebar-top
-		include ../blocks/header
+		//include ../blocks/header
 		.container
 			+e.content
 				+e.desc
 					+e.H1.title Поддержка сайтов
 					+e.P.txt Современный сайт результат непрерывного процесса изменения и совершенствования. С точки зрения бизнеса эффективный сайт постоянно нуждается в доработках, обновлении и развитии. Наш отдел поддержки и развития готов оказать полный перечень услуг по обслуживанию и доработке сайтов.
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать поддержку сайта
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать поддержку сайта
 				+e.btn-wrap
 					+btn.A._border_small._color_white.__btn-nav(href="#") Портфолио
 					+btn.A._border_small._color_white.__btn-nav(href="#") Клиенты о нас
@@ -51,67 +51,120 @@ block content
 	+b.tech-price
 		.container
 			.content
-				+tab("Месяц", "Полгода").__tab
+				+tab({txt:"Месяц", id:"mouth"}, {txt:"Полгода", id:"half-yaer"}).__tab
+				+e.nav
+					+arrow._prev.__arrow._prev
+					+arrow._next.__arrow._next
 				+b.tech-table.__table
 					+e.row
-						+e.cell
-							+b.title.__title Тарифы
-						+e.cell
+						+e.cell._h
+							+b.title Тарифы
+						+e.cell._head.js-slide
 							+e.head._l
-								+e.icon |
+								+e.icon l
 								+e.title Базовый
 								+e.desc Если у вас небольшой сайт, обновления происходят редко
-						+e.cell
+						+e.cell._head._c._cent.js-slide
 							+e.head._c
-								+e.icon ||
+								+e.icon ll
 								+e.title Расширенный
 								+e.desc Если ваш сайт требует постоянного обновления новостей, акций, статей
 
-						+e.cell
+						+e.cell._head.js-slide
 							+e.head._r
-								+e.icon |||
+								+e.icon lll
 								+e.title Профессиональный
 								+e.desc Если у вас интернет-магазин, требующий постоянного обновления
 					+e.row
 						+e.cell._h Абонентская плата (месяц)
-						+e.cell 1 950 р
-						+e.cell 3 900 р
-						+e.cell 6 750 р
+						+e.cell._left.js-slide
+							+e.cell-in._bg
+								+e.hidden-title Абонентская плата (месяц)
+								| 1 950 р
+						+e.cell._cent.js-slide
+							+e.cell-in._bg
+								+e.hidden-title Абонентская плата (месяц)
+								| 3 900 р
+						+e.cell._right.js-slide
+							+e.cell-in._bg
+								+e.hidden-title Абонентская плата (месяц)
+								| 6 750 р
 					+e.row
 						+e.cell._h Кол-во выделенных часов
-						+e.cell 3 часа
-						+e.cell 8 часов
-						+e.cell 15 часов
+						+e.cell._left.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Кол-во выделенных часов
+								| 3 часа
+						+e.cell._cent.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Кол-во выделенных часов
+								| 8 часов
+						+e.cell._right.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Кол-во выделенных часов
+								| 15 часов
 					+e.row
 						+e.cell._h Стоимость часа любого специалиста
-						+e.cell 650 р
-						+e.cell 500 р
-						+e.cell 450 р
+						+e.cel._leftl.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа любого специалиста
+								| 650 р
+						+e.cell._cent.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа любого специалиста
+								| 500 р
+						+e.cell._right.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа любого специалиста
+								| 450 р
 					+e.row
 						+e.cell._h Стоимость часа сверхлимита
-						+e.cell 800 р
-						+e.cell 700 р
-						+e.cell 600 р
+						+e.cel._leftl.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа сверхлимита
+								| 800 р
+						+e.cell._cent.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа сверхлимита
+								| 700 р
+						+e.cell._right.js-slide
+							+e.cell-in._ln
+								+e.hidden-title Стоимость часа сверхлимита
+								| 600 р
 					+e.row
 						+e.cell._h Время реакции
-						+e.cell до 2ух дней
-						+e.cell до 1го дня
-						+e.cell до 8ми часов
+						+e.cell._left.js-slide
+							+e.cell-in
+								+e.hidden-title Время реакции
+								| до 2ух дней
+						+e.cell._cent.js-slide
+							+e.cell-in
+								+e.hidden-title Время реакции
+								| до 1го дня
+						+e.cell._right.js-slide
+							+e.cell-in
+								+e.hidden-title Время реакции
+								| до 8ми часов
 					+e.row
-						+e.cell
-						+e.cell
-							+e.foot
-								+btn.A._border_normal._color_orange(href="#") Заказать
+						+e.cell._h
+						+e.cell._foot._r.js-slide
+							+e.foot._l
+								+btn.A._border_normal._color_orange.__btn(href="#") Заказать
 								+e.A.link(href="#") Подробнее о тарифе
-						+e.cell
-							+e.foot
-								+btn.A._bg-color_orange._size_big._shadow(href="#") Заказать
+						+e.cell._foot.js-slide
+							+e.foot._c
+								+btn.A._bg-color_orange._size_big._shadow.__btn(href="#") Заказать
 								+e.A.link(href="#") Подробнее о тарифе
-						+e.cell
-							+e.foot
-								+btn.A._border_normal._color_orange(href="#") Заказать
+						+e.cell._foot._l.js-slide
+							+e.foot._r
+								+btn.A._border_normal._color_orange.__btn(href="#") Заказать
 								+e.A.link(href="#") Подробнее о тарифе
 
+				+b.compare.__compare
+					+e.A.link(href="#")
+						+e.icon.icon._compare
+						br
+						+e.SPAN.txt Сравнить тарифы
 
 	+hr
 	+b.tech-service
@@ -140,7 +193,7 @@ block content
 		.container
 			.content
 				+b.title.__title Оценка времени
-				+tab("Краткая" , "Подробная").__tab
+				+tab({txt:"Краткая", id:"briefly"} , {txt:"Подробная", id:"detail"}).__tab
 				+e.UL.list
 					- var list = [["_psdt", "2 часа", "Дизайн-макет (тестовый)", "2 часа дизайнера"], ["_photot", "1,5 часа", "Обработка и размещение на сайте 20 фотографий", "1 час контент-менеджера 0.5 часа дизайнера"], ["_psd2htmlt", "2 часа", "Верстка одной простой страницы", "2 часа верстальщика"], ["_modulet", "4 часа", 'Обработка модуля формы "Оставить заявку"', "1 час дизайнера <br>1 час верстальщика <br>2 часа программиста"]]
 					each item in list

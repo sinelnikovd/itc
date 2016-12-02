@@ -6,20 +6,32 @@
 	&__list
 		margin-top: 45px
 		+clearfix
+		@media only screen and (max-width : 550px)
+			margin-top: 10px
 	&__item
 		float: left
 		width: 25%
 		padding: 0 3%
 		box-sizing: border-box
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+			margin-top: 10px
 
 	&__label
 		margin-top: 15px
 		@extend %pbold
 		font-size: 18px
+		@media only screen and (max-width : 550px)
+			margin-top: 5px
 	&__desc
 		margin-top: 12px
+		@media only screen and (max-width : 550px)
+			margin-top: 7px
 	&__time
 		margin-top: 15px
 		color: #929292
 		font-size: 12px
+		@media only screen and (max-width : 550px)
+			margin-top: 5px
 

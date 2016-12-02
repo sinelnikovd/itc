@@ -3,12 +3,18 @@
 	&__list
 		margin: 45px auto 0
 		+clearfix
+		@media only screen and (max-width : 550px)
+			margin-top: 10px
 	&__item
 		float: left
 		width: 25%
 		text-align: center
 		box-sizing: border-box
 		padding: 0 2%
+		@media only screen and (max-width : 550px)
+			float: none
+			width: 100%
+			margin: 15px 0
 
 	&__label
 		margin-top: 10px

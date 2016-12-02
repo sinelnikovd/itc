@@ -1,0 +1,106 @@
+.file-upload
+	margin: 15px 0
+	position: relative
+	&_load
+		.file-upload
+			&__icon-link
+				display: inline-block
+			&__txt
+				display: inline-block
+			&__kill
+				display: block
+			&__label
+				width: 100%
+			&__btn
+				width: 47.7%
+
+	&__input
+		width: 0.1px
+		height: 0.1px
+		opacity: 0
+		overflow: hidden
+		position: absolute
+		z-index: -1
+	&__label
+		cursor: pointer
+		display: inline-block
+		width: 47.7%
+	&__txt
+		width: 40%
+		display: none
+		color: #fff
+		pointer-events: none
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		vertical-align: middle
+	&__btn
+		display: inline-block
+		border: 1px solid #fff
+		color: #fff
+		border-radius: 3px
+		padding: .7em 1em .7em .5em
+		width: 100%
+		text-align: center
+		box-sizing: border-box
+		pointer-events: none
+	&__icon
+		position: relative
+		top: -2px
+		margin-right: 10%
+		vertical-align: middle
+		pointer-events: none
+	&__icon-link
+		display: none
+		pointer-events: none
+		width: 7%
+		text-align: center
+
+	&__kill
+		display: none
+		position: absolute
+		top: 50%
+		margin-top: -5px
+		z-index: 5
+		right: 0
+		+size(15px)
+		cursor: pointer
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 1px
+			background-color: #fff
+		&:after
+			+transform(rotate(45deg))
+			left: 50%
+			margin-left: -1px
+		&:before
+			+transform(rotate(-45deg))
+			right: 50%
+			margin-right: 0px
+
+@media only screen and (max-width : 550px)
+	.file-upload
+		&_load
+			.file-upload
+				&__btn
+					width: 100%
+		&__label
+			width: 100%
+		&__btn
+			width: 100%
+		&__icon
+			width: 10%
+			margin-right: 15px
+		&__txt
+			width: 90%
+			margin-top: 4px
+		&__icon-link
+			margin-top: 20px
+		&__kill
+			top: auto
+			margin-top: 0
+			bottom: 0

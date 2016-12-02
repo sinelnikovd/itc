@@ -1,13 +1,13 @@
 extends ../base/page
 
 block title
-	title Продвижение сайтов
+	title Оптимизация сайтов по словам
 
 block content
 
 	+b.top._optimization#sidebar-top
 
-		include ../blocks/header
+		//include ../blocks/header
 
 		.container
 			+b.title.__title Оптимизация сайтов по словам
@@ -32,7 +32,7 @@ block content
 						+e.icon.icon._list_cw
 						| Оптимизируются только продвигаемые страницы
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 	include ../blocks/sidebar

@@ -123,13 +123,13 @@ $(document).ready ->
 		if scrollPosition > 0
 			if !$(".header").hasClass("header_fixed")
 				$(".header").addClass("header_fixed")
-				$(".top, .top-bg").css
-					"padding-top": $(".header").height() + "px"
+	#			$(".top, .top-bg").css
+	#				"padding-top": $(".header").height() + "px"
 		if scrollPosition <= 0
 			if $(".header").hasClass("header_fixed")
 				$(".header").removeClass("header_fixed")
-				$(".top, .top-bg").css
-					"padding-top": 0 +"px"
+	#			$(".top, .top-bg").css
+	#				"padding-top": 0 +"px"
 
 	headerFixed($(window).scrollTop())
 
@@ -183,7 +183,6 @@ $(document).ready ->
 		$(".header").toggleClass("header_nav750active")
 
 
-
 	efficiencyCarousel = $('.efficiency__slider').owlCarousel
 		loop: true
 		nav: false
@@ -215,7 +214,13 @@ $(document).ready ->
 		$('.price__list').slick("slickPrev")
 	$(".price__arrow_next").click ->
 		$('.price__list').slick("slickNext")
-	priceSlickInit = true
+
+	$(".tech-price__arrow_prev").click ->
+		$('.tech-table__row').slick("slickPrev")
+	$(".tech-price__arrow_next").click ->
+		$('.tech-table__row').slick("slickNext")
+	priceSlickInit = false
+	priceTechSlickInit = false
 	mq600 = window.matchMedia('only screen and (max-width : 600px)')
 	mq600Handler = ->
 		if mq600.matches
@@ -226,10 +231,21 @@ $(document).ready ->
 				slide: ".price-item"
 			priceSlickInit = true
 
+			$('.tech-table__row').slick
+				slidesToShow: 1
+				slidesToScroll: 1
+				arrows: false
+				slide: ".js-slide"
+				asNavFor: '.tech-table__row'
+			priceTechSlickInit = true
+
 		else
 			if priceSlickInit
 				$('.price__list').slick("unslick")
 				priceSlickInit = false
+			if priceTechSlickInit
+				$('.tech-table__row').slick("unslick")
+				priceTechSlickInit = false
 	mq600Handler()
 	mq600.addListener(mq600Handler)
 
@@ -239,10 +255,48 @@ $(document).ready ->
 
 	$(".site-result__btn").click ->
 		$(@).toggleClass("site-result__btn_active")
-		$(@).next(".site-result__list").slideToggle()
+		$(@).next(".site-result__list-wrap").slideToggle()
 
 
 	$('.radial-item__progress, .radial-item__progress-active').circleProgress
 			startAngle: -Math.PI / 2
 			emptyFill: "rgba(0,0,0,0)"
 			thickness: 18
+
+
+
+	$(".js-order-popup").magnificPopup
+		items:
+			src: '#popup-order',
+			type: 'inline'
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+
+	$( '.file-upload__input' ).each ->
+		$input	 = $(@)
+		$label	 = $input.next( 'label' )
+		labelVal = $label.find( '.file-upload__txt' ).html()
+
+		$input.on 'change', ( e ) ->
+			fileName = '';
+
+			if @.files && @.files.length > 1
+				fileName = ( @.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', @.files.length )
+			else if e.target.value
+				fileName = e.target.value.split( '\\' ).pop()
+
+			if fileName
+				$label.find( '.file-upload__txt' ).html( fileName )
+				$input.parent().addClass("file-upload_load")
+			else
+				$label.find( '.file-upload__txt' ).html( labelVal )
+				$input.parent().removeClass("file-upload_load")
+
+
+		$input
+		.on 'focus', -> $input.addClass( 'has-focus' )
+		.on 'blur', -> $input.removeClass( 'has-focus' )
+
+		$label.next( '.file-upload__kill' ).on 'click', ->
+			$label.find( '.file-upload__txt' ).text("")
+			$input.val("")
+			$input.parent().removeClass("file-upload_load")

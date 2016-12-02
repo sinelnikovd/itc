@@ -5,13 +5,12 @@ block title
 
 block content
 	+b.top-bg._promotion#sidebar-top
-		include ../blocks/header
 		.container
 			+e.content
 				+e.desc
 					+e.H1.title Результативное продвижение сайтов
 					+e.P.txt Это больше, чем его оптимизация под поисковые системы. Ваша стратегия SEO должна быть нацелена на качественное и оптимальное предоставление информации пользователю, который ищет в интернете ваши товары и услуги.
-					+btn.A._bg-color_orange._size_big._shadow.__btn(href="#") Сделайте мой сайт посещаемым
+					+btn.A._bg-color_orange._size_big._shadow.__btn.js-order-popup(href="#") Сделайте мой сайт посещаемым
 				+e.btn-wrap
 					+btn.A._border_small._color_white.__btn-nav(href="#") Кейсы
 					+btn.A._border_small._color_white.__btn-nav(href="#") Клиенты о нас
@@ -84,10 +83,11 @@ block content
 						+e.title Лучшая репутация
 						+e.desc Бизнес-сайты, которые находятся на вершине результатов поиска, вызывают доверие у пользователей.
 
+	+hr
+
 	+b.price
 		.container
 			.content
-				+b.hr.__hr
 				+b.title Выберите схему сотрудничества
 				+e.nav
 					+arrow._prev.__arrow._prev
@@ -141,14 +141,15 @@ block content
 					+b.icon.icon_help.__icon
 					+e.A.link(href="#") Помочь с выбором тарифа
 
-	+ad-no-work(true)._hr._no_br
+	+hr
+	+ad-no-work._no_br
 
 	+client._bg
 
-	+efficiency._pt_35
+	+efficiency._pt_35._pb_30
 
 
-	+b.step-work
+	//+b.step-work
 		.container
 			.content
 				+b.title.__title Этапы работ

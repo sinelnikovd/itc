@@ -1,4 +1,6 @@
 .scheme-work
+	position: relative
+	z-index: 32
 	color: #fff
 	padding: 40px 0 35px
 	&__title
@@ -9,10 +11,25 @@
 	&__desc
 		float: left
 		width: 40%
+		@media only screen and (max-width : 950px)
+			float: none
+			width: 80%
+			margin: 0 auto
+		@media only screen and (max-width : 750px)
+			width: 100%
+
+
 	&__scheme
 		float: left
 		width: 51.5%
 		margin-left: 8.5%
+		@media only screen and (max-width : 950px)
+			float: none
+			width: 80%
+			margin: 0 auto
+		@media only screen and (max-width : 750px)
+			width: 100%
+
 
 	&__txt
 		p
@@ -28,6 +45,7 @@
 		box-sizing: border-box
 		border-radius: 3px
 		box-shadow: -1px 0 0 rgba(#000, .2)
+
 		&:after
 			content: ''
 			position: absolute
@@ -39,30 +57,81 @@
 		&_tz
 			background-color: #035b97
 			max-width: 190px
+			@media only screen and (max-width : 950px)
+				.line-scheme__tooltip
+					&:after
+						margin-right: -300px
+						@media only screen and (max-width : 750px)
+							margin-right: -340px
+							@media only screen and (max-width : 550px)
+								margin-right: -20px
+			@media only screen and (max-width : 550px)
+				max-width: none
+
 		&_port
 			background-color: #16599a
 			max-width: 220px
 			margin-left: 6%
+			@media only screen and (max-width : 950px)
+				.line-scheme__tooltip
+					&:after
+						margin-right: -300px
+						@media only screen and (max-width : 750px)
+							margin-right: -340px
+							@media only screen and (max-width : 550px)
+								margin-right: -20px
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 		&_desing
 			background-color: #25579c
 			max-width: 190px
 			margin-left: 22%
+			@media only screen and (max-width : 950px)
+				.line-scheme__tooltip
+					&:after
+						margin-right: -300px
+						@media only screen and (max-width : 750px)
+							margin-right: -340px
+							@media only screen and (max-width : 550px)
+								margin-right: -20px
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 		&_psd2html
 			background-color: #39549f
 			max-width: 190px
 			margin-left: 32.5%
+			@media only screen and (max-width : 950px)
+				.line-scheme__tooltip
+					&:after
+						margin-right: -300px
+						@media only screen and (max-width : 550px)
+							margin-right: -20px
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 		&_prog
 			background-color: #5250a2
 			max-width: 320px
 			margin-left: 22%
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 		&_test
 			background-color: #614ea5
 			max-width: 190px
 			margin-left: 54%
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 		&_start
 			background-color: #714da7
 			max-width: 230px
 			margin-left: 58%
+			@media only screen and (max-width : 550px)
+				max-width: none
+				margin-left: 0
 	&__tooltip-wrap
 		position: absolute
 		width: 35px
@@ -96,7 +165,7 @@
 			bottom: 100%
 			min-width: 500px
 			left: 50%
-			margin-left: -340px
+			margin-left: -400px
 			margin-bottom: 15px
 			padding: 22px 20px
 			box-sizing: border-box
@@ -104,6 +173,13 @@
 			font-size: 14px
 			line-height: 1.5em
 			display: none
+			@media only screen and (max-width : 1200px)
+				right: 0
+				left: auto
+				margin-left: 0
+				margin-right: -20px
+			@media only screen and (max-width : 550px)
+				min-width: 310px
 		&:before
 			content: ''
 			position: absolute

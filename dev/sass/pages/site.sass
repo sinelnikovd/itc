@@ -1,12 +1,17 @@
 .advantage-site
 	columns: 2
 	-webkit-perspective: 1
+	@media only screen and (max-width : 550px)
+		columns: 1
 	&__item
 		margin: 12px 0
 		padding-left: 40px
 		position: relative
 		display: inline-block
 		width: 100%
+		@media only screen and (max-width : 750px)
+			box-sizing: border-box
+
 	&__icon
 		position: absolute
 		left: 0

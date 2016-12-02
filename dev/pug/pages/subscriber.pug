@@ -1,13 +1,13 @@
 extends ../base/page
 
 block title
-	title Продвижение сайтов
+	title SEO-продвижение с абонентской платой
 
 block content
 
 	+b.top#sidebar-top
 
-		include ../blocks/header
+		//include ../blocks/header
 
 		.container
 			+b.title.__title SEO-продвижение с абонентской платой
@@ -32,7 +32,7 @@ block content
 						+e.icon.icon._list_cw
 						| Гарантированный список работ
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 
@@ -42,7 +42,7 @@ block content
 		.container
 			.content
 				+b.title.__title Абонентская плата за продвижение сайта в ТОП10
-				+tab("Месячная подписка", "Годовая подписка").__tab
+				+tab({txt:"Месячная подписка", id:"sub-mouth"}, {txt:"Годовая подписка", id:"sub-year"}).__tab
 				+e.slide-nav-wrap
 					+arrow._prev.__arrow._prev
 					+arrow._next.__arrow._next
@@ -252,8 +252,8 @@ block content
 
 
 
-
-	+client(true)._hr._pb_75
+	+hr
+	+client._pb_75._pt_40
 
 	+b.patern._type_2.darkBlock
 		.container

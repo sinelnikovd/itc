@@ -5,13 +5,13 @@ block title
 
 block content
 	+b.top._context#sidebar-top
-		include ../blocks/header
+		//include ../blocks/header
 
 		.container
 			+b.title.__title Контекстная реклама
 			+e.desc Ведения рекламных кампаний в системах контекстной рекламы Яндекс.Директ и Google Adwords <br>Эффективное размещение контекстной рекламы - это серьезная профессиональная задача со множеством нюансов. Нужно не только грамотно подобрать ключевые слова (и периодически их расширять), написать продающие тексты объявлений, выбрать подходящую стратегию по управлению ставками, работать над оптимизацией ставок, но и понимать как каждый запрос конвертируется в продажу, какой ROI каждого запроса. И таких тонкостей - миллион.
-			+e.content
-				+e.IMG.img(src="media/img/context-top.png")
+			+e.content.animated.fadeInRight
+				+e.IMG.img.animated.fadeInRight(src="media/img/context-top.png")
 				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
 				+b.UL.list.__list
 					+e.item
@@ -27,7 +27,7 @@ block content
 						+e.icon.icon._list_cw
 						| Отдельная стоимость по каждому региону продвижения.
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 	include ../blocks/sidebar
@@ -37,7 +37,7 @@ block content
 			.content
 				+e.title Выберите подходящий тариф
 				+b.desc.__desc Наши последние достижения в области интернет-маркетинга позволили составить ряд успешных стратегий как для малого, так и для среднего бизнеса.
-				+tab("Легкий старт", "Бизнес", "Профи").__tab
+				+tab({txt:"Легкий старт", id:"id-easy"}, {txt:"Бизнес", id:"id-bussines"}, {txt:"Профи", id:"id-profi"}).__tab
 
 				+b.rate-content
 					-for (var i=1; i <= 3;i++)

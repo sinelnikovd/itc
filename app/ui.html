@@ -51,9 +51,9 @@
     </div>
     <div class="container ui">
       <ul class="tab">
-        <li class="tab__item tab__item_active"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
+        <li class="tab__item tab__item_active" id="id-sub-month"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
         </li>
-        <li class="tab__item"><a class="tab__link" href="javascript:void(0);">Годовая подписка</a>
+        <li class="tab__item" id="id-sub-year"><a class="tab__link" href="javascript:void(0);">Годовая подписка</a>
         </li>
       </ul>
     </div>
@@ -62,6 +62,74 @@
       <p>Железнодорожный транспорт в Австралии развит относительно слабо, а билеты весьма дороги. Хорошо налажены только пригородные перевозки и туристические маршруты в районе Сиднея. Самый дешевый, но и самый длительный способ передвижения между городами — автобусы.</p>
     </div>
     <div class="hidden">
+      <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Задать вопрос
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу фамилию
+                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Задайте нам вопрос
+                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div><!--[if lt IE 9]>
     <script src="js/libs/html5shiv/es5-shim.min.js"></script>
     <script src="js/libs/html5shiv/html5shiv.min.js"></script>

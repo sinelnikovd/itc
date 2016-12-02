@@ -1,6 +1,30 @@
 .radial
 	padding-top: 10px
-	
+	position: relative
+	&__logo
+		background-image: url(media/img/radial_logo.svg)
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		+size(66px)
+		position: absolute
+		top: 100%
+		margin-top: 15px
+		left: 50%
+		@media only screen and (max-width : 750px)
+			top: 50%
+		@media only screen and (max-width : 550px)
+			display: none
+		.no-svg & 
+			background-image: url(media/img/radial_logo.png)
+		&:after
+			content: ''
+			position: absolute
+			bottom: -180px
+			width: 270px
+			height: 35px
+			left: 50%
+			margin-left: -135px
+			+radial-gradient(rgba(#a3a3a3, .3), #fff 40%)
 .radial-item
 	margin: 10px 0
 	+clearfix
@@ -10,6 +34,8 @@
 				display: none
 				&-active
 					display: block
+					@media only screen and (max-width : 550px)
+						display: none
 			&__percent
 				background-color: $c-orange
 			&__name
@@ -20,12 +46,16 @@
 		text-align: right
 		padding-right: 5px
 		box-sizing: border-box
+		@media only screen and (max-width : 550px)
+			width: 65%
 	&__percent
 		float: left
 		width: 9%
 		height: 18px
 		background-color: #0e5c98
 		position: relative
+		@media only screen and (max-width : 550px)
+			width: 12%
 		&-txt
 			position: absolute
 			top: 0
@@ -46,6 +76,8 @@
 			top: 0
 			left: 2px
 			+transform(translateX(-50%))
+		@media only screen and (max-width : 550px)
+			display: none
 		&-active
 			float: left
 			width: 41%
@@ -57,5 +89,6 @@
 				top: 0
 				left: 2px
 				+transform(translateX(-50%))
-			
+			@media only screen and (max-width : 550px)
+				display: none
 

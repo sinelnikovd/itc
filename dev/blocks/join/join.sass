@@ -1,4 +1,6 @@
 .join
+	position: relative
+	z-index: 32
 	padding: 35px 0
 	+clearfix
 	&__title
@@ -7,13 +9,23 @@
 		font-size: 34px
 		@extend %pregular
 		line-height: 1.1
-
+		@media only screen and (max-width : 1200px)
+			float: none
+			width: 100%
+			text-align: center
+		@media only screen and (max-width : 750px)
+			font-family: "OpenSansBold", $helvetica
+		@media only screen and (max-width : 550px)
+			font-size: 18px
 	&__form
 		float: right
 		width: 67%
 		text-align: right
 		padding-top: 15px
-
+		@media only screen and (max-width : 1200px)
+			float: none
+			width: 100%
+			text-align: center
 	&__input
 		display: inline-block
 		height: 50px
@@ -25,6 +37,11 @@
 		border-radius: 3px
 		padding: 0 20px
 		margin-left: 1%
+		@media only screen and (max-width : 550px)
+			display: block
+			max-width: none
+			margin-top: 10px
+			margin-left: 0
 		&::-webkit-input-placeholder
 			color: #fff
 			opacity: .6
@@ -42,4 +59,11 @@
 		max-width: 200px
 		width: 100%
 		margin-left: 5%
+		@media only screen and (max-width : 1200px)
+			margin-left: 1%
+		@media only screen and (max-width : 750px)
+			display: block
+			margin: 10px auto 0
+		@media only screen and (max-width : 420px)
+			max-width: none
 

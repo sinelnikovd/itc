@@ -1,0 +1,74 @@
+.popup
+	width: 80%
+	margin: 0 auto
+	max-width: 800px
+	padding: 10px 0
+	position: relative
+	@media only screen and (max-width : 950px)
+		width: 95%
+	&__body
+		margin-top: 20px
+		+clearfix
+	&__form
+		width: 60%
+		float: left
+		@media only screen and (max-width : 750px)
+			width: 100%
+	&__advantage
+		width: 40%
+		padding-left: 5%
+		float: left
+		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			display: none
+
+	&__title
+		@extend %pbold
+		font-size: 50px
+		color: #fff
+		line-height: 1em
+		@media only screen and (max-width : 550px)
+			font-size: 32px
+
+	&__btn
+		width: 100%
+
+	.mfp-close
+		@extend %plight
+		font-size: 14px
+		width: auto
+		height: auto
+		color: #fff
+		i
+			pointer-events: none
+			position: relative
+			top: -1px
+			+size(25px)
+			display: inline-block
+			vertical-align: middle
+			&:after,
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				width: 2px
+				background-color: #fff
+			&:after
+				+transform(rotate(45deg))
+				left: 50%
+				margin-left: -2px
+			&:before
+				+transform(rotate(-45deg))
+				right: 50%
+				margin-right: 0px
+		span
+			@media only screen and (max-width : 550px)
+				display: none
+
+.popup-link
+	color: #fff
+	text-decoration: none
+	border-bottom: 1px dashed #fff
+	&:hover
+		border-bottom-color: transparent
