@@ -1,4 +1,4 @@
-+b.sidebar#sidebar
++b.sidebar#sidebar(class= sidebar_static ? "_static" : "")
 	.container
 		+e.body
 			+b.UL.sidebar-menu
@@ -14,7 +14,7 @@
 					+e.A.link(href="#") FAQ
 				+e.item
 					+e.A.link(href="#") Преимущества
-				+e.item._border-top_dot
+				+e.item._last
 					+e.A.link(href="#") Заказать продвижение
 			+e.links
 				+e.A.link(href="#")

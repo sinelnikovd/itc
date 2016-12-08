@@ -1,9 +1,10 @@
 mixin join()
 	+b.join&attributes(attributes)
 		.container
-			+e.title Готовы присоединиться к довольным клиентам?
-			+e.form
-				form(action="/")
-					+field._blue.__input(type="text", placeholder="Имя")
-					+field._blue.__input.js-inputmask(placeholder="+7 (___) ___-__-__")
-					+btn.BUTTON._bg-color_orange._size_big._shadow.__btn(type="submit") Присоединиться
+			+e.body
+				+e.title Готовы присоединиться к довольным клиентам?
+				+e.form
+					form(action="/")
+						+field._blue.__input(type="text", placeholder="Имя")
+						+field._blue.__input.js-inputmask(placeholder="+7 ")
+						+btn.BUTTON._bg-color_orange._size_big._shadow.__btn(type="submit") Присоединиться

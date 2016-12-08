@@ -40,11 +40,13 @@
               </div>
             </div>
           </div>
-          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-order-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
             <div class="recall__icon icon icon_phone_black"></div></a>
           </div>
         </div>
         <div class="nav header__nav" id="nav">
+          <div class="nav__hover">
+          </div>
           <div class="nav__list">
             <div class="nav__item nav__item_sub nav__item_active"><a class="nav__link" href="#">Создание сайтов</a>
               <ul class="subnav nav__subnav">
@@ -137,7 +139,7 @@
               </li>
               <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Преимущества</a>
               </li>
-              <li class="sidebar-menu__item sidebar-menu__item_border-top_dot"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
+              <li class="sidebar-menu__item sidebar-menu__item_last"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
               </li>
             </ul>
             <div class="sidebar__links"><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_brief"></span><span class="sidebar__link-txt">Заполнить бриф</span></a><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_download"></span><span class="sidebar__link-txt">Скачать презентацию</span></a>
@@ -191,9 +193,9 @@
         <div class="container">
           <div class="content">
             <ul class="tab tech-price__tab">
-              <li class="tab__item tab__item_active" id="mouth"><a class="tab__link" href="javascript:void(0);">Месяц</a>
+              <li class="tab__item active js-tab-tech-price" id="month"><a class="tab__link" href="javascript:void(0);">Месяц</a>
               </li>
-              <li class="tab__item" id="half-yaer"><a class="tab__link" href="javascript:void(0);">Полгода</a>
+              <li class="tab__item js-tab-tech-price" id="half-yaer"><a class="tab__link" href="javascript:void(0);">Полгода</a>
               </li>
             </ul>
             <div class="tech-price__nav">
@@ -245,19 +247,31 @@
                 <div class="tech-table__cell tech-table__cell_left js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_bg">
                     <div class="tech-table__hidden-title">Абонентская плата (месяц)
-                    </div>1 950 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">1 950 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">1 951 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_cent js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_bg">
                     <div class="tech-table__hidden-title">Абонентская плата (месяц)
-                    </div>3 900 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">3 900 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">3 901 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_right js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_bg">
                     <div class="tech-table__hidden-title">Абонентская плата (месяц)
-                    </div>6 750 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">6 750 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">6 751 р
+                    </div>
                   </div>
                 </div>
               </div>
@@ -267,19 +281,31 @@
                 <div class="tech-table__cell tech-table__cell_left js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Кол-во выделенных часов
-                    </div>3 часа
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">3 часа
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">5 часа
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_cent js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Кол-во выделенных часов
-                    </div>8 часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">8 часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">5 часов
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_right js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Кол-во выделенных часов
-                    </div>15 часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">15 часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">55 часов
+                    </div>
                   </div>
                 </div>
               </div>
@@ -289,19 +315,31 @@
                 <div class="tech-table__cel tech-table__cel_leftl js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа любого специалиста
-                    </div>650 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">650 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">651 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_cent js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа любого специалиста
-                    </div>500 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">500 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">501 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_right js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа любого специалиста
-                    </div>450 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">450 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">451 р
+                    </div>
                   </div>
                 </div>
               </div>
@@ -311,19 +349,31 @@
                 <div class="tech-table__cel tech-table__cel_leftl js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа сверхлимита
-                    </div>800 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">800 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">801 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_cent js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа сверхлимита
-                    </div>700 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">700 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">701 р
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_right js-slide">
                   <div class="tech-table__cell-in tech-table__cell-in_ln">
                     <div class="tech-table__hidden-title">Стоимость часа сверхлимита
-                    </div>600 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">600 р
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">601 р
+                    </div>
                   </div>
                 </div>
               </div>
@@ -333,19 +383,31 @@
                 <div class="tech-table__cell tech-table__cell_left js-slide">
                   <div class="tech-table__cell-in">
                     <div class="tech-table__hidden-title">Время реакции
-                    </div>до 2ух дней
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">до 2ух дней
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">до 15ух дней
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_cent js-slide">
                   <div class="tech-table__cell-in">
                     <div class="tech-table__hidden-title">Время реакции
-                    </div>до 1го дня
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">до 1го дня
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">до 15го дня
+                    </div>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_right js-slide">
                   <div class="tech-table__cell-in">
                     <div class="tech-table__hidden-title">Время реакции
-                    </div>до 8ми часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_month tech-table__data_active">до 8ми часов
+                    </div>
+                    <div class="tech-table__data tech-table__data_year">до 15ми часов
+                    </div>
                   </div>
                 </div>
               </div>
@@ -353,15 +415,15 @@
                 <div class="tech-table__cell tech-table__cell_h">
                 </div>
                 <div class="tech-table__cell tech-table__cell_foot tech-table__cell_r js-slide">
-                  <div class="tech-table__foot tech-table__foot_l"><a class="btn btn_border_normal btn_color_orange tech-table__btn" href="#">Заказать</a><a class="tech-table__link" href="#">Подробнее о тарифе</a>
+                  <div class="tech-table__foot tech-table__foot_l"><a class="btn btn_border_normal btn_color_orange tech-table__btn js-order-popup" href="#">Заказать</a>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_foot js-slide">
-                  <div class="tech-table__foot tech-table__foot_c"><a class="btn btn_bg-color_orange btn_size_big btn_shadow tech-table__btn" href="#">Заказать</a><a class="tech-table__link" href="#">Подробнее о тарифе</a>
+                  <div class="tech-table__foot tech-table__foot_c"><a class="btn btn_bg-color_orange btn_size_big btn_shadow tech-table__btn js-order-popup" href="#">Заказать</a>
                   </div>
                 </div>
                 <div class="tech-table__cell tech-table__cell_foot tech-table__cell_l js-slide">
-                  <div class="tech-table__foot tech-table__foot_r"><a class="btn btn_border_normal btn_color_orange tech-table__btn" href="#">Заказать</a><a class="tech-table__link" href="#">Подробнее о тарифе</a>
+                  <div class="tech-table__foot tech-table__foot_r"><a class="btn btn_border_normal btn_color_orange tech-table__btn js-order-popup" href="#">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -442,54 +504,232 @@
           <div class="content">
             <div class="title evaluation__title">Оценка времени
             </div>
-            <ul class="tab evaluation__tab">
-              <li class="tab__item tab__item_active" id="briefly"><a class="tab__link" href="javascript:void(0);">Краткая</a>
-              </li>
-              <li class="tab__item" id="detail"><a class="tab__link" href="javascript:void(0);">Подробная</a>
-              </li>
-            </ul>
-            <ul class="evaluation__list">
-              <li class="evaluation__item">
-                <div class="evaluation__icon icon icon_psdt">
+            <div class="evaluation__tab-container">
+              <ul class="tab evaluation__tab">
+                <li class="tab__item active" id="briefly"><a class="tab__link" href="javascript:void(0);">Краткая</a>
+                </li>
+                <li class="tab__item" id="detail"><a class="tab__link" href="javascript:void(0);">Подробная</a>
+                </li>
+              </ul>
+              <div class="evaluation__body">
+                <ul class="evaluation__list">
+                  <li class="evaluation__item">
+                    <div class="evaluation__icon icon icon_psdt">
+                    </div>
+                    <div class="evaluation__label">2 часа
+                    </div>
+                    <div class="evaluation__desc">Дизайн-макет (тестовый)
+                    </div>
+                    <div class="evaluation__time">2 часа дизайнера
+                    </div>
+                  </li>
+                  <li class="evaluation__item">
+                    <div class="evaluation__icon icon icon_photot">
+                    </div>
+                    <div class="evaluation__label">1,5 часа
+                    </div>
+                    <div class="evaluation__desc">Обработка и размещение на сайте 20 фотографий
+                    </div>
+                    <div class="evaluation__time">1 час контент-менеджера 0.5 часа дизайнера
+                    </div>
+                  </li>
+                  <li class="evaluation__item">
+                    <div class="evaluation__icon icon icon_psd2htmlt">
+                    </div>
+                    <div class="evaluation__label">2 часа
+                    </div>
+                    <div class="evaluation__desc">Верстка одной простой страницы
+                    </div>
+                    <div class="evaluation__time">2 часа верстальщика
+                    </div>
+                  </li>
+                  <li class="evaluation__item">
+                    <div class="evaluation__icon icon icon_modulet">
+                    </div>
+                    <div class="evaluation__label">4 часа
+                    </div>
+                    <div class="evaluation__desc">Обработка модуля формы &quot;Оставить заявку&quot;
+                    </div>
+                    <div class="evaluation__time">1 час дизайнера <br>1 час верстальщика <br>2 часа программиста
+                    </div>
+                  </li>
+                </ul>
+                <ul class="evaluation-detail">
+                  <li class="evaluation-detail__item">
+                    <div class="evaluation-detail__content">
+                      <div class="evaluation-detail__title">Разработка текстовой страницы
+                      </div>
+                      <div class="evaluation-detail__body">
+                        <dl class="evaluation-detail__list">
+                          <dt class="evaluation-detail__spec">Дизайнер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">2:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Верстальщик
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Программист
+                          </dt>
+                          <dd class="evaluation-detail__count-time">0:30
+                          </dd>
+                          <dt class="evaluation-detail__spec">Менеджер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">0:30
+                          </dd>
+                        </dl>
+                        <div class="evaluation-detail__time">
+                          <div class="evaluation-detail__icon icon icon_t4">
+                          </div>
+                          <div class="evaluation-detail__time-txt">4 часа
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="evaluation-detail__img"><img class="evaluation-detail__img-src" src="media/images/eval/1.jpg" alt="" role="presentation"/>
+                    </div>
+                  </li>
+                  <li class="evaluation-detail__item">
+                    <div class="evaluation-detail__content">
+                      <div class="evaluation-detail__title">Разработка страницы с текстом и графикой
+                      </div>
+                      <div class="evaluation-detail__body">
+                        <dl class="evaluation-detail__list">
+                          <dt class="evaluation-detail__spec">Дизайнер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">5:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Верстальщик
+                          </dt>
+                          <dd class="evaluation-detail__count-time">2:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Программист
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Менеджер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                        </dl>
+                        <div class="evaluation-detail__time">
+                          <div class="evaluation-detail__icon icon icon_t9">
+                          </div>
+                          <div class="evaluation-detail__time-txt">9 часов
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="evaluation-detail__img"><img class="evaluation-detail__img-src" src="media/images/eval/2.jpg" alt="" role="presentation"/>
+                    </div>
+                  </li>
+                  <li class="evaluation-detail__item">
+                    <div class="evaluation-detail__content">
+                      <div class="evaluation-detail__title">Разработка формы «Обратный звонок»
+                      </div>
+                      <div class="evaluation-detail__body">
+                        <dl class="evaluation-detail__list">
+                          <dt class="evaluation-detail__spec">Дизайнер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Верстальщик
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Программист
+                          </dt>
+                          <dd class="evaluation-detail__count-time">1:00
+                          </dd>
+                          <dt class="evaluation-detail__spec">Менеджер
+                          </dt>
+                          <dd class="evaluation-detail__count-time">0:30
+                          </dd>
+                        </dl>
+                        <div class="evaluation-detail__time">
+                          <div class="evaluation-detail__icon icon icon_t35">
+                          </div>
+                          <div class="evaluation-detail__time-txt">3.5 часа
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="evaluation-detail__img"><img class="evaluation-detail__img-src" src="media/images/eval/3.jpg" alt="" role="presentation"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hr">
+        <div class="container">
+          <div class="content">
+            <div class="hr__line">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-shem">
+        <div class="container">
+          <div class="content">
+            <div class="title tech-shem__title">Схема работы
+            </div>
+            <div class="tech-shem__svg">
+              <div class="tech-point tech-point_1 tech-point_pos_up">
+                <div class="tech-point__txt">1. Размещаете задачу в личном кабинете
                 </div>
-                <div class="evaluation__label">2 часа
+                <div class="tech-point__dot">
                 </div>
-                <div class="evaluation__desc">Дизайн-макет (тестовый)
+                <div class="tech-point__line">
                 </div>
-                <div class="evaluation__time">2 часа дизайнера
+              </div>
+              <div class="tech-point tech-point_2 tech-point_pos_down">
+                <div class="tech-point__txt">2. Мы вникаем в суть задачи
                 </div>
-              </li>
-              <li class="evaluation__item">
-                <div class="evaluation__icon icon icon_photot">
+                <div class="tech-point__dot">
                 </div>
-                <div class="evaluation__label">1,5 часа
+                <div class="tech-point__line">
                 </div>
-                <div class="evaluation__desc">Обработка и размещение на сайте 20 фотографий
+              </div>
+              <div class="tech-point tech-point_3 tech-point_pos_up">
+                <div class="tech-point__txt">3. Выполняем обновление
                 </div>
-                <div class="evaluation__time">1 час контент-менеджера 0.5 часа дизайнера
+                <div class="tech-point__dot">
                 </div>
-              </li>
-              <li class="evaluation__item">
-                <div class="evaluation__icon icon icon_psd2htmlt">
+                <div class="tech-point__line">
                 </div>
-                <div class="evaluation__label">2 часа
+              </div>
+              <div class="tech-point tech-point_4 tech-point_pos_down">
+                <div class="tech-point__txt">4. Завершаем. Вы получаете уведомление и отчет о затратах времени
                 </div>
-                <div class="evaluation__desc">Верстка одной простой страницы
+                <div class="tech-point__dot">
                 </div>
-                <div class="evaluation__time">2 часа верстальщика
+                <div class="tech-point__line">
                 </div>
-              </li>
-              <li class="evaluation__item">
-                <div class="evaluation__icon icon icon_modulet">
+              </div>
+              <div class="tech-point tech-point_finish tech-point_pos_up">
+                <div class="tech-point__txt">5. Оцениваете качество работы
                 </div>
-                <div class="evaluation__label">4 часа
+                <div class="tech-point__dot">
+                  <div class="tech-point__icon icon icon_tick">
+                  </div>
                 </div>
-                <div class="evaluation__desc">Обработка модуля формы &quot;Оставить заявку&quot;
+                <div class="tech-point__line">
                 </div>
-                <div class="evaluation__time">1 час дизайнера <br>1 час верстальщика <br>2 часа программиста
-                </div>
-              </li>
-            </ul>
+              </div>
+              <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.31036 53.274227" version="1.1" id="svg2">
+                <defs id="defs6"></defs>
+                <path id="path4138" d="M 0.0555588,6.0973805 C 82.252595,6.8585413 84.25443,7.5060631 84.25443,7.5060631 107.57329,15.037082 84.329238,48.783466 124.47164,47.222364 L 254.22357,46.181225 C 283.19798,42.75453 253.33509,3.8146882 302.76667,6.0973805 l 126.10794,0.9109963 c 29.2435,4.5166882 1.12497,40.3423192 42.29626,39.9537022 l 133.91648,-0.650711 c 23.33177,-4.886396 3.94604,-32.064931 31.80238,-39.3361056 3.06415,-0.9867199 83.3736,-0.3573125 83.3736,-0.3573125" style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></path>
+                <path style="fill:none;fill-rule:evenodd;stroke:#e5e5e5;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0.0555588,6.0973805 C 82.252595,6.8585413 84.25443,7.5060631 84.25443,7.5060631 107.57329,15.037082 84.329238,48.783466 124.47164,47.222364 L 254.22357,46.181225 C 283.19798,42.75453 253.33509,3.8146882 302.76667,6.0973805 l 126.10794,0.9109963 c 29.2435,4.5166882 1.12497,40.3423192 42.29626,39.9537022 l 133.91648,-0.650711 c 23.33177,-4.886396 3.94604,-32.064931 31.80238,-39.3361056 3.06415,-0.9867199 83.3736,-0.3573125 83.3736,-0.3573125" id="path4140"></path>
+                <path id="path4144" d="M 0.0555588,6.0973805 C 82.252595,6.8585413 84.25443,7.5060631 84.25443,7.5060631 c 23.31886,7.5310189 0.07481,41.2774029 40.21721,39.7163009" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></path>
+                <path id="path4148" d="M 124.47164,47.222364 254.22357,46.181225 C 283.19798,42.75453 253.33509,3.8146882 302.76667,6.0973805" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></path>
+                <path id="path4150" d="m 302.76667,6.0973805 126.10794,0.9109963 c 29.2435,4.5166882 1.12497,40.3423192 42.29626,39.9537022" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></path>
+                <path id="path4152" d="m 471.17087,46.962079 133.91648,-0.650711 c 23.33177,-4.886396 3.94604,-32.064931 31.80238,-39.3361056 3.06415,-0.9867199 83.3736,-0.3573125 83.3736,-0.3573125" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></path>
+                <path id="path4142" d="M 0.0555588,6.0973805 C 82.252595,6.8585413 84.25443,7.5060631 84.25443,7.5060631 107.57329,15.037082 84.329238,48.783466 124.47164,47.222364 L 254.22357,46.181225 C 283.19798,42.75453 253.33509,3.8146882 302.76667,6.0973805 l 126.10794,0.9109963 c 29.2435,4.5166882 1.12497,40.3423192 42.29626,39.9537022 l 133.91648,-0.650711 c 23.33177,-4.886396 3.94604,-32.064931 31.80238,-39.3361056 3.06415,-0.9867199 83.3736,-0.3573125 83.3736,-0.3573125" style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;stroke-opacity:1"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -540,13 +780,15 @@
       </div>
       <div class="join blueblock" id="sidebar-bottom">
         <div class="container">
-          <div class="join__title">Готовы присоединиться к довольным клиентам?
-          </div>
-          <div class="join__form">
-            <form action="/"><input class="field field_blue join__input" type="text" placeholder="Имя"/><input class="field field_blue join__input js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
-              <button class="btn btn_bg-color_orange btn_size_big btn_shadow join__btn" type="submit">Присоединиться
-              </button>
-            </form>
+          <div class="join__body">
+            <div class="join__title">Готовы присоединиться к довольным клиентам?
+            </div>
+            <div class="join__form">
+              <form action="/"><input class="field field_blue join__input" type="text" placeholder="Имя"/><input class="field field_blue join__input js-inputmask" placeholder="+7 " type="text"/>
+                <button class="btn btn_bg-color_orange btn_size_big btn_shadow join__btn" type="submit">Присоединиться
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -853,7 +1095,7 @@
                 </div>
                 <div class="control">
                   <label class="control__label">Укажите ваш телефон
-                  </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow order__btn" type="submit">Отправить</a>
                 </div>
@@ -900,7 +1142,7 @@
             <!--+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться-->
           </form>
         </div>
-        <div class="social footer__social"><a class="social__icon icon icon icon_fb" href="#"></a><a class="social__icon icon icon icon_vk" href="#"></a><a class="social__icon icon icon icon_in" href="#"></a>
+        <div class="social footer__social"><a class="social__icon icon icon_fb" href="#"></a><a class="social__icon icon icon_vk" href="#"></a><a class="social__icon icon icon_in" href="#"></a>
         </div>
       </div><hr class="footer__hr"/>
       <div class="footer__nav container">
@@ -922,6 +1164,74 @@
     </div>
     <div class="hidden">
       <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
         <div class="popup__title">Задать вопрос
         </div>
         <div class="popup__body">
@@ -934,8 +1244,8 @@
                     </label><input class="field" placeholder="Ваше имя" type="text"/>
                   </div>
                   <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
                   </div>
                 </div>
                 <div class="form__line">
@@ -945,12 +1255,12 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
                   <label class="control__label">Задайте нам вопрос
-                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
                 </div>
@@ -963,6 +1273,48 @@
                   </div>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
                 </div>
               </form>
             </form>

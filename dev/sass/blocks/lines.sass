@@ -1,0 +1,450 @@
+.lines
+	position: relative
+	margin-top: -45px
+	margin-left: 2%
+	width: 80%
+	@media only screen and (max-width : 550px)
+		margin-top: 0
+		width: 100%
+		margin-left: 0
+	&__point
+		position: absolute
+		z-index: 2
+		&.lines-point_t
+			margin-left: -8px
+			@media only screen and (max-width : 550px)
+				margin-left: 0
+			&_1
+				top: 100%
+				margin-top: -20px
+				left: -2px
+				z-index: 3
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+
+			&_2
+				top: 70%
+				margin-top: -8px
+				left: 36%
+				z-index: 2
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+
+			&_3
+				top: 52.5%
+				margin-top: -8px
+				left: 78%
+				z-index: 1
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+
+			&_4
+				top: 100%
+				left: -5px
+				margin-top: -23px
+				z-index: 3
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+			&_5
+				top: 68%
+				left: 38%
+				margin-top: -8px
+				z-index: 2
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+			&_6
+				top: 74%
+				left: 64%
+				margin-top: -8px
+				z-index: 1
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+			&_7
+				top: 2%
+				left: 97%
+				margin-top: -8px
+				z-index: 1
+				@media only screen and (max-width : 550px)
+					margin-top: 0
+					top: 0
+					left: 0
+
+
+	&__line
+		width: 100%
+		@media only screen and (max-width : 550px)
+			opacity: 0
+			pointer-events: none
+			position: absolute
+			top: 0
+			left: 0
+
+	&__line-orange
+		&_1
+			stroke-dasharray: 270
+			stroke-dashoffset: 270
+		&_2
+			stroke-dasharray: 320
+			stroke-dashoffset: 320
+		&_3
+			stroke-dasharray: 190
+			stroke-dashoffset: 190
+		&_4
+			stroke-dasharray: 295
+			stroke-dashoffset: 295
+		&.anim
+			&.lines__line-orange_1
+				animation: anim1svg 3s linear 0s 1 normal
+			&.lines__line-orange_2
+				animation: anim2svg 3s linear 0s 1 normal
+			&.lines__line-orange_3
+				animation: anim3svg 3s linear 0s 1 normal
+			&.lines__line-orange_4
+				animation: anim4svg 3s linear 0s 1 normal
+
+		&.anim-stop
+			stroke-dashoffset: 0
+
+
+.lines-point
+	position: absolute
+	@media only screen and (max-width : 550px)
+		position: relative
+		padding: 15px 0 15px 30px
+	&_orange
+		.lines-point__dot
+			background-color: #ff6026
+			border-color: #fff
+			&:after
+				border-color: #fff
+	&.tooltip_active
+		.lines-point__link-txt
+			color: #ff6026
+			border-color: transparent
+		.line-tooltip
+			display: block
+	&_wide
+		.lines-point
+			&__link
+				width: 230px
+				@media only screen and (max-width : 550px)
+					width: 100%
+	&_finish
+		.lines-point
+			&__dot
+				&:after
+					display: none
+		@media only screen and (max-width : 550px)
+			padding-top: 0
+	&_t
+		&_1
+			.lines-point__dot
+				&:after
+					+transform(rotate(-55deg))
+					@media only screen and (max-width : 550px)
+						+transform(rotate(45deg))
+			.line-tooltip
+				margin-left: -50px
+				&:after
+					left: 0
+				@media only screen and (max-width : 550px)
+					margin-left: 0
+		&_3
+			.lines-point
+				&__dot
+					&:after
+						+transform(rotate(-80deg))
+						left: 0
+						@media only screen and (max-width : 550px)
+							+transform(rotate(45deg))
+				&__link
+					bottom: auto
+					top: 100%
+					margin-bottom: 0
+					margin-top: 10px
+					@media only screen and (max-width : 550px)
+						margin-top: 0
+				&__desc
+					margin-top: 50px
+					@media only screen and (max-width : 550px)
+						margin-top: 0
+				&__line
+					bottom: -30px
+			.line-tooltip
+				margin-bottom: -10px
+				@media only screen and (max-width : 550px)
+					margin-bottom: 0
+		&_4
+			.lines-point
+				&__dot
+					&:after
+						+transform(rotate(-58deg))
+						@media only screen and (max-width : 550px)
+							+transform(rotate(45deg))
+				&__link
+					top: 100%
+					margin-top: 10px
+					@media only screen and (max-width : 550px)
+						margin-top: 0
+			.line-tooltip
+				margin-left: -50px
+				margin-bottom: 15px
+				&:after
+					left: 0
+				@media only screen and (max-width : 550px)
+					margin-bottom: 0
+					margin-left: 0
+		&_6
+			.lines-point
+				&__link
+					top: 100%
+					width: 330px
+					margin-top: 10px
+					@media only screen and (max-width : 550px)
+						margin-top: 0
+			.line-tooltip
+				margin-bottom: -20px
+				@media only screen and (max-width : 550px)
+					margin-bottom: 0
+		&_7
+			.lines-point
+				&__link
+					width: 100px
+			.line-tooltip
+				margin-left: -350px
+				margin-bottom: 40px
+				&:after
+					right: 0
+					left: auto
+					margin-left: 0
+					margin-right: 80px
+				@media only screen and (max-width : 550px)
+					margin-bottom: 10px
+					margin-left: 0
+					&:after
+						margin-left: 20px
+						margin-right: 0
+						left: 0
+						right: auto
+						@media only screen and (max-width : 380px)
+							margin-left: 50px
+
+	&__dot
+		+size(21px)
+		background-color: #fff
+		border: 1px solid #ccc
+		border-radius: 100%
+		line-height: 21px
+		text-align: center
+		&:after
+			content: ''
+			position: absolute
+			top: -1px
+			bottom: 0
+			left: -2px
+			right: 0
+			margin: auto
+			+size(7px)
+			border-right: 1px solid #ccc
+			border-bottom: 1px solid #ccc
+			+transform(rotate(-45deg))
+		@media only screen and (max-width : 550px)
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 2
+			&:after
+				top: -2px
+				+transform(rotate(45deg))
+		
+
+
+	&__dot-icon
+		display: inline-block
+		position: relative
+		top: -3px
+	&__link
+		position: absolute
+		bottom: 100%
+		width: 185px
+		text-align: left
+		border: 0 none
+		background-color: transparent
+		color: #515a5c
+		font-size: 14px
+		cursor: pointer
+		margin: 0 0 10px
+		padding: 0
+		&:hover
+			.lines-point__link-txt
+				border-bottom-color: transparent
+		&-txt
+			border-bottom: 1px dashed #515a5c
+		@media only screen and (max-width : 550px)
+			position: static
+			width: 100%
+			margin-bottom: 0
+	&__desc
+		position: absolute
+		top: 100%
+		margin-top: 5px
+		font-size: 12px
+		color: #929292
+		width: 200px
+		@media only screen and (max-width : 550px)
+			position: static
+			width: 100%
+			margin-top: 0
+
+	&__line
+		position: absolute
+		top: 4px
+		left: 6px
+		bottom: -4px
+		z-index: 1
+		width: 10px
+		border-left: 1px solid #ccc
+		border-right: 1px solid #ccc
+		background-color: #e5e5e5
+		opacity: 0
+		pointer-events: none
+		@media only screen and (max-width : 550px)
+			opacity: 1
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 50%
+			margin-left: -1px
+			border-left: 2px dotted #fff
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 100%
+			left: 0
+			right: 0
+			background-color: #ff6026
+		&.anim
+			&:before
+				animation: animbefore 3s linear 0s 1 normal
+				bottom: 0
+	&__shadow
+		position: absolute
+		top: 0
+		left: 3px
+		bottom: -30px
+		z-index: 3
+		width: 20px
+		+linear-gradient(to bottom, transparent 50%, #fff)
+		display: none
+		@media only screen and (max-width : 550px)
+			display: block
+
+	
+
+
++keyframes(animbefore)
+	0%
+		bottom: 100%
+	100%
+		bottom: 0
+
+
++keyframes(anim1svg)
+	0%
+		stroke-dashoffset: 270px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim2svg)
+	0%
+		stroke-dashoffset: 320px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim3svg)
+	0%
+		stroke-dashoffset: 190px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim4svg)
+	0%
+		stroke-dashoffset: 295px
+	100%
+		stroke-dashoffset: 0
+
+
+
+.line-tooltip
+	position: absolute
+	bottom: 100%
+	left: 50%
+	margin-left: -250px
+	margin-bottom: 50px
+	width: 475px
+	z-index: 5
+	border: 1px solid #e5e5e5
+	background-color: #fff
+	padding: 5px 20px
+	box-sizing: border-box
+	display: none
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 50%
+		margin-left: 50px
+		border-right: 5px solid transparent
+		border-top: 10px solid #e5e5e5
+		border-left: 5px solid transparent
+	@media only screen and (max-width : 550px)
+		width: 320px
+		margin-left: 0
+		left: 30px
+		margin-bottom: 0
+		&:after
+			margin-left: 20px
+			left: 0
+	@media only screen and (max-width : 380px)
+		left: 0
+		width: 290px
+		&:after
+			margin-left: 50px
+
+
+
+	&__item
+		padding-left: 20px
+		margin: 10px 0
+		position: relative
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+
+.fade
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 500
+	display: none

@@ -27,7 +27,7 @@ block content
 						+e.icon.icon._list_cw
 						| Отдельная стоимость по каждому региону продвижения.
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal._shadow.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 	include ../blocks/sidebar
@@ -37,39 +37,39 @@ block content
 			.content
 				+e.title Выберите подходящий тариф
 				+b.desc.__desc Наши последние достижения в области интернет-маркетинга позволили составить ряд успешных стратегий как для малого, так и для среднего бизнеса.
-				+tab({txt:"Легкий старт", id:"id-easy"}, {txt:"Бизнес", id:"id-bussines"}, {txt:"Профи", id:"id-profi"}).__tab
-
-				+b.rate-content
-					-for (var i=1; i <= 3;i++)
-						+e.item(class= (i == 1) ? "_active" : "")
-							+e.IMG.img(src="media/img/rate/"+ i +".png", alt="")
-							+e.title Легкий старт
-							+e.price 2490 
-								+b.SPAN.rubl Р
-								|  в месяц
-							+b.rate-sale.__sale
-								+e.price 1990 
+				+e.tab-container
+					+tab({txt:"Легкий старт", id:"id-easy", cls:"js-rate-tab"}, {txt:"Бизнес", id:"id-bussines", cls:"js-rate-tab"}, {txt:"Профи", id:"id-profi", cls:"js-rate-tab"}).__tab
+					+b.rate-content
+						-for (var i=1; i <= 3;i++)
+							+e.item(class= (i == 1) ? "_active" : "")
+								+e.IMG.img(src="media/img/rate/"+ i +".png", alt="")
+								+e.title Легкий старт
+								+e.price 2490 
 									+b.SPAN.rubl Р
 									|  в месяц
-								+e.if при заказе SEO-продвижения
-								+e.percent
-									+e.SPAN.percent-txt -20%
+								+b.rate-sale.__sale
+									+e.price 1990
+										+b.SPAN.rubl Р
+										|  в месяц
+									+e.if при заказе SEO-продвижения
+									+e.percent
+										+e.SPAN.percent-txt -20%
 
-							+e.UL.list
-								+e.list-item
-									+e.list-icon.icon._list_cg_b
-									| Яндекс или Google
-								+e.list-item
-									+e.list-icon.icon._list_cg_b
-									| Отслеживание целей
-								+e.list-item
-									+e.list-icon.icon._del
-									| Настройка Яндекс.Метрика
-								+e.list-item
-									+e.list-icon.icon._del
-									| Коллтрекинг
+								+e.UL.list
+									+e.list-item
+										+e.list-icon.icon._list_cg_b
+										| Яндекс или Google
+									+e.list-item
+										+e.list-icon.icon._list_cg_b
+										| Отслеживание целей
+									+e.list-item
+										+e.list-icon.icon._del
+										| Настройка Яндекс.Метрика
+									+e.list-item
+										+e.list-icon.icon._del
+										| Коллтрекинг
 
-							+btn.A._bg-color_orange._size_normal.__btn(href="#") Выбрать тариф
+								+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Выбрать тариф
 
 
 	+b.rsya
@@ -95,5 +95,75 @@ block content
 						p Для тех, кто хочет получить целевой трафик «прямо сейчас»
 						p В случае наличия достаточных средств на интернет-маркетинг, было бы неэффективно использовать лишь один канал привлечения клиентов, такой как SEO.
 
+	+b.algorithm
+		.container
+			.content
+				+b.title.__title Алгоритм работы
+				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+
+				+b.lines.__lines.js-lines
+					- var list = [{cls:"_t_4", btntxt:"1. Создание рекламных кампаний"},{cls:"_t_5", btntxt:"2. Оптимизация рекламных кампаний для улучшения KPI"},{cls:"_t_6", btntxt:"3. Регулярный мониторинг и анализ эффективности рекламных кампаний с помощью систем Яндекс.Метрика и Google Analytics."},{cls:"_t_7", btntxt:" 4. Результат", dot: true}]
+					each item in list
+						+b.lines-point(class= item.cls, class= item.dot ? "_finish" : "", class= item.dot ? "js-button_finish": "")._wide.__point.js-button
+							+e.BUTTON.link
+								+e.SPAN.link-txt= item.btntxt
+							+e.dot
+								if item.dot
+									+e.dot-icon.icon._tick
+							if !item.dot
+								+e.line.js-btn-line
+							+b.line-tooltip
+								+e.UL.list
+									+e.item
+										+e.icon.icon._list_cg
+										| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+									+e.item
+										+e.icon.icon._list_cg
+										| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+									+e.item
+										+e.icon.icon._list_cg
+										| А/В тестирование объявлений
+									+e.item
+										+e.icon.icon._list_cg
+										| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+					+e.line.js-list-line
+						svg(
+							xmlns:dc="http://purl.org/dc/elements/1.1/"
+							xmlns:cc="http://creativecommons.org/ns#"
+							xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+							xmlns:svg="http://www.w3.org/2000/svg"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 718.96484 213.61044"
+							version="1.1"
+							id="svg2")
+							defs( id="defs6" )
+							path(
+								id="path4138"
+								d="M 1.1240684,207.71668 C 102.67559,188.34861 227.60022,154.97646 285.36364,152.75323 c 84.85274,-2.5091 136.30812,24.44842 187.92267,12.56307 66.41563,-0.11893 127.92226,-76.346685 242.11953,-160.4858397"
+								style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" )
+							path(
+								style="fill:none;fill-rule:evenodd;stroke:#e5e5e5;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+								d="M 1.1240684,207.71668 C 102.67559,188.34861 227.60022,154.97646 285.36364,152.75323 c 84.85274,-2.5091 136.30812,24.44842 187.92267,12.56307 66.41563,-0.11893 127.92226,-76.346685 242.11953,-160.4858397"
+								id="path4140" )
+							+e.PATH.line-orange._4.js-line(
+								style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+								d="M 1.1240684,207.71668 C 102.67559,188.34861 227.60022,154.97646 285.36364,152.75323"
+								id="path4144" )
+							+e.PATH.line-orange._3.js-line(
+								style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+								d="m 285.36364,152.75323 c 84.85274,-2.5091 136.30812,24.44842 187.92267,12.56307"
+								id="path4146" )
+							+e.PATH.line-orange._4.js-line(
+								style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+								d="M 473.28631,165.3163 C 539.70194,165.19737 601.20857,88.969615 715.40584,4.8304603"
+								id="path4148" )
+							path(
+								id="path4142"
+								d="M 1.1240684,207.71668 C 102.67559,188.34861 227.60022,154.97646 285.36364,152.75323 c 84.85274,-2.5091 136.30812,24.44842 187.92267,12.56307 66.41563,-0.11893 127.92226,-76.346685 242.11953,-160.4858397"
+								style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;stroke-opacity:1" )
+
 
 	+order.darkBlock
+
+
+	.fade

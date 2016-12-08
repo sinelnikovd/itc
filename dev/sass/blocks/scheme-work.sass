@@ -7,6 +7,8 @@
 		color: #fff
 		text-align: left
 	&__body
+		position: relative
+		z-index: 2
 		+clearfix
 	&__desc
 		float: left
@@ -39,13 +41,118 @@
 
 .line-scheme
 	&__line
+		&_animated
+			+animation(fadeLine 1s both)
+			.line-scheme__line-in
+				+animation(fadeLineIn 1s both)
+		&_to-animated
+			opacity: 0
+		&_tz
+			+animation-delay(.1s)
+			.line-scheme__line-in
+				background-color: #035b97
+				width: 190px
+				+animation-delay(.1s)
+				@media only screen and (max-width : 950px)
+					.line-scheme__tooltip
+						&:after
+							margin-right: -300px
+							@media only screen and (max-width : 750px)
+								margin-right: -340px
+								@media only screen and (max-width : 550px)
+									margin-right: -20px
+				@media only screen and (max-width : 550px)
+					max-width: none
+
+		&_port
+			+animation-delay(.5s)
+			.line-scheme__line-in
+				background-color: #16599a
+				width: 220px
+				margin-left: 6%
+				+animation-delay(.5s)
+				@media only screen and (max-width : 950px)
+					.line-scheme__tooltip
+						&:after
+							margin-right: -300px
+							@media only screen and (max-width : 750px)
+								margin-right: -340px
+								@media only screen and (max-width : 550px)
+									margin-right: -20px
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+		&_desing
+			+animation-delay(.8s)
+			.line-scheme__line-in
+				background-color: #25579c
+				width: 190px
+				margin-left: 22%
+				+animation-delay(.8s)
+				@media only screen and (max-width : 950px)
+					.line-scheme__tooltip
+						&:after
+							margin-right: -300px
+							@media only screen and (max-width : 750px)
+								margin-right: -340px
+								@media only screen and (max-width : 550px)
+									margin-right: -20px
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+		&_psd2html
+			+animation-delay(1s)
+			.line-scheme__line-in
+				background-color: #39549f
+				width: 190px
+				margin-left: 32.5%
+				+animation-delay(1s)
+				@media only screen and (max-width : 950px)
+					.line-scheme__tooltip
+						&:after
+							margin-right: -300px
+							@media only screen and (max-width : 550px)
+								margin-right: -20px
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+		&_prog
+			+animation-delay(.8s)
+			.line-scheme__line-in
+				background-color: #5250a2
+				width: 320px
+				margin-left: 22%
+				+animation-delay(.8s)
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+		&_test
+			+animation-delay(1.2s)
+			.line-scheme__line-in
+				background-color: #614ea5
+				width: 190px
+				margin-left: 54%
+				+animation-delay(1.2s)
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+		&_start
+			+animation-delay(1.3s)
+			.line-scheme__line-in
+				background-color: #714da7
+				width: 230px
+				margin-left: 58%
+				+animation-delay(1.3s)
+				@media only screen and (max-width : 550px)
+					max-width: none
+					margin-left: 0
+	&__line-in
 		position: relative
 		margin: 10px 0
 		padding: 9px 36px 9px 18px
 		box-sizing: border-box
 		border-radius: 3px
 		box-shadow: -1px 0 0 rgba(#000, .2)
-
 		&:after
 			content: ''
 			position: absolute
@@ -54,84 +161,7 @@
 			right: 35px
 			width: 1px
 			background-color: rgba(#000, .2)
-		&_tz
-			background-color: #035b97
-			max-width: 190px
-			@media only screen and (max-width : 950px)
-				.line-scheme__tooltip
-					&:after
-						margin-right: -300px
-						@media only screen and (max-width : 750px)
-							margin-right: -340px
-							@media only screen and (max-width : 550px)
-								margin-right: -20px
-			@media only screen and (max-width : 550px)
-				max-width: none
 
-		&_port
-			background-color: #16599a
-			max-width: 220px
-			margin-left: 6%
-			@media only screen and (max-width : 950px)
-				.line-scheme__tooltip
-					&:after
-						margin-right: -300px
-						@media only screen and (max-width : 750px)
-							margin-right: -340px
-							@media only screen and (max-width : 550px)
-								margin-right: -20px
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
-		&_desing
-			background-color: #25579c
-			max-width: 190px
-			margin-left: 22%
-			@media only screen and (max-width : 950px)
-				.line-scheme__tooltip
-					&:after
-						margin-right: -300px
-						@media only screen and (max-width : 750px)
-							margin-right: -340px
-							@media only screen and (max-width : 550px)
-								margin-right: -20px
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
-		&_psd2html
-			background-color: #39549f
-			max-width: 190px
-			margin-left: 32.5%
-			@media only screen and (max-width : 950px)
-				.line-scheme__tooltip
-					&:after
-						margin-right: -300px
-						@media only screen and (max-width : 550px)
-							margin-right: -20px
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
-		&_prog
-			background-color: #5250a2
-			max-width: 320px
-			margin-left: 22%
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
-		&_test
-			background-color: #614ea5
-			max-width: 190px
-			margin-left: 54%
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
-		&_start
-			background-color: #714da7
-			max-width: 230px
-			margin-left: 58%
-			@media only screen and (max-width : 550px)
-				max-width: none
-				margin-left: 0
 	&__tooltip-wrap
 		position: absolute
 		width: 35px
@@ -197,3 +227,18 @@
 				display: block
 
 
++keyframes(fadeLine)
+	from
+		opacity: 0;
+		margin-left: 3000px;
+	to
+		opacity: 1;
+		margin-left: 0;
+
++keyframes(fadeLineIn)
+	from
+		opacity: 0;
+		width: 1000px;
+	50%
+		opacity: 1;
+		width: 1000px;

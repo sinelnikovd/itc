@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("media/img/svg/sprite.svg");
       background-repeat: no-repeat;
-      background-size: 9em 264.1em;
+      background-size: 9em 275.3em;
 
       .no-svg & {
         background-image: url("media/img/svg/sprite.png");
@@ -1031,9 +1031,48 @@
   }
 
 
-.icon_techad_1 {
+.icon_t35 {
   &:before {
       background-position: 0em -240.5em;
+      width: 3.5em;
+      height: 3.5em;
+    }
+  }
+
+  @mixin icon-t35(){
+    @extend .icon_t35;
+  }
+
+
+.icon_t4 {
+  &:before {
+      background-position: 0em -244em;
+      width: 3.5em;
+      height: 3.5em;
+    }
+  }
+
+  @mixin icon-t4(){
+    @extend .icon_t4;
+  }
+
+
+.icon_t9 {
+  &:before {
+      background-position: 0em -247.5em;
+      width: 3.5em;
+      height: 3.5em;
+    }
+  }
+
+  @mixin icon-t9(){
+    @extend .icon_t9;
+  }
+
+
+.icon_techad_1 {
+  &:before {
+      background-position: 0em -251em;
       width: 2.4em;
       height: 2.1em;
     }
@@ -1046,7 +1085,7 @@
 
 .icon_techad_2 {
   &:before {
-      background-position: 0em -242.6em;
+      background-position: 0em -253.1em;
       width: 2.3em;
       height: 2em;
     }
@@ -1059,7 +1098,7 @@
 
 .icon_techad_3 {
   &:before {
-      background-position: 0em -244.6em;
+      background-position: 0em -255.1em;
       width: 2em;
       height: 2em;
     }
@@ -1072,7 +1111,7 @@
 
 .icon_techad_4 {
   &:before {
-      background-position: 0em -246.6em;
+      background-position: 0em -257.1em;
       width: 2.8em;
       height: 1.3em;
     }
@@ -1085,7 +1124,7 @@
 
 .icon_techad_5 {
   &:before {
-      background-position: 0em -247.9em;
+      background-position: 0em -258.4em;
       width: 2.2em;
       height: 1.9em;
     }
@@ -1098,7 +1137,7 @@
 
 .icon_techad_6 {
   &:before {
-      background-position: 0em -249.8em;
+      background-position: 0em -260.3em;
       width: 2.1em;
       height: 2.1em;
     }
@@ -1109,9 +1148,22 @@
   }
 
 
+.icon_tick {
+  &:before {
+      background-position: 0em -262.4em;
+      width: 0.9em;
+      height: 0.7em;
+    }
+  }
+
+  @mixin icon-tick(){
+    @extend .icon_tick;
+  }
+
+
 .icon_tie {
   &:before {
-      background-position: 0em -251.9em;
+      background-position: 0em -263.1em;
       width: 1.1em;
       height: 2em;
     }
@@ -1124,7 +1176,7 @@
 
 .icon_update {
   &:before {
-      background-position: 0em -253.9em;
+      background-position: 0em -265.1em;
       width: 9em;
       height: 7em;
     }
@@ -1137,7 +1189,7 @@
 
 .icon_upload {
   &:before {
-      background-position: 0em -260.9em;
+      background-position: 0em -272.1em;
       width: 1.2em;
       height: 1.9em;
     }
@@ -1150,7 +1202,7 @@
 
 .icon_vk {
   &:before {
-      background-position: 0em -262.8em;
+      background-position: 0em -274em;
       width: 2.2em;
       height: 1.3em;
     }

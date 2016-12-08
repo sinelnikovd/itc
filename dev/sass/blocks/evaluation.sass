@@ -3,8 +3,9 @@
 	padding: 30px 0 50px
 	&__tab
 		margin-top: 25px
-	&__list
+	&__body
 		margin-top: 45px
+	&__list
 		+clearfix
 		@media only screen and (max-width : 550px)
 			margin-top: 10px
@@ -34,4 +35,59 @@
 		font-size: 12px
 		@media only screen and (max-width : 550px)
 			margin-top: 5px
+
+.evaluation-detail
+	display: none
+	border-left: 1px solid #e5e5e5
+	border-right: 1px solid #e5e5e5
+	border-bottom: 1px solid #e5e5e5
+	text-align: left
+	box-sizing: border-box
+	width: 100%
+	&__item
+		border-top: 1px solid #e5e5e5
+		padding: 20px 27px
+		box-sizing: border-box
+		+clearfix
+
+	&__body
+		margin-top: 15px
+		float: left
+		width: 50%
+		position: relative
+	&__img
+		float: left
+		width: 45%
+		margin-left: 5%
+
+	&__title
+		@extend %pbold
+		font-size: 18px
+
+	&__time
+		position: absolute
+		top: 50%
+		margin-top: -30px
+		right: 15%
+		text-align: center
+
+	&__time-txt
+		margin-top: 5px
+		@extend %pbold
+		font-size: 12px
+		text-transform: uppercase
+
+	&__list
+		width: 55%
+		+clearfix
+	&__spec
+		float: left
+		width: 50%
+		margin: 7px 0
+	&__count-time
+		margin: 7px 0
+		float: left
+		width: 50%
+		text-align: center
+
 

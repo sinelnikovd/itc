@@ -114,8 +114,17 @@ strong
 
 .blueblock
 	background-color: #303c6b
-	background-image: url(media/img/dots-pattern.png)
 	color: #fff
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-image: url(media/img/dots-pattern.png)
+		opacity: .6
 
 
 .sp-retina,

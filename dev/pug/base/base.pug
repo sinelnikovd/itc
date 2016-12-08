@@ -38,6 +38,56 @@ html
 			//- Здесь пишем код 
 		.hidden
 			+b.popup._order#popup-order
+				+e.title Оставить заявку
+				+e.body
+					+e.form
+						form(action="/")
+							+b.FORM.form.__form
+								+e.line
+									+b.control.__control
+										+e.LABEL.label Укажите ваше имя
+										+field(placeholder="Ваше имя")
+									+b.control.__control
+										+e.LABEL.label Укажите ваш E-mail
+										+field(placeholder="Ваша E-mail")
+								+e.line
+									+b.control.__control
+										+e.LABEL.label Укажите вашу организацию
+										+field(placeholder="Ваша организация")
+									+b.control.__control
+										+e.LABEL.label Укажите ваш телефон
+										+field.js-inputmask(placeholder="+7 ")
+								+b.control
+									+e.LABEL.label Опишите вашу задачу
+									+e.TEXTAREA.textarea.field._textarea(rows="4", placeholder="Комментарий")
+								+b.control
+									+b.A.popup-link(href="#") У вас есть промокод?
+								+b.control
+									+b.file-upload
+										+e.INPUT.input#fileupload(type="file")
+										+e.LABEL.label(for="fileupload")
+											+e.SPAN.btn
+												+e.icon.icon_upload
+												| Загрузить задание
+											+e.icon-link.icon_link_cw
+											+e.txt
+										+e.kill
+
+								+b.control
+									+btn.A._bg-color_orange._size_big._shadow.popup__btn(type="submit") Отправить
+
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ
+
+			+b.popup._order#popup-question
 				+e.title Задать вопрос
 				+e.body
 					+e.form
@@ -48,18 +98,18 @@ html
 										+e.LABEL.label Укажите ваше имя
 										+field(placeholder="Ваше имя")
 									+b.control.__control
-										+e.LABEL.label Укажите вашу фамилию
-										+field(placeholder="Ваша фамилия")
+										+e.LABEL.label Укажите ваш E-mail
+										+field(placeholder="Ваша E-mail")
 								+e.line
 									+b.control.__control
 										+e.LABEL.label Укажите вашу организацию
 										+field(placeholder="Ваша организация")
 									+b.control.__control
 										+e.LABEL.label Укажите ваш телефон
-										+field.js-inputmask(placeholder="+7 (___) ___-__-__")
+										+field.js-inputmask(placeholder="+7 ")
 								+b.control
 									+e.LABEL.label Задайте нам вопрос
-									+e.TEXTAREA.textarea.field._textarea(rows="4")
+									+e.TEXTAREA.textarea.field._textarea(rows="4", placeholder="Ваш вопрос")
 								+b.control
 									+b.A.popup-link(href="#") У вас есть промокод?
 								+b.control
@@ -75,6 +125,33 @@ html
 
 								+b.control
 									+btn.A._bg-color_orange._size_big._shadow.popup__btn(type="submit") Задать вопрос
+
+					+b.UL.advantage-list.__advantage
+						+e.item
+							+e.icon.icon.icon_star
+							+e.txt Специалисты высокого класса
+						+e.item
+							+e.icon.icon.icon_tie
+							+e.txt Нам доверяют свои сайты крупнейшие компании
+						+e.item
+							+e.icon.icon.icon_guarantee
+							+e.txt Гарантия качества выполненных работ
+
+			+b.popup._order#popup-call
+				+e.title Заказать звонок
+				+e.body
+					+e.form
+						form(action="/")
+							+b.FORM.form.__form
+								+b.control
+									+e.LABEL.label Укажите ваше имя
+									+field(placeholder="Ваше имя")
+								+b.control
+									+e.LABEL.label Укажите ваш телефон
+									+field.js-inputmask(placeholder="+7 ")
+
+								+b.control
+									+btn.A._bg-color_orange._size_big._shadow.popup__btn(type="submit") Отправить
 
 					+b.UL.advantage-list.__advantage
 						+e.item

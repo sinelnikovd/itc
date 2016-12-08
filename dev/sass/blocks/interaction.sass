@@ -42,6 +42,25 @@
 			flex-wrap: wrap
 			.interaction-item
 				width: 50%
+				&:first-child,
+				&:nth-child(3)
+					.tooltip-interaction
+						margin-left: -80px
+						&:after
+							right: auto
+							left: 70px
+						@media only screen and (max-width : 550px)
+							margin-left: -70px
+
+		.tooltip-interaction
+			margin-left: -400px
+			&:after
+				left: auto
+				right: 70px
+			@media only screen and (max-width : 550px)
+				margin-left: -240px
+			@media only screen and (max-width : 380px)
+				margin-left: -210px
 
 	&__title
 		color: #fff
@@ -76,7 +95,8 @@
 				+transform(rotate(90deg))
 		&_text
 			text-align: center
-			flex-grow: 2
+			@media only screen and (max-width : 1200px)
+				flex-grow: 2
 		&-top
 			position: absolute
 			bottom: 100%
@@ -99,7 +119,7 @@
 			top: 100%
 			margin-top: -40px
 			font-size: 12px
-			min-width: 150px
+			width: 150px
 			left: 50%
 			margin-left: -75px
 			text-align: center
@@ -118,6 +138,52 @@
 .interaction-item
 	text-align: center
 	margin-bottom: 17px
+	position: relative
+	cursor: pointer
 	&__desc
 		margin-top: 8px
 		@extend %bold
+	&__tooltip
+		display: none
+	&_active-tooltip
+		.interaction-item__tooltip
+			display: block
+
+.tooltip-interaction
+	color: #515a5c
+	position: absolute
+	bottom: 100%
+	left: 50%
+	margin-left: -250px
+	margin-bottom: 15px
+	width: 475px
+	z-index: 5
+	border: 1px solid #e5e5e5
+	background-color: #fff
+	padding: 5px 20px
+	box-sizing: border-box
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 50%
+		margin-left: 5px
+		border-right: 5px solid transparent
+		border-top: 10px solid #e5e5e5
+		border-left: 5px solid transparent
+	@media only screen and (max-width : 550px)
+		width: 320px
+		margin-left: -160px
+		&:after
+			margin-left: -5px
+	@media only screen and (max-width : 380px)
+		width: 290px
+		margin-left: -145px
+	&__item
+		padding-left: 20px
+		margin: 10px 0
+		position: relative
+	&__icon
+		position: absolute
+		top: 0
+		left: 0

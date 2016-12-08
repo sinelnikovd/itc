@@ -32,7 +32,7 @@ block content
 						+e.icon.icon._list_cw
 						| Гарантированный список работ
 				+e.group-btn
-					+btn.A._bg-color_orange._size_normal.__btn.js-order-popup(href="#") Заказать
+					+btn.A._bg-color_orange._size_normal._shadow.__btn.js-order-popup(href="#") Заказать
 					+btn.A._border_small._color_white.__btn(href="#") Кейсы
 
 
@@ -42,7 +42,7 @@ block content
 		.container
 			.content
 				+b.title.__title Абонентская плата за продвижение сайта в ТОП10
-				+tab({txt:"Месячная подписка", id:"sub-mouth"}, {txt:"Годовая подписка", id:"sub-year"}).__tab
+				+tab({txt:"Месячная подписка", id:"sub-month", cls:"js-tab-top10"}, {txt:"Годовая подписка", id:"sub-year", cls:"js-tab-top10"}).__tab
 				+e.slide-nav-wrap
 					+arrow._prev.__arrow._prev
 					+arrow._next.__arrow._next
@@ -60,17 +60,26 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Ежемесячный комплекс работ по оптимизации и монторингу
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -80,17 +89,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Количество запросов
-							| до 120
+							+e.data._month._active до 120
+							+e.data._year до 121
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Количество запросов
-							| до 150
+							+e.data._month._active до 150
+							+e.data._year до 151
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Количество запросов
-							| до 200
+							+e.data._month._active до 200
+							+e.data._year до 201
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -100,17 +112,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Конкурентность запросов
-							| средняя
+							+e.data._month._active средняя
+							+e.data._year средняя
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Конкурентность запросов
-							| высокая
+							+e.data._month._active высокая
+							+e.data._year высокая
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Конкурентность запросов
-							| высокая
+							+e.data._month._active высокая
+							+e.data._year высокая
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -120,17 +135,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Максимальное количество регионов для продвижения
-							| 1
+							+e.data._month._active 1
+							+e.data._year 10
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Максимальное количество регионов для продвижения
-							| 3
+							+e.data._month._active 3
+							+e.data._year 10
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Максимальное количество регионов для продвижения
-							| 9
+							+e.data._month._active 9
+							+e.data._year 10
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -140,17 +158,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Участие копирайтера для написания текстов (символов)
-							| 20 000
+							+e.data._month._active 20 000
+							+e.data._year 20 001
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Участие копирайтера для написания текстов (символов)
-							| 25 000
+							+e.data._month._active 25 000
+							+e.data._year 25 001
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Участие копирайтера для написания текстов (символов)
-							| 30 000
+							+e.data._month._active 30 000
+							+e.data._year 30 001
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -160,17 +181,26 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Рекомендации по улучшению продающих качеств сайта
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Рекомендации по улучшению продающих качеств сайта
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Рекомендации по улучшению продающих качеств сайта
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -180,17 +210,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Техническая поддержка сайта
-							| 1 час
+							+e.data._month._active 1 час
+							+e.data._year 1 час
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Техническая поддержка сайта
-							| 2 часа
+							+e.data._month._active 2 часа
+							+e.data._year 2 часа
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Техническая поддержка сайта
-							| 4 часа
+							+e.data._month._active 4 часа
+							+e.data._year 4 часа
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -200,17 +233,26 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Еженедельная отчетность
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Еженедельная отчетность
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Еженедельная отчетность
-							+b.icon._list_cg
+							+e.data._month._active
+								+b.icon._list_cg
+							+e.data._year
+								+b.icon._list_cg
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row
@@ -220,17 +262,20 @@ block content
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
-							| 220
+							+e.data._month._active 220
+							+e.data._year 221
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
-							| 200
+							+e.data._month._active 200
+							+e.data._year 201
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 						+e.cell._slide
 							+e.hidden Написание текстов сверх лимита (за 1000 символов), руб.
-							| 190
+							+e.data._month._active 190
+							+e.data._year 191
 							+b.tooltip.__tooltip_h(data-tooltip="Далеко-далеко за словесными горами в стране.")
 								+e.SPAN.txt ?
 					+e.row._foot
@@ -238,17 +283,26 @@ block content
 						+e.cell._t
 						+e.cell._slide
 							+e.hidden._f Стоимость тарифа, руб.
-							| 12 000 р.
+							+e.data._month._active 12 000 р.
+							+e.data._year 12 000 р.
 						+e.cell._slide
 							+e.hidden._f Стоимость тарифа, руб.
-							| 20 000 р.
+							+e.data._month._active 20 000 р.
+							+e.data._year 20 000 р.
 						+e.cell._old-price._slide
 							+e.hidden._f Стоимость тарифа, руб.
-							+e.SPAN.sale -15%
-							br
-							+e.SPAN.old-price 24 000 р.
-							br
-							| 20 000 р.
+							+e.data._month._active
+								+e.SPAN.sale -15%
+								br
+								+e.SPAN.old-price 24 000 р.
+								br
+								| 20 000 р.
+							+e.data._year
+								+e.SPAN.sale -15%
+								br
+								+e.SPAN.old-price 24 000 р.
+								br
+								| 20 000 р.
 
 
 

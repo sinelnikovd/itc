@@ -1,5 +1,7 @@
 .sidebar
 	width: 100%
+	position: relative
+	z-index: 30
 	@media only screen and (max-width : 950px)
 		display: none
 
@@ -9,12 +11,18 @@
 		left: 0
 		right: 0
 		z-index: 30
+		&.sidebar_static
+			position: relative
+			top: 0
 	&_absolute
 		position: absolute
 		bottom: 0
 		top: auto
 		z-index: 30
-		
+		&.sidebar_static
+			position: relative
+			top: 0
+			bottom: auto
 	.container
 		position: relative
 	&__body
@@ -65,8 +73,12 @@
 		&_active
 			.sidebar-menu__link
 				background-color: #f2f2f2
-		&_border-top_dot
+		&_last
 			border-top: 1px dotted #9eafb4
+			.sidebar-menu__link
+				&:hover
+					background-color: $c-orange
+					color: #fff
 
 	&__link
 		padding: 14px 18px 13px

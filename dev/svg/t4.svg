@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="35"
+   height="35"
+   viewBox="0 0 35 35"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="t4.svg">
+  <defs
+     id="defs35" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="945"
+     id="namedview33"
+     showgrid="false"
+     inkscape:zoom="6.7428571"
+     inkscape:cx="-2.2987288"
+     inkscape:cy="17.5"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title3">t4</title>
+  <path
+     d="M17.5,17.5V3A14.55,14.55,0,0,1,30.1,24.77Z"
+     fill="#ff6026"
+     id="path5" />
+  <path
+     d="M17.5,2A15.5,15.5,0,1,1,2,17.5,15.52,15.52,0,0,1,17.5,2m0-2A17.5,17.5,0,1,0,35,17.5,17.5,17.5,0,0,0,17.5,0Z"
+     fill="#333"
+     id="path7" />
+  <rect
+     x="17"
+     y="4"
+     width="1"
+     height="3"
+     fill="#333"
+     id="rect9" />
+  <rect
+     x="11"
+     y="5.61"
+     width="1"
+     height="3"
+     transform="translate(-2.01 6.7) rotate(-30)"
+     fill="#333"
+     id="rect11" />
+  <rect
+     x="6.61"
+     y="10"
+     width="1"
+     height="3"
+     transform="translate(-6.41 11.91) rotate(-60)"
+     fill="#333"
+     id="rect13" />
+  <rect
+     x="5"
+     y="16"
+     width="1"
+     height="3"
+     transform="translate(-12 23) rotate(-90)"
+     fill="#333"
+     id="rect15" />
+  <rect
+     x="6.61"
+     y="22"
+     width="1"
+     height="3"
+     transform="translate(-9.69 41.41) rotate(-120)"
+     fill="#333"
+     id="rect17" />
+  <rect
+     x="11"
+     y="26.39"
+     width="1"
+     height="3"
+     transform="translate(7.51 57.8) rotate(-150)"
+     fill="#333"
+     id="rect19" />
+  <rect
+     x="17"
+     y="28"
+     width="1"
+     height="3"
+     transform="translate(35 59) rotate(-180)"
+     fill="#333"
+     id="rect21" />
+  <rect
+     x="23"
+     y="26.39"
+     width="1"
+     height="3"
+     transform="translate(57.8 40.3) rotate(150)"
+     fill="#333"
+     id="rect23" />
+  <rect
+     x="27.39"
+     y="22"
+     width="1"
+     height="3"
+     transform="translate(62.19 11.09) rotate(120)"
+     fill="#333"
+     id="rect25" />
+  <rect
+     x="29"
+     y="16"
+     width="1"
+     height="3"
+     transform="translate(47 -12) rotate(90)"
+     fill="#333"
+     id="rect27" />
+  <rect
+     x="27.39"
+     y="10"
+     width="1"
+     height="3"
+     transform="translate(23.91 -18.41) rotate(60)"
+     fill="#333"
+     id="rect29" />
+  <rect
+     x="23"
+     y="5.61"
+     width="1"
+     height="3"
+     transform="matrix(0.87, 0.5, -0.5, 0.87, 6.7, -10.8)"
+     fill="#333"
+     id="rect31" />
+</svg>

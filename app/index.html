@@ -40,11 +40,13 @@
               </div>
             </div>
           </div>
-          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-order-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
             <div class="recall__icon icon icon_phone_black"></div></a>
           </div>
         </div>
         <div class="nav header__nav" id="nav">
+          <div class="nav__hover">
+          </div>
           <div class="nav__list">
             <div class="nav__item nav__item_sub nav__item_active"><a class="nav__link" href="#">Создание сайтов</a>
               <ul class="subnav nav__subnav">
@@ -136,7 +138,7 @@
               </li>
               <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Преимущества</a>
               </li>
-              <li class="sidebar-menu__item sidebar-menu__item_border-top_dot"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
+              <li class="sidebar-menu__item sidebar-menu__item_last"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
               </li>
             </ul>
             <div class="sidebar__links"><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_brief"></span><span class="sidebar__link-txt">Заполнить бриф</span></a><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_download"></span><span class="sidebar__link-txt">Скачать презентацию</span></a>
@@ -301,7 +303,7 @@
                   </li>
                   <li class="price-item__list-item">Простота расчётов: в отличие от других схем оплат в этой не нужно изучать дополнительную информацию.
                   </li>
-                </ul><a class="btn btn_border_normal btn_color_orange price-item__btn" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
+                </ul><a class="btn btn_border_normal btn_color_orange price-item__btn js-order-popup" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
               </li>
               <li class="price-item price-item_center">
                 <div class="price-item__icon"><span class="icon icon_priceic2"></span>
@@ -323,7 +325,7 @@
                   </li>
                   <li class="price-item__list-item">Вы не платите за запросы, которые выходят в ТОП-10 самостоятельно
                   </li>
-                </ul><a class="btn btn_bg-color_orange btn_size_big btn_shadow price-item__btn price-item__btn_orange" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
+                </ul><a class="btn btn_bg-color_orange btn_size_big btn_shadow price-item__btn price-item__btn_orange js-order-popup" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
               </li>
               <li class="price-item">
                 <div class="price-item__icon"><span class="icon icon_priceic3"></span>
@@ -345,12 +347,12 @@
                   </li>
                   <li class="price-item__list-item">Классическое SEO с выгодной схемой оплаты
                   </li>
-                </ul><a class="btn btn_border_normal btn_color_orange price-item__btn" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
+                </ul><a class="btn btn_border_normal btn_color_orange price-item__btn js-order-popup" href="#">Заказать</a><a class="price-item__next" href="#">Подробнее о тарифе</a>
               </li>
             </ul>
             <div class="price-help">
               <div class="icon icon icon_help price-help__icon">
-              </div><a class="price-help__link" href="#">Помочь с выбором тарифа</a>
+              </div><a class="price-help__link js-question-popup" href="javascript:void(0);">Помочь с выбором тарифа</a>
             </div>
           </div>
         </div>
@@ -370,7 +372,7 @@
               <div class="title">Если реклама не помогает
               </div>
               <div class="desc ad-no-work__desc">Вы уже сотрудничаете с тем или иным SEO-агентством, но недовольны результатом или стоимостью раскрутки сайта? Закажите у нас бесплатный аудит Вашего веб-ресурса — и мы уже сегодня дадим Вам рекомендации по его улучшению и развитию.
-              </div><a class="btn btn_bg-color_orange btn_size_big ad-no-work__btn" href="#">Заказать бесплатный аудит сайта</a>
+              </div><a class="btn btn_bg-color_orange btn_size_big btn_shadow ad-no-work__btn js-order-popup" href="#">Заказать бесплатный аудит сайта</a>
             </div>
             <div class="ad-no-work__notebook">
             </div>
@@ -676,17 +678,131 @@
           </div>
         </div>
       </div>
-      <!--+b.step-work
-      .container
-      	.content
-      		+b.title.__title Этапы работ
-      		+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
-      
-      		+b.lines
-      
-      
-      
-      -->
+      <div class="step-work">
+        <div class="container">
+          <div class="content">
+            <div class="title step-work__title">Этапы работ
+            </div>
+            <div class="desc step-work__desc">Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
+            </div>
+            <div class="lines js-lines">
+              <div class="lines-point lines-point_t_1 lines__point js-button">
+                <button class="lines-point__link"><span class="lines-point__link-txt">1. Подготовка сайта к продвижению</span>
+                </button>
+                <div class="lines-point__dot">
+                </div>
+                <div class="lines-point__desc">1-й месяц
+                </div>
+                <div class="lines-point__line js-btn-line">
+                </div>
+                <div class="line-tooltip">
+                  <ul class="line-tooltip__list">
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lines-point lines-point_t_2 lines__point js-button">
+                <button class="lines-point__link"><span class="lines-point__link-txt">2. Продвижение сайта</span>
+                </button>
+                <div class="lines-point__dot">
+                </div>
+                <div class="lines-point__desc">2-ой и последующие месяцы
+                </div>
+                <div class="lines-point__line js-btn-line">
+                </div>
+                <div class="line-tooltip">
+                  <ul class="line-tooltip__list">
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lines-point lines-point_t_3 lines__point js-button">
+                <button class="lines-point__link"><span class="lines-point__link-txt">3. Поддержка достигнутых позиций сайта</span>
+                </button>
+                <div class="lines-point__dot">
+                </div>
+                <div class="lines-point__desc">Начиная с 6 месяца продвижения
+                </div>
+                <div class="lines-point__line js-btn-line">
+                </div>
+                <div class="lines-point__shadow">
+                </div>
+                <div class="line-tooltip">
+                  <ul class="line-tooltip__list">
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="line-tooltip__item">
+                      <div class="line-tooltip__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lines__line js-list-line">
+                <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 713.00171 218.68869" version="1.1">
+                  <defs id="defs6">
+                    <linearGradient id="linearGradient4204">
+                      <stop id="stop4206" offset="0" style="stop-color:#ffffff;stop-opacity:1"></stop>
+                      <stop id="stop4208" offset="1" style="stop-color:#ffffff;stop-opacity:0"></stop>
+                      <linearGradient gradientTransform="translate(2,-2)" gradientUnits="userSpaceOnUse" y2="130.02238" x2="557.53601" y1="48.216988" x1="655.68707" id="linearGradient4210" xlink:href="#linearGradient4204"></linearGradient>
+                    </linearGradient>
+                  </defs>
+                  <path style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861" id="path4140"></path>
+                  <path id="path4142" d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861" style="fill:none;fill-rule:evenodd;stroke:#e5e5e5;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"></path>
+                  <path class="lines__line-orange lines__line-orange_1 js-line" d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1">
+                  </path>
+                  <path class="lines__line-orange lines__line-orange_2 js-line" d="m 263.51154,161.51264 c 121.79929,-11.20085 184.56095,58.35215 300.04748,-38.39039" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1">
+                  </path>
+                  <path class="lines__line-orange lines__line-orange_3 js-line" d="M 563.55902,123.12225 709.21582,4.6547861" style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1">
+                  </path>
+                  <path style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861" id="path4146"></path>
+                  <path style="fill:none;fill-rule:evenodd;stroke:url(#linearGradient4210);stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="M 565.55902,121.12225 715.91728,-2.0466731" id="path4202"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="interaction blueblock darkBlock">
         <div class="container">
           <div class="content">
@@ -708,18 +824,58 @@
                   <div class="interaction__next-bottom">Разработка стратегии, тексты, счета, отчеты
                   </div>
                 </div>
-                <div class="interaction-item">
+                <div class="interaction-item js-interaction">
                   <div class="interaction-item__icon icon icon_interic2">
                   </div>
                   <div class="interaction-item__desc">Аккаунт <br>менеджер
                   </div>
+                  <div class="tooltip-interaction interaction-item__tooltip">
+                    <ul class="tooltip-interaction__list">
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>А/В тестирование объявлений
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="interaction__next icon icon_double-arrow">
                 </div>
-                <div class="interaction-item">
+                <div class="interaction-item js-interaction">
                   <div class="interaction-item__icon icon icon_interic3">
                   </div>
                   <div class="interaction-item__desc">SEO-специалист
+                  </div>
+                  <div class="tooltip-interaction interaction-item__tooltip">
+                    <ul class="tooltip-interaction__list">
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>А/В тестирование объявлений
+                      </li>
+                      <li class="tooltip-interaction__item">
+                        <div class="tooltip-interaction__icon icon icon_list_cg">
+                        </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="interaction__next icon icon_double-arrow">
@@ -727,28 +883,108 @@
               </div>
             </div>
             <div class="interaction__right">
-              <div class="interaction-item">
+              <div class="interaction-item js-interaction">
                 <div class="interaction-item__icon icon icon_interic4">
                 </div>
                 <div class="interaction-item__desc">Копирайтер
                 </div>
+                <div class="tooltip-interaction interaction-item__tooltip">
+                  <ul class="tooltip-interaction__list">
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="interaction-item">
+              <div class="interaction-item js-interaction">
                 <div class="interaction-item__icon icon icon_interic5">
                 </div>
                 <div class="interaction-item__desc">Дизайнер
                 </div>
+                <div class="tooltip-interaction interaction-item__tooltip">
+                  <ul class="tooltip-interaction__list">
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="interaction-item">
+              <div class="interaction-item js-interaction">
                 <div class="interaction-item__icon icon icon_interic6">
                 </div>
                 <div class="interaction-item__desc">Программист
                 </div>
+                <div class="tooltip-interaction interaction-item__tooltip">
+                  <ul class="tooltip-interaction__list">
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="interaction-item">
+              <div class="interaction-item js-interaction">
                 <div class="interaction-item__icon icon icon_interic7">
                 </div>
                 <div class="interaction-item__desc">Аналитик
+                </div>
+                <div class="tooltip-interaction interaction-item__tooltip">
+                  <ul class="tooltip-interaction__list">
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>А/В тестирование объявлений
+                    </li>
+                    <li class="tooltip-interaction__item">
+                      <div class="tooltip-interaction__icon icon icon_list_cg">
+                      </div>Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -847,28 +1083,16 @@
           </div>
         </div>
       </div>
-      <div class="order order_promoution darkBlock" id="sidebar-bottom">
+      <div class="order order_promoution darkBlock">
         <div class="container">
-          <div class="order-manager order__manager"><img class="order-manager__img" src="media/images/manager.jpg" alt="" role="presentation"/>
-            <div class="order-manager__name">Василий Васильев
-            </div>
-            <div class="order-manager__position">Аккаунт менеджер
-            </div>
-          </div>
           <div class="order__body">
             <div class="title order__title">Закажите необходимые вам услуги
             </div>
             <div class="order__form-wrap">
               <form class="form order__form">
-                <div class="form__line">
-                  <div class="control form__control">
-                    <label class="control__label">Укажите ваше имя
-                    </label><input class="field" placeholder="Ваше имя" type="text"/>
-                  </div>
-                  <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
-                  </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
                 </div>
                 <div class="form__line">
                   <div class="control form__control">
@@ -877,7 +1101,7 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
@@ -911,6 +1135,7 @@
           </div>
         </div>
       </div>
+      <div class="fade"></div>
     </div>
     <div class="footer">
       <div class="footer__top container">
@@ -929,7 +1154,7 @@
             <!--+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться-->
           </form>
         </div>
-        <div class="social footer__social"><a class="social__icon icon icon icon_fb" href="#"></a><a class="social__icon icon icon icon_vk" href="#"></a><a class="social__icon icon icon icon_in" href="#"></a>
+        <div class="social footer__social"><a class="social__icon icon icon_fb" href="#"></a><a class="social__icon icon icon_vk" href="#"></a><a class="social__icon icon icon_in" href="#"></a>
         </div>
       </div><hr class="footer__hr"/>
       <div class="footer__nav container">
@@ -951,6 +1176,74 @@
     </div>
     <div class="hidden">
       <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
         <div class="popup__title">Задать вопрос
         </div>
         <div class="popup__body">
@@ -963,8 +1256,8 @@
                     </label><input class="field" placeholder="Ваше имя" type="text"/>
                   </div>
                   <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
                   </div>
                 </div>
                 <div class="form__line">
@@ -974,12 +1267,12 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
                   <label class="control__label">Задайте нам вопрос
-                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
                 </div>
@@ -992,6 +1285,48 @@
                   </div>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
                 </div>
               </form>
             </form>

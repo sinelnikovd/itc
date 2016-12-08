@@ -1,5 +1,5 @@
 mixin tab(...items)
 	+b.UL.tab&attributes(attributes)
 		each item, index in items
-			+e.item(class= (index == 0) ? "_active" : '', id= item.id)
+			+e.item(class= (index == 0) ? "active" : '', id= item.id, class= item.cls)
 				+e.A.link(href="javascript:void(0);")= item.txt

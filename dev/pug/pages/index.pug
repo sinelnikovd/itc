@@ -17,7 +17,6 @@ block content
 
 	include ../blocks/sidebar
 
-
 	+b.search-query
 		.container
 			.content
@@ -105,7 +104,7 @@ block content
 							+e.list-item Самая рентабельная схема для небольших интернет-проектов.
 							+e.list-item Простота расчётов: в отличие от других схем оплат в этой не нужно изучать дополнительную информацию.
 
-						+btn.A._border_normal._color_orange.__btn(href="#") Заказать
+						+btn.A._border_normal._color_orange.__btn.js-order-popup(href="#") Заказать
 						+e.A.next(href="#") Подробнее о тарифе
 					+b.price-item._center
 						+e.icon
@@ -120,7 +119,7 @@ block content
 							+e.list-item Оплата за позиции в ТОПе по выбранным ключевым запросам
 							+e.list-item Вы не платите за запросы, которые выходят в ТОП-10 самостоятельно
 
-						+btn.A._bg-color_orange._size_big._shadow.__btn._orange(href="#") Заказать
+						+btn.A._bg-color_orange._size_big._shadow.__btn._orange.js-order-popup(href="#") Заказать
 						+e.A.next(href="#") Подробнее о тарифе
 					+b.price-item
 						+e.icon
@@ -135,11 +134,11 @@ block content
 							+e.list-item Таргетинговую рекламу в социальных сетях.
 							+e.list-item Классическое SEO с выгодной схемой оплаты
 
-						+btn.A._border_normal._color_orange.__btn(href="#") Заказать
+						+btn.A._border_normal._color_orange.__btn.js-order-popup(href="#") Заказать
 						+e.A.next(href="#") Подробнее о тарифе
 				+b.price-help
 					+b.icon.icon_help.__icon
-					+e.A.link(href="#") Помочь с выбором тарифа
+					+e.A.link(href="javascript:void(0);").js-question-popup Помочь с выбором тарифа
 
 	+hr
 	+ad-no-work._no_br
@@ -148,14 +147,94 @@ block content
 
 	+efficiency._pt_35._pb_30
 
-
-	//+b.step-work
+	+b.step-work
 		.container
 			.content
 				+b.title.__title Этапы работ
 				+b.desc.__desc Показатель удовлетворенности клиентов (NPS) 39%, что на 13% выше, чем в среднем на рынке B2B.
 
-				+b.lines
+				+b.lines.js-lines
+					- var list = [{cls:"_t_1", btntxt:"1. Подготовка сайта к продвижению", desc:"1-й месяц"},{cls:"_t_2", btntxt:"2. Продвижение сайта", desc:"2-ой и последующие месяцы"},{cls:"_t_3", btntxt:"3. Поддержка достигнутых позиций сайта", desc:"Начиная с 6 месяца продвижения", shadow:true}]
+					each item in list
+						+b.lines-point(class= item.cls).__point.js-button
+							+e.BUTTON.link
+								+e.SPAN.link-txt= item.btntxt
+							+e.dot
+							+e.desc= item.desc
+							+e.line.js-btn-line
+							if item.shadow
+								+e.shadow
+
+
+							+b.line-tooltip
+								+e.UL.list
+									+e.item
+										+e.icon.icon._list_cg
+										| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+									+e.item
+										+e.icon.icon._list_cg
+										| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+									+e.item
+										+e.icon.icon._list_cg
+										| А/В тестирование объявлений
+									+e.item
+										+e.icon.icon._list_cg
+										| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+
+					+e.line.js-list-line
+						svg(
+							 xmlns:dc="http://purl.org/dc/elements/1.1/"
+							 xmlns:cc="http://creativecommons.org/ns#"
+							 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+							 xmlns:svg="http://www.w3.org/2000/svg"
+							 xmlns="http://www.w3.org/2000/svg"
+							 viewBox="0 0 713.00171 218.68869"
+							 version="1.1")
+							defs( id="defs6" )
+								linearGradient( id="linearGradient4204" )
+									stop(
+										id="stop4206"
+										offset="0"
+										style="stop-color:#ffffff;stop-opacity:1" )
+									stop(
+										id="stop4208"
+										offset="1"
+										style="stop-color:#ffffff;stop-opacity:0" )
+									linearGradient(
+										gradientTransform="translate(2,-2)"
+										gradientUnits="userSpaceOnUse"
+										y2="130.02238"
+										x2="557.53601"
+										y1="48.216988"
+										x1="655.68707"
+										id="linearGradient4210"
+										xlink:href="#linearGradient4204" )
+							path(
+								 style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+								 d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861"
+								 id="path4140" )
+							path(
+								 id="path4142"
+								 d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861"
+								 style="fill:none;fill-rule:evenodd;stroke:#e5e5e5;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0" )
+							+e.PATH.line-orange._1.js-line(
+								 d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264"
+								 style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" )
+							+e.PATH.line-orange._2.js-line(
+								 d="m 263.51154,161.51264 c 121.79929,-11.20085 184.56095,58.35215 300.04748,-38.39039"
+								 style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" )
+							+e.PATH.line-orange._3.js-line(
+								 d="M 563.55902,123.12225 709.21582,4.6547861"
+								 style="fill:none;fill-rule:evenodd;stroke:#ff6026;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" )
+							path(
+								 style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+								 d="M 1.2456645,212.81943 C 81.507015,195.78516 250.95866,157.29394 263.51154,161.51264 385.31083,150.31179 448.07249,219.86479 563.55902,123.12225 L 709.21582,4.6547861"
+								 id="path4146" )
+							path( 
+								style="fill:none;fill-rule:evenodd;stroke:url(#linearGradient4210);stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+								d="M 565.55902,121.12225 715.91728,-2.0466731"
+								id="path4202" )
+
 
 
 
@@ -172,27 +251,111 @@ block content
 						+e.next._text.icon._double-arrow
 							+e.next-top Согласование
 							+e.next-bottom Разработка стратегии, тексты, счета, отчеты
-						+b.interaction-item
+						+b.interaction-item.js-interaction
 							+e.icon.icon._interic2
 							+e.desc Аккаунт <br>менеджер
+							+b.tooltip-interaction.__tooltip
+								+e.UL.list
+									+e.item
+										+e.icon.icon._list_cg
+										| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+									+e.item
+										+e.icon.icon._list_cg
+										| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+									+e.item
+										+e.icon.icon._list_cg
+										| А/В тестирование объявлений
+									+e.item
+										+e.icon.icon._list_cg
+										| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
 						+e.next.icon._double-arrow
-						+b.interaction-item
+						+b.interaction-item.js-interaction
 							+e.icon.icon._interic3
 							+e.desc SEO-специалист
+							+b.tooltip-interaction.__tooltip
+								+e.UL.list
+									+e.item
+										+e.icon.icon._list_cg
+										| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+									+e.item
+										+e.icon.icon._list_cg
+										| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+									+e.item
+										+e.icon.icon._list_cg
+										| А/В тестирование объявлений
+									+e.item
+										+e.icon.icon._list_cg
+										| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
 						+e.next.icon._double-arrow
 				+e.right
-					+b.interaction-item
+					+b.interaction-item.js-interaction
 						+e.icon.icon._interic4
 						+e.desc Копирайтер
-					+b.interaction-item
+						+b.tooltip-interaction.__tooltip
+							+e.UL.list
+								+e.item
+									+e.icon.icon._list_cg
+									| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+								+e.item
+									+e.icon.icon._list_cg
+									| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+								+e.item
+									+e.icon.icon._list_cg
+									| А/В тестирование объявлений
+								+e.item
+									+e.icon.icon._list_cg
+									| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+					+b.interaction-item.js-interaction
 						+e.icon.icon._interic5
 						+e.desc Дизайнер
-					+b.interaction-item
+						+b.tooltip-interaction.__tooltip
+							+e.UL.list
+								+e.item
+									+e.icon.icon._list_cg
+									| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+								+e.item
+									+e.icon.icon._list_cg
+									| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+								+e.item
+									+e.icon.icon._list_cg
+									| А/В тестирование объявлений
+								+e.item
+									+e.icon.icon._list_cg
+									| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+					+b.interaction-item.js-interaction
 						+e.icon.icon._interic6
 						+e.desc Программист
-					+b.interaction-item
+						+b.tooltip-interaction.__tooltip
+							+e.UL.list
+								+e.item
+									+e.icon.icon._list_cg
+									| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+								+e.item
+									+e.icon.icon._list_cg
+									| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+								+e.item
+									+e.icon.icon._list_cg
+									| А/В тестирование объявлений
+								+e.item
+									+e.icon.icon._list_cg
+									| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
+					+b.interaction-item.js-interaction
 						+e.icon.icon._interic7
 						+e.desc Аналитик
+						+b.tooltip-interaction.__tooltip
+							+e.UL.list
+								+e.item
+									+e.icon.icon._list_cg
+									| Работа с ключевыми словами: добавление релевантных запросов, проработка минус-слов, удаление неэффективных ключевых слов
+								+e.item
+									+e.icon.icon._list_cg
+									| Подключение дополнительных опций и инструментов систем Яндекс.Директ и Google AdWords (Ремаркетинг, Ретаргетинг, Торговые Кампании AdWords, Динамические Поисковые Объявления, РСЯ, КМС и т. д.)
+								+e.item
+									+e.icon.icon._list_cg
+									| А/В тестирование объявлений
+								+e.item
+									+e.icon.icon._list_cg
+									| Оптимизация ставок на основе данных о конверсиях (системы Origami, Marin Software)
 
 	+b.seo
 		.container
@@ -247,9 +410,9 @@ block content
 							+e.title Тип информации
 							+e.desc Регулярно обновляемая информация, всегда актуальные цены.
 
-	+b.order._promoution.darkBlock#sidebar-bottom
+	+b.order._promoution.darkBlock
 		.container
-			+b.order-manager.__manager
+			//-+b.order-manager.__manager
 				+e.IMG.img(src="media/images/manager.jpg", alt="")
 				+e.name Василий Васильев
 				+e.position Аккаунт менеджер
@@ -257,20 +420,16 @@ block content
 				+b.title.__title Закажите необходимые вам услуги
 				+e.form-wrap
 					+b.FORM.form.__form
-						+e.line
-							+b.control.__control
-								+e.LABEL.label Укажите ваше имя
-								+field(placeholder="Ваше имя")
-							+b.control.__control
-								+e.LABEL.label Укажите вашу фамилию
-								+field(placeholder="Ваша фамилия")
+						+b.control
+							+e.LABEL.label Укажите ваше имя
+							+field(placeholder="Ваше имя")
 						+e.line
 							+b.control.__control
 								+e.LABEL.label Введите свой e-mail
 								+field(placeholder="Ваш e-mail")
 							+b.control.__control
 								+e.LABEL.label Укажите ваш телефон
-								+field.js-inputmask(placeholder="+7 (___) ___-__-__")
+								+field.js-inputmask(placeholder="+7 ")
 						+b.control
 							+e.LABEL.label Укажите ваш сайт
 							+field(placeholder="Ваш сайт")
@@ -287,6 +446,7 @@ block content
 							+e.icon.icon.icon_guarantee
 							+e.txt Гарантия качества выполненных работ
 
+	.fade
 
 
 

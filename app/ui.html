@@ -51,7 +51,7 @@
     </div>
     <div class="container ui">
       <ul class="tab">
-        <li class="tab__item tab__item_active" id="id-sub-month"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
+        <li class="tab__item active" id="id-sub-month"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
         </li>
         <li class="tab__item" id="id-sub-year"><a class="tab__link" href="javascript:void(0);">Годовая подписка</a>
         </li>
@@ -63,6 +63,74 @@
     </div>
     <div class="hidden">
       <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
         <div class="popup__title">Задать вопрос
         </div>
         <div class="popup__body">
@@ -75,8 +143,8 @@
                     </label><input class="field" placeholder="Ваше имя" type="text"/>
                   </div>
                   <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
                   </div>
                 </div>
                 <div class="form__line">
@@ -86,12 +154,12 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
                   <label class="control__label">Задайте нам вопрос
-                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
                 </div>
@@ -104,6 +172,48 @@
                   </div>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
                 </div>
               </form>
             </form>

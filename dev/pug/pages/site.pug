@@ -37,7 +37,7 @@ block content
 					| Полное погружение в проект
 
 
-
+	-var sidebar_static = true
 	include ../blocks/sidebar
 
 	+b.create-site
@@ -139,70 +139,125 @@ block content
 				+b.line-scheme.__scheme
 					-var list = [["Составление ТЗ", "_tz"], ["Прототипирование", "_port"], ["Дизайн", "_desing"],["Верстка", "_psd2html"], ["Программирование", "_prog"], ["Тестирование", "_test"], ["Запуск и поддержка", "_start"]]
 					each item in list
-						+e.line(class= item[1])
-							+e.txt= item[0]
-							+e.tooltip-wrap
-								+e.tooltip(data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.") ?
+						+e.line._to-animated(class= item[1])
+							+e.line-in
+								+e.txt= item[0]
+								+e.tooltip-wrap
+									+e.tooltip(data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.") ?
 
 
 
 	+b.technology
 		.container
-			.content
-				+b.title.__title Технология ведения проекта
+			+b.title.__title Технология ведения проекта
+			+e.tab-container
 				+tab({txt:"Концепция", id:"#id-concept"}, {txt:"Реализация", id:"#id-relize"}).__tab
 				+e.body
-					+b.accordion.__accordion
-						+e.head._active
-							+e.icon
-							+e.SPAN.head-txt Руководитель проекта
-						+e.body
-							+e.txt
-								p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
-						+e.head
-							+e.icon
-							+e.SPAN.head-txt Ведущий программист
-						+e.body
-							+e.txt
-								p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
-						+e.head
-							+e.icon
-							+e.SPAN.head-txt Front-end разработчик
-						+e.body
-							+e.txt
-								p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
-						+e.head
-							+e.icon
-							+e.SPAN.head-txt Back-end разработчик
-						+e.body
-							+e.txt
-								p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
-					+b.radial.__radial
-						+e.logo
-						+b.radial-item._active
-							+e.name Руководитель проекта
-							+e.percent
-								+e.SPAN.percent-txt 20%
-							+e.progress(data-value="0.2" data-size="340" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
-							+e.progress-active(data-value="0.2" data-size="340" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
-						+b.radial-item 
-							+e.name Ведущий программист
-							+e.percent
-								+e.SPAN.percent-txt 10%
-							+e.progress(data-value="0.1" data-size="290" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
-							+e.progress-active(data-value="0.1" data-size="290" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
-						+b.radial-item 
-							+e.name Front-end разработчик
-							+e.percent
-								+e.SPAN.percent-txt 40%
-							+e.progress(data-value="0.4" data-size="230" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
-							+e.progress-active(data-value="0.4" data-size="230" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
-						+b.radial-item 
-							+e.name Back-end разработчик
-							+e.percent
-								+e.SPAN.percent-txt 30%
-							+e.progress(data-value="0.3" data-size="180" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
-							+e.progress-active(data-value="0.3" data-size="180" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+					+e.item
+						+b.accordion.__accordion
+							+e.head._active
+								+e.icon
+								+e.SPAN.head-txt Руководитель проекта
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Ведущий программист
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Front-end разработчик
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Back-end разработчик
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+						+b.radial.__radial
+							+e.logo
+							+b.radial-item._active
+								+e.name Руководитель проекта
+								+e.percent
+									+e.SPAN.percent-txt 20%
+								+e.progress(data-value="0.2" data-size="340" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.2" data-size="340" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Ведущий программист
+								+e.percent
+									+e.SPAN.percent-txt 10%
+								+e.progress(data-value="0.1" data-size="290" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.1" data-size="290" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Front-end разработчик
+								+e.percent
+									+e.SPAN.percent-txt 40%
+								+e.progress(data-value="0.4" data-size="230" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.4" data-size="230" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Back-end разработчик
+								+e.percent
+									+e.SPAN.percent-txt 30%
+								+e.progress(data-value="0.3" data-size="180" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.3" data-size="180" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+
+					+e.item
+						+b.accordion.__accordion
+							+e.head._active
+								+e.icon
+								+e.SPAN.head-txt Руководитель проекта
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Ведущий программист
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Front-end разработчик
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+							+e.head
+								+e.icon
+								+e.SPAN.head-txt Back-end разработчик
+							+e.body
+								+e.txt
+									p Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.
+						+b.radial.__radial
+							+e.logo
+							+b.radial-item._active
+								+e.name Руководитель проекта
+								+e.percent
+									+e.SPAN.percent-txt 50%
+								+e.progress(data-value="0.5" data-size="340" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.2" data-size="340" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Ведущий программист
+								+e.percent
+									+e.SPAN.percent-txt 10%
+								+e.progress(data-value="0.1" data-size="290" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.1" data-size="290" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Front-end разработчик
+								+e.percent
+									+e.SPAN.percent-txt 40%
+								+e.progress(data-value="0.4" data-size="230" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.4" data-size="230" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
+							+b.radial-item 
+								+e.name Back-end разработчик
+								+e.percent
+									+e.SPAN.percent-txt 30%
+								+e.progress(data-value="0.3" data-size="180" data-fill='{"gradient": ["#0e5c98", "#1b77be"]}')
+								+e.progress-active(data-value="0.3" data-size="180" data-fill='{"gradient": ["#c75024", "#f2612e"]}')
 
 
 

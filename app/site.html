@@ -40,11 +40,13 @@
               </div>
             </div>
           </div>
-          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-order-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
             <div class="recall__icon icon icon_phone_black"></div></a>
           </div>
         </div>
         <div class="nav header__nav" id="nav">
+          <div class="nav__hover">
+          </div>
           <div class="nav__list">
             <div class="nav__item nav__item_sub nav__item_active"><a class="nav__link" href="#">Создание сайтов</a>
               <ul class="subnav nav__subnav">
@@ -146,7 +148,7 @@
           </ul>
         </div>
       </div>
-      <div class="sidebar" id="sidebar">
+      <div class="sidebar sidebar_static" id="sidebar">
         <div class="container">
           <div class="sidebar__body">
             <ul class="sidebar-menu">
@@ -162,7 +164,7 @@
               </li>
               <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Преимущества</a>
               </li>
-              <li class="sidebar-menu__item sidebar-menu__item_border-top_dot"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
+              <li class="sidebar-menu__item sidebar-menu__item_last"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
               </li>
             </ul>
             <div class="sidebar__links"><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_brief"></span><span class="sidebar__link-txt">Заполнить бриф</span></a><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_download"></span><span class="sidebar__link-txt">Скачать презентацию</span></a>
@@ -288,13 +290,15 @@
       </div>
       <div class="join blueblock">
         <div class="container">
-          <div class="join__title">Готовы присоединиться к довольным клиентам?
-          </div>
-          <div class="join__form">
-            <form action="/"><input class="field field_blue join__input" type="text" placeholder="Имя"/><input class="field field_blue join__input js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
-              <button class="btn btn_bg-color_orange btn_size_big btn_shadow join__btn" type="submit">Присоединиться
-              </button>
-            </form>
+          <div class="join__body">
+            <div class="join__title">Готовы присоединиться к довольным клиентам?
+            </div>
+            <div class="join__form">
+              <form action="/"><input class="field field_blue join__input" type="text" placeholder="Имя"/><input class="field field_blue join__input js-inputmask" placeholder="+7 " type="text"/>
+                <button class="btn btn_bg-color_orange btn_size_big btn_shadow join__btn" type="submit">Присоединиться
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -593,59 +597,73 @@
               </div>
             </div>
             <div class="line-scheme scheme-work__scheme">
-              <div class="line-scheme__line line-scheme__line_tz">
-                <div class="line-scheme__txt">Составление ТЗ
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_tz">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Составление ТЗ
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_port">
-                <div class="line-scheme__txt">Прототипирование
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_port">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Прототипирование
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_desing">
-                <div class="line-scheme__txt">Дизайн
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_desing">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Дизайн
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_psd2html">
-                <div class="line-scheme__txt">Верстка
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_psd2html">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Верстка
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_prog">
-                <div class="line-scheme__txt">Программирование
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_prog">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Программирование
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_test">
-                <div class="line-scheme__txt">Тестирование
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_test">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Тестирование
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="line-scheme__line line-scheme__line_start">
-                <div class="line-scheme__txt">Запуск и поддержка
-                </div>
-                <div class="line-scheme__tooltip-wrap">
-                  <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+              <div class="line-scheme__line line-scheme__line_to-animated line-scheme__line_start">
+                <div class="line-scheme__line-in">
+                  <div class="line-scheme__txt">Запуск и поддержка
+                  </div>
+                  <div class="line-scheme__tooltip-wrap">
+                    <div class="line-scheme__tooltip" data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.">?
+                    </div>
                   </div>
                 </div>
               </div>
@@ -655,95 +673,181 @@
       </div>
       <div class="technology">
         <div class="container">
-          <div class="content">
-            <div class="title technology__title">Технология ведения проекта
-            </div>
+          <div class="title technology__title">Технология ведения проекта
+          </div>
+          <div class="technology__tab-container">
             <ul class="tab technology__tab">
-              <li class="tab__item tab__item_active" id="#id-concept"><a class="tab__link" href="javascript:void(0);">Концепция</a>
+              <li class="tab__item active" id="#id-concept"><a class="tab__link" href="javascript:void(0);">Концепция</a>
               </li>
               <li class="tab__item" id="#id-relize"><a class="tab__link" href="javascript:void(0);">Реализация</a>
               </li>
             </ul>
             <div class="technology__body">
-              <div class="accordion technology__accordion">
-                <div class="accordion__head accordion__head_active">
-                  <div class="accordion__icon">
-                  </div><span class="accordion__head-txt">Руководитель проекта</span>
-                </div>
-                <div class="accordion__body">
-                  <div class="accordion__txt">
-                    <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+              <div class="technology__item">
+                <div class="accordion technology__accordion">
+                  <div class="accordion__head accordion__head_active">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Руководитель проекта</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Ведущий программист</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Front-end разработчик</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Back-end разработчик</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="accordion__head">
-                  <div class="accordion__icon">
-                  </div><span class="accordion__head-txt">Ведущий программист</span>
-                </div>
-                <div class="accordion__body">
-                  <div class="accordion__txt">
-                    <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                <div class="radial technology__radial">
+                  <div class="radial__logo">
                   </div>
-                </div>
-                <div class="accordion__head">
-                  <div class="accordion__icon">
-                  </div><span class="accordion__head-txt">Front-end разработчик</span>
-                </div>
-                <div class="accordion__body">
-                  <div class="accordion__txt">
-                    <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                  <div class="radial-item radial-item_active">
+                    <div class="radial-item__name">Руководитель проекта
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">20%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.2" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.2" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__head">
-                  <div class="accordion__icon">
-                  </div><span class="accordion__head-txt">Back-end разработчик</span>
-                </div>
-                <div class="accordion__body">
-                  <div class="accordion__txt">
-                    <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Ведущий программист
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">10%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
+                  </div>
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Front-end разработчик
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">40%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
+                  </div>
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Back-end разработчик
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">30%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="radial technology__radial">
-                <div class="radial__logo">
+              <div class="technology__item">
+                <div class="accordion technology__accordion">
+                  <div class="accordion__head accordion__head_active">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Руководитель проекта</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Ведущий программист</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Front-end разработчик</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
+                  <div class="accordion__head">
+                    <div class="accordion__icon">
+                    </div><span class="accordion__head-txt">Back-end разработчик</span>
+                  </div>
+                  <div class="accordion__body">
+                    <div class="accordion__txt">
+                      <p>Мы считаем, что уведомления должны направляться на e-mail или jabber-клиент пользователя только в том случае, если они требуют от него какой-то реакции. Объяснение этому простое - мы не хотим засорять почтовый ящик.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="radial-item radial-item_active">
-                  <div class="radial-item__name">Руководитель проекта
+                <div class="radial technology__radial">
+                  <div class="radial__logo">
                   </div>
-                  <div class="radial-item__percent"><span class="radial-item__percent-txt">20%</span>
+                  <div class="radial-item radial-item_active">
+                    <div class="radial-item__name">Руководитель проекта
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">50%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.5" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.2" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
-                  <div class="radial-item__progress" data-value="0.2" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Ведущий программист
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">10%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
-                  <div class="radial-item__progress-active" data-value="0.2" data-size="340" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Front-end разработчик
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">40%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
-                </div>
-                <div class="radial-item"> 
-                  <div class="radial-item__name">Ведущий программист
-                  </div>
-                  <div class="radial-item__percent"><span class="radial-item__percent-txt">10%</span>
-                  </div>
-                  <div class="radial-item__progress" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
-                  </div>
-                  <div class="radial-item__progress-active" data-value="0.1" data-size="290" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
-                  </div>
-                </div>
-                <div class="radial-item"> 
-                  <div class="radial-item__name">Front-end разработчик
-                  </div>
-                  <div class="radial-item__percent"><span class="radial-item__percent-txt">40%</span>
-                  </div>
-                  <div class="radial-item__progress" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
-                  </div>
-                  <div class="radial-item__progress-active" data-value="0.4" data-size="230" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
-                  </div>
-                </div>
-                <div class="radial-item"> 
-                  <div class="radial-item__name">Back-end разработчик
-                  </div>
-                  <div class="radial-item__percent"><span class="radial-item__percent-txt">30%</span>
-                  </div>
-                  <div class="radial-item__progress" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
-                  </div>
-                  <div class="radial-item__progress-active" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                  <div class="radial-item"> 
+                    <div class="radial-item__name">Back-end разработчик
+                    </div>
+                    <div class="radial-item__percent"><span class="radial-item__percent-txt">30%</span>
+                    </div>
+                    <div class="radial-item__progress" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#0e5c98&quot;, &quot;#1b77be&quot;]}">
+                    </div>
+                    <div class="radial-item__progress-active" data-value="0.3" data-size="180" data-fill="{&quot;gradient&quot;: [&quot;#c75024&quot;, &quot;#f2612e&quot;]}">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -839,7 +943,7 @@
                 </div>
                 <div class="control">
                   <label class="control__label">Укажите ваш телефон
-                  </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow order__btn" type="submit">Отправить</a>
                 </div>
@@ -886,7 +990,7 @@
             <!--+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться-->
           </form>
         </div>
-        <div class="social footer__social"><a class="social__icon icon icon icon_fb" href="#"></a><a class="social__icon icon icon icon_vk" href="#"></a><a class="social__icon icon icon icon_in" href="#"></a>
+        <div class="social footer__social"><a class="social__icon icon icon_fb" href="#"></a><a class="social__icon icon icon_vk" href="#"></a><a class="social__icon icon icon_in" href="#"></a>
         </div>
       </div><hr class="footer__hr"/>
       <div class="footer__nav container">
@@ -908,6 +1012,74 @@
     </div>
     <div class="hidden">
       <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
         <div class="popup__title">Задать вопрос
         </div>
         <div class="popup__body">
@@ -920,8 +1092,8 @@
                     </label><input class="field" placeholder="Ваше имя" type="text"/>
                   </div>
                   <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
                   </div>
                 </div>
                 <div class="form__line">
@@ -931,12 +1103,12 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
                   <label class="control__label">Задайте нам вопрос
-                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
                 </div>
@@ -949,6 +1121,48 @@
                   </div>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
                 </div>
               </form>
             </form>

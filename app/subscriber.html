@@ -40,11 +40,13 @@
               </div>
             </div>
           </div>
-          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-order-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
             <div class="recall__icon icon icon_phone_black"></div></a>
           </div>
         </div>
         <div class="nav header__nav" id="nav">
+          <div class="nav__hover">
+          </div>
           <div class="nav__list">
             <div class="nav__item nav__item_sub nav__item_active"><a class="nav__link" href="#">Создание сайтов</a>
               <ul class="subnav nav__subnav">
@@ -138,7 +140,7 @@
                 </div>Гарантированный список работ
               </li>
             </ul>
-            <div class="top__group-btn"><a class="btn btn_bg-color_orange btn_size_normal top__btn js-order-popup" href="#">Заказать</a><a class="btn btn_border_small btn_color_white top__btn" href="#">Кейсы</a>
+            <div class="top__group-btn"><a class="btn btn_bg-color_orange btn_size_normal btn_shadow top__btn js-order-popup" href="#">Заказать</a><a class="btn btn_border_small btn_color_white top__btn" href="#">Кейсы</a>
             </div>
           </div>
         </div>
@@ -159,7 +161,7 @@
               </li>
               <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Преимущества</a>
               </li>
-              <li class="sidebar-menu__item sidebar-menu__item_border-top_dot"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
+              <li class="sidebar-menu__item sidebar-menu__item_last"><a class="sidebar-menu__link" href="#">Заказать продвижение</a>
               </li>
             </ul>
             <div class="sidebar__links"><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_brief"></span><span class="sidebar__link-txt">Заполнить бриф</span></a><a class="sidebar__link" href="#"><span class="sidebar__icon icon icon_download"></span><span class="sidebar__link-txt">Скачать презентацию</span></a>
@@ -173,9 +175,9 @@
             <div class="title top10-price__title">Абонентская плата за продвижение сайта в ТОП10
             </div>
             <ul class="tab top10-price__tab">
-              <li class="tab__item tab__item_active" id="sub-mouth"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
+              <li class="tab__item active js-tab-top10" id="sub-month"><a class="tab__link" href="javascript:void(0);">Месячная подписка</a>
               </li>
-              <li class="tab__item" id="sub-year"><a class="tab__link" href="javascript:void(0);">Годовая подписка</a>
+              <li class="tab__item js-tab-top10" id="sub-year"><a class="tab__link" href="javascript:void(0);">Годовая подписка</a>
               </li>
             </ul>
             <div class="top10-price__slide-nav-wrap">
@@ -207,7 +209,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Ежемесячный комплекс работ по оптимизации и монторингу
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -215,7 +223,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Ежемесячный комплекс работ по оптимизации и монторингу
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -223,7 +237,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Ежемесячный комплекс работ по оптимизации и монторингу
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -238,19 +258,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Количество запросов
-                  </div>до 120
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">до 120
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">до 121
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Количество запросов
-                  </div>до 150
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">до 150
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">до 151
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Количество запросов
-                  </div>до 200
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">до 200
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">до 201
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -264,19 +296,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Конкурентность запросов
-                  </div>средняя
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">средняя
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">средняя
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Конкурентность запросов
-                  </div>высокая
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">высокая
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">высокая
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Конкурентность запросов
-                  </div>высокая
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">высокая
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">высокая
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -290,19 +334,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Максимальное количество регионов для продвижения
-                  </div>1
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">1
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">10
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Максимальное количество регионов для продвижения
-                  </div>3
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">3
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">10
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Максимальное количество регионов для продвижения
-                  </div>9
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">9
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">10
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -316,19 +372,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Участие копирайтера для написания текстов (символов)
-                  </div>20 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">20 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">20 001
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Участие копирайтера для написания текстов (символов)
-                  </div>25 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">25 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">25 001
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Участие копирайтера для написания текстов (символов)
-                  </div>30 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">30 000
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">30 001
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -343,7 +411,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Рекомендации по улучшению продающих качеств сайта
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -351,7 +425,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Рекомендации по улучшению продающих качеств сайта
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -359,7 +439,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Рекомендации по улучшению продающих качеств сайта
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -374,19 +460,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Техническая поддержка сайта
-                  </div>1 час
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">1 час
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">1 час
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Техническая поддержка сайта
-                  </div>2 часа
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">2 часа
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">2 часа
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Техническая поддержка сайта
-                  </div>4 часа
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">4 часа
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">4 часа
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -401,7 +499,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Еженедельная отчетность
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -409,7 +513,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Еженедельная отчетность
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -417,7 +527,13 @@
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Еженедельная отчетность
                   </div>
-                  <div class="icon icon_list_cg">
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">
+                    <div class="icon icon_list_cg">
+                    </div>
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">
+                    <div class="icon icon_list_cg">
+                    </div>
                   </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
@@ -432,19 +548,31 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Написание текстов сверх лимита (за 1000 символов), руб.
-                  </div>220
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">220
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">221
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Написание текстов сверх лимита (за 1000 символов), руб.
-                  </div>200
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">200
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">201
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden">Написание текстов сверх лимита (за 1000 символов), руб.
-                  </div>190
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">190
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">191
+                  </div>
                   <div class="tooltip top10-price__tooltip top10-price__tooltip_h" data-tooltip="Далеко-далеко за словесными горами в стране."><span class="tooltip__txt">?</span>
                   </div>
                 </div>
@@ -456,15 +584,27 @@
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden top10-price__hidden_f">Стоимость тарифа, руб.
-                  </div>12 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">12 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">12 000 р.
+                  </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_slide">
                   <div class="top10-price__hidden top10-price__hidden_f">Стоимость тарифа, руб.
-                  </div>20 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active">20 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_year">20 000 р.
+                  </div>
                 </div>
                 <div class="top10-price__cell top10-price__cell_old-price top10-price__cell_slide">
                   <div class="top10-price__hidden top10-price__hidden_f">Стоимость тарифа, руб.
-                  </div><span class="top10-price__sale">-15%</span><br><span class="top10-price__old-price">24 000 р.</span><br>20 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_month top10-price__data_active"><span class="top10-price__sale">-15%</span><br><span class="top10-price__old-price">24 000 р.</span><br>20 000 р.
+                  </div>
+                  <div class="top10-price__data top10-price__data_year"><span class="top10-price__sale">-15%</span><br><span class="top10-price__old-price">24 000 р.</span><br>20 000 р.
+                  </div>
                 </div>
               </div>
             </div>
@@ -753,7 +893,7 @@
                 </div>
                 <div class="control">
                   <label class="control__label">Укажите ваш телефон
-                  </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow order__btn" type="submit">Отправить</a>
                 </div>
@@ -800,7 +940,7 @@
             <!--+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться-->
           </form>
         </div>
-        <div class="social footer__social"><a class="social__icon icon icon icon_fb" href="#"></a><a class="social__icon icon icon icon_vk" href="#"></a><a class="social__icon icon icon icon_in" href="#"></a>
+        <div class="social footer__social"><a class="social__icon icon icon_fb" href="#"></a><a class="social__icon icon icon_vk" href="#"></a><a class="social__icon icon icon_in" href="#"></a>
         </div>
       </div><hr class="footer__hr"/>
       <div class="footer__nav container">
@@ -822,6 +962,74 @@
     </div>
     <div class="hidden">
       <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
         <div class="popup__title">Задать вопрос
         </div>
         <div class="popup__body">
@@ -834,8 +1042,8 @@
                     </label><input class="field" placeholder="Ваше имя" type="text"/>
                   </div>
                   <div class="control form__control">
-                    <label class="control__label">Укажите вашу фамилию
-                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
                   </div>
                 </div>
                 <div class="form__line">
@@ -845,12 +1053,12 @@
                   </div>
                   <div class="control form__control">
                     <label class="control__label">Укажите ваш телефон
-                    </label><input class="field js-inputmask" placeholder="+7 (___) ___-__-__" type="text"/>
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
                   </div>
                 </div>
                 <div class="control">
                   <label class="control__label">Задайте нам вопрос
-                  </label><textarea class="control__textarea field field_textarea" rows="4"></textarea>
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
                 </div>
@@ -863,6 +1071,48 @@
                   </div>
                 </div>
                 <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
                 </div>
               </form>
             </form>

@@ -15,12 +15,18 @@
 		right: 0
 		background-image: url(media/img/dots-pattern.png)
 		z-index: 1
+		opacity: .6
 	.container
 		position: relative
 		z-index: 2
 	&_promoution
 		padding: 43px 0 42px
 		.order
+			&__body
+				margin-left: 31.7%
+				@media only screen and (max-width : 950px)
+					width: 100%
+					margin-left: 0
 			&__title
 				width: 100%
 				margin-bottom: 25px

@@ -1,0 +1,54 @@
+.tech-shem
+	padding: 20px 0
+	
+	&__svg
+		margin-top: 20px
+		width: 90%
+		position: relative
+
+
+.tech-point
+	position: absolute
+	&_1
+		left: -2px
+	&_2
+		left: 16%
+	&_3
+		left: 41%
+	&_4
+		left: 64%
+
+	&_finish
+		right: -5px
+		.tech-point__dot
+			text-align: center
+			&:after
+				display: none
+
+
+	&_pos
+		&_up
+			top: -4px
+			.tech-point__txt
+				bottom: 100%
+		&_down
+			bottom: -2px
+			.tech-point__txt
+				top: 100%
+	
+	&__txt
+		position: absolute
+
+	&__dot
+		+size(21px)
+		border-radius: 100%
+		border: 1px solid #ccc
+		background-color: #fff
+		&:after
+			content: ''
+			position: absolute
+			+size(7px)
+			+transform-origin(-10% 170%)
+			+transform(rotate(45deg))
+			border-right: 1px solid #ccc
+			border-top: 1px solid #ccc
