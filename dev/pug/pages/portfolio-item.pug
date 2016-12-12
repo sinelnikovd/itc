@@ -1,0 +1,127 @@
+extends ../base/page
+
+block title
+	title Поддержка сайтов
+
+block content
+	+b.top-profile
+		.container
+			+e.wrap
+				+e.A.nav._prev(href="#")
+					+e.SPAN.nav-arrow
+						i.icon.icon_prev_cw
+					+e.SPAN.nav-txt Окна Строй
+				+e.A.nav._next(href="#")
+					+e.SPAN.nav-txt Окна Строй
+					+e.SPAN.nav-arrow
+						i.icon.icon_next_cw
+				+e.title Шувалов
+				+e.type Интернет магазин
+				+e.desc Создать сайт, который будет на слуху у некоторых сограждан которые бы смотрели на него и могли бы прикупить себе раз в 5 лет какой нибудь там хрусталь чтоли
+
+	+b.desing
+		.container
+			+e.wrap
+				+e.top
+					+b.portfolio-desc
+						+e.title
+							+e.A.link(href="#") shuvalov-crystal.ru
+								i.icon.icon_link-go
+						+e.P.txt «Шувалов» - это торговая марка продукции, выпускаемой ООО «Дятьковская стекольная артель». Предприятие находится в г. Дятьково – городе мастеров стекла и хрусталя, чьё производство заложено с 1790г.
+				+e.txt_1
+					+b.portfolio-desc
+						+e.title Во время работы
+						+e.txt Подбираем решение. Вместе анализируем потребности бизнеса и подбираем оптимальную маркетинговую стратегию.
+				+e.txt_2
+					+b.portfolio-desc
+						+e.txt Товары избавили от лишних элементов, вынесли навигацию под ховер, чтобы придать фотографии чистоту.
+				+e.txt_3
+					+b.portfolio-desc
+						+e.txt Небольшой паралакс акцентирует внимание на уникальное предложение - Хрустальные изделия на заказ.
+				+e.txt_4
+					+b.portfolio-desc
+						+e.txt В дизайне важно было подчеркнуть богатую историю бренда, передать традиции великих мастеров прошлого.
+
+
+				+e.IMG.img(src="media/images/portfolio/1.png")
+
+
+	.container
+		.hr__line
+
+	+b.portfolio-client
+		.container
+			+b.portfolio-title.__title Мнение клиента
+			+e.wrap
+				+e.txt
+					P Мы рады что доверили наше будущее этим ребятам. Они в служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков.
+
+					P Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.
+				+e.person
+					+e.IMG.avatar(src="media/images/portfolio/ava.jpg", alt="")
+					+e.person-data
+						+e.name Ринат Ильшатов
+						+e.position гениральный директор <br>ООО Nike Russia
+					+e.IMG.painting(src="media/images/portfolio/p.png", alt="")
+
+	.container
+		.hr__line
+
+	+b.solutions
+		.container
+			+b.portfolio-title.__title Решения в проекте
+			+e.tab-container
+				+tab({txt:"О компании", cls:"js-tab-portfolio"}, {txt:"Карточка товара", cls:"js-tab-portfolio"}, {txt:"Корзина", cls:"js-tab-portfolio"}).__tab
+				+e.body
+					+e.item
+						+b.portfolio-desc.__desc
+							+e.title О компании
+							+e.txt Стояла задача отобразить богатую историю компании и передать преемственность поколений мастеров. Разработали посадочную страницу отображающую историю бренда.
+						+e.IMG.item-img(src="media/images/portfolio/cart.png", alt="")
+					+e.item
+						+b.portfolio-desc.__desc
+							+e.title Карточка товара
+							+e.txt В карточке товаров акцент был сделан на изображение. Красивая сочная фотография изделия замет тысячи символов скучного текста. По просьбе заказчика была добавлена возможность заказа по телефону, с отслеживанием статистики.
+						+e.IMG.item-img(src="media/images/portfolio/cart.png", alt="")
+					+e.item
+						+b.portfolio-desc.__desc
+							+e.title Корзина
+							+e.txt Корзину решили не перегружать сложными формами заказа. Уместили все на одной странице. Страница является корзиной и страницей заказа одновременно.
+						+e.IMG.item-img(src="media/images/portfolio/cart.png", alt="")
+	.container
+		.hr__line
+
+	+b.mobile-version
+		.container
+			+b.portfolio-title.__title Мобильная версия
+			+e.wrap
+				+b.portfolio-desc.__desc
+					+e.title Во время работы
+					+e.txt Подбираем решение. Вместе анализируем потребности бизнеса и подбираем оптимальную маркетинговую стратегию.
+
+				+e.IMG.img(src="media/images/portfolio/mobile.png", alt="")
+
+	.container
+		.hr__line
+
+	+b.detail
+		.container
+			+btn.A._bg-color_orange._size_big._shadow.__btn(href="#") Хотите больше техдеталей проекта?
+
+
+	+b.socials
+		.container
+			+e.title Поделиться в соц сетях
+			+e.body
+				+e.A.link(href="#")
+					+e.icon.icon_fb_cg
+				+e.A.link(href="#")
+					+e.icon.icon_vk_cg
+				+e.A.link(href="#")
+					+e.icon.icon_tw_cg
+				+e.A.link(href="#")
+					+e.icon.icon_gp_cg
+				+e.A.link(href="#")
+					+e.icon.icon_od_cg
+				+e.A.link(href="#")
+					+e.icon.icon_mm_cg

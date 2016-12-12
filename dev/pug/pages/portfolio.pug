@@ -1,0 +1,96 @@
+extends ../base/base
+
+block title
+	title Поддержка сайтов
+
+block base-content
+	-var header_black= true
+	include ../blocks/header
+	.paranja
+	.page
+		+b.portfolio
+			.container
+				+e.H1.title Портфолио
+				+e.P.desc Итак, ясно, чт нестандартный подход охватывает традиционный канал. К тому же продукт раскручивает коллективный медиаплан.
+				+tab({txt:"Все"}, {txt:"Разработка"}, {txt:"Продвижение"}).__tab
+			+e.items
+				- for(var x =1; x <= 20; x++)
+					+b.portfolio-item.__item(style="background-image: url(media/images/work/"+ x + ".jpg)")
+						+e.content
+							+e.bg(style="background-image: url(media/images/work/"+ x + ".jpg)")
+							+e.body
+								+e.title Эндорфин
+								+e.desc Создали красивый лендинг <br>для бумажного шоу
+
+			
+			+b.portfolio-item-inline.__item-inline(style="background-image: url(media/images/work-big/1.jpg)")
+				+e.container
+					+e.content
+						+e.bg(style="background-image: url(media/images/work-big/1.jpg)")
+						+e.body
+							+e.title Flats-line
+							+e.subtitle Сервис путешествий
+							+e.desc Создать сайт, который будет на слуху у некоторых сограждан которые бы смотрели на него и могли бы прикупить себе раз в 5 лет какой нибудь там хрусталь чтоли
+
+			.container
+				+btn.A._bg-color_orange._size_big._shadow.__btn(href="#") Подробнее
+
+			.container
+				+b.loader
+					+e.in
+						+e.circle_1
+						+e.circle_2
+						+e.center
+
+
+	+b.footer
+		+e.top.container
+			+e.contact
+				+e.contact-title Как с нами связаться:
+				+e.contact-body
+					+e.A.phone(href="tel:+74832681880") +7 (4832) 68-18-80
+					+e.A.email(href="mailto:support@itc-media.ru") support@itc-media.ru
+			+e.subscribe
+				+e.subscribe-title Подписывайтесь на новости и акции:
+				+e.FORM.subscribe-form(action="/")
+					+field._blue.__subscribe-input(placeholder="Ваш e-mail")
+					+btn.BUTTON._border_small._color_white.__subscribe-btn(type="submit") Подписаться
+					//+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться
+			+b.social.__social
+				+e.A.icon.icon._fb(href="#")
+				+e.A.icon.icon._vk(href="#")
+				+e.A.icon.icon._in(href="#")
+		+e.HR.hr
+		+e.nav.container
+			+e.nav-list
+				+e.A.nav-title(href="#") Создание сайтов
+				+e.A.nav-item(href="#") Корпоративные сайты
+				+e.A.nav-item(href="#") Интернет-магазины
+				+e.A.nav-item(href="#") Корпоративные порталы
+				+e.A.nav-item(href="#") Посадочные страницы
+			+e.nav-list
+				+e.A.nav-title(href="#") Продвижение сайтов
+				+e.A.nav-item(href="#") Контекстная реклама
+				+e.A.nav-item(href="#") Медийная реклама
+				+e.A.nav-item(href="#") Раскрутка групп
+				+e.A.nav-item(href="#") Таргетированная реклама
+				+e.A.nav-item(href="#") Коллтрекинг
+				+e.A.nav-item(href="#") Оптимизация сайта при создании
+			+e.nav-list
+				+e.A.nav-title(href="#") Магазин готовых решений
+				+e.A.nav-item(href="#") Интернет-магазины
+				+e.A.nav-item(href="#") Корпоративные сайты
+				+e.A.nav-item(href="#") Посадочные страницы
+				+e.A.nav-title(href="#") Портфолио
+			+e.nav-list
+				+e.A.nav-title(href="#") Компания
+				+e.A.nav-item(href="#") О нас
+				+e.A.nav-item(href="#") Блог
+				+e.A.nav-item(href="#") Вакансии
+				+e.A.nav-title(href="#") Личный кабинет
+		+e.HR.hr
+		+e.bottom.container
+			+b.logo._footer.__logo
+				+e.IMG.image(src="media/img/footer-logo.png", alt="ITC-Meadia")
+			+b.copyright.__copyright © 2009-2016 ITC MEDIA интерактивное агентство
+

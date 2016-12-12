@@ -1,0 +1,41 @@
+.loader
+	overflow: hidden
+	text-align: center
+	padding: 30px 0
+	&__in
+		display: inline-block
+		position: relative
+		+animation(loader 5s linear infinite)
+		+size(30px)
+	&__center
+		+size(20px)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 3
+		margin: auto
+		background-color: #fff
+		border-radius: 100%
+
+	&__circle
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 50%
+		border-radius: 15px 0 0 15px
+		&_1
+			+linear-gradient(to bottom, #ec6446, #f0836b 50%)
+		&_2
+			+linear-gradient(to bottom, #f0836b, #fff)
+			+transform-origin(right center)
+			+transform(rotate(-140deg))
+
+
++keyframes(loader)
+	from
+		+transform(rotate(0deg))
+	to
+		+transform(rotate(360deg))

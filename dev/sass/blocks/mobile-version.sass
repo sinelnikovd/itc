@@ -1,0 +1,23 @@
+.mobile-version
+	padding: 45px 0 0
+	text-align: center
+	&__wrap
+		display: inline-block
+		margin-top: 25px
+		margin-left: 25px
+		position: relative
+	&__desc
+		position: absolute
+		bottom: 70px
+		width: 60%
+		left: 100%
+		text-align: left
+
+	@media only screen and (max-width : 1200px)
+		&__desc
+			width: 50%
+
+	@media only screen and (max-width : 950px)
+		&__desc
+			width: 100%
+			position: static

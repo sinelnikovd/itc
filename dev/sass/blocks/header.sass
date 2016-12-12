@@ -12,6 +12,41 @@
 		background-color: #fff
 	@media only screen and (max-width : 550px)
 		padding-bottom: 5px
+	&_black
+		.logo
+			&__image
+				background-image: url(media/img/logo_black.png)
+			&__desc
+				opacity: 1
+				color: #afc2cf
+		.call
+			color: #333
+			&__icon
+				+icon-phone_blue
+			&__tab
+				color: #333
+				&-link
+					color: #333
+					border-bottom-color: rgba(#000,.7)
+		.nav
+			border-bottom: 1px solid #ebeaef
+			&__link
+				color: #333
+				opacity: .8
+			&__hover
+				background-color: #fb5f27
+		.header
+			&__btn
+				color: #333
+				border-color: #e6ebec
+				&:hover
+					background-color: #e6ebec
+				&:active
+					background-color: #cad0d1
+					border-color: #cad0d1
+		.hamburger
+			&__line
+				background-color: #303030
 	&_fixed
 		background-color: #fff
 		color: #333

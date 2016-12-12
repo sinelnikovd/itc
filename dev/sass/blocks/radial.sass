@@ -8,10 +8,12 @@
 		+size(66px)
 		position: absolute
 		top: 100%
-		margin-top: 15px
-		left: 50%
+		margin-top: 37px
+		left: 51%
 		@media only screen and (max-width : 750px)
 			top: 50%
+			margin-top: 0
+			left: 52%
 		@media only screen and (max-width : 550px)
 			display: none
 		.no-svg & 
@@ -26,7 +28,7 @@
 			margin-left: -135px
 			+radial-gradient(rgba(#a3a3a3, .3), #fff 40%)
 .radial-item
-	margin: 10px 0
+	margin: 5px 0
 	+clearfix
 	&_active
 		.radial-item
@@ -46,6 +48,8 @@
 		text-align: right
 		padding-right: 5px
 		box-sizing: border-box
+		position: relative
+		z-index: 2
 		@media only screen and (max-width : 550px)
 			width: 65%
 	&__percent
@@ -54,6 +58,7 @@
 		height: 18px
 		background-color: #0e5c98
 		position: relative
+		z-index: 2
 		@media only screen and (max-width : 550px)
 			width: 12%
 		&-txt
@@ -73,7 +78,7 @@
 		position: relative
 		canvas
 			position: absolute
-			top: 0
+			top: -5px
 			left: 2px
 			+transform(translateX(-50%))
 		@media only screen and (max-width : 550px)
@@ -86,7 +91,7 @@
 			display: none
 			canvas
 				position: absolute
-				top: 0
+				top: -5px
 				left: 2px
 				+transform(translateX(-50%))
 			@media only screen and (max-width : 550px)

@@ -1,0 +1,242 @@
+.portfolio
+	padding-top: 175px
+	text-align: center
+	&__title
+		text-align: center
+		font-size: 50px
+		text-transform: uppercase
+		line-height: 1.375em
+		@extend %pebold
+		letter-spacing: 9px
+		@media only screen and (max-width : 550px)
+			font-size: 30px
+
+	&__desc
+		@extend %italic
+		width: 44%
+		margin: 20px auto 0
+		text-align: center
+		line-height: 1.5em
+		@media only screen and (max-width : 1200px)
+			width: 70%
+		@media only screen and (max-width : 950px)
+			width: 80%
+		@media only screen and (max-width : 750px)
+			width: 100%
+		
+
+	&__tab
+		margin-top: 35px
+		.tab__link
+			padding-left: 1.5em
+			padding-right: 1.5em
+
+		@media only screen and (max-width : 550px)
+			width: 100%
+			padding: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			.tab__item
+				width: 100%
+				margin: 0
+			.tab__link
+				padding-left: 0
+				padding-right: 0
+
+
+	&__items
+		margin-top: 40px
+		+clearfix
+
+	&__item
+		float: left
+		width: 20%
+		padding-top: 20%
+		@media only screen and (max-width : 1800px)
+			width: 25%
+			padding-top: 25%
+		@media only screen and (max-width : 1200px)
+			width: 33.33333333%
+			padding-top: 33.3333333333333%
+			&:last-child,
+			&:nth-last-child(2)
+				display: none
+		@media only screen and (max-width : 750px)
+			width: 50%
+			padding-top: 50%
+			&:last-child,
+			&:nth-last-child(2)
+				display: block
+
+	&__item-inline
+		float: left
+		width: 100%
+
+	&__btn
+		margin-top: 85px
+		margin-bottom: 20px
+
+
+
+.portfolio-item
+	position: relative
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	overflow: hidden
+	&:hover
+		.portfolio-item__content
+			opacity: 1
+
+	&__content
+		position: absolute
+		top: 40px
+		bottom: 40px
+		left: 40px
+		right: 40px
+		overflow: hidden
+		opacity: 0
+		white-space: nowrap
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(#000,.3)
+		&:before
+			content: ''
+			display: inline-block
+			height: 100%
+			width: 0
+			vertical-align: middle
+
+	&__bg
+		position: absolute
+		top: -40px
+		bottom: -40px
+		left: -40px
+		right: -40px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+		+filter(blur(5px))
+
+	&__body
+		position: relative
+		z-index: 2
+		color: #fff
+		display: inline-block
+		vertical-align: middle
+		width: 80%
+
+
+
+
+	&__title
+		@extend %sbold
+		font-size: 20px
+		line-height: 1.35em
+		
+	&__desc
+		@extend %italic
+		margin-top: 30px
+		width: 100%
+		white-space: normal
+
+	@media only screen and (max-width : 550px)
+		&__content
+			top: 15px
+			bottom: 15px
+			left: 15px
+			right: 15px
+		
+		&__bg
+			top: -15px
+			bottom: -15px
+			left: -15px
+			right: -15px
+
+		&__title
+			font-size: 15px
+		&__desc
+			font-size: 12px
+			margin-top: 15px
+			br
+				display: none
+
+
+
+
+
+
+.portfolio-item-inline
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+
+	&__container
+		max-width: 1600px
+		padding: 40px 15px
+		margin: 0 auto
+
+	&__content
+		position: relative
+		overflow: hidden
+		color: #fff
+		max-width: 730px
+		box-sizing: border-box
+		padding: 150px 60px
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(#000,.3)
+
+	&__bg
+		position: absolute
+		top: -40px
+		bottom: -40px
+		left: 0
+		right: 0
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+		+filter(blur(5px))
+
+
+	&__body
+		position: relative
+		z-index: 2
+
+	&__title
+		font-size: 50px
+		text-transform: uppercase
+		line-height: 1.375em
+		@extend %pebold
+
+	&__subtitle
+		margin-top: 30px
+		@extend %sbold
+		font-size: 20px
+		line-height: 1.35em
+	&__desc
+		@extend %italic
+		margin-top: 30px
+
+	@media only screen and (max-width : 550px)
+		&__content
+			padding: 50px 20px
+		&__title
+			font-size: 30px
+		&__subtitle
+			margin-top: 15px
+		&__desc
+			margin-top: 10px

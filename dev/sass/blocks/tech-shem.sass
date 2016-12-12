@@ -1,10 +1,50 @@
 .tech-shem
-	padding: 20px 0
-	
+	padding: 20px 0 120px
+	@media only screen and (max-width : 550px)
+		padding-bottom: 20px
+
 	&__svg
-		margin-top: 20px
+		margin-top: 85px
 		width: 90%
 		position: relative
+		@media only screen and (max-width : 550px)
+			margin-top: 15px
+			width: 100%
+
+
+	&__svg-obj
+		opacity: 1
+		@media only screen and (max-width : 550px)
+			opacity: 0
+			pointer-events: none
+			position: absolute
+			top: 0
+			left: 0
+
+	&__line-orange
+		&_1
+			stroke-dasharray: 150
+			stroke-dashoffset: 150
+			&.anim
+				+animation(anim1tech 3s linear 0s 1 normal)
+		&_2
+			stroke-dasharray: 200
+			stroke-dashoffset: 200
+			&.anim
+				+animation(anim2tech 3s linear 0s 1 normal)
+		&_3
+			stroke-dasharray: 190
+			stroke-dashoffset: 190
+			&.anim
+				+animation(anim3tech 3s linear 0s 1 normal)
+		&_4
+			stroke-dasharray: 260
+			stroke-dashoffset: 260
+			&.anim
+				+animation(anim4tech 3s linear 0s 1 normal)
+
+		&.anim-stop
+			stroke-dashoffset: 0
 
 
 .tech-point
@@ -17,27 +57,39 @@
 		left: 41%
 	&_4
 		left: 64%
-
 	&_finish
 		right: -5px
-		.tech-point__dot
-			text-align: center
-			&:after
-				display: none
-
+		.tech-point
+			&__dot
+				text-align: center
+				&:after
+					display: none
+			&__txt
+				width: 120px
+				left: -20px
 
 	&_pos
 		&_up
 			top: -4px
 			.tech-point__txt
+				margin-bottom: 10px
 				bottom: 100%
 		&_down
 			bottom: -2px
 			.tech-point__txt
+				margin-top: 10px
 				top: 100%
+
+	&_orange
+		.tech-point
+			&__dot
+				background-color: $c-orange
+				&:after
+				border-color: #fff
 	
 	&__txt
 		position: absolute
+		width: 180px
 
 	&__dot
 		+size(21px)
@@ -52,3 +104,108 @@
 			+transform(rotate(45deg))
 			border-right: 1px solid #ccc
 			border-top: 1px solid #ccc
+
+	&__line
+		position: absolute
+		top: 4px
+		left: 6px
+		bottom: -4px
+		z-index: 1
+		width: 10px
+		border-left: 1px solid #ccc
+		border-right: 1px solid #ccc
+		background-color: #e5e5e5
+		opacity: 0
+		pointer-events: none
+		@media only screen and (max-width : 550px)
+			opacity: 1
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 50%
+			margin-left: -1px
+			border-left: 2px dotted #fff
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 100%
+			left: 0
+			right: 0
+			background-color: #ff6026
+		&.anim
+			&:before
+				animation: animbefore 3s linear 0s 1 normal
+				bottom: 0
+	@media only screen and (max-width : 550px)
+		position: relative
+		padding: 15px 0 15px 30px
+		
+		&_1
+			left: 0
+		&_2
+			left: 0
+		&_3
+			left: 0
+		&_4
+			left: 0
+		&_finish
+			right: 0
+			padding-top: 0
+			.tech-point
+				&__txt
+					left: 0
+					width: 100%
+		&_pos
+			&_up
+				top: 0
+				.tech-point__txt
+					margin-bottom: 0
+					bottom: auto
+			&_down
+				bottom: 0
+				.tech-point__txt
+					margin-top: 0
+					top: auto
+		&__dot
+			position: absolute
+			z-index: 2
+			top: -5px
+			left: 0
+			&:after
+				+transform-origin(80% 95%)
+				+transform(rotate(135deg))
+		&__txt
+			position: static
+			width: 100%
+
+
+
++keyframes(anim1tech)
+	0%
+		stroke-dashoffset: 150px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim2tech)
+	0%
+		stroke-dashoffset: 200px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim3tech)
+	0%
+		stroke-dashoffset: 190px
+	100%
+		stroke-dashoffset: 0
+
+
++keyframes(anim4tech)
+	0%
+		stroke-dashoffset: 260px
+	100%
+		stroke-dashoffset: 0

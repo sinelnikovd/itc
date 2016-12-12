@@ -1,12 +1,14 @@
 .evaluation
 	text-align: center
 	padding: 30px 0 50px
+	overflow: hidden
 	&__tab
 		margin-top: 25px
 	&__body
 		margin-top: 45px
 	&__list
 		+clearfix
+		width: 100%
 		@media only screen and (max-width : 550px)
 			margin-top: 10px
 	&__item
@@ -49,12 +51,21 @@
 		padding: 20px 27px
 		box-sizing: border-box
 		+clearfix
-
 	&__body
 		margin-top: 15px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			right: 35%
+			top: 10px
+			bottom: 10px
+			background-color: #e5e5e5
+			width: 1px
+
+	&__content
 		float: left
 		width: 50%
-		position: relative
 	&__img
 		float: left
 		width: 45%
@@ -89,5 +100,25 @@
 		float: left
 		width: 50%
 		text-align: center
-
-
+	@media only screen and (max-width : 750px)
+		&__content
+			width: 65%
+		&__img
+			width: 30%
+	@media only screen and (max-width : 550px)
+		&__content
+			float: none
+			width: 100%
+		&__img
+			float: none
+			width: 100%
+			margin-left: 0
+			margin-top: 15px
+			text-align: center
+		&__list
+			width: 70%
+		&__time
+			right: 5%
+		&__body
+			&:after
+				right: 30%

@@ -1,0 +1,26 @@
+.socials
+	text-align: center
+	padding-bottom: 70px
+	@extend %italic
+	&__body
+		margin-top: 10px
+	&__link
+		margin: 0 1em
+		&:hover
+			.icon
+				&_fb_cg
+					+icon-fb_co
+				&_vk_cg
+					+icon-vk_co
+				&_tw_cg
+					+icon-tw_co
+				&_gp_cg
+					+icon-gp_co
+				&_od_cg
+					+icon-od_co
+				&_mm_cg
+					+icon-mm_co
+	@media only screen and (max-width : 550px)
+		&__link
+			margin: 0 .8em
+

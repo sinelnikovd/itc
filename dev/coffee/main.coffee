@@ -27,7 +27,8 @@ $(document).ready ->
 		false
 
 	$(window).on "load", ->
-		sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
+		if $("div").is("#sidebar-top")
+			sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
 		sidebarBottom = if $("div").is("#sidebar-bottom") then $("#sidebar-bottom").offset().top else $(".footer").offset().top
 
 		sidebarFixed = (scrollPosition) ->
@@ -64,10 +65,10 @@ $(document).ready ->
 		ui.newHeader.addClass("accordion__head_active")
 	)
 
-	$( ".technology__accordion" ).on( "accordionbeforeactivate",( event, ui ) ->
-		$(".radial-item").removeClass("radial-item_active")
-		$(".radial-item").eq(ui.newHeader.index()/2).addClass("radial-item_active")
-	)
+	$( ".technology__item .technology__accordion" ).on "accordionbeforeactivate", ( event, ui ) ->
+		$(".technology__item.active .radial-item").removeClass("radial-item_active")
+		console.log(ui.newHeader.index())
+		$(".technology__item.active .radial-item").eq(ui.newHeader.index()/2).addClass("radial-item_active")
 
 
 
@@ -114,6 +115,12 @@ $(document).ready ->
 	$(".top10-price__arrow_next").click ->
 		$('.top10-price__row').slick("slickNext")
 
+
+	$('.popup-tech__arrow_prev').click ->
+		$('.popup-tech__slider-items').trigger('prev.owl.carousel')
+	$('.popup-tech__arrow_next').click ->
+		$('.popup-tech__slider-items').trigger('next.owl.carousel')
+
 	slickInit = false
 
 	mq750 = window.matchMedia('only screen and (max-width : 750px)')
@@ -127,10 +134,32 @@ $(document).ready ->
 				asNavFor: '.top10-price__row'
 			slickInit = true
 
+
+
+			#$('.popup-tech__slider').slick
+			#	slidesToShow: 2
+			#	slidesToScroll: 1
+			#	arrows: false
+			#	slide: ".popup-tech__coll"
+
+			$('.popup-tech__slider-items').addClass("owl-carousel")
+			$('.popup-tech__slider-items').owlCarousel
+				loop: true
+				nav: false
+				dots: false
+				items: 2
+				responsive:
+					0:
+						items: 1
+					600:
+						items: 2
+
 		else
 			if slickInit
 				$('.top10-price__row').slick("unslick")
 				slickInit = false
+			if $('.popup-tech__slider-items').hasClass("owl-carousel")
+				$('.popup-tech__slider-items').removeClass("owl-carousel").trigger('destroy.owl.carousel')
 	mq750Handler()
 	mq750.addListener(mq750Handler)
 
@@ -256,6 +285,10 @@ $(document).ready ->
 				asNavFor: '.tech-table__row'
 			priceTechSlickInit = true
 
+			$(".popup-tech__cell").css
+				height: "auto"
+
+
 		else
 			if priceSlickInit
 				$('.price__list').slick("unslick")
@@ -275,10 +308,10 @@ $(document).ready ->
 		$(@).next(".site-result__list-wrap").slideToggle()
 
 
-	$('.radial-item__progress, .radial-item__progress-active').circleProgress
-			startAngle: -Math.PI / 2
-			emptyFill: "rgba(0,0,0,0)"
-			thickness: 18
+	#$('.radial-item__progress, .radial-item__progress-active').circleProgress
+	#		startAngle: -Math.PI / 2
+	#		emptyFill: "rgba(0,0,0,0)"
+	#		thickness: 18
 
 
 
@@ -300,6 +333,37 @@ $(document).ready ->
 			src: '#popup-question',
 			type: 'inline'
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+
+	$(".js-tech-popup").magnificPopup
+		items:
+			src: '#popup-tech',
+			type: 'inline'
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>'
+		callbacks:
+			open: ->
+				$(".popup-tech__header .popup-tech__cell").each ->
+
+					indx = $(@).index()+1
+					containers = $(@).add($(".popup-tech__coll .popup-tech__cell:nth-child("+indx+")"))
+					maxH = 0
+					i = 0
+					
+
+					containers.each ->
+						$(@).height("auto");
+						h = $(@).height()
+						if(h > maxH)
+							maxH = h;
+
+						i += 1;
+						if i == containers.length
+							if typeof maxH == 'undefined' || typeof maxH == 'null'
+								false
+							containers.css
+								height: maxH + 'px'
+
+
+
 
 	$( '.file-upload__input' ).each ->
 		$input	 = $(@)
@@ -382,10 +446,11 @@ $(document).ready ->
 			backgroundPosition: coords
 
 		# order parallax
-		yPos = ($(window).scrollTop() - $(".order").offset().top) / 2
-		coords = 'center '+ yPos + 'px'
-		$(".order").css
-			backgroundPosition: coords
+		if $("div").is(".order")
+			yPos = ($(window).scrollTop() - $(".order").offset().top) / 2
+			coords = 'center '+ yPos + 'px'
+			$(".order").css
+				backgroundPosition: coords
 
 		# paralax arm
 		if $("div").is(".rsya")
@@ -421,6 +486,15 @@ $(document).ready ->
 		tabMenu: '.evaluation__tab'
 		tabContent: '.evaluation__body'
 		fixedHeight: false
+		dynamicHeight: true
+		startSlide: 1
+		easing: "easeInOutCubic"
+		translateX: "500px"
+
+	$(".solutions__tab-container").tabtab
+		tabMenu: '.solutions__tab'
+		tabContent: '.solutions__body'
+		fixedHeight: true
 		startSlide: 1
 		easing: "easeInOutCubic"
 		translateX: "500px"
@@ -432,6 +506,31 @@ $(document).ready ->
 		callbackFunction: (elem, action)->
 			elem.find(".line-scheme__line").removeClass("line-scheme__line_to-animated")
 			elem.find(".line-scheme__line").addClass("line-scheme__line_animated")
+
+
+	addAnimTech = (collection, elem, elInitIndex) ->
+		collection.eq(elem).addClass("anim")
+			.on "webkitAnimationEnd oanimationend msAnimationEnd animationend",->
+				if elem != elInitIndex
+					addAnimTech(collection, elem+1, elInitIndex)
+				collection.eq(elem).addClass("anim-stop")
+				$(".js-tech-button").eq(elem+1).addClass("tech-point_orange")
+
+	recurTech = (collection, elem, elInitIndex) ->
+		if elem == 0 || collection.eq(elem-1).hasClass("anim-stop")
+			addAnimTech(collection, elem, elInitIndex)
+			return
+		recurTech(collection, elem-1 , elInitIndex);
+
+
+	$(".tech-shem").viewportChecker
+		offset: 300
+		callbackFunction: (elem, action)->
+			console.log("ASdasdd")
+			$(".js-tech-button").first().addClass("tech-point_orange")
+			el = $(".js-tech-button").last().index()
+			recurTech($(".js-tech-line"), el ,el)
+			recurTech($(".js-tech-btn-line"), el , el)
 
 
 
@@ -474,3 +573,157 @@ $(document).ready ->
 			$(".tech-table__data_year").addClass("tech-table__data_active")
 
 
+
+	##
+	# CANVAS 
+	##
+	$(".technology").viewportChecker
+		offset: 300
+		callbackFunction: (elem, action)->
+			$(".radial-item__progress, .radial-item__progress-active").each ->
+				p = $(@).data("value")*100;
+				cfrom = $(@).data("color-from")
+				cto = $(@).data("color-to")
+				x = 0;
+				html = $(@).html();
+				$(@).html('');
+				example = $('<canvas width="'+$(@).data("size")+'" height="'+$(@).data("size")+'">'+html+'</canvas>').appendTo($(@))[0];
+				ctx = example.getContext('2d');
+
+				t = 27;
+				t1 = 16;
+
+				staticDraw = ()->
+
+					ctx.clearRect(0, 0, example.width, example.height);
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2 -t/2 , 0, Math.PI*2, false);
+					ctx.strokeStyle = "#f5f5f5"
+					ctx.lineWidth = t-3;
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2-1, 0, Math.PI*2, false);
+					ctx.strokeStyle = "#e5e5e5"
+					ctx.lineWidth = 1;
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2 -t+1 , 0, Math.PI*2, false);
+					ctx.strokeStyle = "#e5e5e5"
+					ctx.lineWidth = 1;
+					ctx.stroke();
+
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2-t/2 , Math.PI * 1.5, 180 * Math.PI/180, true);
+					ctx.strokeStyle = "#fff"
+					ctx.lineWidth = 30;
+					ctx.stroke();
+
+					ctx.save();
+					ctx.translate(example.width/2, example.height/2);
+					ctx.rotate(180 * Math.PI / 180 + Math.PI/2);
+					ctx.beginPath();
+					ctx.moveTo(0, -example.height/2+t);
+					ctx.lineTo(0, -example.height/2);
+					ctx.strokeStyle = "#e5e5e5"
+					ctx.lineWidth = 1
+					ctx.stroke();
+					ctx.restore();
+
+				draw = ()->
+
+					staticDraw()
+
+					grd = ctx.createLinearGradient(0,0,example.width, example.height);
+
+					grd.addColorStop(0,cfrom);
+					grd.addColorStop(1,cto);
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2-t/2 , Math.PI * 1.5, 36 * (x+1) / 10 * Math.PI/180 + Math.PI * 1.5, false);
+					ctx.strokeStyle = "#fff"
+					ctx.lineWidth = 27;
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.arc(example.width/2, example.height/2, example.height/2 - t/2 , Math.PI * 1.5, 36 * x / 10  * Math.PI/180 + Math.PI * 1.5, false);
+					ctx.strokeStyle = grd
+					ctx.lineWidth = t1;
+					ctx.stroke();
+
+					ctx.save();
+					ctx.translate(example.width/2, example.height/2);
+					ctx.rotate(36 * (x+1) / 10 * Math.PI / 180 - Math.PI * 2);
+					ctx.beginPath();
+					ctx.moveTo(0, -example.height/2+t);
+					ctx.lineTo(0, -example.height/2);
+					ctx.strokeStyle = "#e5e5e5"
+					ctx.lineWidth = 1
+					ctx.stroke();
+					ctx.restore();
+
+
+					if x < p
+						window.requestAnimationFrame(draw);
+					x += 1;
+
+				draw()
+
+
+
+
+	$(window).resize ->
+
+		if !mq600.matches
+
+			$(".popup-tech__header .popup-tech__cell").each ->
+
+				indx = $(@).index()+1
+				containers = $(@).add($(".popup-tech__coll .popup-tech__cell:nth-child("+indx+")"))
+				maxH = 0
+				i = 0
+				
+
+
+				containers.each ->
+					$(@).height("auto");
+					h = $(@).height()
+					if(h > maxH)
+						maxH = h;
+
+					i += 1;
+					if i == containers.length
+						if typeof maxH == 'undefined' || typeof maxH == 'null'
+							false
+						containers.css
+							height: maxH + 'px'
+
+
+	#$(".popup-tech__header .popup-tech__cell").each ->
+	#	console.log($(@).add($(".popup-tech__slider .popup-tech__coll").first().find(".popup-tech__cell").eq($(@).index())))
+	#	$(@).add($(".popup-tech__slider .popup-tech__coll").first().find(".popup-tech__cell").eq($(@).index())).equalHeightResponsive();
+
+
+
+	resizeBgPortfolio = ->
+		$(".portfolio-item-inline").each ->
+			cnt = $(@).find(".portfolio-item-inline__content")
+			bg = $(@).find(".portfolio-item-inline__bg")
+
+
+			bgLeft = $(@).offset().left - cnt.offset().left
+			
+			bgRight = cnt.offset().left + cnt.outerWidth() - $(@).width()
+
+			bg.css
+				left: bgLeft
+				right: bgRight
+
+
+	resizeBgPortfolio()
+
+	$(window).resize ->
+		resizeBgPortfolio()

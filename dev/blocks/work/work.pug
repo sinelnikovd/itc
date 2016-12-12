@@ -3,17 +3,19 @@ mixin work()
 		- for (var x = 1; x <= 10; x++)
 			+b.work-item.__item(style="background-image: url(media/images/work/"+ x + ".jpg)")
 				+e.hover
-					+e.title Августин
-					+e.desc Год на продвижении
-					+e.DL.list
-						+e.DT.list-key 150%
-						+e.DD.list-desc Увеличена доля поискового трафика 
-						+e.DT.list-key 88%
-							+e.mark +31%
-						+e.DD.list-desc Запросы в ТОП10 
-						+e.DT.list-key 3 897
-							+e.mark +1200%
-						+e.DD.list-desc Число посетителей в месяц
-					+e.link-group
-						+e.A.link.icon._link(href="#")
-						+e.A.link.icon._stat(href="#")
+					+e.bg(style="background-image: url(media/images/work/"+ x + ".jpg)")
+					+e.body
+						+e.title Августин
+						+e.desc Год на продвижении
+						+e.DL.list
+							+e.DT.list-key 150%
+							+e.DD.list-desc Увеличена доля поискового трафика 
+							+e.DT.list-key 88%
+								+e.mark +31%
+							+e.DD.list-desc Запросы в ТОП10 
+							+e.DT.list-key 3 897
+								+e.mark +1200%
+							+e.DD.list-desc Число посетителей в месяц
+						+e.link-group
+							+e.A.link.icon._link(href="#")
+							+e.A.link.icon._stat(href="#")

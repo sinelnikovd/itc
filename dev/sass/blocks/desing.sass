@@ -1,0 +1,46 @@
+.desing
+	margin-top: -50px
+	padding-bottom: 60px
+	&__wrap
+		position: relative
+		padding-right:  30%
+
+	&__top
+		position: absolute
+		right: 0
+		padding-left: 30px
+		width: 30%
+		box-sizing: border-box
+		top: 9%
+
+	&__txt
+		position: absolute
+		right: 0
+		padding-left: 30px
+		width: 30%
+		box-sizing: border-box
+		&_1
+			top: 25%
+		&_2
+			top: 45%
+		&_3
+			top: 65%
+		&_4
+			top: 80%
+	@media only screen and (max-width : 950px)
+		&__txt
+			&_1
+				top: 32%
+
+	@media only screen and (max-width : 750px)
+		margin-top: 0
+		padding-top: 50px
+		&__wrap
+			padding-right: 0
+		&__top
+			position: static
+			width: 100%
+			padding-left: 0
+			padding-bottom: 30px
+		&__txt
+			display: none

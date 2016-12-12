@@ -1,0 +1,92 @@
+.top-profile
+	background-image: url(media/images/portfolio/bg.jpg)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	padding: 265px 0 135px
+	color: #fff
+	text-align: center
+
+	&__title
+		font-size: 50px
+		text-transform: uppercase
+		line-height: 1.375em
+		@extend %pebold
+		letter-spacing: 9px
+
+	&__type
+		margin-top: 20px
+		@extend %sbold
+		font-size: 20px
+		line-height: 1.35em
+
+
+	&__desc
+		width: 60%
+		margin: 20px auto 0
+		@extend %italic
+		line-height: 1.7em
+
+	&__wrap
+		position: relative
+
+	&__nav
+		position: absolute
+		top: 50%
+		margin-top: -13px
+		&:hover
+			.top-profile
+				&__nav-arrow
+					background-color: #ff6026
+				&__nav-txt
+					display: inline-block
+		&_prev
+			left: 0
+			.top-profile__nav-arrow
+				.icon
+					left: -2px
+		&_next
+			right: 0
+			.top-profile__nav-arrow
+				.icon
+					right: -2px
+
+	&__nav-arrow
+		vertical-align: middle
+		display: inline-block
+		+size(45px)
+		background-color: rgba(#012233,.28)
+		border-radius: 100%
+		margin: 5px
+		text-align: center
+		&:before
+			content: ''
+			height: 100%
+			width: 0
+			display: inline-block
+			vertical-align: middle
+		.icon
+			vertical-align: middle
+			position: relative
+
+
+	&__nav-txt
+		display: none
+		color: #fff
+		@extend %italic
+
+
+	@media only screen and (max-width : 950px)
+		padding-top: 100px
+
+	@media only screen and (max-width : 750px)
+		&__nav
+			&:hover
+				.top-profile
+					&__nav-txt
+						display: none
+
+	@media only screen and (max-width : 550px)
+		&__title
+			font-size: 32px
+
