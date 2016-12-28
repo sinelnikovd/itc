@@ -18,20 +18,16 @@ $(document).ready ->
 		clientCarousel.trigger('next.owl.carousel')
 
 
-	$(".call__tab-link").click ->
-		if !$(@).parent().hasClass("call__tab-item_active")
-			$(".call__tab-item").removeClass("call__tab-item_active")
-			$(@).parent().addClass("call__tab-item_active")
-			$(".call__phone-item").removeClass("call__phone-item_active")
-			$(".call__phone-item").eq($(@).parent().index()).addClass("call__phone-item_active")
-		false
+	$(".call__select").change ->
+		$(".call__phone-item").removeClass("call__phone-item_active")
+		$(".call__phone-item").eq($(@).val()).addClass("call__phone-item_active")
+
 
 	$(window).on "load", ->
-		if $("div").is("#sidebar-top")
-			sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
-		sidebarBottom = if $("div").is("#sidebar-bottom") then $("#sidebar-bottom").offset().top else $(".footer").offset().top
-
 		sidebarFixed = (scrollPosition) ->
+			if $("div").is("#sidebar-top")
+				sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
+			sidebarBottom = if $("div").is("#sidebar-bottom") then $("#sidebar-bottom").offset().top else $(".footer").offset().top
 			if scrollPosition > sidebarTop - 105
 				$("#sidebar").addClass("sidebar_fixed")
 			if scrollPosition <= sidebarTop - 105
@@ -58,6 +54,8 @@ $(document).ready ->
 		collapsible:true
 		heightStyle:"content"
 	$( ".accordion" ).accordion( "option", "icons", null )
+
+	$( ".vacancy__accordion" ).accordion( "option", "active", false )
 
 	$( ".accordion" ).on( "accordionbeforeactivate",( event, ui ) ->
 		ui.oldHeader.removeClass("accordion__head_active")
@@ -198,14 +196,48 @@ $(document).ready ->
 						link.removeClass("sidebar__link_white")
 
 
+	slicEmployeekInit = false
+
+
+	$(".employee__nav_prev").click ->
+		$('.employee__slider').slick("slickPrev")
+	$(".employee__nav_next").click ->
+		$('.employee__slider').slick("slickNext")
+
 	mq950 = window.matchMedia('only screen and (max-width : 950px)')
 	mq950Handler = ->
 		if mq950.matches
 			$(".header__call").prependTo($("#nav"))
 			$(".sidebar__links").appendTo($("#nav"))
+
+			$('.employee__slider').slick
+				slidesToShow: 1
+				slidesToScroll: 1
+				arrows: false
+				responsive: [
+					{
+						breakpoint: 601,
+						settings: {
+							vertical: true
+						}
+					},
+				]
+			slicEmployeekInit = true
+
 		else
 			$(".header__call").insertBefore($(".header__recall"))
 			$(".sidebar__links").appendTo($(".sidebar__body"))
+
+			$(".nav__hover").stop()
+			$(".nav__hover").width($(".nav__item_active").width())
+			$(".nav__hover").animate
+				left : $(".nav__item_active").offset().left-$('.nav').offset().left
+			, 250
+
+			if slicEmployeekInit
+				$('.employee__slider').slick("unslick")
+				slicEmployeekInit = false
+
 	mq950Handler()
 	mq950.addListener(mq950Handler)
 
@@ -303,6 +335,50 @@ $(document).ready ->
 
 
 
+	$('.popup-shop__arrow_prev').click ->
+		$(@).closest('.popup-shop__table').find('.popup-shop__slider-items').trigger('prev.owl.carousel')
+	$('.popup-shop__arrow_next').click ->
+		$(@).closest('.popup-shop__table').find('.popup-shop__slider-items').trigger('next.owl.carousel')
+
+	cardSlickInit = false
+
+	mq550 = window.matchMedia('only screen and (max-width : 550px)')
+	mq550Handler = ->
+		if mq550.matches
+			$('.card__items').slick
+				slidesToShow: 1
+				slidesToScroll: 1
+				arrows: false
+				adaptiveHeight: true
+			cardSlickInit = true
+
+
+			$('.popup-shop__slider-items').addClass("owl-carousel")
+			$('.popup-shop__slider-items').owlCarousel
+				loop: true
+				nav: false
+				dots: false
+				items: 2
+				responsive:
+					0:
+						items: 1
+					600:
+						items: 2
+
+			$("#about-menu").removeClass("about-menu_header").appendTo($(".about-menu-wrap"))
+
+		else
+			if cardSlickInit
+				$('.card__items').slick("unslick")
+				cardSlickInit = false
+
+			if $('.popup-shop__slider-items').hasClass("owl-carousel")
+				$('.popup-shop__slider-items').removeClass("owl-carousel").trigger('destroy.owl.carousel')
+	mq550Handler()
+	mq550.addListener(mq550Handler)
+
+
+
 	$(".site-result__btn").click ->
 		$(@).toggleClass("site-result__btn_active")
 		$(@).next(".site-result__list-wrap").slideToggle()
@@ -345,6 +421,34 @@ $(document).ready ->
 
 					indx = $(@).index()+1
 					containers = $(@).add($(".popup-tech__coll .popup-tech__cell:nth-child("+indx+")"))
+					maxH = 0
+					i = 0
+					
+
+					containers.each ->
+						$(@).height("auto");
+						h = $(@).height()
+						if(h > maxH)
+							maxH = h;
+
+						i += 1;
+						if i == containers.length
+							if typeof maxH == 'undefined' || typeof maxH == 'null'
+								false
+							containers.css
+								height: maxH + 'px'
+
+	$(".js-shop-popup").magnificPopup
+		items:
+			src: '#popup-shop',
+			type: 'inline'
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>'
+		callbacks:
+			open: ->
+				$(".popup-shop__header .popup-shop__cell").each ->
+
+					indx = $(@).index()+1
+					containers = $(@).add($(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
 					maxH = 0
 					i = 0
 					
@@ -459,6 +563,13 @@ $(document).ready ->
 			$(".rsya__arm").css
 				transform: "translateY("+coords+")"
 
+		# paralax cloud
+		if $("div").is(".mission")
+			yPos = -($(window).scrollTop() - $(".mission").offset().top) / 3
+			coords = 'center '+ yPos + 'px'
+			$(".mission").css
+				backgroundPosition: coords
+
 
 	$(".js-interaction").click ->
 		$(@).addClass("interaction-item_active-tooltip")
@@ -496,6 +607,24 @@ $(document).ready ->
 		tabContent: '.solutions__body'
 		fixedHeight: true
 		startSlide: 1
+		easing: "easeInOutCubic"
+		translateX: "500px"
+
+
+	$(".shop-price__tab-container").tabtab
+		tabMenu: '.shop-price__tab'
+		tabContent: '.shop-price__body'
+		startSlide: 1
+		fixedHeight: true
+		easing: "easeInOutCubic"
+		translateX: "500px"
+
+	$(".instrument__tab-container").tabtab
+		tabMenu: '.instrument__tab'
+		tabContent: '.instrument__body'
+		startSlide: 1
+		fixedHeight: false
+		dynamicHeight: true
 		easing: "easeInOutCubic"
 		translateX: "500px"
 
@@ -702,6 +831,33 @@ $(document).ready ->
 							height: maxH + 'px'
 
 
+	$(window).resize ->
+
+		if !mq550.matches
+
+			$(".popup-shop__header .popup-shop__cell").each ->
+
+				indx = $(@).index()+1
+				containers = $(@).add($(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
+				maxH = 0
+				i = 0
+				
+
+
+				containers.each ->
+					$(@).height("auto");
+					h = $(@).height()
+					if(h > maxH)
+						maxH = h;
+
+					i += 1;
+					if i == containers.length
+						if typeof maxH == 'undefined' || typeof maxH == 'null'
+							false
+						containers.css
+							height: maxH + 'px'
+
+
 	#$(".popup-tech__header .popup-tech__cell").each ->
 	#	console.log($(@).add($(".popup-tech__slider .popup-tech__coll").first().find(".popup-tech__cell").eq($(@).index())))
 	#	$(@).add($(".popup-tech__slider .popup-tech__coll").first().find(".popup-tech__cell").eq($(@).index())).equalHeightResponsive();
@@ -727,3 +883,237 @@ $(document).ready ->
 
 	$(window).resize ->
 		resizeBgPortfolio()
+
+
+	resizeBgAbout = ->
+		$(".top-banner").each ->
+			cnt = $(@).find(".top-banner__block")
+			bg = $(@).find(".top-banner__bg")
+
+
+			bgLeft = $(@).offset().left - cnt.offset().left
+			bgRight = cnt.offset().left + cnt.outerWidth() - $(@).width()
+
+			bgTop = $(@).offset().top - cnt.offset().top
+			bgBottom = cnt.offset().top + cnt.outerHeight() - $(@).outerHeight()
+
+
+
+			bg.css
+				top: bgTop
+				bottom: bgBottom
+				left: bgLeft
+				right: bgRight
+
+
+	resizeBgAbout()
+
+	$(window).resize ->
+		resizeBgAbout()
+
+
+
+	mq480 = window.matchMedia('only screen and (max-width : 480px)')
+	mq480Handler = ->
+		if mq480.matches
+
+			$('.shop-price__slider').addClass("owl-carousel")
+			$('.shop-price__slider').owlCarousel
+				loop: true
+				nav: false
+				dots: false
+				items: 1
+				onInitialized: (e) ->
+					cont = $(e.target).closest(".js-tabs-height")
+					console.log(cont)
+					cont.height($(e.target).outerHeight())
+
+		else
+			if $('.shop-price__slider').hasClass("owl-carousel")
+				$('.shop-price__slider').removeClass("owl-carousel").trigger('destroy.owl.carousel')
+	mq480Handler()
+	mq480.addListener(mq480Handler)
+
+
+
+	$(".shop-price__header .shop-price__cell").each ->
+		if !mq480.matches
+
+			indx = $(@).index()+1
+			containers = $(@).add($(".shop-price__col .shop-price__cell:nth-child("+indx+")"))
+			maxH = 0
+			i = 0
+			
+
+
+			containers.each ->
+				$(@).height("auto");
+				h = $(@).height()
+				if(h > maxH)
+					maxH = h;
+
+				i += 1;
+				if i == containers.length
+					if typeof maxH == 'undefined' || typeof maxH == 'null'
+						false
+					containers.css
+						height: maxH + 'px'
+
+
+
+	
+	$('.call__select').niceSelect();
+
+
+	consistCarousel = $('.shop-consist__slider').owlCarousel
+		loop: true
+		nav: false
+		items: 1
+		dots: true
+		dotsContainer: ".shop-consist__slider-dots"
+	$('.shop-consist__arrow_prev').click ->
+		consistCarousel.trigger('prev.owl.carousel')
+	$('.shop-consist__arrow_next').click ->
+		consistCarousel.trigger('next.owl.carousel')
+
+
+
+	shopworkCarousel = $('.shop-work__slider').owlCarousel
+		loop: true
+		nav: false
+		items: 1
+		dots: false
+		animateIn: "fadeInLeft"
+		animateOut: "fadeOutRight"
+	$('.shop-work__arrow_prev').click ->
+		shopworkCarousel.trigger('prev.owl.carousel')
+	$('.shop-work__arrow_next').click ->
+		shopworkCarousel.trigger('next.owl.carousel')
+
+
+	$(".top-banner__typed").typed
+		strings: ['Честно.', 'С любовью.', 'Как для себя.']
+		typeSpeed: 100
+		loop: true
+
+
+	#$("#chart").each ->
+	#	data = $(@).data("datas");
+	#	html = $(@).html();
+	#	$(@).html('');
+	#	example = $('<canvas width="'+$(@).width()+'" height="'+$(@).width()+'">'+html+'</canvas>').appendTo($(@))[0];
+	#	ctx = example.getContext('2d');
+
+	#	ctx.clearRect(0, 0, example.width, example.height);
+
+	#	prevAngle = 0
+
+	#	for item in data
+	#		console.log(item)
+	#		angle = item.val*2*Math.PI/100 + prevAngle
+
+	#		ctx.beginPath();
+	#		ctx.arc(example.width/2, example.width/2, example.width/2 , prevAngle, angle, false);
+	#		ctx.lineTo(example.width/2, example.width/2)
+	#		ctx.fillStyle = item.color
+	#		ctx.fill()
+
+	#		prevAngle = angle
+
+	$(window).resize ->
+		if $("div").is("#piechart")
+			drawChart();
+
+	$(".js-about-reviews-still").click ->
+		$(".about-reviews__btn").addClass("about-reviews__btn_hide")
+		$(".about-reviews__hidden").slideDown();
+		false
+
+
+	vacancyBlockFixed = ->
+		scrollPosition = $(window).scrollTop()
+		vacancyBlock = $(".vacancy-block")
+		headerSize = $(".header").height()
+
+		if $(window).width() > 950
+			if vacancyBlock.height() < $(".vacancy__accordion").height()
+
+				if scrollPosition + headerSize  < $(".vacancy__body").offset().top + $(".vacancy__body").height() - vacancyBlock.outerHeight()
+
+					if scrollPosition + headerSize >= $(".vacancy__body").offset().top
+						posTop = scrollPosition + headerSize - $(".vacancy__body").offset().top
+						vacancyBlock.css
+							transform: "translateY("+posTop+"px)"
+
+
+
+
+	vacancyBlockFixed()
+
+	$(window).scroll ->
+		vacancyBlockFixed()
+
+
+	$(".about-reviews-item__link").click ->
+		$(@).closest(".about-reviews-item").closest(".about-reviews__item-wrap").css
+			height: $(@).closest(".about-reviews-item").outerHeight()
+		$(@).closest(".about-reviews-item").addClass("about-reviews-item_fixed")
+		$(@).closest(".about-reviews-item").find(".about-reviews-item__hide").show()
+
+		$(@).hide()
+
+
+	$(window).mouseup ->
+		$(".about-reviews__item-wrap").css
+			height: "auto"
+		$(".about-reviews-item").removeClass("about-reviews-item_fixed")
+		$(".about-reviews-item").find(".about-reviews-item__hide").hide()
+
+		$(".about-reviews-item__link").show()
+
+
+	$(".employee-item").click ->
+		$(".employee-full-item_active").removeClass("employee-full-item_active")
+
+		$("#employee-full-item-"+$(@).data("id")).addClass("employee-full-item_active")
+
+
+	$(".js-top-next").click ->
+		$('html, body').animate({
+			scrollTop: $("#about-menu").offset().top - $(".header").height()
+		}, 2000);
+
+
+	$(".js-still-add-shop").click ->
+		$('html, body').animate({
+			scrollTop: $("#shop-work").offset().top - $(".header").height()
+		}, 2000);
+
+
+
+
+	aboutMenuFixed = ->
+		scrollPosition = $(window).scrollTop()
+		aboutMenu = $("#about-menu")
+		headerSize = $(".header").height()
+
+
+		if scrollPosition + headerSize >= $(".about-menu-wrap").offset().top
+			if !mq550.matches
+				aboutMenu.addClass("about-menu_header").appendTo($(".header"))
+
+		else
+			aboutMenu.removeClass("about-menu_header").appendTo($(".about-menu-wrap"))
+
+
+
+
+	aboutMenuFixed()
+
+	$(window).scroll ->
+		aboutMenuFixed()
+
+
+	$(".about-menu__link").mPageScroll2id
+		offset: $(".header")
+		highlightClass: "about-menu__link_active"

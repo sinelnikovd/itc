@@ -38,7 +38,7 @@ block content
 				+e.title Выберите подходящий тариф
 				+b.desc.__desc Наши последние достижения в области интернет-маркетинга позволили составить ряд успешных стратегий как для малого, так и для среднего бизнеса.
 				+e.tab-container
-					+tab({txt:"Легкий старт", id:"id-easy", cls:"js-rate-tab"}, {txt:"Бизнес", id:"id-bussines", cls:"js-rate-tab"}, {txt:"Профи", id:"id-profi", cls:"js-rate-tab"}).__tab
+					+tab({txt:"Профи", id:"id-easy", cls:"js-rate-tab"}, {txt:"Бизнес", id:"id-bussines", cls:"js-rate-tab"}, {txt:"Легкий старт", id:"id-profi", cls:"js-rate-tab"}).__tab
 					+b.rate-content
 						-for (var i=1; i <= 3;i++)
 							+e.item(class= (i == 1) ? "_active" : "")

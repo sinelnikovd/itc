@@ -1,0 +1,60 @@
+.about-menu
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	border-bottom: 2px solid #ebeaef
+	background-color: #fff
+
+	&_header
+		position: relative
+		z-index: 20
+		border-bottom: 0 none
+		border-top: 2px solid #ebeaef
+
+
+
+	&__list
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+
+	&__item
+		padding-left: 2%
+		padding-right: 2%
+		
+
+	&__link
+		@extend %pbold
+		font-size: 12px
+		line-height: 1.375em
+		color: #333
+		opacity: .6
+		text-decoration: none
+		text-transform: uppercase
+		padding: 13px 0 9px
+		display: inline-block
+		border-bottom: 2px solid transparent
+		margin-bottom: -2px
+		&:hover
+			border-bottom-color: #333
+			opacity: 1
+
+		&_active
+			border-bottom-color: #333
+			opacity: 1
+
+@media only screen and (max-width : 550px)
+	.about-menu
+		display: none
+
+.about-menu-wrap
+	position: relative
+	height: 40px
+	
+@media only screen and (max-width : 550px)
+	.about-menu-wrap
+		display: none

@@ -1,0 +1,357 @@
+extends ../base/page
+
+block title
+	title Поддержка сайтов
+
+block content
+	+b.top-portfolio._seo
+		.container
+			+e.wrap
+				+e.A.nav._prev(href="#")
+					+e.SPAN.nav-arrow
+						i.icon.icon_prev_cw
+					+e.SPAN.nav-txt Окна Строй
+				+e.A.nav._next(href="#")
+					+e.SPAN.nav-txt Окна Строй
+					+e.SPAN.nav-arrow
+						i.icon.icon_next_cw
+				+e.title Шувалов
+				+e.items
+					+e.item
+						+e.icon.icon._start
+						+e.label Начало сотрудничества:
+						+e.txt Конец 2013 года
+					+e.item
+						+e.icon.icon._seo-work
+						+e.label Основные работы:
+						+e.txt поисковое продвижение сайта, маркетинговый аудит, поддержка и развитие сайта
+
+				+e.btn-wrap
+					+btn.A._border_normal._color_orange.__btn(href="#") Смотреть процесс разработки
+
+	+b.seo-task
+		.container
+			+e.side._left
+				+e.title Задача 
+				+e.txt Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов
+			+e.side._right
+				+e.title Решение 
+				+e.txt Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом.
+
+
+	+b.work-case
+		.container
+			+b.title.__title Проведеные работы, в рамках данного кейса
+			+b.accordion.__accordion
+				+e.head._active
+					+e.icon
+					+e.SPAN.head-txt Работа с продвижением
+				+e.body
+					ul.wokr-case__list
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc1
+							| Провели комплексный анализ тематики и ниши предоставляемых услуг
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc2
+							| Оптимизировали список ключевых запросов
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc3
+							| Переработали структуру сайта для увеличения числа ключевых запросов
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc4
+							| Переработали подачу торгового предложения на сайте.
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc5
+							| Сверстали сайт адаптивно
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc6
+							| Добавили уникальный GEO-модуль на сайт
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc7
+							| Обеспечили актуальную функциональность сайту
+
+				+e.head
+					+e.icon
+					+e.SPAN.head-txt Работа с аналитикой
+				+e.body
+					ul.wokr-case__list
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc8
+							| Настроили цели в Google Analytics и Яндекс.Метрике
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc9
+							| Настроили Calltracking и подмену номеров
+
+				+e.head
+					+e.icon
+					+e.SPAN.head-txt Работа с контекстом
+				+e.body
+					ul.wokr-case__list
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc10
+							| Подключили ретаргетинг
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc11
+							| Оптимизировали стратегию показов объявлений
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc12
+							| Подключили таргетированную рекламу
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc13
+							| Подключили имиджевую рекламу 
+
+				+e.head
+					+e.icon
+					+e.SPAN.head-txt Работа с SMM
+				+e.body
+					ul.wokr-case__list
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc14
+							| Определили стратегию контент-маркетинга в социальных сетях
+
+
+						li.work-case__item
+							i.work-case__icon.icon.icon_icwc15
+							| Провели конкурсные мероприятия по привлечению подписчиков в группу
+
+	+b.seo-block-table._trafic-chanel
+		.container
+			+b.title.__title Распределние трафика по основным каналам
+			+e.desc Минимальная доля трафика приходит на сайт за счет комбинации различных рекламных активностей и поискового продвижения. Поисковый трафик составляет более 25% от общей массы переходво. <br>В среднем из поиска на сайт переходит юолее 30 000 пользователей ежедневно.
+
+			+e.TABLE.table
+				+e.THEAD.thead
+					+e.TR.tr
+						+e.TD.th Источники трафика
+						+e.TD.td Колличество трафика
+				+e.TFOOT.tfoot
+					+e.TR.tr
+						+e.TD.th Итого
+						+e.TD.td
+							+e.val 100%
+
+				+e.TR.tr
+					+e.TD.th Переходы по рекламе
+					+e.TD.td
+						+e.val 39.1%
+				+e.TR.tr
+					+e.TD.th Переходы из поисковых систем
+					+e.TD.td
+						+e.val 25.36%
+				+e.TR.tr
+					+e.TD.th Прямые заходы
+					+e.TD.td
+						+e.val 18.16%
+				+e.TR.tr
+					+e.TD.th Внутренние переходы
+					+e.TD.td
+						+e.val 10.95%
+				+e.TR.tr
+					+e.TD.th Переходы по ссылкам на сайтах
+					+e.TD.td
+						+e.val 5.69%
+				+e.TR.tr
+					+e.TD.th Другое
+					+e.TD.td
+						+e.val Менее 1%
+
+	.container
+		.hr__line
+
+	+b.trafic-source
+		.container
+			+b.title.__title Распределение по источникам привлечения трафика
+			+e.body
+				//-+e.side._left
+				script( type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
+				script.
+					google.charts.load('current', {'packages':['corechart']});
+					google.charts.setOnLoadCallback(drawChart);
+					function drawChart() {
+
+					var data = google.visualization.arrayToDataTable([
+					['Источники трафика', 'Колличество трафика'],
+					['Переходы по рекламе',     39.1],
+					['Переходы из поисковых систем',      25.36],
+					['Прямые заходы',  18.16],
+					['Внутренние переходы', 10.95],
+					['Переходы по ссылкам на сайтах',    5.69],
+					['Другое',    0.74],
+					]);
+
+					var options = {
+						chartArea: {
+							'width':"95%",
+							'height':"95%"
+						},
+						colors: [
+							"#f2f2f2","#f2602d","#3d4d89","#28c945","#9fb0b5","#3c4447"
+						],
+						fontSize: 14,
+						fontName: "ProximaNovaBold",
+						height: 400,
+						legend:{
+							position: 'right'
+						}
+
+					};
+
+					if(document.body.clientWidth < 600)
+						options.legend.position = 'bottom'
+
+					var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+					chart.draw(data, options);
+					}
+				+e.pizza#piechart
+				//-+e.side._right
+					+b.UL.trafic-source-legend
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Переходы по рекламе
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Переходы из поисковых систем
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Переходы по рекламе
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Прямые заходы
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Внутренние переходы
+						+e.item
+							+e.SPAN.percent 39.00%
+							+e.SPAN.txt Переходы по ссылкам на сайтах
+
+
+	+b.interesting-facts.blueblock
+		.container
+			+b.title.__title Интересные факты о проекте
+			+e.body
+				+e.item
+					+e.icon.icon._fcic1
+					+e.label 72% запрросов в ТОП-10 за 9 месяцев 
+					+e.elaboration (с нуля)
+				+e.item
+					+e.icon.icon._fcic2
+					+e.label 67.7 видимость сайта 
+					+e.elaboration (с нуля на начало сотрудничества)
+				+e.item
+					+e.icon.icon._fcic3
+					+e.label Средняя позиция улучшилась в 10 раз 
+					+e.elaboration сейчас 11 к 100 в начале сотрудничества
+				+e.item._big
+					+e.icon.icon._fcic4
+					+e.label Переходы из поисковиков увеличились в 1.5 
+					+e.elaboration (в сравнении с предыдущим кварталом)
+
+
+	+portfolio-client
+
+	+b.seo-block-table._position-report
+		.container
+			+b.title.__title Отчет о позициях продвигаемых запросов/видимость проекта
+			+e.desc Видимость проекта в поисковыхсистемах по продвигаемым запросам составляет 53% <br>ТОП-10 Яндекса включает 77% слов и 73% вТОП-10 Google
+
+			+e.TABLE.table
+				+e.THEAD.thead
+					+e.TR.tr
+						+e.TD.th Основные показатели
+						+e.TD.td Значение
+				+e.TFOOT.tfoot
+					+e.TR.tr
+						+e.TD.th Общее колличество запросов
+						+e.TD.td
+							+e.val 138
+
+				+e.TR.tr
+					+e.TD.th Видимость
+					+e.TD.td
+						+e.val 53%
+				+e.TR.tr
+					+e.TD.th ТОП-3 Яндекс
+					+e.TD.td
+						+e.val 28 запросов, 20%
+				+e.TR.tr
+					+e.TD.th ТОП-10 Яндекс
+					+e.TD.td
+						+e.val 456 запросов, 65%
+				+e.TR.tr
+					+e.TD.th ТОП-3 Google
+					+e.TD.td
+						+e.val 40 запросов, 55%
+				+e.TR.tr
+					+e.TD.th ТОП-10 Google
+					+e.TD.td
+						+e.val 101 запросов, 73%
+
+	.container
+		.hr__line
+
+	+b.seo-block-table._competitor
+		.container
+			+b.title.__title Сравнение видимости конкурентов сайта
+			+e.desc Обладает максимальной видимостью (72%) по запросам в продвижении относительно конкурентов без учета запросов с указаниеем бренда
+
+			+e.TABLE.table
+				+e.THEAD.thead
+					+e.TR.tr
+						+e.TD.th Конкурент
+						+e.TD.td Значение
+				+e.TR.tr
+					+e.TD.th samosonie.ru
+					+e.TD.td
+						+e.val 53%
+				+e.TR.tr
+					+e.TD.th pache.ru
+					+e.TD.td
+						+e.val 47.9%
+				+e.TR.tr
+					+e.TD.th chemodan77,ru
+					+e.TD.td
+						+e.val 35.8%
+
+	.container
+		.hr__line
+
+	+b.project-comand
+		.container
+			+b.title.__title Над проектом работали
+
+			+e.items
+				+e.item
+					+e.IMG.photo(src="media/images/com/1.jpg")
+					+e.name Ринат Ильшатов
+					+e.position арт-директор
+				+e.item
+					+e.IMG.photo(src="media/images/com/2.jpg")
+					+e.name Игорь Васнецов
+					+e.position дизайнер
+				+e.item
+					+e.IMG.photo(src="media/images/com/3.jpg")
+					+e.name Ринат Ильшатов
+					+e.position шрифтовик
+				+e.item
+					+e.IMG.photo(src="media/images/com/4.jpg")
+					+e.name Ринат Ильшатов
+					+e.position менеджер
+
+	+detail("Отправить заявку на продвижение")
+
+
+	+socials
+
+
+

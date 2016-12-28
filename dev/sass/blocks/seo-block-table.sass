@@ -1,0 +1,90 @@
+.seo-block-table
+	padding: 60px 0
+	position: relative
+
+	&_position-report
+		background-image: url(media/img/line-gradient.png)
+		background-repeat: no-repeat
+		background-position: center 0
+
+		.seo-block-table__title
+			max-width: 600px
+			text-align: center
+			margin: 0 auto
+
+	&_trafic-chanel
+		background-image: url(media/img/line-gradient.png)
+		background-repeat: no-repeat
+		background-position: center 0
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 36px
+		line-height: 1.25em
+
+
+	&__desc
+		max-width: 750px
+		@extend %italic
+		margin: 35px auto 0
+		line-height: 1.6em
+		text-align: center
+
+
+	&__table
+		max-width: 750px
+		width: 100%
+		margin: 40px auto 0
+
+	&__thead
+		.seo-block-table__td
+			@extend %pbold
+			font-size: 15px
+			color: #353535
+		.seo-block-table__tr
+			&:hover
+				.seo-block-table__td
+					padding: 10px 20px
+	&__tfoot
+		.seo-block-table__td
+			@extend %pbold
+			font-size: 15px
+			color: #353535
+			background-color: #f2f2f2
+
+	&__td
+		border-bottom: 1px solid #e5e5e5
+		padding: 10px 20px
+	&__th
+		border-bottom: 1px solid #e5e5e5
+		padding: 10px 20px
+
+	&__tr
+		&:hover
+			.seo-block-table__td
+				padding-top: 9px
+				padding-bottom: 9px
+			.seo-block-table__val
+				@extend %pbold
+				color: #ff6026
+
+
+@media only screen and (max-width : 750px)
+	.seo-block-table
+		&__title
+			font-size: 34px
+
+@media only screen and (max-width : 550px)
+	.seo-block-table
+		&_trafic-chanel
+			.seo-block-table
+				&__th
+					width: 80%
+
+		&_position-report
+			.seo-block-table
+				&__th
+					width: 50%
+		&__title
+			font-size: 20px
+

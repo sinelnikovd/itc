@@ -1,0 +1,107 @@
+.about-reviews
+	padding: 40px 0 50px
+	background-color: #f5f5f5
+	text-align: center
+
+	&__body
+		margin-top: 5px
+		+clearfix
+
+	&__item-wrap
+		float: left
+		width: 50%
+		margin: 10px 0
+		padding: 0 15px
+		box-sizing: border-box
+		position: relative
+
+	&__hidden
+		display: none
+
+	&__btn
+		margin-top: 25px
+
+		&_hide
+			display: none
+
+@media only screen and (max-width : 750px)
+	.about-reviews
+		&__item-wrap
+			float: none
+			width: 100%
+
+
+
+
+.about-reviews-item
+	padding: 15px 20px 15px 100px
+	position: relative
+	border: 1px solid transparent
+	box-sizing: border-box
+	text-align: left
+	background-color: #fff
+
+	&:hover
+		border-color: #ccc
+
+	&_fixed
+		border-color: #ccc
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+
+
+	&__preview
+		+size(60px)
+		position: absolute
+		top: 50px
+		left: 20px
+		border-radius: 100%
+
+	&__name
+		@extend %bold
+
+	&__position
+		font-size: 12px
+		line-height: 1.3em
+		color: #938f8f
+
+	&__desc
+		margin-top: 5px
+		line-height: 1.5em
+		p
+			margin: 10px 0
+
+	&__link
+		margin-top: 5px
+		padding: 0
+		background: none
+		border: 0 none
+		outline: none
+		font-size: 12px
+		color: #938f8f
+		cursor: pointer
+		border-bottom: 1px dashed #938f8f
+
+		&:hover
+			border-color: transparent
+
+	&__hide
+		display: none
+
+
+@media only screen and (max-width : 550px)
+	.about-reviews-item
+		padding-left: 20px
+		&__info
+			position: relative
+			padding-left: 50px
+			box-sizing: border-box
+
+		&__preview
+			+size(40px)
+			left: 0
+			margin-top: -20px
+

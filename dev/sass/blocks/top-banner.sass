@@ -1,0 +1,116 @@
+.top-banner
+	+linear-gradient(45deg, #5b5ba6, #3079a8)
+	padding: 275px 0 65px
+	position: relative
+	color: #fff
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1
+		background-image: url(media/img/dots-pattern.png)
+		opacity: .6
+
+	&__block
+		position: relative
+		z-index: 2
+		overflow: hidden
+		max-width: 880px
+		margin: 0 auto
+		text-align: center
+		padding: 40px 10px 60px
+		box-sizing: border-box
+
+	&__text
+		position: relative
+		z-index: 2
+
+	&__bg
+		+linear-gradient(45deg, #5b5ba6, #3079a8)
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
+
+	&__title
+		@extend %pebold
+		font-size: 50px
+		line-height: 1em
+		text-transform: uppercase
+		letter-spacing: 10px
+		text-shadow: 0 6px 29px rgba(#000,.1)
+
+	&__desc
+		margin-top: 30px
+		@extend %psbold
+		font-size: 20px
+		text-shadow: 0 6px 29px rgba(#000,.1)
+
+	&__date
+		margin-top: 30px
+
+	
+	&__further-wrap
+		position: relative
+		z-index: 2
+		text-align: center
+		margin-top: 120px
+
+@media only screen and (max-width : 950px)
+	.top-banner
+		&__title
+			font-size: 40px
+
+@media only screen and (max-width : 600px)
+	.top-banner
+		&__block
+			padding: 30px 5px
+		&__title
+			font-size: 24px
+
+@media only screen and (max-width : 480px)
+	.top-banner
+		&__desc
+			margin-top: 20px
+
+		&__date
+			margin-top: 20px
+
+.further
+	border: 0 none
+	background: none
+	outline: none
+	color: #fff
+	cursor: pointer
+	opacity: .6
+	&:hover
+		opacity: 1
+	&__txt
+		margin: 10px
+
+	&__mouse
+		+animation( mouse 0.7s alternate infinite linear)
+
++keyframes(mouse)
+	0%
+		+transform(translateY(0))
+	100%
+		+transform(translateY(-50%))
+
+
+.typed-cursor
+	opacity: 1
+	+animation( blink 0.7s infinite)
+
++keyframes(blink)
+	0%
+		opacity: 1
+	50%
+		opacity: 0
+	100%
+		opacity: 1

@@ -1,0 +1,74 @@
+.mission
+	background-image: url('media/img/cloud.jpg')
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	padding: 440px 0 40px
+	position: relative
+	overflow: hidden
+	&:before
+		content: ''
+		position: absolute
+		z-index: 2
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-image: url(media/img/dots-pattern.png)
+		opacity: .6
+
+	&__logo
+		position: absolute
+		top: -105px
+		left: 50%
+		z-index: 1
+		+transform(translateX(-50%))
+
+	&__desc
+		position: relative
+		z-index: 3
+		@extend %pbold
+		max-width: 880px
+		font-size: 26px
+		line-height: 1.3em
+		text-align: center
+		margin: 0 auto
+		color: #333331
+
+	&__not-work
+		position: relative
+		z-index: 3
+		margin: 95px auto 0
+		color: #333
+		font-size: 11px
+		text-align: center
+		max-width: 265px
+
+
+@media only screen and (max-width : 1200px)
+	.mission
+		padding-top: 300px
+@media only screen and (max-width : 950px)
+	.mission
+		padding-top: 220px
+@media only screen and (max-width : 750px)
+	.mission
+		padding-top: 150px
+
+		&__logo
+			top: -80px
+
+		&__desc
+			font-size: 24px
+@media only screen and (max-width : 550px)
+	.mission
+		padding-top: 120px
+
+		&__logo
+			top: -10%
+
+		&__desc
+			font-size: 18px
+
+		&__not-work
+			margin-top: 50px

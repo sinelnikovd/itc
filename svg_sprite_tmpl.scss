@@ -25,7 +25,23 @@
     }
   }
 
+%<%=common %>_<%=svgItem.name%> {
+  &:before {
+      background-position: <%= svgItem.relPositionX %>em <%= svgItem.relPositionY %>em;
+      width: <%= svgItem.relWidth %>em;
+      height: <%= svgItem.relHeight %>em;
+    }
+  }
+
   @mixin <%=common %>-<%=svgItem.name%>(){
-    @extend .<%=common %>_<%=svgItem.name%>;
+    @extend %<%=common %>_<%=svgItem.name%>;
+  }
+
+  @mixin m-<%=common %>-<%=svgItem.name%>(){
+     &:before {
+      background-position: <%= svgItem.relPositionX %>em <%= svgItem.relPositionY %>em;
+      width: <%= svgItem.relWidth %>em;
+      height: <%= svgItem.relHeight %>em;
+    }
   }
 <% }); %>

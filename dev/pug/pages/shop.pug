@@ -1,0 +1,536 @@
+extends ../base/page
+
+block title
+	title Разработка интернет магазинов
+
+block content
+
+	+b.top._shop#sidebar-top
+
+		.container
+			+b.title.__title Разработка интернет магазинов
+			+e.desc Комплексный подход к разработке дизайна и функциональной части, учитывая все тонкости и детали Вашей деятельности, позволяет получить качественный и удобный интернет-магазин.
+			+e.content
+				+b.shop-layers.__layers
+					+e.IMG.img._bottom(src="media/img/wireframe.png")
+					+e.IMG.img._center(src="media/img/desctop.png")
+					+e.IMG.img._top(src="media/img/grid.png")
+				+e.subtitle Особенности оптимизации по абонентской плате в ITC Media:
+				+b.UL.list.__list
+					+e.item
+						+e.icon.icon._list_cw
+						| Корзина товаров с отображением выбранных товаров, их свойств и действующих скидок;
+					+e.item
+						+e.icon.icon._list_cw
+						| Возможность оформления заказа в несколько этапов: Корзина, Доставка, Оформление заказа, Оплата;
+					+e.item
+						+e.icon.icon._list_cw
+						| Возможность оформления заказа с регистрацией покупателя и без регистрации;
+					+e.item
+						+e.icon.icon._list_cw
+						| Поддержка приема онлайн-платежей через самые известные платежные системы.
+				+e.group-btn
+					+btn.A._bg-color_orange._size_normal._shadow.__btn.js-order-popup(href="#") Заказать
+					+btn.A._border_small._color_white.__btn(href="#") Кейсы
+
+	-var sidebar_static = true
+	include ../blocks/sidebar
+
+	+b.shop-price
+		.container
+			.content
+				+b.title.__title Решения для интернет-магазинов
+				+e.tab-container
+					+tab({txt:"1С Bitrix"},{txt:"Host CMS"}).__tab
+					+e.body
+						-for(var x=0; x<2; x++)
+							+e.table
+								+e.header
+									+e.cell._title
+									+e.cell._h Включенная редакция 1С Bitrix
+									+e.cell._h Адаптивная верстка
+									+e.cell._h Онлайн оплата
+									+e.cell._h Система доставки
+									+e.cell._h Интеграция с 1С
+									+e.cell._h Облачные технологии BIG DATA
+									+e.cell._h Скорость разработки
+									+e.cell._foot Цена
+
+								+e.slider-wrap
+									+e.slider
+										+e.col
+											+e.cell._title
+												+b.shop-price-head
+													+e.title Интернет-магазин
+													+e.desc Полноценный магазин по реализации одной группы товаров с оплатой онлайн.
+											+e.cell._d
+												+e.hidden-title Включенная редакция 1С Bitrix
+												| «Малый бизнес»
+											+e.cell._d
+												+e.hidden-title Адаптивная верстка
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Онлайн оплата
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Система доставки
+												+e.icon.icon._not
+											+e.cell._d
+												+e.hidden-title Интеграция с 1С
+												+e.icon.icon._not
+											+e.cell._d
+												+e.hidden-title Облачные технологии BIG DATA
+												+e.icon.icon._not
+											+e.cell._d
+												+e.hidden-title Скорость разработки
+												+e.icon-time.icon._month
+												+e.icon-time.icon._month
+											+e.cell._foot 12 000 р.
+										+e.col
+											+e.cell._title
+												+b.shop-price-head
+													+e.title Торговый портал
+													+e.desc Масштабаная платформа по продаже разных групп товаров с просчетом доставки в регионы и отслеживанием заказов в личном кабинете.
+											+e.cell._d
+												+e.hidden-title Включенная редакция 1С Bitrix
+												| «Малый бизнес»
+											+e.cell._d
+												+e.hidden-title Адаптивная верстка
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Онлайн оплата
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Система доставки
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Интеграция с 1С
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Облачные технологии BIG DATA
+												+e.icon.icon._check
+											+e.cell._d
+												+e.hidden-title Скорость разработки
+												+e.icon-time.icon._month
+												+e.icon-time.icon._month
+												+e.icon-time.icon._month
+												+e.icon-time.icon._month
+											+e.cell._foot 20 000 р.
+
+
+					+btn.A._border_small._color_white.__btn.js-shop-popup(href="#") 
+						span.shop-price__btn-txt Полное сравнение
+					br
+					+e.A.link.js-still-add-shop(href="#") Что можно добавить еще?
+
+
+	+b.shop-work#shop-work
+		+e.slider.owl-carousel
+			-for(var x =0; x<2; x++)
+				+b.shop-work-item
+					+e.bg(style="background-image: url(media/images/shop/work_bg.jpg)")
+						.container
+							+e.wrap
+								+e.IMG.notebook(src="media/images/shop/notebook.png")
+								+e.body
+									+e.content
+										+e.title &laquo;Хрусталь Шувалов&raquo;
+										+e.A.link(href="#") shuvalov-crystal.ru
+										+e.txt
+											p Горный хрусталь – прозрачная бесцветная разновидность кристаллического кварца. Встречается в виде призматических кристаллов с заостренной ромбоэдрической головкой.
+
+										+btn.A._border_small._color_white.__btn(href="#") Смотреть
+
+									+e.person
+										+e.IMG.avatar(src="media/images/person/1.jpg", alt="")
+										+e.person-data
+											+e.name Ковель Денис
+											+e.position Генеральный директор
+											+e.A.recall(href="#") Читать отзыв
+		+e.slider-nav
+			+e.arrow._prev
+				i.icon.icon_prev_cw
+			+e.arrow._next
+				i.icon.icon_next_cw
+
+	+b.shop-form
+		.container
+			+b.title.__title С нами легко работать
+			+e.desc Прозрачные условия сотрудничества, понятные сметы и брифы. Убедитесь сами.
+			form(action="/")
+				+e.subtitle Пришлите пример
+				+e.check-group
+					+b.shop-checkbox.__checkbox
+						+e.INPUT.input#brief(type="checkbox")
+						+e.LABEL.label(for="brief")
+							+e.img(style="background-image: url(media/img/brief.jpg)")
+							+e.check
+							br
+							+e.txt Бриф
+					+b.shop-checkbox.__checkbox
+						+e.INPUT.input#contract(type="checkbox")
+						+e.LABEL.label(for="contract")
+							+e.img(style="background-image: url(media/img/contract.jpg)")
+							+e.check
+							br
+							+e.txt Договор
+					+b.shop-checkbox.__checkbox
+						+e.INPUT.input#presentation(type="checkbox")
+						+e.LABEL.label(for="presentation")
+							+e.img(style="background-image: url(media/img/presentation.jpg)")
+							+e.check
+							br
+							+e.txt Презентация
+					+b.shop-checkbox.__checkbox
+						+e.INPUT.input#estimate(type="checkbox")
+						+e.LABEL.label(for="estimate")
+							+e.img(style="background-image: url(media/img/estimate.jpg)")
+							+e.check
+							br
+							+e.txt Смета
+
+				+e.subtitle Мне на почту
+				+e.form
+					+e.control._field
+						+field.js-inputmask(placeholder="Ваш телефон")
+					+e.control._field
+						+field(placeholder="Ваш e-mail")
+					+e.control._btn
+						+btn.A._bg-color_orange._size_normal.__btn(href="#") Отправить
+
+
+	+b.shop-consist
+		.container
+			+e.body
+				+e.IMG.preview(src="media/images/shop/tablet.png")
+				+e.slider-wrap
+					+e.slider.owl-carousel
+						-for(var x = 0; x < 3; x++)
+							+e.item
+								+e.slide-title Из чего состоит интернет магазин?
+								+b.accordion.__accordion
+									- var list = [{head:"Проектирование. Разработка уникального и эксклюзивного дизайна"},{head:"Система управления сайтом (CMS)"},{head:"Блог, новостная лента"},{head:"Позволяет выводить новостную ленту в различных блоках сайта."},{head:"Статистика посещений"},{head:"Карта проезда"},{head:"Проектирование. Разработка уникального и эксклюзивного дизайна"},{head:"Система управления сайтом (CMS)"},{head:"Блог, новостная лента"}]
+									each item,index in list
+										+e.head(class= (index == 0) ? "_active" : "")
+											+e.icon
+											+e.SPAN.head-txt= item.head
+										+e.body
+											+e.txt
+												p В настоящее время особенность блогов заключается не только в структуре записей, но и в простоте добавления новых записей. Пользователь просто обращается к веб-серверу, прохо­дит процесс идентификации пользователя.
+
+
+					+e.slider-nav
+						+arrow._prev.__arrow._prev
+						+e.slider-dots
+						+arrow._next.__arrow._next
+
+	+b.patern._type_2.darkBlock
+		.container
+			.content
+				+e.body
+					+b.title.__title Интернет магазин вам подойдет, если вы хотите
+					+e.desc
+						p Автоматизацию процесса продаж в сети;
+						p Дополнительный источник дохода для офлайн магазина;
+						p Организовать продажу собственных товаров бренда через интернет;
+						p Организовать амбициозный Start Up.
+
+	+b.scheme-work._white
+		.container
+			+e.body
+				+e.desc
+					+b.title.__title Схема работы по сайту
+					+e.txt
+						p Процесс разработки в Waterfall выглядит как поток, последовательно проходящий фазы анализа, проектирования, реализации, тестирования, интеграции и поддержки
+						p Методология дает гарантированный результат в рамках основных метрик проекта
+						p Подходит для компаний предпочитающих работать по фиксированному бюджету
+
+				+b.line-scheme.__scheme
+					-var list = [["Составление ТЗ", "_tz"], ["Прототипирование", "_port"], ["Дизайн", "_desing"],["Верстка", "_psd2html"], ["Программирование", "_prog"], ["Тестирование", "_test"], ["Запуск и поддержка", "_start"]]
+					each item in list
+						+e.line._to-animated(class= item[1])
+							+e.line-in
+								+e.txt= item[0]
+								+e.tooltip-wrap
+									+e.tooltip(data-tooltip="ТЗ устанавливает основное назначение разрабатываемого объекта, его технические характеристики, показатели качества и технико-экономические требования, предписание по выполнению необходимых стадий создания документации (конструкторской, технологической, программной и т. д.) и её состав, а также специальные требования.") ?
+
+	+order.darkBlock
+
+
+
+block popup
+	+b.popup-shop#popup-shop
+		+e.title Битрикс
+		+e.table
+			+e.header
+				+e.cell._main-title Описание
+				+e.cell._h Включенная редакция 1С Bitrix
+				+e.cell._h Проектирование структуры сайта
+				+e.cell._h Уникальный дизайн магазина
+				+e.cell._h Верстка валидная стандартам W3C
+				+e.cell._h Интеграция с системой управления
+				+e.cell._h Онлайн каталог товаров
+				+e.cell._h Умный поиск товаров
+				+e.cell._h Умная фильтрация товаров
+				+e.cell._h Сбор товаров корзину
+				+e.cell._h Расширенные торговые предложения
+				+e.cell._h Адаптивная верстка
+				+e.cell._h Онлайн оплата
+				+e.cell._h Система доставки
+				+e.cell._h Несколько регионов работы
+				+e.cell._h Интеграция с 1С
+				+e.cell._h Облачные технологии BIG DATA
+				+e.cell._h Личный кабинет
+				+e.cell._h Скорость разработки
+			+e.slider
+				+arrow._prev.__arrow._prev
+				+arrow._next.__arrow._next
+				+e.slider-items
+					+e.coll
+						+e.cell._head
+							+b.popup-shop-head
+								+e.title Интернет магазин
+								+e.desc Полноценный магазин по реализации одной группы товаров с оплатой онлайн.
+						+e.cell._d
+							+e.hidden-title Включенная редакция 1С Bitrix
+							+e.SPAN.redact "Малый бизнес"
+						+e.cell._d
+							+e.hidden-title Проектирование структуры сайта
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Уникальный дизайн магазина
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Верстка валидная стандартам W3C
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Интеграция с системой управления
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн каталог товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Умный поиск товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Умная фильтрация товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Сбор товаров корзину
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Расширенные торговые предложения
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Адаптивная верстка
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн оплата
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Система доставки
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Несколько регионов работы
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Интеграция с 1С
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Облачные технологии BIG DATA
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Личный кабинет
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Скорость разработки
+							+e.SPAN.time ~ 40 рабочих дней
+					+e.coll
+						+e.cell._head
+							+b.popup-shop-head
+								+e.title Торговый портал
+								+e.desc Полноценный магазин по реализации одной группы товаров с оплатой онлайн.
+						+e.cell._d
+							+e.hidden-title Включенная редакция 1С Bitrix
+							+e.SPAN.redact "Малый бизнес"
+						+e.cell._d
+							+e.hidden-title Проектирование структуры сайта
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Уникальный дизайн магазина
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Верстка валидная стандартам W3C
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Интеграция с системой управления
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн каталог товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Умный поиск товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Умная фильтрация товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Сбор товаров корзину
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Расширенные торговые предложения
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Адаптивная верстка
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн оплата
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Система доставки
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Несколько регионов работы
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Интеграция с 1С
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Облачные технологии BIG DATA
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Личный кабинет
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Скорость разработки
+							+e.SPAN.time ~ 65 рабочих дней
+		+e.title Host CMS
+		+e.table
+			+e.header
+				+e.cell._main-title Описание
+				+e.cell._h Включенная редакция 1С Bitrix
+				+e.cell._h Проектирование структуры сайта
+				+e.cell._h Уникальный дизайн магазина
+				+e.cell._h Верстка валидная стандартам W3C
+				+e.cell._h Интеграция с системой управления
+				+e.cell._h Онлайн каталог товаров
+				+e.cell._h Поиск товаров
+				+e.cell._h Фильтрация товаров
+				+e.cell._h Сбор товаров корзину
+				+e.cell._h Торговые предложения
+				+e.cell._h Адаптивная верстка
+				+e.cell._h Онлайн оплата
+				+e.cell._h Система доставки
+				+e.cell._h Несколько регионов работы
+				+e.cell._h Личный кабинет
+				+e.cell._h Скорость разработки
+			+e.slider
+				+arrow._prev.__arrow._prev
+				+arrow._next.__arrow._next
+				+e.slider-items
+					+e.coll
+						+e.cell._head
+							+b.popup-shop-head
+								+e.title Интернет витрина
+								+e.desc Полноценный магазин по реализации одной группы товаров с оплатой онлайн.
+						+e.cell._d
+							+e.hidden-title Включенная редакция Host CMS
+							+e.SPAN.redact "Мой сайт"
+						+e.cell._d
+							+e.hidden-title Проектирование структуры сайта
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Уникальный дизайн магазина
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Верстка валидная стандартам W3C
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Интеграция с системой управления
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн каталог товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Поиск товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Фильтрация товаров
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Сбор товаров корзину
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Торговые предложения
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Адаптивная верстка
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Онлайн оплата
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Система доставки
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Несколько регионов работы
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Личный кабинет
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Скорость разработки
+							+e.SPAN.time ~ 25 рабочих дней
+					+e.coll
+						+e.cell._head
+							+b.popup-shop-head
+								+e.title Интернет магазин
+								+e.desc Полноценный магазин по реализации одной группы товаров с оплатой онлайн.
+						+e.cell._d
+							+e.hidden-title Включенная редакция 1С Bitrix
+							+e.SPAN.redact "Малый бизнес"
+						+e.cell._d
+							+e.hidden-title Проектирование структуры сайта
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Уникальный дизайн магазина
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Верстка валидная стандартам W3C
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Интеграция с системой управления
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн каталог товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Поиск товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Фильтрация товаров
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Сбор товаров корзину
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Торговые предложения
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Адаптивная верстка
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Онлайн оплата
+							+e.I.icon.icon_check
+						+e.cell._d
+							+e.hidden-title Система доставки
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Несколько регионов работы
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Личный кабинет
+							+e.I.icon.icon_not
+						+e.cell._d
+							+e.hidden-title Скорость разработки
+							+e.SPAN.time ~ 38 рабочих дней

@@ -1,0 +1,48 @@
+.project-comand
+	padding: 60px 0 5px
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 36px
+
+	&__items
+		max-width: 800px
+		margin: 30px auto 0
+		display: flex
+
+	&__item
+		width: 25%
+		text-align: center
+
+	&__photo
+		+size(80px)
+		border-radius: 100%
+
+
+	&__name
+		margin-top: 10px
+		font-size: 15px
+		color: #333
+
+	&__position
+		margin-top: 5px
+		font-size: 12px
+		color: #9299a2
+
+
+@media only screen and (max-width : 750px)
+	.project-comand
+		&__title
+			font-size: 34px
+
+@media only screen and (max-width : 550px)
+	.project-comand
+		&__title
+			font-size: 20px
+
+		&__items
+			flex-wrap: wrap
+
+		&__item
+			margin: 10px 0
+			width: 50%

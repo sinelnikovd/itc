@@ -21,27 +21,25 @@
           <div class="header__hamburger"><a class="hamburger" href="javascript:void(0);"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></a>
           </div><a class="logo header__logo" href="/"><span class="logo__image"></span><span class="logo__desc">Создаем медиапространства</span></a>
           <div class="call header__call">
-            <ul class="call__tab">
-              <li class="call__tab-item call__tab-item_active"><a class="call__tab-link">Москва</a>
-              </li>
-              <li class="call__tab-item"><a class="call__tab-link">Калуга</a>
-              </li>
-              <li class="call__tab-item"><a class="call__tab-link">Брянск</a>
-              </li>
-            </ul>
+            <select class="call__select">
+              <option class="call__select-item call__select-item_active" value="0">Москва
+              </option>
+              <option class="call__select-item" value="1">Калуга
+              </option>
+              <option class="call__select-item" value="2">Брянск
+              </option>
+            </select>
             <div class="call__phone">
-              <div class="call__icon icon icon_phone">
+              <div class="call__phone-item call__phone-item_active">+7 4832 68 18 80
               </div>
-              <div class="call__phone-item call__phone-item_active">+7 (4832) 68-18-80
+              <div class="call__phone-item">+7 4832 68 18 81
               </div>
-              <div class="call__phone-item">+7 (4832) 68-18-81
-              </div>
-              <div class="call__phone-item">+7 (4832) 68-18-82
+              <div class="call__phone-item">+7 4832 68 18 82
               </div>
             </div>
           </div>
-          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);"><span class="recall__txt">Заказать звонок</span>
-            <div class="recall__icon icon icon_phone_black"></div></a>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);">
+            <div class="recall__icon icon icon_call"></div><span class="recall__txt">Заказать звонок</span></a>
           </div>
         </div>
         <div class="nav header__nav" id="nav">

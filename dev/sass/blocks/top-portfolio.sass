@@ -1,4 +1,4 @@
-.top-profile
+.top-portfolio
 	background-image: url(media/images/portfolio/bg.jpg)
 	background-repeat: no-repeat
 	background-position: 50% 50%
@@ -6,6 +6,11 @@
 	padding: 265px 0 135px
 	color: #fff
 	text-align: center
+
+	&_seo
+		padding-top: 215px
+		padding-bottom: 40px
+
 
 	&__title
 		font-size: 50px
@@ -35,19 +40,19 @@
 		top: 50%
 		margin-top: -13px
 		&:hover
-			.top-profile
+			.top-portfolio
 				&__nav-arrow
 					background-color: #ff6026
 				&__nav-txt
 					display: inline-block
 		&_prev
 			left: 0
-			.top-profile__nav-arrow
+			.top-portfolio__nav-arrow
 				.icon
 					left: -2px
 		&_next
 			right: 0
-			.top-profile__nav-arrow
+			.top-portfolio__nav-arrow
 				.icon
 					right: -2px
 
@@ -76,13 +81,50 @@
 		@extend %italic
 
 
+	&__items
+		margin-top: 75px
+		text-align: center
+
+	&__item
+		max-width: 245px
+		display: inline-block
+		padding: 0 10px 0 80px
+		text-align: left
+		position: relative
+		vertical-align: top
+		&:last-child
+			margin-left: 60px
+
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+
+	&__label
+		@extend %sbold
+		font-size: 20px
+		line-height: 1.2em
+
+	&__txt
+		margin-top: 5px
+		@extend %italic
+
+	&__btn-wrap
+		margin-top: 55px
+
+	&__btn
+		width: 100%
+		max-width: 250px
+
+
+
 	@media only screen and (max-width : 950px)
 		padding-top: 100px
 
 	@media only screen and (max-width : 750px)
 		&__nav
 			&:hover
-				.top-profile
+				.top-portfolio
 					&__nav-txt
 						display: none
 
@@ -90,3 +132,29 @@
 		&__title
 			font-size: 32px
 
+
+@media only screen and (max-width : 950px)
+	.top-portfolio
+		&__item
+			max-width: 220px
+			&:last-child
+				margin-left: 0
+
+@media only screen and (max-width : 750px)
+	.top-portfolio
+		&__item
+			max-width: 350px
+			width: 100%
+			display: block
+			margin: 15px auto 
+			&:last-child
+				margin-left: auto
+
+@media only screen and (max-width : 550px)
+	.top-portfolio
+		&_seo
+			.top-portfolio
+				&__nav
+					top: 14%
+		&__item
+			width: 80%

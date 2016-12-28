@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Разработка интернет магазинов</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="_main.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__hamburger"><a class="hamburger" href="javascript:void(0);"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></a>
+          </div><a class="logo header__logo" href="/"><span class="logo__image"></span><span class="logo__desc">Создаем медиапространства</span></a>
+          <div class="call header__call">
+            <select class="call__select">
+              <option class="call__select-item call__select-item_active" value="0">Москва
+              </option>
+              <option class="call__select-item" value="1">Калуга
+              </option>
+              <option class="call__select-item" value="2">Брянск
+              </option>
+            </select>
+            <div class="call__phone">
+              <div class="call__phone-item call__phone-item_active">+7 4832 68 18 80
+              </div>
+              <div class="call__phone-item">+7 4832 68 18 81
+              </div>
+              <div class="call__phone-item">+7 4832 68 18 82
+              </div>
+            </div>
+          </div>
+          <div class="header__recall"><a class="btn btn_border_small btn_color_white header__btn js-call-popup" href="javascript:void(0);">
+            <div class="recall__icon icon icon_call"></div><span class="recall__txt">Заказать звонок</span></a>
+          </div>
+        </div>
+        <div class="nav header__nav" id="nav">
+          <div class="nav__hover">
+          </div>
+          <div class="nav__list">
+            <div class="nav__item nav__item_sub nav__item_active"><a class="nav__link" href="#">Создание сайтов</a>
+              <ul class="subnav nav__subnav">
+                <li class="subnav__item"><a class="subnav__link" href="#">Корпоративные сайты</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Интернет-магазины</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Корпоративные порталы</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Посадочные страницы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item nav__item_sub"><a class="nav__link" href="#">Продвижение сайтов</a>
+              <ul class="subnav nav__subnav">
+                <li class="subnav__item"><a class="subnav__link" href="#">Контекстная реклама</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Медийная реклама</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Раскрутка групп</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Таргетированная реклама</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Коллтрекинг</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Оптимизация сайта при создании</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item"><a class="nav__link" href="#">Портфолио</a>
+            </div>
+            <div class="nav__item nav__item_sub"><a class="nav__link" href="#">Магазин</a>
+              <ul class="subnav nav__subnav">
+                <li class="subnav__item"><a class="subnav__link" href="#">Интернет-магазины</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Корпоративные сайты</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Посадочные страницы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item"><a class="nav__link" href="#">Поддержка</a>
+            </div>
+            <div class="nav__item nav__item_sub"><a class="nav__link" href="#">Компания</a>
+              <ul class="subnav nav__subnav">
+                <li class="subnav__item"><a class="subnav__link" href="#">О нас</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Блог</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Вакансии</a>
+                </li>
+                <li class="subnav__item"><a class="subnav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paranja"></div>
+    <div class="page">
+      <div class="top-banner" id="sidebar-top">
+        <div class="container">
+          <div class="top-banner__block">
+            <div class="top-banner__bg">
+            </div>
+            <div class="top-banner__text">
+              <div class="top-banner__title">О нас в трех словах
+              </div>
+              <div class="top-banner__desc"><span class="top-banner__typed"></span>
+              </div>
+              <div class="top-banner__date">est. Dec. 2010
+              </div>
+            </div>
+          </div>
+          <div class="top-banner__further-wrap">
+            <button class="further top-banner__further js-top-next">
+              <div class="further__mouse icon icon_mouse">
+              </div>
+              <div class="further__txt">Смотрите дальше
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="about-menu-wrap">
+        <div class="about-menu" id="about-menu">
+          <div class="container">
+            <ul class="about-menu__list">
+              <li class="about-menu__item"><a class="about-menu__link" href="#instrument">Технологии</a>
+              </li>
+              <li class="about-menu__item"><a class="about-menu__link" href="#mission">Миссия</a>
+              </li>
+              <li class="about-menu__item"><a class="about-menu__link" href="#employee">Сотрудники</a>
+              </li>
+              <li class="about-menu__item"><a class="about-menu__link" href="#about-reviews">Отзывы</a>
+              </li>
+              <li class="about-menu__item"><a class="about-menu__link" href="#card">Привилегии</a>
+              </li>
+              <li class="about-menu__item"><a class="about-menu__link" href="#vacancy">Вакансии</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="client-company">
+        <div class="container">
+          <div class="client-company__txt">
+            <p>Имея годы бесценного опыта, мы определили четкий подход к созданию сайтов. Мы умеем находить и предлагать самые оптимальные решения и не боимся быть оригинальными. И может быть, именно за это, наши клиенты довольны нами и тем, что получают в результате. </p>
+            <p>Нашими клиентами уже стали крупнейшие компании города, работающие в различных сферах бизнеса.</p>
+          </div>
+          <div class="client-company__company">
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/1.png" alt="" role="presentation"/>
+            </div>
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/2.png" alt="" role="presentation"/>
+            </div>
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/3.png" alt="" role="presentation"/>
+            </div>
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/4.png" alt="" role="presentation"/>
+            </div>
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/5.png" alt="" role="presentation"/>
+            </div>
+            <div class="client-company__item"><img class="client-company__img" src="media/images/company/6.png" alt="" role="presentation"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instrument" id="instrument">
+        <div class="container">
+          <div class="title instrument__title">В своей работе мы используем
+          </div>
+          <div class="instrument__tab-container">
+            <ul class="tab instrument__tab">
+              <li class="tab__item active"><a class="tab__link" href="javascript:void(0);">Рекламные инструменты</a>
+              </li>
+              <li class="tab__item"><a class="tab__link" href="javascript:void(0);">Технические компетенции</a>
+              </li>
+              <li class="tab__item"><a class="tab__link" href="javascript:void(0);">Управление проектами</a>
+              </li>
+            </ul>
+            <div class="instrument__body">
+              <div class="instrument-item">
+                <div class="instrument-item__wrap">
+                  <div class="instrument-item__left">
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/1.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Отслеживаем лиды в Callibri
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://callibri.ru">callibri.ru</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/2.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Подсчитываем позиции в SEranking
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://seranking.ru">seranking.ru</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/3.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Анализируем семантическое ядро в SerpStat
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://serpstat.com">serpstat.com</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo instrument-service__logo_hidden-small" src="media/images/sevr/4.png" alt="" role="presentation"/><img class="instrument-service__logo instrument-service__logo_hidden-big" src="media/images/sevr/4.1.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Контролируем рекламные компании в AORI и Elama
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://aori.ru">aori.ru</a><a class="instrument-service__link" href="http://elama.ru">elama.ru</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="instrument-item__right">
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_refresh">
+                      </div>
+                      <div class="instrument-technology__head">Постоянное продвижение
+                      </div>
+                      <p class="instrument-technology__txt">При продвижении не останавливаемся на завоеванных позициях, а постоянно развиваем ваш сайт
+                      </p>
+                    </div>
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_key">
+                      </div>
+                      <div class="instrument-technology__head">Личный кабинет
+                      </div>
+                      <p class="instrument-technology__txt">Разработали собственный личный кабинет клиента 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instrument-item">
+                <div class="instrument-item__wrap">
+                  <div class="instrument-item__left">
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/5.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Используем для сложных проектов 1С-Битрикс
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://1c-bitrix.ru">1c-bitrix.ru</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/6.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Используем для типовых проектов Host CMS
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://hostcms.ru">hostcms.ru</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/7.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Прототипируем сайты в Axure
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://axure.com">axure.com</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="instrument-item__right">
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_dis2">
+                      </div>
+                      <div class="instrument-technology__head">Эксклюзивный дизайн
+                      </div>
+                      <p class="instrument-technology__txt">Рисуем эксклюзивный дизайн, который будет удобен для пользования вашей ЦА.
+                      </p>
+                    </div>
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_bitrix2">
+                      </div>
+                      <div class="instrument-technology__head">Сертификация
+                      </div>
+                      <p class="instrument-technology__txt">Практически все наши разработчики проходят сертификацию от 1С-Битрикс
+                      </p>
+                    </div>
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_web">
+                      </div>
+                      <div class="instrument-technology__head">Web-стандарты
+                      </div>
+                      <p class="instrument-technology__txt">Мы соблюдаем web-стандарты. И умеем, если требуется, их обходить
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instrument-item">
+                <div class="instrument-item__wrap">
+                  <div class="instrument-item__left">
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/8.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Ни одна задача не потеряется в Bitrix24
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://bitrix24.ru">bitrix24.ru</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/9.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Храним информацию в MindManager
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://mindjet.com">mindjet.com</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/10.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Надёжная защита паролей от PassWork
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://passwork.me">passwork.me</a>
+                      </p>
+                    </div>
+                    <div class="instrument-service"><img class="instrument-service__logo" src="media/images/sevr/11.png" alt="" role="presentation"/>
+                      <p class="instrument-service__txt">Храним данные в Dropbox и Яндекс.Диск
+                      </p>
+                      <p class="instrument-service__link-wrap"><a class="instrument-service__link" href="http://dropbox.com">dropbox.com</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="instrument-item__right">
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_nda">
+                      </div>
+                      <div class="instrument-technology__head">Договор NDA
+                      </div>
+                      <p class="instrument-technology__txt">Если вы не любите «светиться», то мы готовы работать по договору NDA
+                      </p>
+                    </div>
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_db">
+                      </div>
+                      <div class="instrument-technology__head">Сохранность данных
+                      </div>
+                      <p class="instrument-technology__txt">Сохранность ваших данных обеспечивает NAS с шифрованием
+                      </p>
+                    </div>
+                    <div class="instrument-technology">
+                      <div class="instrument-technology__icon icon icon_bonus">
+                      </div>
+                      <div class="instrument-technology__head">Программа привилегий
+                      </div>
+                      <p class="instrument-technology__txt">Мы настроены на долгосрочное сотрудничество. Развиваем Программу Привилегий с полезными бонусами и скидками
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mission" id="mission">
+        <div class="container"><img class="mission__logo" src="media/img/big-logo.png" alt="" role="presentation"/>
+          <p class="mission__desc">Создание сайтов, приносящих прибыль нашим клиентам, позволяющих выделиться среди конкурентов в их сегменте бизнеса. 
+          </p>
+          <p class="mission__not-work">Мы не работаем над табачными, алкогольными и порнографическими проектами
+          </p>
+        </div>
+      </div>
+      <div class="employee" id="employee">
+        <div class="container">
+          <div class="title employee__title">Сотрудники
+          </div>
+          <div class="employee__body">
+            <div class="employee__side employee__side_left">
+              <div class="employee__slider">
+                <div class="employee__col">
+                  <div class="employee-item" data-id="1"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="2"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="3"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="4"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="5"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="6"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="7"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="8"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="employee__col">
+                  <div class="employee-item" data-id="9"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="10"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="11"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="12"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="13"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="14"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item" data-id="15"><img class="employee-item__preview" src="media/images/employee/1.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">Евгений Александров
+                      </div>
+                      <div class="employee-item__position">Владелец агентства
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-item employee-item_vacancy"><img class="employee-item__preview" src="media/images/employee/vacancy.png" alt="" role="presentation"/>
+                    <div class="employee-item__desc">
+                      <div class="employee-item__name">У нас есть крутая <br>вакансия для вас
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="employee__nav employee__nav_prev" type="button"><span class="employee__nav-arrow"><i class="icon icon_prev_cw"></i></span>
+              </button>
+              <button class="employee__nav employee__nav_next" type="button"><span class="employee__nav-arrow"><i class="icon icon_next_cw"></i></span>
+              </button>
+            </div>
+            <div class="employee__side employee__side_right">
+              <div class="employee-full-item employee-full-item_active" id="employee-full-item-1">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-2">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-3">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-4">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-5">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-6">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-7">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-8">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-9">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-10">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-11">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-12">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-13">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-14">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee-full-item" id="employee-full-item-15">
+                <div class="employee-full-item__info"><img class="employee-full-item__preview" src="media/images/employee/full/1.jpg" alt="" role="presentation"/>
+                  <dl class="employee-full-item__list">
+                    <dt class="employee-full-item__num">100<sup>+</sup>
+                    </dt>
+                    <dd class="employee-full-item__inf">дел ведет одновременно. Это абсолютный рекорд в России.
+                    </dd>
+                    <dt class="employee-full-item__num">10
+                    </dt>
+                    <dd class="employee-full-item__inf">книг читает Дмитрий за одну поездку на метро
+                    </dd>
+                    <dt class="employee-full-item__num">5
+                    </dt>
+                    <dd class="employee-full-item__inf">котов Дмитрий снял с дерева
+                    </dd>
+                  </dl>
+                </div>
+                <div class="employee-full-item__desc">
+                  <div class="employee-full-item__name">Дмитрий Помогайло
+                  </div>
+                  <div class="employee-full-item__position">Помощник
+                  </div>
+                  <div class="employee-full-item__txt">
+                    <p>Мы часто называем его "супермен", этот человек способен сделать все в нашей студии. В нужный момент, будь это горящие сроки или закончившаяся бумага для принтера Дмитрий Помогайло нас выручает.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-reviews" id="about-reviews">
+        <div class="container">
+          <div class="title about-reviews__title">Отзывы
+          </div>
+          <div class="about-reviews__body">
+            <div class="about-reviews__item-wrap">
+              <div class="about-reviews-item about-reviews__item">
+                <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                  <div class="about-reviews-item__body">
+                    <div class="about-reviews-item__name">Екатерина Пилютина
+                    </div>
+                    <div class="about-reviews-item__position">Заместитель директора
+                    </div>
+                  </div>
+                </div>
+                <div class="about-reviews-item__desc">
+                  <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  <div class="about-reviews-item__hide">
+                    <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  </div>
+                  <button class="about-reviews-item__link" type="button">Раскрыть
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="about-reviews__item-wrap">
+              <div class="about-reviews-item about-reviews__item">
+                <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                  <div class="about-reviews-item__body">
+                    <div class="about-reviews-item__name">Екатерина Пилютина
+                    </div>
+                    <div class="about-reviews-item__position">Заместитель директора
+                    </div>
+                  </div>
+                </div>
+                <div class="about-reviews-item__desc">
+                  <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  <div class="about-reviews-item__hide">
+                    <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  </div>
+                  <button class="about-reviews-item__link" type="button">Раскрыть
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="about-reviews__item-wrap">
+              <div class="about-reviews-item about-reviews__item">
+                <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                  <div class="about-reviews-item__body">
+                    <div class="about-reviews-item__name">Екатерина Пилютина
+                    </div>
+                    <div class="about-reviews-item__position">Заместитель директора
+                    </div>
+                  </div>
+                </div>
+                <div class="about-reviews-item__desc">
+                  <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  <div class="about-reviews-item__hide">
+                    <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  </div>
+                  <button class="about-reviews-item__link" type="button">Раскрыть
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="about-reviews__item-wrap">
+              <div class="about-reviews-item about-reviews__item">
+                <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                  <div class="about-reviews-item__body">
+                    <div class="about-reviews-item__name">Екатерина Пилютина
+                    </div>
+                    <div class="about-reviews-item__position">Заместитель директора
+                    </div>
+                  </div>
+                </div>
+                <div class="about-reviews-item__desc">
+                  <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  <div class="about-reviews-item__hide">
+                    <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                  </div>
+                  <button class="about-reviews-item__link" type="button">Раскрыть
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="about-reviews__hidden">
+              <div class="about-reviews__item-wrap">
+                <div class="about-reviews-item about-reviews__item">
+                  <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                    <div class="about-reviews-item__body">
+                      <div class="about-reviews-item__name">Екатерина Пилютина
+                      </div>
+                      <div class="about-reviews-item__position">Заместитель директора
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-reviews-item__desc">
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    <div class="about-reviews-item__hide">
+                      <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                      <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    </div>
+                    <button class="about-reviews-item__link" type="button">Раскрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="about-reviews__item-wrap">
+                <div class="about-reviews-item about-reviews__item">
+                  <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                    <div class="about-reviews-item__body">
+                      <div class="about-reviews-item__name">Екатерина Пилютина
+                      </div>
+                      <div class="about-reviews-item__position">Заместитель директора
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-reviews-item__desc">
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    <div class="about-reviews-item__hide">
+                      <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                      <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    </div>
+                    <button class="about-reviews-item__link" type="button">Раскрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="about-reviews__item-wrap">
+                <div class="about-reviews-item about-reviews__item">
+                  <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                    <div class="about-reviews-item__body">
+                      <div class="about-reviews-item__name">Екатерина Пилютина
+                      </div>
+                      <div class="about-reviews-item__position">Заместитель директора
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-reviews-item__desc">
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    <div class="about-reviews-item__hide">
+                      <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                      <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    </div>
+                    <button class="about-reviews-item__link" type="button">Раскрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="about-reviews__item-wrap">
+                <div class="about-reviews-item about-reviews__item">
+                  <div class="about-reviews-item__info"><img class="about-reviews-item__preview" src="media/images/about-rew/1.jpg" alt="" role="presentation"/>
+                    <div class="about-reviews-item__body">
+                      <div class="about-reviews-item__name">Екатерина Пилютина
+                      </div>
+                      <div class="about-reviews-item__position">Заместитель директора
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-reviews-item__desc">
+                    <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    <div class="about-reviews-item__hide">
+                      <p>Работа выполнена на высоком профессиональном уровне и вызывает положительные отклики, как среди специалистов, так и среди рядовых пользователей. Сайт удобно структурирован, понятен в навигации и обладает хорошими функциональными возможностями. Сайт снабжен удобным и простым в применении административным интерфейсом, что позволяет сотрудникам нашей компании самостоятельно изменять структуру сайта и размещать любые необходимые материалы. Отмечаем качество, разумные сроки выполнения проекта, ответственность и надежность в партнёрских отношениях.</p>
+                      <p>Мы высоко оцениваем интеллектуальный и добросовестный труд ваших сотрудников, уровень и качество проведенной работы по созданию сайта нашего Агентства. Мы рады, что вы содействуете развитию нашего бизнеса, эффективно обеспечивая работу нашего сайта.</p>
+                    </div>
+                    <button class="about-reviews-item__link" type="button">Раскрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn_border_normal btn_color_orange about-reviews__btn js-about-reviews-still" type="button">Еще отзывы
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="card">
+        <div class="container">
+          <div class="card__body">
+            <div class="title card__title">Программа привилегий
+            </div>
+            <div class="card__desc">
+              <p>Мы дарим Вам особые привилегии в благодарность за долгие отношения и активное пользование нашими услугами. <br>Узнайте прямо сейчас, сколько битов Вы можете сегодня потратить, а так же Ваш статус и Ваши индивидуальные преимущества!</p>
+            </div>
+          </div>
+          <div class="card__items">
+            <div class="card__item">
+              <div class="card-item">
+                <div class="card-item__image-wrap"><img class="card-item__image" src="media/images/card/1.jpg" alt="" role="presentation"/>
+                </div>
+                <div class="card-item__body">
+                  <div class="card-item__label">Возможности карты:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Скидка 5% на все услуги, которые вы не приобретали ранее в агентстве ITC MEDIA.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Подарки в ваш день рождения, день рождения компании.
+                    </li>
+                  </ul>
+                  <div class="card-item__label">Условия получения карты «5%»:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Период сотрудничества более 3-х месяцев.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Сумма ежемесячного платежа по всем услугам, которыми вы пользуетесь, должна быть от 3000 рублей.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card__item">
+              <div class="card-item">
+                <div class="card-item__image-wrap"><img class="card-item__image" src="media/images/card/2.jpg" alt="" role="presentation"/>
+                </div>
+                <div class="card-item__body">
+                  <div class="card-item__label">Возможности карты:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Скидка 10% на все услуги, которые вы не приобретали ранее в агентстве ITC MEDIA.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Персональные подарки в ваш день рождения и день рождения компании.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Индивидуальные консультации по развитию ваших проектов и ведения рекламных кампаний в Интернете до 3-х часов в квартал.
+                    </li>
+                  </ul>
+                  <div class="card-item__label">Условия получения карты «5%»:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Период сотрудничества от 6 месяцев.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Сумма ежемесячного платежа по всем услугам, которыми вы пользуетесь, должна быть от 10 000 рублей.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card__item">
+              <div class="card-item">
+                <div class="card-item__image-wrap"><img class="card-item__image" src="media/images/card/3.jpg" alt="" role="presentation"/>
+                </div>
+                <div class="card-item__body">
+                  <div class="card-item__label">Возможности карты:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Для вас доступна максимальная скидка — 15% на все новые услуги агентства ITC MEDIA, которыми вы не пользовались ранее.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>На ваш день рождения, день рождения компании и другие праздники мы подготовим персональные VIP-подарки. Порадуйте себя и своих коллег!
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Индивидуальные консультации по развитию ваших проектов и ведения рекламных кампаний в Интернете до 3-х часов в квартал.
+                    </li>
+                  </ul>
+                  <div class="card-item__label">Условия получения карты «5%»:
+                  </div>
+                  <ul class="card-item__list">
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Период сотрудничества от 6 месяцев.
+                    </li>
+                    <li class="card-item__item">
+                      <div class="card-item__icon icon icon_list_cg">
+                      </div>Сумма ежемесячного платежа по всем услугам, которыми вы пользуетесь, должна начинаться от 15000 рублей.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vacancy" id="vacancy">
+        <div class="container">
+          <div class="title vacancy__title">Вакансии
+          </div>
+          <div class="vacancy__body">
+            <div class="vacancy__side vacancy__side_right">
+              <div class="vacancy-block">
+                <div class="vacancy-block__title">Ищете работу и считаете, что можете влиться в команду?
+                </div>
+                <div class="vacancy-block__body">
+                  <div class="vacancy-block__txt">Присылайте короткий рассказ о себе, резюме и портфолио с пометкой «работа» на почту
+                  </div><a class="vacancy-block__mail" href="mailto:Info@itc-media.ru">Info@itc-media.ru</a>
+                </div>
+              </div>
+            </div>
+            <div class="vacancy__side vacancy__side_left">
+              <div class="accordion vacancy__accordion">
+                <div class="accordion__head">
+                  <div class="accordion__icon">
+                  </div><span class="accordion__head-txt">PHP программист</span><span class="vacancy__salary"> з/п 40—50 т. р.</span>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__txt">
+                    <div class="accordion__title">Обязанности
+                    </div>
+                    <p>Осуществляет верстку полос текущих номеров (статей и рекламных макетов). <br>Выполняет работы по художественному оформлению публикаций различного характера. <br>Разрабатывает проекты художественного оформления изданий.</p>
+                    <div class="accordion__title">Требования
+                    </div>
+                    <p>Дизайнеры бывают разные: от ландшафтных до модных. Мы же предлагаем вам образец должностной инструкции дизайнера, работающего в издательском доме. Соответственно, основные должностные обязанности дизайнера в этой сфере – верстка и создание рекламных модулей. Не забудьте их четко прописать в должностной инструкции дизайнера, вам только кажется, что творческие люди не обращают внимание на такие подробности.</p>
+                    <div class="accordion__title">Условия
+                    </div>
+                    <ul class="vacancy__list">
+                      <li class="vacancy__item">1.1. Дизайнер относится к категории специалистов.</li>
+                      <li class="vacancy__item">1.2. Дизайнер назначается на должность и освобождается от нее приказом генерального директора компании по представлению арт-директора / главного редактора. </li>
+                      <li class="vacancy__item">1.3. Дизайнер подчиняется непосредственно арт-директору / главному редактору. </li>
+                      <li class="vacancy__item">1.4. На время отсутствия дизайнера его права и обязанности переходят к другому должностному лицу, о чем объявляется в приказе по организации.</li>
+                      <li class="vacancy__item">1.5. На должность дизайнера назначается лицо, отвечающее следующим требованиям: образование – среднее специальное, высшее, опыт аналогичной работы от года, знание редакционно-издательских пакетов на платформах РС и Мас.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion__head">
+                  <div class="accordion__icon">
+                  </div><span class="accordion__head-txt">Дизайнер</span><span class="vacancy__salary"> з/п 40 т. р.</span>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__txt">
+                    <div class="accordion__title">Обязанности
+                    </div>
+                    <p>Осуществляет верстку полос текущих номеров (статей и рекламных макетов). <br>Выполняет работы по художественному оформлению публикаций различного характера. <br>Разрабатывает проекты художественного оформления изданий.</p>
+                    <div class="accordion__title">Требования
+                    </div>
+                    <p>Дизайнеры бывают разные: от ландшафтных до модных. Мы же предлагаем вам образец должностной инструкции дизайнера, работающего в издательском доме. Соответственно, основные должностные обязанности дизайнера в этой сфере – верстка и создание рекламных модулей. Не забудьте их четко прописать в должностной инструкции дизайнера, вам только кажется, что творческие люди не обращают внимание на такие подробности.</p>
+                    <div class="accordion__title">Условия
+                    </div>
+                    <ul class="vacancy__list">
+                      <li class="vacancy__item">1.1. Дизайнер относится к категории специалистов.</li>
+                      <li class="vacancy__item">1.2. Дизайнер назначается на должность и освобождается от нее приказом генерального директора компании по представлению арт-директора / главного редактора. </li>
+                      <li class="vacancy__item">1.3. Дизайнер подчиняется непосредственно арт-директору / главному редактору. </li>
+                      <li class="vacancy__item">1.4. На время отсутствия дизайнера его права и обязанности переходят к другому должностному лицу, о чем объявляется в приказе по организации.</li>
+                      <li class="vacancy__item">1.5. На должность дизайнера назначается лицо, отвечающее следующим требованиям: образование – среднее специальное, высшее, опыт аналогичной работы от года, знание редакционно-издательских пакетов на платформах РС и Мас.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion__head">
+                  <div class="accordion__icon">
+                  </div><span class="accordion__head-txt">Junior SEO оптимизатор</span><span class="vacancy__salary"> з/п не указана</span>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__txt">
+                    <div class="accordion__title">Обязанности
+                    </div>
+                    <p>Осуществляет верстку полос текущих номеров (статей и рекламных макетов). <br>Выполняет работы по художественному оформлению публикаций различного характера. <br>Разрабатывает проекты художественного оформления изданий.</p>
+                    <div class="accordion__title">Требования
+                    </div>
+                    <p>Дизайнеры бывают разные: от ландшафтных до модных. Мы же предлагаем вам образец должностной инструкции дизайнера, работающего в издательском доме. Соответственно, основные должностные обязанности дизайнера в этой сфере – верстка и создание рекламных модулей. Не забудьте их четко прописать в должностной инструкции дизайнера, вам только кажется, что творческие люди не обращают внимание на такие подробности.</p>
+                    <div class="accordion__title">Условия
+                    </div>
+                    <ul class="vacancy__list">
+                      <li class="vacancy__item">1.1. Дизайнер относится к категории специалистов.</li>
+                      <li class="vacancy__item">1.2. Дизайнер назначается на должность и освобождается от нее приказом генерального директора компании по представлению арт-директора / главного редактора. </li>
+                      <li class="vacancy__item">1.3. Дизайнер подчиняется непосредственно арт-директору / главному редактору. </li>
+                      <li class="vacancy__item">1.4. На время отсутствия дизайнера его права и обязанности переходят к другому должностному лицу, о чем объявляется в приказе по организации.</li>
+                      <li class="vacancy__item">1.5. На должность дизайнера назначается лицо, отвечающее следующим требованиям: образование – среднее специальное, высшее, опыт аналогичной работы от года, знание редакционно-издательских пакетов на платформах РС и Мас.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div class="container">
+          <div class="content">
+            <div class="title order__title">Мы не просто занимаемся SEO, мы улучшаем ваш ресурс!
+            </div>
+            <div class="desc order__desc">Отправьте заявку и получите коммерческое предложение
+            </div>
+            <div class="order__form-wrap">
+              <form class="form order__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу фамилию
+                    </label><input class="field" placeholder="Ваша фамилия" type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow order__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+              <ul class="advantage-list order__advantage">
+                <li class="advantage-list__item">
+                  <div class="advantage-list__icon icon icon icon_star">
+                  </div>
+                  <div class="advantage-list__txt">Специалисты высокого класса
+                  </div>
+                </li>
+                <li class="advantage-list__item">
+                  <div class="advantage-list__icon icon icon icon_tie">
+                  </div>
+                  <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+                  </div>
+                </li>
+                <li class="advantage-list__item">
+                  <div class="advantage-list__icon icon icon icon_guarantee">
+                  </div>
+                  <div class="advantage-list__txt">Гарантия качества выполненных работ
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__top container">
+        <div class="footer__contact">
+          <div class="footer__contact-title">Как с нами связаться:
+          </div>
+          <div class="footer__contact-body"><a class="footer__phone" href="tel:+74832681880">+7 (4832) 68-18-80</a><a class="footer__email" href="mailto:support@itc-media.ru">support@itc-media.ru</a>
+          </div>
+        </div>
+        <div class="footer__subscribe">
+          <div class="footer__subscribe-title">Подписывайтесь на новости и акции:
+          </div>
+          <form class="footer__subscribe-form" action="/"><input class="field field_blue footer__subscribe-input" placeholder="Ваш e-mail" type="text"/>
+            <button class="btn btn_border_small btn_color_white footer__subscribe-btn" type="submit">Подписаться
+            </button>
+            <!--+e.BUTTON.subscribe-btn.btn._transparent._border_1._border_white(type="submit") Подписаться-->
+          </form>
+        </div>
+        <div class="social footer__social"><a class="social__icon icon icon_fb" href="#"></a><a class="social__icon icon icon_vk" href="#"></a><a class="social__icon icon icon_in" href="#"></a>
+        </div>
+      </div><hr class="footer__hr"/>
+      <div class="footer__nav container">
+        <div class="footer__nav-list"><a class="footer__nav-title" href="#">Создание сайтов</a><a class="footer__nav-item" href="#">Корпоративные сайты</a><a class="footer__nav-item" href="#">Интернет-магазины</a><a class="footer__nav-item" href="#">Корпоративные порталы</a><a class="footer__nav-item" href="#">Посадочные страницы</a>
+        </div>
+        <div class="footer__nav-list"><a class="footer__nav-title" href="#">Продвижение сайтов</a><a class="footer__nav-item" href="#">Контекстная реклама</a><a class="footer__nav-item" href="#">Медийная реклама</a><a class="footer__nav-item" href="#">Раскрутка групп</a><a class="footer__nav-item" href="#">Таргетированная реклама</a><a class="footer__nav-item" href="#">Коллтрекинг</a><a class="footer__nav-item" href="#">Оптимизация сайта при создании</a>
+        </div>
+        <div class="footer__nav-list"><a class="footer__nav-title" href="#">Магазин готовых решений</a><a class="footer__nav-item" href="#">Интернет-магазины</a><a class="footer__nav-item" href="#">Корпоративные сайты</a><a class="footer__nav-item" href="#">Посадочные страницы</a><a class="footer__nav-title" href="#">Портфолио</a>
+        </div>
+        <div class="footer__nav-list"><a class="footer__nav-title" href="#">Компания</a><a class="footer__nav-item" href="#">О нас</a><a class="footer__nav-item" href="#">Блог</a><a class="footer__nav-item" href="#">Вакансии</a><a class="footer__nav-title" href="#">Личный кабинет</a>
+        </div>
+      </div><hr class="footer__hr"/>
+      <div class="footer__bottom container">
+        <div class="logo logo_footer footer__logo"><img class="logo__image" src="media/img/footer-logo.png" alt="ITC-Meadia" title=""/>
+        </div>
+        <div class="copyright footer__copyright">© 2009-2016 ITC MEDIA интерактивное агентство
+        </div>
+      </div>
+    </div>
+    <div class="hidden">
+      <div class="popup popup_order" id="popup-order">
+        <div class="popup__title">Оставить заявку
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Опишите вашу задачу
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-question">
+        <div class="popup__title">Задать вопрос
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваше имя
+                    </label><input class="field" placeholder="Ваше имя" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш E-mail
+                    </label><input class="field" placeholder="Ваша E-mail" type="text"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="control form__control">
+                    <label class="control__label">Укажите вашу организацию
+                    </label><input class="field" placeholder="Ваша организация" type="text"/>
+                  </div>
+                  <div class="control form__control">
+                    <label class="control__label">Укажите ваш телефон
+                    </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="control__label">Задайте нам вопрос
+                  </label><textarea class="control__textarea field field_textarea" rows="4" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="control"><a class="popup-link" href="#">У вас есть промокод?</a>
+                </div>
+                <div class="control">
+                  <div class="file-upload"><input class="file-upload__input" id="fileupload" type="file"/>
+                    <label class="file-upload__label" for="fileupload"><span class="file-upload__btn"><span class="file-upload__icon icon icon_upload"></span>Загрузить задание</span><span class="file-upload__icon-link icon icon_link_cw"></span><span class="file-upload__txt"></span>
+                    </label>
+                    <div class="file-upload__kill">
+                    </div>
+                  </div>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Задать вопрос</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup-call">
+        <div class="popup__title">Заказать звонок
+        </div>
+        <div class="popup__body">
+          <div class="popup__form">
+            <form action="/">
+              <form class="form popup__form">
+                <div class="control">
+                  <label class="control__label">Укажите ваше имя
+                  </label><input class="field" placeholder="Ваше имя" type="text"/>
+                </div>
+                <div class="control">
+                  <label class="control__label">Укажите ваш телефон
+                  </label><input class="field js-inputmask" placeholder="+7 " type="text"/>
+                </div>
+                <div class="control"><a class="btn btn_bg-color_orange btn_size_big btn_shadow popup__btn" type="submit">Отправить</a>
+                </div>
+              </form>
+            </form>
+          </div>
+          <ul class="advantage-list popup__advantage">
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_star">
+              </div>
+              <div class="advantage-list__txt">Специалисты высокого класса
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_tie">
+              </div>
+              <div class="advantage-list__txt">Нам доверяют свои сайты крупнейшие компании
+              </div>
+            </li>
+            <li class="advantage-list__item">
+              <div class="advantage-list__icon icon icon icon_guarantee">
+              </div>
+              <div class="advantage-list__txt">Гарантия качества выполненных работ
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!--[if lt IE 9]>
+    <script src="js/libs/html5shiv/es5-shim.min.js"></script>
+    <script src="js/libs/html5shiv/html5shiv.min.js"></script>
+    <script src="js/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="js/libs/respond/respond.min.js"></script><![endif]-->
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

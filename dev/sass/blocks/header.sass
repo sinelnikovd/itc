@@ -7,11 +7,13 @@
 	color: #fff
 	+transition(all .5s ease-in-out)
 	@media only screen and (max-width : 950px)
-		padding-bottom: 10px
+		&__top
+			padding-bottom: 10px
 	@media only screen and (max-width : 750px)
 		background-color: #fff
 	@media only screen and (max-width : 550px)
-		padding-bottom: 5px
+		&__top
+			padding-bottom: 5px
 	&_black
 		.logo
 			&__image
@@ -21,13 +23,17 @@
 				color: #afc2cf
 		.call
 			color: #333
+			&__select
+				&.nice-select
+					&:after
+						border-top-color: #333
+					&:hover
+						border-color: #ebeaef
+					&.open
+						border-color: #ebeaef
+		.recall
 			&__icon
-				+icon-phone_blue
-			&__tab
-				color: #333
-				&-link
-					color: #333
-					border-bottom-color: rgba(#000,.7)
+				+icon-call_cg
 		.nav
 			border-bottom: 1px solid #ebeaef
 			&__link
@@ -58,13 +64,17 @@
 				opacity: 1
 				color: #afc2cf
 		.call
+			&__select
+				&.nice-select
+					&:after
+						border-top-color: #333
+					&:hover
+						border-color: #ebeaef
+					&.open
+						border-color: #ebeaef
+		.recall
 			&__icon
-				+icon-phone_blue
-			&__tab
-				color: #333
-				&-link
-					color: #333
-					border-bottom-color: rgba(#000,.7)
+				+icon-call_cg
 		.nav
 			border-top: 1px solid #ebeaef
 			border-bottom: 0 none
@@ -112,16 +122,18 @@
 					opacity: 1
 					color: #afc2cf
 			.call
+				&__select
+					&.nice-select
+						&:after
+							border-top-color: #333
+						&:hover
+							border-color: #ebeaef
+
+						&.open
+							border-color: #ebeaef
+			.recall
 				&__icon
-					&:before
-						background-position: 0em -140.7em
-						width: 1em
-						height: 2.1em
-				&__tab
-					color: #333
-					&-link
-						color: #333
-						border-bottom-color: rgba(#000,.7)
+					+m-icon-call_cg
 			.nav
 				border-top: 1px solid #ebeaef
 				border-bottom: 0 none
@@ -192,19 +204,24 @@
 		@media only screen and (max-width : 550px)
 			padding-top: 5px
 	&__call
+		padding-top: 15px
 		float: left
-		width: 29%
+		width: 34%
+		@media only screen and (max-width : 1200px)
+			width: 32%
 		@media only screen and (max-width : 950px)
 			margin: 10px auto
 			float: none
-			width: 220px
+			width: 100%
 			color: #333
 	&__recall
 		float: left
-		width: 23%
+		width: 18%
 		padding-top: 16px
 		box-sizing: border-box
 		text-align: right
+		@media only screen and (max-width : 1200px)
+			width: 20%
 		@media only screen and (max-width : 950px)
 			width: 50%
 			position: relative
@@ -234,6 +251,9 @@
 	&__btn
 		margin-left: auto
 		max-width: 170px
+		&:hover
+			.recall__icon
+				+m-icon-call_cg
 		@media only screen and (max-width : 750px)
 			width: auto
 			max-width: none
@@ -245,6 +265,7 @@
 			&:active
 				background-color: #cad0d1
 				border-color: #cad0d1
+		
 		@media only screen and (max-width : 550px)
 			padding: 2px 7px
 
@@ -284,9 +305,23 @@
 		@media only screen and (max-width : 950px)
 			display: none
 
+%icon-btn-call
+	+icon-call_cg
+
+
+
 .call
 	text-align: right
 	position: relative
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	@media only screen and (max-width : 950px)
+		justify-content: center
 	&__icon
 		position: absolute
 		top: 2px
@@ -310,13 +345,52 @@
 			&:hover
 				opacity: 1
 				border-bottom-color: transparent
+	&__select
+		&.nice-select
+			background-color: transparent
+			height: 32px
+			line-height: 30px
+			padding-left: 10px
+			padding-right: 25px
+			border-radius: 3px
+			border: 1px solid transparent
+			&:after
+				+transform(rotate(0))
+				+transform-origin(0 0)
+				height: 0
+				width: 0
+				border-right: 3px solid transparent
+				border-top: 6px solid #fff
+				border-left: 3px solid transparent
+				border-bottom: 0 none
+				margin-top: -2px
+			&:hover
+				border-color: rgba(255,255,255,.3)
+
+			&.open
+				border-color: rgba(255,255,255,.3)
+			
+			.list
+				border-radius: 2px
+				color: #333
+
+			.option
+				font-size: 12px
+				line-height: 1
+				min-height: 100%
+				padding: 10px 30px 10px 15px
+				&.selected
+					font-weight: normal
+					@extend %bold
+
 	&__phone
-		height: 22px
+		padding-left: 5px
+		height: 17px
 		position: relative
-		width: 100%
+		width: 150px
 		&-item
 			@extend %bold
-			font-size: 22px
+			font-size: 17px
 			line-height: 1
 			opacity: 0
 			+transition(opacity .2s ease-in-out)

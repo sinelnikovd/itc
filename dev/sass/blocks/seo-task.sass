@@ -1,0 +1,84 @@
+.seo-task
+	background-color: #fd6128
+	padding: 65px 0 70px
+	position: relative
+	overflow: hidden
+	color: #fff
+
+	&:after
+		+transform(skewX(-35deg))
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		width: 2000em
+		background-color: #303c6c
+
+	&__side
+		position: relative
+		z-index: 2
+		float: left
+		width: 50%
+		box-sizing: border-box
+
+		&_left
+			padding-right: 10%
+
+		&_right
+			padding-left: 10%
+
+	&__title
+		@extend %pregular
+		font-size: 36px
+		line-height: 1.2em
+
+	&__txt
+		margin-top: 20px
+		line-height: 1.5em
+
+@media only screen and (max-width : 750px)
+	.seo-task
+		padding-top: 20px
+		padding-bottom: 0
+		&:after
+			display: none
+		&__side
+			float: none
+			width: 100%
+			padding-left: 0
+			padding-right: 0
+			&_left
+				padding-bottom: 30px
+			&_right
+				padding-top: 30px
+				position: relative
+				padding-bottom: 30px
+				&:after
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 50%
+					margin-left: -1000em
+					width: 2000em
+					background-color: #303c6c
+				.seo-task
+					&__title
+						position: relative
+						z-index: 2
+					&__txt
+						position: relative
+						z-index: 2
+
+		&__title
+			font-size: 30px
+
+
+@media only screen and (max-width : 550px)
+	.seo-task
+		&__title
+			font-size: 22px
+
+
+
