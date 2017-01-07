@@ -4,18 +4,24 @@
 		top: 0
 		right: 0
 		max-width: none
+		opacity: 0
 		&_center
 			top: 20px
 			right: 30px
-			+animation(animdesctop 1s linear)
-			+animation-fill-mode(both)
 		&_top
 			top: 60px
 			right: 140px
-			opacity: 0
-			+animation(animgrid 2s linear)
-			+animation-fill-mode(both)
 
+	&_animate
+		.shop-layers
+			&__img
+				opacity: 1
+				&_center
+					+animation(animdesctop 1s linear)
+					+animation-fill-mode(both)
+				&_top
+					+animation(animgrid 2s linear)
+					+animation-fill-mode(both)
 
 
 
@@ -33,5 +39,7 @@
 +keyframes(animdesctop)
 	0%
 		+transform(translateY(0))
+		opacity: 0
 	100%
 		+transform(translateY(-50px))
+		opacity: 1

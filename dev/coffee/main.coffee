@@ -63,6 +63,8 @@ $(document).ready ->
 		ui.newHeader.addClass("accordion__head_active")
 	)
 
+
+
 	$( ".technology__item .technology__accordion" ).on "accordionbeforeactivate", ( event, ui ) ->
 		$(".technology__item.active .radial-item").removeClass("radial-item_active")
 		console.log(ui.newHeader.index())
@@ -448,9 +450,11 @@ $(document).ready ->
 				$(".popup-shop__header .popup-shop__cell").each ->
 
 					indx = $(@).index()+1
-					containers = $(@).add($(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
+					containers = $(@).add($(@).closest(".popup-shop__table").find(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
 					maxH = 0
 					i = 0
+
+					console.log(containers)
 					
 
 					containers.each ->
@@ -565,7 +569,7 @@ $(document).ready ->
 
 		# paralax cloud
 		if $("div").is(".mission")
-			yPos = -($(window).scrollTop() - $(".mission").offset().top) / 3
+			yPos = -($(window).scrollTop() - $(".mission").offset().top) / 10
 			coords = 'center '+ yPos + 'px'
 			$(".mission").css
 				backgroundPosition: coords
@@ -838,7 +842,7 @@ $(document).ready ->
 			$(".popup-shop__header .popup-shop__cell").each ->
 
 				indx = $(@).index()+1
-				containers = $(@).add($(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
+				containers = $(@).add($(@).closest(".popup-shop__table").find(".popup-shop__coll .popup-shop__cell:nth-child("+indx+")"))
 				maxH = 0
 				i = 0
 				
@@ -983,18 +987,31 @@ $(document).ready ->
 		nav: false
 		items: 1
 		dots: false
-		animateIn: "fadeInLeft"
-		animateOut: "fadeOutRight"
+		smartSpeed: 1000
+		onDragged: (e)->
+			$(".shop-work-item").removeClass("shop-work-item_animate_left").removeClass("shop-work-item_animate_right").removeClass("shop-work-item_first")
+			if this._drag.direction == "left"
+				$(".owl-item .shop-work-item").addClass("shop-work-item_animate_left")
+			if this._drag.direction == "right"
+				$(".owl-item .shop-work-item").addClass("shop-work-item_animate_right")
+		onInitialized: ->
+			$(".owl-item.active .shop-work-item").addClass("shop-work-item_first")
+
+
+		#animateIn: "fadeInLeft"
+		#animateOut: "fadeOutRight"
 	$('.shop-work__arrow_prev').click ->
 		shopworkCarousel.trigger('prev.owl.carousel')
 	$('.shop-work__arrow_next').click ->
 		shopworkCarousel.trigger('next.owl.carousel')
 
 
-	$(".top-banner__typed").typed
-		strings: ['Честно.', 'С любовью.', 'Как для себя.']
-		typeSpeed: 100
-		loop: true
+	$(window).on "load", ->
+		$(".top-banner__typed").typed
+			strings: ['С любовью. ^1500 Честно. ^1500 Как для себя.']
+			typeSpeed: 150
+			loop: false
+			backDelay: 5000
 
 
 	#$("#chart").each ->
@@ -1032,18 +1049,40 @@ $(document).ready ->
 
 	vacancyBlockFixed = ->
 		scrollPosition = $(window).scrollTop()
-		vacancyBlock = $(".vacancy-block")
+		vacancyBlock = $(".vacancy-block-container")
 		headerSize = $(".header").height()
 
-		if $(window).width() > 950
-			if vacancyBlock.height() < $(".vacancy__accordion").height()
 
-				if scrollPosition + headerSize  < $(".vacancy__body").offset().top + $(".vacancy__body").height() - vacancyBlock.outerHeight()
+		vacancyBlock.removeClass("vacancy-block-container_fixed").removeClass("vacancy-block-container_absolute").css
+				top: "auto"
 
-					if scrollPosition + headerSize >= $(".vacancy__body").offset().top
-						posTop = scrollPosition + headerSize - $(".vacancy__body").offset().top
-						vacancyBlock.css
-							transform: "translateY("+posTop+"px)"
+		if !mq950.matches && vacancyBlock.height() < $(".vacancy__accordion").height()
+
+			if scrollPosition + headerSize < $(".vacancy__body").offset().top - 10
+				vacancyBlock.removeClass("vacancy-block-container_fixed").removeClass("vacancy-block-container_absolute").css
+					top: "auto"
+
+			if scrollPosition + headerSize > $(".vacancy__body").offset().top - 10
+				vacancyBlock.removeClass("vacancy-block-container_absolute").addClass("vacancy-block-container_fixed").css
+					top: headerSize + 10
+
+			if scrollPosition + headerSize > $(".vacancy__body").offset().top + $(".vacancy__body").height() - vacancyBlock.outerHeight()
+				vacancyBlock.removeClass("vacancy-block-container_fixed").addClass("vacancy-block-container_absolute").css
+					top: "auto"
+
+
+
+
+
+		#if $(window).width() > 950
+		#	if vacancyBlock.height() < $(".vacancy__accordion").height()
+
+		#		if scrollPosition + headerSize  < $(".vacancy__body").offset().top + $(".vacancy__body").height() - vacancyBlock.outerHeight()
+
+		#			if scrollPosition + headerSize >= $(".vacancy__body").offset().top
+		#				posTop = scrollPosition + headerSize - $(".vacancy__body").offset().top
+		#				vacancyBlock.css
+		#					transform: "translateY("+posTop+"px)"
 
 
 
@@ -1052,6 +1091,14 @@ $(document).ready ->
 
 	$(window).scroll ->
 		vacancyBlockFixed()
+
+	$(window).resize ->
+		vacancyBlockFixed()
+
+	$( ".vacancy__accordion" ).on( "accordionactivate accordioncreate",( event, ui ) ->
+		vacancyBlockFixed()
+
+	)
 
 
 	$(".about-reviews-item__link").click ->
@@ -1073,37 +1120,49 @@ $(document).ready ->
 
 
 	$(".employee-item").click ->
-		$(".employee-full-item_active").removeClass("employee-full-item_active")
+		if !$(@).hasClass("employee-item_vacancy")
+			$(".employee-full-item_active").removeClass("employee-full-item_active")
 
-		$("#employee-full-item-"+$(@).data("id")).addClass("employee-full-item_active")
+			$(".employee-item_active").removeClass("employee-item_active")
+
+			$(@).addClass("employee-item_active")
+
+			$("#employee-full-item-"+$(@).data("id")).addClass("employee-full-item_active")
 
 
 	$(".js-top-next").click ->
+		scrollTo = if $(".header").hasClass("header_fixed") then $("#about-menu").offset().top - $(".header").height() else $("#about-menu").offset().top - $(".header").height() + 27
 		$('html, body').animate({
-			scrollTop: $("#about-menu").offset().top - $(".header").height()
-		}, 2000);
+			scrollTop: scrollTo
+		}, 1000);
 
 
 	$(".js-still-add-shop").click ->
 		$('html, body').animate({
-			scrollTop: $("#shop-work").offset().top - $(".header").height()
+			scrollTop: $("#shop-consist").offset().top - $(".header").height()
+		}, 2000);
+
+	$(".js-cool-vacancy").click ->
+		$('html, body').animate({
+			scrollTop: $("#vacancy").offset().top - $(".header").height()
 		}, 2000);
 
 
 
 
 	aboutMenuFixed = ->
-		scrollPosition = $(window).scrollTop()
-		aboutMenu = $("#about-menu")
-		headerSize = $(".header").height()
+		if $("div").is("#about-menu")
+			scrollPosition = $(window).scrollTop()
+			aboutMenu = $("#about-menu")
+			headerSize = $(".header").height()
 
 
-		if scrollPosition + headerSize >= $(".about-menu-wrap").offset().top
-			if !mq550.matches
-				aboutMenu.addClass("about-menu_header").appendTo($(".header"))
+			if scrollPosition + headerSize >= $(".about-menu-wrap").offset().top
+				if !mq550.matches && !aboutMenu.hasClass("about-menu_header")
+					aboutMenu.addClass("about-menu_header").appendTo($(".header"))
 
-		else
-			aboutMenu.removeClass("about-menu_header").appendTo($(".about-menu-wrap"))
+			else
+				aboutMenu.removeClass("about-menu_header").appendTo($(".about-menu-wrap"))
 
 
 
@@ -1117,3 +1176,7 @@ $(document).ready ->
 	$(".about-menu__link").mPageScroll2id
 		offset: $(".header")
 		highlightClass: "about-menu__link_active"
+
+
+	$('.shop-layers').imagesLoaded ->
+		$(".shop-layers").addClass("shop-layers_animate")

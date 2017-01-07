@@ -8,20 +8,20 @@
 
 	&__body
 		margin-top: 15px
-		+clearfix
+		display: flex
+		align-items: stretch
 
 
 	&__side
 		&_left
-			float: left
+			order: 0
 			width: 74%
 			margin-top: -10px
 
 
 		&_right
-			float: right
+			order: 1
 			width: 26%
-			padding-left: 3%
 			box-sizing: border-box
 			position: relative
 
@@ -50,17 +50,39 @@
 
 @media only screen and (max-width : 950px)
 	.vacancy
+		&__body
+			display: block
 		&__side
 			&_left
-				float: none
 				width: 100%
 
 			&_right
-				float: none
 				width: 100%
 				padding-left: 0
 				padding-bottom: 20px
 
+
+
+
+.vacancy-block-container
+	&_fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		max-width: 1200px
+		padding: 0 15px
+		margin: 0 auto
+		box-sizing: border-box
+		@media only screen and (max-width : 1200px)
+			max-width: 972px
+		.vacancy-block-wrap
+			width: 26%
+			margin-left: auto
+
+	&_absolute
+		position: absolute
+		bottom: 0
 
 
 .vacancy-block
@@ -70,10 +92,9 @@
 	background-image: url(media/img/vacancy-bg.png)
 	background-repeat: no-repeat
 	background-position: 0 0
+	box-sizing: border-box
+	margin-left: 15px
 
-	&_fixed
-		position: absolute
-		top: 0
 
 	&__title
 		@extend %plight
@@ -105,6 +126,7 @@
 
 @media only screen and (max-width : 950px)
 	.vacancy-block
+		max-width: none
 		+clearfix
 		&__title
 			float: left

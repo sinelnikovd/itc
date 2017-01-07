@@ -7,10 +7,14 @@
 		background-repeat: no-repeat
 		background-position: center 0
 
-		.seo-block-table__title
-			max-width: 600px
-			text-align: center
-			margin: 0 auto
+		.seo-block-table
+			&__title
+				max-width: 600px
+				text-align: center
+				margin: 0 auto
+			&__th
+				width: 50%
+		
 
 	&_trafic-chanel
 		background-image: url(media/img/line-gradient.png)
@@ -46,11 +50,20 @@
 				.seo-block-table__td
 					padding: 10px 20px
 	&__tfoot
-		.seo-block-table__td
-			@extend %pbold
-			font-size: 15px
-			color: #353535
-			background-color: #f2f2f2
+		.seo-block-table
+			&__td
+				@extend %pbold
+				font-size: 15px
+				color: #353535
+				background-color: #f2f2f2
+			&__tr
+				&:hover
+					.seo-block-table__td
+						padding-top: 10px
+						padding-bottom: 10px
+					.seo-block-table__val
+						@extend %pbold
+
 
 	&__td
 		border-bottom: 1px solid #e5e5e5
@@ -65,7 +78,7 @@
 				padding-top: 9px
 				padding-bottom: 9px
 			.seo-block-table__val
-				@extend %pbold
+				@extend %bold
 				color: #ff6026
 
 

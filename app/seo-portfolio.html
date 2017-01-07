@@ -310,6 +310,7 @@
               		'width':"95%",
               		'height':"95%"
               	},
+              	//enableInteractivity: false,
               	colors: [
               		"#f2f2f2","#f2602d","#3d4d89","#28c945","#9fb0b5","#3c4447"
               	],
@@ -318,7 +319,10 @@
               	height: 400,
               	legend:{
               		position: 'right'
-              	}
+              	},
+              	tooltip:{
+              		trigger: "selection"
+              	},
               
               };
               
@@ -544,7 +548,7 @@
         </div>
       </div>
       <div class="detail">
-        <div class="container"><a class="btn btn_bg-color_orange btn_size_big btn_shadow detail__btn" href="#">Отправить заявку на продвижение</a>
+        <div class="container"><a class="btn btn_bg-color_orange btn_size_big btn_shadow detail__btn js-order-popup" href="#">Отправить заявку на продвижение</a>
         </div>
       </div>
       <div class="socials">

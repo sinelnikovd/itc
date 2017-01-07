@@ -58,8 +58,11 @@
 		position: relative
 		@media only screen and (max-width : 950px)
 			position: static
+	&__notebook
+		opacity: 0
 	&__body
 		max-width: 500px
+		opacity: 0
 		@media only screen and (max-width : 1200px)
 			margin-left: 5%
 		@media only screen and (max-width : 950px)
@@ -161,4 +164,50 @@
 
 
 
+.owl-item.active
+	.shop-work-item
+		&_animate
+			&_left
+				.shop-work-item
+					&__notebook
+						@extend .animated
+						@extend .fadeInRight
+					&__body
+						@extend .animated
+						@extend .fadeInRight
+			&_right
+				.shop-work-item
+					&__notebook
+						@extend .animated
+						@extend .fadeInLeft
+					&__body
+						@extend .animated
+						@extend .fadeInLeft
+		&_first
+			.shop-work-item
+				&__notebook
+					opacity: 1
+				&__body
+					opacity: 1
+
+
+.owl-item
+	.shop-work-item
+		&_animate
+			&_left
+				.shop-work-item
+					&__notebook
+						@extend .animated
+						@extend .fadeOutLeft
+					&__body
+						@extend .animated
+						@extend .fadeOutLeft
+			&_right
+				.shop-work-item
+					&__notebook
+						@extend .animated
+						@extend .fadeOutRight
+					&__body
+						@extend .animated
+						@extend .fadeOutRight
 

@@ -1,4 +1,4 @@
-mixin detail(txt)
+mixin detail(txt, cls)
 	+b.detail&attributes(attributes)
 		.container
-			+btn.A._bg-color_orange._size_big._shadow.__btn(href="#")= txt
+			+btn.A._bg-color_orange._size_big._shadow.__btn(href="#", class= cls)= txt

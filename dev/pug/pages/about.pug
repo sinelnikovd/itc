@@ -181,7 +181,7 @@ block content
 						+e.col
 							- var id = 1
 							- for(var x=0; x < 8; x++)
-								+b.employee-item(data-id= id)
+								+b.employee-item(data-id= id class= (x==0) ? "_active" : "")
 									+e.IMG.preview(src="media/images/employee/1.png")
 									+e.desc
 										+e.name Евгений Александров
@@ -196,7 +196,7 @@ block content
 										+e.name Евгений Александров
 										+e.position Владелец агентства
 								-id += 1
-							+b.employee-item._vacancy
+							+b.employee-item._vacancy.js-cool-vacancy
 								+e.IMG.preview(src="media/images/employee/vacancy.png")
 								+e.desc
 									+e.name У нас есть крутая <br>вакансия для вас
@@ -358,11 +358,13 @@ block content
 			+b.title.__title Вакансии
 			+e.body
 				+e.side._right
-					+b.vacancy-block
-						+e.title Ищете работу и считаете, что можете влиться в команду?
-						+e.body
-							+e.txt Присылайте короткий рассказ о себе, резюме и портфолио с пометкой «работа» на почту
-							+e.A.mail(href="mailto:Info@itc-media.ru") Info@itc-media.ru
+					+b.vacancy-block-container
+						+b.vacancy-block-wrap
+							+b.vacancy-block
+								+e.title Ищете работу и считаете, что можете влиться в команду?
+								+e.body
+									+e.txt Присылайте короткий рассказ о себе, резюме и портфолио с пометкой «работа» на почту
+									+e.A.mail(href="mailto:info@itc-media.ru") info@itc-media.ru
 
 				+e.side._left
 					+b.accordion.__accordion
