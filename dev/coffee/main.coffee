@@ -1002,14 +1002,18 @@ $(document).ready ->
 		#animateOut: "fadeOutRight"
 	$('.shop-work__arrow_prev').click ->
 		shopworkCarousel.trigger('prev.owl.carousel')
+		$(".shop-work-item").removeClass("shop-work-item_animate_left").removeClass("shop-work-item_animate_right").removeClass("shop-work-item_first")
+		$(".owl-item .shop-work-item").addClass("shop-work-item_animate_right")
 	$('.shop-work__arrow_next').click ->
 		shopworkCarousel.trigger('next.owl.carousel')
+		$(".shop-work-item").removeClass("shop-work-item_animate_left").removeClass("shop-work-item_animate_right").removeClass("shop-work-item_first")
+		$(".owl-item .shop-work-item").addClass("shop-work-item_animate_left")
 
 
 	$(window).on "load", ->
 		$(".top-banner__typed").typed
-			strings: ['С любовью. ^1500 Честно. ^1500 Как для себя.']
-			typeSpeed: 150
+			strings: ['С любовью. ^800 Честно. ^800 Как для себя.']
+			typeSpeed: 80
 			loop: false
 			backDelay: 5000
 
@@ -1131,7 +1135,10 @@ $(document).ready ->
 
 
 	$(".js-top-next").click ->
-		scrollTo = if $(".header").hasClass("header_fixed") then $("#about-menu").offset().top - $(".header").height() else $("#about-menu").offset().top - $(".header").height() + 27
+		if !mq550.matches
+			scrollTo = if $(".header").hasClass("header_fixed") then $("#about-menu").offset().top - $(".header").height() else $("#about-menu").offset().top - $(".header").height() + 27
+		else
+			scrollTo = if $(".header").hasClass("header_fixed") then $("#client-company").offset().top - $(".header").height() else $("#client-company").offset().top - $(".header").height() + 27
 		$('html, body').animate({
 			scrollTop: scrollTo
 		}, 1000);
