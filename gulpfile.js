@@ -39,12 +39,12 @@ gulp.task('sass', function () {
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
 	})).on('error', sass.logError)
-	.pipe(rename({suffix: '.min', prefix : '_'}))
+	//.pipe(rename({suffix: '.min', prefix : '_'}))
 	.pipe(autoprefixer({
 		browsers: ['last 15 versions'],
 		cascade: false
 	}))
-	.pipe(cleanCSS())
+	//.pipe(cleanCSS())
 	.pipe(connect.reload())
 	.pipe(gulp.dest('app'));
 });
