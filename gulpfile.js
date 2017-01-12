@@ -132,7 +132,6 @@ gulp.task('coffee', function() {
 	gulp.src('dev/coffee/*.coffee')
 	.pipe(coffee({bare: true}).on('error', console.log))
 	.pipe(connect.reload())
-	.pipe(uglify())
 	.pipe(gulp.dest('app/js/'));
 });
 

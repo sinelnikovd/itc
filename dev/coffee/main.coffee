@@ -23,31 +23,30 @@ $(document).ready ->
 		$(".call__phone-item").eq($(@).val()).addClass("call__phone-item_active")
 
 
-	$(window).on "load", ->
-		sidebarFixed = (scrollPosition) ->
-			if $("div").is("#sidebar-top")
-				sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
-			sidebarBottom = if $("div").is("#sidebar-bottom") then $("#sidebar-bottom").offset().top else $(".footer").offset().top
-			if scrollPosition > sidebarTop - 105
-				$("#sidebar").addClass("sidebar_fixed")
-			if scrollPosition <= sidebarTop - 105
-				$("#sidebar").removeClass("sidebar_fixed")
+	sidebarFixed = (scrollPosition) ->
+		if $("div").is("#sidebar-top")
+			sidebarTop = $("#sidebar-top").offset().top + $("#sidebar-top").outerHeight()
+		sidebarBottom = if $("div").is("#sidebar-bottom") then $("#sidebar-bottom").offset().top else $(".footer").offset().top
+		if scrollPosition > sidebarTop - 105
+			$("#sidebar").addClass("sidebar_fixed")
+		if scrollPosition <= sidebarTop - 105
+			$("#sidebar").removeClass("sidebar_fixed")
 
-			if scrollPosition > sidebarBottom - $("#sidebar .sidebar__body").outerHeight(true) - 105
-				$("#sidebar").removeClass("sidebar_fixed")
-				$("#sidebar").addClass("sidebar_absolute")
-				$("#sidebar").css
-					bottom: $(document).height() - sidebarBottom + $("#sidebar .sidebar__body").outerHeight(true)
-			if scrollPosition <= sidebarBottom - $("#sidebar .sidebar__body").outerHeight(true) - 105
-				$("#sidebar").removeClass("sidebar_absolute")
-				$("#sidebar").css
-					bottom: "auto"
+		if scrollPosition > sidebarBottom - $("#sidebar .sidebar__body").outerHeight(true) - 105
+			$("#sidebar").removeClass("sidebar_fixed")
+			$("#sidebar").addClass("sidebar_absolute")
+			$("#sidebar").css
+				bottom: $(document).height() - sidebarBottom + $("#sidebar .sidebar__body").outerHeight(true)
+		if scrollPosition <= sidebarBottom - $("#sidebar .sidebar__body").outerHeight(true) - 105
+			$("#sidebar").removeClass("sidebar_absolute")
+			$("#sidebar").css
+				bottom: "auto"
 
-		sidebarFixed($(window).scrollTop())
+	sidebarFixed($(window).scrollTop())
 
-		$(window).scroll ->
-			scrollPosition = $(@).scrollTop()
-			sidebarFixed(scrollPosition)
+	$(window).scroll ->
+		scrollPosition = $(@).scrollTop()
+		sidebarFixed(scrollPosition)
 
 
 	$( ".accordion" ).accordion
