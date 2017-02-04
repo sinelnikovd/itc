@@ -43,6 +43,7 @@
 		display: inline-block
 		position: relative
 		top: 1.2em
+		margin-bottom: -3px
 		@media only screen and (max-width : 950px)
 			top: 0
 			width: 50%
@@ -52,6 +53,28 @@
 				order: 5
 		@media only screen and (max-width : 550px)
 			width: 100%
+
+
+		@media only screen and (min-width : 951px)
+			&_sub
+				&:hover
+					position: relative
+					.nav__subnav
+						position: absolute
+						top: 100%
+						margin-top: 1px
+						display: block
+						width: 220px
+						background-color: #2f3c6b
+						&_r
+							right: 0
+						.subnav
+							&__item
+								&:hover
+									background-color: rgba(#fff, .05)
+							&__link
+								color: #fff
+								padding: 15px 20px
 
 	&__link
 		@extend %pregular

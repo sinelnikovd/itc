@@ -1,0 +1,43 @@
+.main-dignity
+	padding: 62px 0 55px
+	background-image: url(media/img/slide-line-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	color: #fff
+	position: relative
+
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#000,.5)
+
+	&__list
+		position: relative
+		z-index: 2
+
+	&__item
+		width: 300px
+		text-align: center
+
+
+
+.main-dignity-item
+	display: inline-block
+	text-align: left
+	&__value
+		font-size: 50px
+		@extend %plight
+		line-height: 1.1em
+
+	&__plus
+		@extend %pbold
+		font-size: 20px
+		line-height: 1
+		position: relative
+		bottom: 20px
+		left: 5px

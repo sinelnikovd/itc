@@ -1,0 +1,25 @@
+mixin reviews(txt, cls)
+	+b.reviews&attributes(attributes)
+		.container
+			+b.title.__title Отзывы наших клиентов
+			+e.slider
+				+arrow._prev_cw.__arrow._prev
+				+arrow._next_cw.__arrow._next
+				+e.items.owl-carousel
+					-for(var i = 0; i < 3; i++)
+						+b.reviews-item
+							+e.person
+								+e.avatar
+									+e.IMG.avatar-img(src="media/images/person/2.jpg")
+								+e.name Екатерина Пилютина
+								+e.positon Заместитель директора по экологическому просвещению и туризму
+							+e.desc
+								+e.title Заповедник «Брянский лес»
+								+e.A.link(href="http://bryansky-les.ru/") http://bryansky-les.ru/
+								+e.txt
+									p От имени ФГБУ «Заповедник «Брянский лес» благодарю коллектив интернет-агентства ITC MEDIA за продуктивную работу по созданию нового официального сайта для заповедника. За время совместной работы ITC MEDIA показали себя серьёзной компанией, способной не только услышать клиента, что в наше время редкость, но и предложить адекватные поставленным задачам решения. Успешные результаты сотрудничества позволяют рекомендовать компанию как профессионального и надежного партнера.
+									+e.A.btn(href="#" data-mfp-src="http://lorempixel.com/640/480/cats")
+										+e.btn-icon.icon_comment
+										| Посмотреть оригинал отзыва
+			+e.all
+				+e.A.all-btn(href="#") Все отзывы

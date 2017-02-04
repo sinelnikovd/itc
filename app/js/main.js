@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var aboutMenuFixed, addAnim, addAnimTech, cardSlickInit, clientCarousel, consistCarousel, efficiencyCarousel, headerFixed, mq480, mq480Handler, mq550, mq550Handler, mq600, mq600Handler, mq750, mq750Handler, mq950, mq950Handler, priceSlickInit, priceTechSlickInit, recur, recurTech, resizeBgAbout, resizeBgPortfolio, reviewsCarousel, shopworkCarousel, sidebarFixed, slicEmployeekInit, slickInit, toActiveMainMenuHover, vacancyBlockFixed;
+  var aboutMenuFixed, addAnim, addAnimTech, cardSlickInit, clientCarousel, consistCarousel, efficiencyCarousel, headerFixed, img, mainServiceHeight, mq480, mq480Handler, mq550, mq550Handler, mq600, mq600Handler, mq750, mq750Handler, mq950, mq950Handler, priceSlickInit, priceTechSlickInit, recur, recurTech, resizeBgAbout, resizeBgPortfolio, reviewsCarousel, shopworkCarousel, sidebarFixed, slicEmployeekInit, slickInit, toActiveMainMenuHover, vacancyBlockFixed;
   $('input.js-inputmask').inputmask("+7 (999) 999-99-99", {
     clearIncomplete: true
   });
@@ -357,26 +357,65 @@ $(document).ready(function() {
     $(this).toggleClass("site-result__btn_active");
     return $(this).next(".site-result__list-wrap").slideToggle();
   });
+  $(".main-service-advantage__btn").click(function() {
+    $(this).toggleClass("main-service-advantage__btn_active");
+    return $(this).next(".main-service-advantage__list-wrap").slideToggle();
+  });
   $(".js-order-popup").magnificPopup({
     items: {
       src: '#popup-order',
       type: 'inline'
     },
-    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>',
+    callbacks: {
+      open: function() {
+        return $(".wrapper").addClass('wrapper_active');
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
+      }
+    }
   });
   $(".js-call-popup").magnificPopup({
     items: {
       src: '#popup-call',
       type: 'inline'
     },
-    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>',
+    callbacks: {
+      open: function() {
+        return $(".wrapper").addClass('wrapper_active');
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
+      }
+    }
   });
   $(".js-question-popup").magnificPopup({
     items: {
       src: '#popup-question',
       type: 'inline'
     },
-    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>',
+    callbacks: {
+      open: function() {
+        return $(".wrapper").addClass('wrapper_active');
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
+      }
+    }
+  });
+  $(".reviews-item__btn").magnificPopup({
+    type: 'image',
+    callbacks: {
+      open: function() {
+        return $(".wrapper").addClass('wrapper_active');
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
+      }
+    }
   });
   $(".js-tech-popup").magnificPopup({
     items: {
@@ -386,6 +425,7 @@ $(document).ready(function() {
     closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>',
     callbacks: {
       open: function() {
+        $(".wrapper").addClass('wrapper_active');
         return $(".popup-tech__header .popup-tech__cell").each(function() {
           var containers, i, indx, maxH;
           indx = $(this).index() + 1;
@@ -410,6 +450,9 @@ $(document).ready(function() {
             }
           });
         });
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
       }
     }
   });
@@ -421,6 +464,7 @@ $(document).ready(function() {
     closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>',
     callbacks: {
       open: function() {
+        $(".wrapper").addClass('wrapper_active');
         return $(".popup-shop__header .popup-shop__cell").each(function() {
           var containers, i, indx, maxH;
           indx = $(this).index() + 1;
@@ -446,6 +490,9 @@ $(document).ready(function() {
             }
           });
         });
+      },
+      close: function() {
+        return $(".wrapper").removeClass('wrapper_active');
       }
     }
   });
@@ -609,11 +656,26 @@ $(document).ready(function() {
     easing: "easeInOutCubic",
     translateX: "500px"
   });
+  $(".main-best__tab-container").tabtab({
+    tabMenu: '.main-best__tab',
+    tabContent: '.main-best-content',
+    startSlide: 1,
+    fixedHeight: true,
+    dynamicHeight: false,
+    easing: "easeInOutCubic",
+    translateX: "500px"
+  });
   $(".scheme-work").viewportChecker({
     offset: 300,
     callbackFunction: function(elem, action) {
       elem.find(".line-scheme__line").removeClass("line-scheme__line_to-animated");
       return elem.find(".line-scheme__line").addClass("line-scheme__line_animated");
+    }
+  });
+  $(".main-how-to-work").viewportChecker({
+    offset: 300,
+    callbackFunction: function(elem, action) {
+      return elem.find(".main-how-to-work__list").addClass("main-how-to-work__list_anim");
     }
   });
   addAnimTech = function(collection, elem, elInitIndex) {
@@ -942,8 +1004,14 @@ $(document).ready(function() {
     return $(".owl-item .shop-work-item").addClass("shop-work-item_animate_left");
   });
   $(window).on("load", function() {
-    return $(".top-banner__typed").typed({
+    $(".top-banner__typed").typed({
       strings: ['С любовью. ^800 Честно. ^800 Как для себя.'],
+      typeSpeed: 80,
+      loop: false,
+      backDelay: 5000
+    });
+    return $(".top-main__typed").typed({
+      strings: ['Digital агентство полного цикла'],
       typeSpeed: 80,
       loop: false,
       backDelay: 5000
@@ -1063,7 +1131,51 @@ $(document).ready(function() {
     offset: $(".header"),
     highlightClass: "about-menu__link_active"
   });
-  return $('.shop-layers').imagesLoaded(function() {
+  $('.shop-layers').imagesLoaded(function() {
     return $(".shop-layers").addClass("shop-layers_animate");
   });
+  $('.carousel-autoscroll').scrollingCarousel({
+    autoScroll: true,
+    autoScrollSpeed: 50000,
+    autoScrollDirection: 'left',
+    scrollSpeed: "slow",
+    beforeCreateFunction: null,
+    afterCreateFunction: null,
+    scrollerAlignment: "horizontal",
+    scrollerOffset: 0
+  });
+  mainServiceHeight = function() {
+    return $(".main-service-item").each(function() {
+      var containers, i, indx, maxH;
+      indx = $(this).index() + 1;
+      containers = $(this);
+      maxH = 0;
+      i = 0;
+      return containers.each(function() {
+        var h;
+        $(this).height("auto");
+        h = $(this).height();
+        if (h > maxH) {
+          maxH = h;
+        }
+        i += 1;
+        if (i === containers.length) {
+          if (typeof maxH === 'undefined' || typeof maxH === 'null') {
+            false;
+          }
+          return containers.css({
+            height: maxH + 'px'
+          });
+        }
+      });
+    });
+  };
+  mainServiceHeight();
+  $(window).resize(function() {
+    return mainServiceHeight();
+  });
+  img = new Image();
+  img.src = "media/img/main/top.jpg";
+  img.onload = function() {};
+  return $(".top-main__bg").css("backgroundImage", "url(" + img.src + ")").addClass("top-main__bg_active");
 });

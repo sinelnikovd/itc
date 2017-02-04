@@ -384,6 +384,10 @@ $(document).ready ->
 		$(@).toggleClass("site-result__btn_active")
 		$(@).next(".site-result__list-wrap").slideToggle()
 
+	$(".main-service-advantage__btn").click ->
+		$(@).toggleClass("main-service-advantage__btn_active")
+		$(@).next(".main-service-advantage__list-wrap").slideToggle()
+
 
 	#$('.radial-item__progress, .radial-item__progress-active').circleProgress
 	#		startAngle: -Math.PI / 2
@@ -397,19 +401,44 @@ $(document).ready ->
 			src: '#popup-order',
 			type: 'inline'
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
-
+		callbacks:
+			open: ->
+				$(".wrapper").addClass('wrapper_active')
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
 
 	$(".js-call-popup").magnificPopup
 		items:
 			src: '#popup-call',
 			type: 'inline'
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+		callbacks:
+			open: ->
+				$(".wrapper").addClass('wrapper_active')
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
 
 	$(".js-question-popup").magnificPopup
 		items:
 			src: '#popup-question',
 			type: 'inline'
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i><span>Закрыть</span></button>'
+		callbacks:
+			open: ->
+				$(".wrapper").addClass('wrapper_active')
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
+
+
+	$(".reviews-item__btn").magnificPopup
+		type: 'image'
+		callbacks:
+			open: ->
+				$(".wrapper").addClass('wrapper_active')
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
+
+	
 
 	$(".js-tech-popup").magnificPopup
 		items:
@@ -418,6 +447,7 @@ $(document).ready ->
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>'
 		callbacks:
 			open: ->
+				$(".wrapper").addClass('wrapper_active')
 				$(".popup-tech__header .popup-tech__cell").each ->
 
 					indx = $(@).index()+1
@@ -438,6 +468,8 @@ $(document).ready ->
 								false
 							containers.css
 								height: maxH + 'px'
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
 
 	$(".js-shop-popup").magnificPopup
 		items:
@@ -446,6 +478,7 @@ $(document).ready ->
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i></i></button>'
 		callbacks:
 			open: ->
+				$(".wrapper").addClass('wrapper_active')
 				$(".popup-shop__header .popup-shop__cell").each ->
 
 					indx = $(@).index()+1
@@ -468,7 +501,8 @@ $(document).ready ->
 								false
 							containers.css
 								height: maxH + 'px'
-
+			close: ->
+				$(".wrapper").removeClass('wrapper_active')
 
 
 
@@ -632,12 +666,27 @@ $(document).ready ->
 		translateX: "500px"
 
 
+	$(".main-best__tab-container").tabtab
+		tabMenu: '.main-best__tab'
+		tabContent: '.main-best-content'
+		startSlide: 1
+		fixedHeight: true
+		dynamicHeight: false
+		easing: "easeInOutCubic"
+		translateX: "500px"
+
+
 
 	$(".scheme-work").viewportChecker
 		offset: 300
 		callbackFunction: (elem, action)->
 			elem.find(".line-scheme__line").removeClass("line-scheme__line_to-animated")
 			elem.find(".line-scheme__line").addClass("line-scheme__line_animated")
+
+	$(".main-how-to-work").viewportChecker
+		offset: 300
+		callbackFunction: (elem, action)->
+			elem.find(".main-how-to-work__list").addClass("main-how-to-work__list_anim")
 
 
 	addAnimTech = (collection, elem, elInitIndex) ->
@@ -1016,6 +1065,12 @@ $(document).ready ->
 			loop: false
 			backDelay: 5000
 
+		$(".top-main__typed").typed
+			strings: ['Digital агентство полного цикла']
+			typeSpeed: 80
+			loop: false
+			backDelay: 5000
+
 
 	#$("#chart").each ->
 	#	data = $(@).data("datas");
@@ -1186,3 +1241,46 @@ $(document).ready ->
 
 	$('.shop-layers').imagesLoaded ->
 		$(".shop-layers").addClass("shop-layers_animate")
+
+
+
+
+	$('.carousel-autoscroll').scrollingCarousel
+		autoScroll: true
+		autoScrollSpeed: 50000
+		autoScrollDirection: 'left'
+		scrollSpeed: "slow"
+		beforeCreateFunction: null
+		afterCreateFunction: null
+		scrollerAlignment: "horizontal"
+		scrollerOffset: 0
+
+	mainServiceHeight = ->
+		$(".main-service-item").each ->
+			indx = $(@).index()+1
+			containers = $(@)
+			maxH = 0
+			i = 0
+			containers.each ->
+				$(@).height("auto");
+				h = $(@).height()
+				if(h > maxH)
+					maxH = h;
+
+				i += 1;
+				if i == containers.length
+					if typeof maxH == 'undefined' || typeof maxH == 'null'
+						false
+					containers.css
+						height: maxH + 'px'
+
+	mainServiceHeight()
+	$(window).resize ->
+		mainServiceHeight()
+
+	img = new Image()
+	img.src = "media/img/main/top.jpg"
+
+	img.onload = ->
+	$(".top-main__bg").css("backgroundImage", "url("+img.src+")").addClass("top-main__bg_active")
+

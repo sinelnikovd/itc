@@ -1,0 +1,116 @@
+.main-experts
+	padding: 40px 0 52px
+	&__body
+		position: relative
+		z-index: 2
+		+clearfix
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 34px
+		color: #fff
+
+	&__person
+		margin-top: 45px
+		float: left
+		width: 26%
+		text-align: right
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+			text-align: center
+
+	&__data
+		margin-top: 60px
+		float: right
+		width: 74%
+		padding-left: 8%
+		box-sizing: border-box
+		@media only screen and (max-width : 750px)
+			float: none
+			width: 100%
+			padding: 0 20px
+
+	&__preview
+		border-radius: 100%
+
+	&__name
+		margin-top: 20px
+		@extend %pbold
+		font-size: 26px
+
+	&__position
+		margin-top: 8px
+
+
+	&__list
+		width: 85%
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		@media only screen and (max-width : 750px)
+			width: 100%
+
+		@media only screen and (max-width : 550px)
+			display: block
+
+	&__item
+		padding: 0 20px
+		box-sizing: border-box
+		&:first-child
+			padding-left: 0
+
+		&:last-child
+			padding-right: 0
+
+		@media only screen and (max-width : 550px)
+			padding: 0
+			display: flex
+			align-items: center
+
+	&__num
+		font-size: 50px
+		@extend %plight
+		@media only screen and (max-width : 550px)
+			line-height: 1.1em
+
+
+	&__num-desc
+		margin-top: 20px
+		@media only screen and (max-width : 550px)
+			margin-top: 0
+			line-height: 1.3em
+			padding: 0 10px
+
+	&__quote
+		width: 90%
+		margin-top: 60px
+		font-size: 18px
+		line-height: 1.6em
+		position: relative
+
+		p
+			position: relative
+			z-index: 2
+		@media only screen and (max-width : 550px)
+			width: 100%
+			margin-top: 30px
+			font-size: 14px
+	&__qo
+		position: absolute
+		z-index: 1
+		opacity: .2
+
+		&_r
+			top: -20px
+			left: -25px
+
+		&_l
+			bottom: -20px
+			right: -10px
+
+	&__btn
+		margin-top: 45px
+		@media only screen and (max-width : 550px)
+			width: 100%
+

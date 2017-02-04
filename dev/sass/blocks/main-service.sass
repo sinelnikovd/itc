@@ -1,0 +1,203 @@
+.main-service
+	padding: 40px 0
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 34px
+		@media only screen and (max-width : 550px)
+			font-size: 18px
+			font-family: "ProximaNovaBold", $helvetica
+	&__desc
+		@extend %pregular
+		margin: 7px auto 0
+		font-size: 18px
+		max-width: 600px
+		@media only screen and (max-width : 550px)
+			font-size: 16px
+	&__type
+		margin-top: 10px
+		display: flex
+		flex-wrap: wrap
+
+.main-service-item
+	width: 33.3333333%
+	box-sizing: border-box
+	position: relative
+	@media only screen and (max-width : 950px)
+		width: 50%
+	@media only screen and (max-width : 750px)
+		width: 100%
+
+	&:hover
+		.main-service-item
+			&__body
+				box-shadow: 0 0 20px #ced7d9
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: -55px
+				padding-bottom: 80px
+				z-index: 2
+				background-color: #fff
+
+			&__btn
+				display: block
+
+			&__icon
+				&.icon
+					&_site
+						+m-icon-site_o
+					&_promotion
+						+m-icon-promotion_o
+					&_support
+						+m-icon-support_o
+					&_context
+						+m-icon-context_o
+					&_media
+						+m-icon-media_o
+					&_smm
+						+m-icon-smm_o
+
+	&__body
+		padding: 25px 30px
+		text-align: center
+
+	&__icon-wrap
+		height: 95px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__title
+		margin-top: 15px
+		@extend %plight
+		font-size: 26px
+		line-height: 1.3em
+		color: #333
+		@media only screen and (max-width : 550px)
+			font-size: 22px
+
+
+	&__txt
+		margin-top: 10px
+		line-height: 1.7em
+
+	&__btn
+		position: absolute
+		bottom: 20px
+		left: 0
+		right: 0
+		margin: auto
+		display: none
+
+
+.main-service-advantage
+	margin-top: 40px
+	border-top: 1px solid #ebeaef
+	text-align: center
+
+	&__btn
+		border: 1px solid #ebeaef
+		background-color: #fff
+		height: 44px
+		position: relative
+		top: -22px
+		padding: 0 2.5em
+		cursor: pointer
+		&:after
+			content: ''
+			display: inline-block
+			margin-left: 5px
+			+size(8px)
+			+transform(rotate(-135deg))
+			+transition(transform .5s ease-in-out)
+			border-top: 1px solid #039be6
+			border-left: 1px solid #039be6
+			position: relative
+		&-txt
+			color: #039be6
+			font-size: 14px
+			border-bottom: 1px dashed #039be6
+		&:hover
+			&:after
+				border-color: $c-orange
+			.main-service-advantage__btn
+				&-txt
+					color: $c-orange
+					border-bottom-color: $c-orange
+		&_active
+			&:after
+				+transform(rotate(45deg) translateY(3px))
+
+	&__main-title
+		margin: 30px auto 0
+		@extend %pregular
+		font-size: 34px
+		line-height: 1.25em
+		color: #040504
+		max-width: 800px
+		@media only screen and (max-width : 550px)
+			font-size: 18px
+			font-family: "ProximaNovaBold", $helvetica
+
+	&__list-wrap
+		display: none
+	&__list
+		max-width: 1050px
+		margin: 35px auto 0
+		text-align: left
+		+clearfix
+		@media only screen and (max-width : 550px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+
+
+	&__item
+		position: relative
+		padding-left: 50px
+		padding-right: 40px
+		margin: 10px 0 50px
+		float: left
+		width: 50%
+		box-sizing: border-box
+		@media only screen and (max-width : 950px)
+			width: 100%
+
+		@media only screen and (max-width : 750px)
+			padding-right: 0
+
+
+
+	&__title
+		@extend %plight
+		font-size: 26px
+		@media only screen and (max-width : 550px)
+			font-size: 22px
+
+	&__txt
+		margin-top: 20px
+		line-height: 1.6em
+
+	&__icon
+		background-color: #012233
+		+size(30px)
+		border-radius: 100%
+		position: absolute
+		top: 0
+		left: 0
+		@extend %pbold
+		color: #fff
+		font-size: 16px
+		text-align: center
+		line-height: 30px
+	&__check
+		position: absolute
+		bottom: 0
+		right: -5px
+		display: block
+		line-height: 1

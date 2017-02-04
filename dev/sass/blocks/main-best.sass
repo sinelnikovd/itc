@@ -1,0 +1,141 @@
+.main-best
+	padding: 40px 0 120px
+	text-align: center
+	&__title
+		font-size: 34px
+		line-height: 1.35em
+		font-family: "ProximaNovaRegular", $helvetica
+		text-align: center
+		@media only screen and (max-width : 550px)
+			font-size: 18px
+			font-family: "ProximaNovaBold", $helvetica
+
+	&__desc
+		margin: 0 auto
+		line-height: 1.65
+		max-width: 620px
+		@media only screen and (max-width : 550px)
+			width: 100%
+
+	&__tab
+		margin-top: 40px
+		@media only screen and (max-width : 550px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: flex-end
+			.tab__item
+				width: 100%
+				margin: 0
+
+
+
+.main-best-content
+	padding: 45px 0 0
+	width: 100%
+
+	&__item
+		width: 100%
+		+clearfix
+
+	&__img-wrap
+		float: left
+		width: 60%
+		text-align: center
+		padding-left: 10px
+		box-sizing: border-box
+		@media only screen and (max-width : 950px)
+			width: 50%
+		@media only screen and (max-width : 750px)
+			display: none
+
+	&__body
+		float: left
+		width: 40%
+		text-align: left
+		padding-top: 35px
+		@media only screen and (max-width : 950px)
+			width: 50%
+		@media only screen and (max-width : 750px)
+			width: 70%
+			margin: 0 auto
+			float: none
+		@media only screen and (max-width : 550px)
+			width: 90%
+		@media only screen and (max-width : 400px)
+			width: 100%
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 18px
+		color: #333
+		text-transform: uppercase
+
+	&__price
+		margin-top: 10px
+		@extend %pbold
+		font-size: 24px
+		line-height: 1.3em
+		color: #333
+
+	&__num
+		font-size: 26px
+		line-height: 1.3em
+		display: inline-block
+		margin: 0 5px
+
+
+	&__rubl
+		position: relative
+
+		&:before
+			content: '−'
+			position: absolute
+			top: 15%
+			right: 15%
+			left: -15%
+			text-align: center
+
+	&__sale
+		margin-left: 10px
+		@extend %bold
+		font-size: 14px
+		height: 26px
+		line-height: 26px
+		padding: 0 10px
+		display: inline-block
+		background-color: #23ce42
+		color: #fff
+		vertical-align: middle
+		border-radius: 30px
+		position: relative
+		top: -2px
+
+	&__list
+		margin-top: 33px
+		&-item
+			margin: 15px 0
+			position: relative
+			padding-left: 25px
+		&-icon
+			position: absolute
+			top: 0
+			left: 0
+		&-price
+			margin-top: 5px
+			@extend %bold
+	&__btn-wrap
+		margin-top: 35px
+		display: flex
+		@media only screen and (max-width : 400px)
+			display: block
+
+	&__btn
+		margin-right: 15px
+		@media only screen and (max-width : 400px)
+			margin-bottom: 10px
+			margin-right: 0
+			width: 100%
+

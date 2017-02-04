@@ -14,6 +14,7 @@ include /blocks/work/work
 include /blocks/portfolio-client/portfolio-client
 include /blocks/detail/detail
 include /blocks/socials/socials
+include /blocks/reviews/reviews
 doctype html
 html
 	head
@@ -38,8 +39,9 @@ html
 		link(rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-touch-icon-114x114.png")
 		
 	body
-		block base-content
-			//- Здесь пишем код 
+		.wrapper
+			block base-content
+				//- Здесь пишем код 
 		.hidden
 			+b.popup._order#popup-order
 				+e.title Оставить заявку

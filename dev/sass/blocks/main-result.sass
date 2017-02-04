@@ -1,0 +1,77 @@
+.main-result
+	padding: 40px 0 30px
+
+	&__title
+		font-family: "ProximaNovaRegular", $helvetica
+		font-size: 36px
+		margin-bottom: 80px
+		text-shadow: -1px -1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(0,0,0,0.7)
+		@media only screen and (max-width : 550px)
+			font-size: 20px
+			font-family: "ProximaNovaBold", $helvetica
+
+.main-result-block
+	width: 82%
+	margin: 0 auto 20px
+	+clearfix
+	@media only screen and (max-width : 950px)
+		width: 100%
+	&_l
+		.main-result-block
+			&__img-wrap
+				float: right
+				@media only screen and (max-width : 750px)
+					float: none
+			&__body
+				margin-right: 490px
+				@media only screen and (max-width : 950px)
+					margin-right: 350px
+				@media only screen and (max-width : 750px)
+					margin-right: auto
+	&_r
+		.main-result-block
+			&__img-wrap
+				float: left
+				@media only screen and (max-width : 750px)
+					float: none
+			&__body
+				margin-left: 490px
+				@media only screen and (max-width : 950px)
+					margin-left: 350px
+				@media only screen and (max-width : 750px)
+					margin-left: auto
+
+
+	&__img-wrap
+		width: 460px
+		text-align: center
+		@media only screen and (max-width : 950px)
+			width: 340px
+		@media only screen and (max-width : 750px)
+			width: 100%
+			margin-bottom: -20px
+
+
+	&__value
+		@extend %pregular
+		color: #9eafb4
+		font-size: 14px
+		text-transform: uppercase
+
+	&__num
+		font-size: 50px
+
+
+	&__title
+		margin-top: 20px
+		@extend %pbold
+		font-size: 26px
+		line-height: 1.3em
+		color: #333
+		text-shadow: -1px -1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(0,0,0,0.7)
+		@media only screen and (max-width : 550px)
+			font-size: 20px
+
+	&__txt
+		margin-top: 15px
+		line-height: 1.7em
