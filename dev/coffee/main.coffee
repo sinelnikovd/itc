@@ -607,6 +607,13 @@ $(document).ready ->
 			$(".mission").css
 				backgroundPosition: coords
 
+		# paralax main
+		if $("div").is(".top-main__bg")
+			yPos = -($(window).scrollTop() - $(".top-main__bg").offset().top) / 2
+			coords = 'center '+ yPos + 'px'
+			$(".top-main__bg").css
+				backgroundPosition: coords
+
 
 	$(".js-interaction").click ->
 		$(@).addClass("interaction-item_active-tooltip")
@@ -1197,6 +1204,12 @@ $(document).ready ->
 			scrollTop: scrollTo
 		}, 1000);
 
+	$(".js-top-main-next").click ->
+		scrollTo = if $(".header").hasClass("header_fixed") then $("#main-service").offset().top - $(".header").height() else $("#main-service").offset().top - $(".header").height() + 27
+		$('html, body').animate({
+			scrollTop: scrollTo
+		}, 1000);
+
 
 	$(".js-still-add-shop").click ->
 		$('html, body').animate({
@@ -1278,9 +1291,15 @@ $(document).ready ->
 	$(window).resize ->
 		mainServiceHeight()
 
-	img = new Image()
-	img.src = "media/img/main/top.jpg"
 
-	img.onload = ->
-	$(".top-main__bg").css("backgroundImage", "url("+img.src+")").addClass("top-main__bg_active")
+	$('.parallax-window').parallax()
+
+	$('.parallax-slider').on "load", ->
+		$(@).fadeIn()
+
+	#img = new Image()
+	#img.src = "media/img/main/top.jpg"
+
+	#mg.onload = ->
+	#$(".top-main__bg").css("backgroundImage", "url("+img.src+")").addClass("top-main__bg_active")
 

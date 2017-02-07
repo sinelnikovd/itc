@@ -4,8 +4,7 @@ block title
 	title Продвижение сайтов
 
 block content
-	+b.top-main
-		+e.bg
+	+b.top-main.parallax-window(data-parallax="scroll" data-image-src="media/img/main/top.jpg")
 		.container
 			+e.body
 				+b.title.__title Делаем маркетинг лучше
@@ -13,12 +12,12 @@ block content
 					+e.SPAN.typed
 
 			+e.further-wrap
-				+b.BUTTON.further.__further.js-top-next
+				+b.BUTTON.further.__further.js-top-main-next
 					+e.mouse.icon._mouse
 					+e.txt Смотрите дальше
 
 
-	+b.main-service
+	+b.main-service#main-service
 		.container
 			+b.title.__title Создание сайтов, их продвижение и поддержка
 			+b.desc.__desc Комплексный подход к разработке и созданию сайтов для бизнеса, ориентированных на продвижение и высокую конверсию
